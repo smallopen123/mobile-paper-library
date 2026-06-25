@@ -36,8 +36,6 @@ jobs:
           QQ_SMTP_FROM: ${{ secrets.QQ_SMTP_FROM }}
           QQ_SMTP_TO: ${{ secrets.QQ_SMTP_TO }}
           QQ_SMTP_AUTH_CODE: ${{ secrets.QQ_SMTP_AUTH_CODE }}
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/mobile_paper_library.py
