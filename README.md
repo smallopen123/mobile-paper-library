@@ -2,12 +2,15 @@
 
 这是一个独立的 GitHub Actions 项目，用于每天生成安卓手机浏览器可查看的前沿论文库。它不会影响已有的每日邮件提醒系统。
 
+当前版本为无 API 免费模式，不调用 OpenAI 或其他模型 API。
+
 ## 功能
 
 - 每天北京时间 09:00 自动运行
 - 检索 20 篇低空经济安全、航迹预测、智能体、机器人学习相关论文
 - 生成 GitHub Pages 手机网页归档
-- 每篇包含原文页面、PDF 链接、英文核心内容、中文对照解释、方法理论分析、为什么前沿、拓展创新方向与实践思路
+- 每篇包含原文页面、PDF 链接、英文摘要、规则相关性说明、实践阅读思路
+- 中文翻译建议使用安卓 Chrome/Edge 的网页翻译功能
 - 单独发送邮件通知，邮件中包含当天网页链接
 
 ## GitHub Secrets
@@ -23,9 +26,8 @@
 | `QQ_SMTP_FROM` | `1425709546@qq.com` |
 | `QQ_SMTP_TO` | `1425709546@qq.com` |
 | `QQ_SMTP_AUTH_CODE` | QQ 邮箱 SMTP 授权码 |
-| `OPENAI_API_KEY` | OpenAI API Key |
 
-可选变量：在 `Settings -> Secrets and variables -> Actions -> Variables` 添加 `OPENAI_MODEL`，例如 `gpt-4.1-mini`。
+无需配置 `OPENAI_API_KEY`。
 
 ## GitHub Pages
 
