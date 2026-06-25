@@ -12,13 +12,12 @@ import ssl
 import textwrap
 import urllib.parse
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass, asdict
+from dataclasses import dataclass
 from email.message import EmailMessage
 from pathlib import Path
 from typing import Iterable
 
 import requests
-from openai import OpenAI
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,12 +26,6 @@ HISTORY_PATH = ROOT / "data" / "sent_history.json"
 MAX_ITEMS = 20
 RECENT_DAYS = 7
 PRIMARY_DAYS = 3
-
-RESEARCH_PROFILE = """
-博士研究方向：低空经济安全评估、低空空域/无人机/城市空中交通安全风险建模、
-航迹预测、时空序列建模、多智能体/具身智能/机器人学习、智能体协同与决策。
-重点会议：IROS、ICRA、RSS、CoRL、NeurIPS、ICML、ICLR、KDD、AAAI、IJCAI、ICDE。
-"""
 
 KEYWORDS = [
     "low altitude economy",
@@ -126,15 +119,14 @@ def arxiv_pdf_url(entry_url: str) -> str:
     return entry_url
 
 
+def matched_keywords(item: Item) -> list[str]:
+    haystack = f"{item.title} {item.summary} {item.source}".lower()
+    return [keyword for keyword in KEYWORDS if keyword in haystack]
+
+
 def relevance_score(item: Item) -> float:
     haystack = f"{item.title} {item.summary} {item.source}".lower()
-    score = 0.0
-    for keyword in KEYWORDS:
-        if keyword in haystack:
-            score += 2.0
-    for term in ["iros", "icra", "rss", "corl", "neurips", "icml", "iclr", "kdd", "aaai", "ijcai", "icde"]:
-        if term in haystack:
-            score += 1.2
+    score = len(matched_keywords(item)) * 2.0
     if "uav" in haystack or "drone" in haystack:
         score += 3.0
     if "trajectory" in haystack or "motion forecasting" in haystack:
@@ -199,9 +191,7 @@ def dedupe(items: Iterable[Item]) -> list[Item]:
     seen: set[str] = set()
     result: list[Item] = []
     for item in items:
-        if not item.title or not item.url:
-            continue
-        if item.key in seen:
+        if not item.title or not item.url or item.key in seen:
             continue
         seen.add(item.key)
         result.append(item)
@@ -245,87 +235,26 @@ def select_items(items: list[Item], history: set[str]) -> list[Item]:
     return sorted(candidates, key=lambda item: item.score, reverse=True)[:MAX_ITEMS]
 
 
-def extract_json(text: str) -> list[dict]:
-    match = re.search(r"```json\s*(.*?)```", text, flags=re.S | re.I)
-    if match:
-        text = match.group(1)
-    start = text.find("[")
-    end = text.rfind("]")
-    if start >= 0 and end > start:
-        text = text[start : end + 1]
-    return json.loads(text)
-
-
-def safe_error(exc: Exception) -> str:
-    message = f"{type(exc).__name__}: {exc}"
-    message = re.sub(r"sk-[A-Za-z0-9_\-]+", "[redacted-openai-key]", message)
-    message = re.sub(r"sk-proj-[A-Za-z0-9_\-]+", "[redacted-openai-key]", message)
-    return message[:1200]
-
-
-def fallback_analysis(items: list[Item]) -> list[dict]:
-    rows = []
-    for item in items:
-        rows.append(
-            {
-                "key": item.key,
-                "english_core": item.summary,
-                "chinese_translation": "未生成模型翻译。请检查 OPENAI_API_KEY 后重新运行 workflow。",
-                "method_theory": "候选论文已收集；方法理论分析需要模型生成。",
-                "why_frontier": "该条目因关键词、发布时间和研究方向相关性被选入今日论文库。",
-                "innovation_practice": "可先阅读原文 PDF，提取数据、任务、模型和评价指标，再设计低空安全或航迹预测迁移实验。",
-            }
-        )
-    return rows
-
-
-def generate_analysis(items: list[Item]) -> list[dict]:
-    api_key = os.getenv("OPENAI_API_KEY")
-    if not api_key:
-        print("OpenAI analysis skipped: OPENAI_API_KEY is missing.")
-        return fallback_analysis(items)
-    model = os.getenv("OPENAI_MODEL") or "gpt-4.1-mini"
-    print(f"OpenAI analysis enabled: key_present=yes, model={model}")
-    client = OpenAI(api_key=api_key)
-    source = json.dumps([asdict(item) | {"key": item.key} for item in items], ensure_ascii=False, indent=2)
-    prompt = f"""
-你是面向博士研究的低空经济与智能体论文分析助手。请基于候选论文生成 JSON 数组，必须只输出 JSON。
-
-{RESEARCH_PROFILE}
-
-每个数组元素必须包含：
-- key：沿用输入中的 key
-- english_core：英文核心内容，优先概括 abstract 中的核心问题、方法、实验，不超过 120 words
-- chinese_translation：对应中文翻译与解释，不是全文翻译，强调博士研究者读论文需要抓住什么
-- method_theory：方法理论分析，包含建模假设、关键算法/理论工具、相较传统方法的改进、适用于低空安全评估/航迹预测/智能体系统的方式、潜在局限
-- why_frontier：为什么前沿，从新问题、新场景、新模型、新训练范式、新指标、安全性/实时性/可解释性、顶会趋势或产业价值解释
-- innovation_practice：拓展创新方向与具体实践思路，包含可验证假设、数据/仿真环境、模型改造、实验设计、评价指标、消融实验、落地路径
-
-要求：
-- 不编造输入中没有的作者、链接或录用状态。
-- 语言专业、紧凑、可直接用于手机阅读。
-- 必须覆盖输入的全部 {len(items)} 篇论文。
-
-候选论文：
-{source}
-"""
-    try:
-        response = client.responses.create(model=model, input=prompt, temperature=0.25)
-        data = extract_json(response.output_text)
-        by_key = {row.get("key"): row for row in data if row.get("key")}
-        fallback = {row["key"]: row for row in fallback_analysis(items)}
-        print(f"OpenAI analysis generated rows: {len(by_key)}")
-        return [by_key.get(item.key, fallback[item.key]) for item in items]
-    except Exception:
-        raise
-
-
-def generate_analysis_with_fallback(items: list[Item]) -> list[dict]:
-    try:
-        return generate_analysis(items)
-    except Exception as exc:
-        print(f"Using fallback analysis because OpenAI failed: {safe_error(exc)}")
-        return fallback_analysis(items)
+def rule_based_notes(item: Item) -> dict[str, str]:
+    keywords = matched_keywords(item)
+    keyword_text = ", ".join(keywords[:8]) if keywords else "未命中特定关键词，但因发布时间和类别被纳入候选。"
+    reading_hint = (
+        "免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，"
+        "或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。"
+    )
+    relevance = (
+        f"规则相关性：命中关键词 {keyword_text}。可优先检查论文的问题定义、数据来源、模型输入输出、"
+        "评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。"
+    )
+    practice = (
+        "实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；"
+        "再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。"
+    )
+    return {
+        "reading_hint": reading_hint,
+        "relevance": relevance,
+        "practice": practice,
+    }
 
 
 def page_base_url() -> str:
@@ -337,11 +266,10 @@ def page_base_url() -> str:
     return f"https://{owner}.github.io/{name}"
 
 
-def render_daily_page(items: list[Item], analysis: list[dict], today: str, base_url: str) -> str:
+def render_daily_page(items: list[Item], today: str, base_url: str) -> str:
     cards = []
-    analysis_by_key = {row["key"]: row for row in analysis}
     for idx, item in enumerate(items, 1):
-        row = analysis_by_key.get(item.key, {})
+        notes = rule_based_notes(item)
         cards.append(
             f"""
             <article class="paper" id="paper-{idx}">
@@ -352,11 +280,10 @@ def render_daily_page(items: list[Item], analysis: list[dict], today: str, base_
                 <a href="{html.escape(item.url)}" target="_blank" rel="noopener">原文页面</a>
                 <a href="{html.escape(item.pdf_url)}" target="_blank" rel="noopener">PDF链接</a>
               </div>
-              <section><h3>English Core</h3><p>{html.escape(row.get("english_core", item.summary))}</p></section>
-              <section><h3>中文对照</h3><p>{html.escape(row.get("chinese_translation", ""))}</p></section>
-              <section><h3>方法理论分析</h3><p>{html.escape(row.get("method_theory", ""))}</p></section>
-              <section><h3>为什么前沿</h3><p>{html.escape(row.get("why_frontier", ""))}</p></section>
-              <section><h3>拓展创新方向与实践思路</h3><p>{html.escape(row.get("innovation_practice", ""))}</p></section>
+              <section><h3>English Abstract</h3><p>{html.escape(item.summary)}</p></section>
+              <section><h3>中文阅读提示</h3><p>{html.escape(notes["reading_hint"])}</p></section>
+              <section><h3>规则相关性说明</h3><p>{html.escape(notes["relevance"])}</p></section>
+              <section><h3>实践阅读思路</h3><p>{html.escape(notes["practice"])}</p></section>
             </article>
             """
         )
@@ -366,7 +293,7 @@ def render_daily_page(items: list[Item], analysis: list[dict], today: str, base_
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>低空经济前沿双语论文库 - {today}</title>
+  <title>低空经济前沿论文库 - {today}</title>
   <style>
     :root{{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}}
     *{{box-sizing:border-box}}
@@ -386,17 +313,19 @@ def render_daily_page(items: list[Item], analysis: list[dict], today: str, base_
     .meta{{color:var(--muted);font-size:14px}}
     .links{{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}}
     .links a{{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}}
+    .notice{{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}}
     .back{{display:inline-block;margin:14px 0 0;color:#d6f2ee}}
     @media (max-width:520px){{h1{{font-size:23px}}h2{{font-size:18px}}.paper{{padding:16px 14px}}}}
   </style>
 </head>
 <body>
   <header><div class="wrap">
-    <h1>低空经济前沿双语论文库</h1>
-    <p class="sub">{today} · 20 篇论文 · 手机阅读版</p>
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">{today} · 20 篇论文 · 免费模式 · 手机阅读版</p>
     <a class="back" href="{base_url}/">查看历史归档</a>
   </div></header>
   <main>
+    <div class="notice">当前为无 API 免费模式：页面提供英文摘要、PDF 链接、规则相关性和阅读建议。中文翻译可使用安卓浏览器自带网页翻译完成。</div>
     <nav class="toc" aria-label="论文目录">{nav}</nav>
     {''.join(cards)}
   </main>
@@ -410,14 +339,14 @@ def render_index(today: str, base_url: str) -> str:
     for path in sorted(DOCS_DIR.iterdir(), reverse=True):
         if path.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", path.name):
             label = path.name
-            entries.append(f'<li><a href="{base_url}/{label}/">{label} 双语论文库</a></li>')
+            entries.append(f'<li><a href="{base_url}/{label}/">{label} 前沿论文库</a></li>')
     items = "\n".join(entries) or "<li>暂无归档</li>"
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>低空经济前沿双语论文库</title>
+  <title>低空经济前沿论文库</title>
   <style>
     body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:#f4f6f8;color:#172033;line-height:1.7}}
     main{{max-width:860px;margin:0 auto;padding:30px 18px 64px}}
@@ -430,8 +359,8 @@ def render_index(today: str, base_url: str) -> str:
 </head>
 <body>
   <main>
-    <h1>低空经济前沿双语论文库</h1>
-    <p class="muted">最后更新：{today}。每天北京时间 09:00 自动生成。</p>
+    <h1>低空经济前沿论文库</h1>
+    <p class="muted">最后更新：{today}。每天北京时间 09:00 自动生成。当前为无 API 免费模式。</p>
     <ul>{items}</ul>
   </main>
 </body>
@@ -465,12 +394,10 @@ def main() -> None:
     selected = select_items(all_items, load_history())
     if len(selected) < MAX_ITEMS:
         raise RuntimeError(f"Only found {len(selected)} candidate papers.")
-    analysis = generate_analysis_with_fallback(selected)
 
     daily_dir = DOCS_DIR / today
     daily_dir.mkdir(parents=True, exist_ok=True)
-    daily_page = render_daily_page(selected, analysis, today, base_url)
-    (daily_dir / "index.html").write_text(daily_page, encoding="utf-8")
+    (daily_dir / "index.html").write_text(render_daily_page(selected, today, base_url), encoding="utf-8")
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     (DOCS_DIR / "index.html").write_text(render_index(today, base_url), encoding="utf-8")
     save_history(selected)
@@ -478,10 +405,11 @@ def main() -> None:
     top_titles = "\n".join(f"{idx}. {item.title}" for idx, item in enumerate(selected[:8], 1))
     body = textwrap.dedent(
         f"""
-        今日低空经济前沿双语论文库已生成：
+        今日低空经济前沿论文库已生成：
         {base_url}/{today}/
 
-        手机浏览器打开即可查看 20 篇论文的原文 PDF 链接、英文核心内容、中文对照解释、方法理论分析和创新实践思路。
+        当前为无 API 免费模式：网页包含 20 篇论文的英文摘要、原文页面、PDF 链接、规则相关性说明和实践阅读思路。
+        如需中文翻译，可在安卓 Chrome/Edge 中打开页面后使用“翻译网页”。
 
         今日部分条目：
         {top_titles}
@@ -490,8 +418,8 @@ def main() -> None:
         {base_url}/
         """
     ).strip()
-    send_email(f"低空经济前沿双语论文库 - {today}", body)
-    print(f"Generated mobile paper library for {today}: {base_url}/{today}/")
+    send_email(f"低空经济前沿论文库 - {today}", body)
+    print(f"Generated free mobile paper library for {today}: {base_url}/{today}/")
 
 
 if __name__ == "__main__":
