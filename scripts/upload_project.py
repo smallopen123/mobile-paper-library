@@ -18,6 +18,7 @@ UPLOAD_FILES = [
     "data/sent_history.json",
     "docs/index.html",
     "scripts/mobile_paper_library.py",
+    "scripts/trigger_workflow.py",
     "scripts/upload_project.py",
 ]
 
