@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "11c244ea99cdab31",
+      "title": "Autonomous Video Generation with Counterfactual Controllability for Self-Evolving World Models",
+      "url": "http://arxiv.org/abs/2606.24152v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "71a330f9f56a5cfb",
+      "title": "AI-Empowered UAV-Assisted Backscatter Localization and ISAC for Zero-Energy IoT: A Comprehensive Survey",
+      "url": "http://arxiv.org/abs/2606.23125v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "d1f511cb937370d9",
+      "title": "Low Variance Trust Region Optimization with Independent Actors and Sequential Updates in Cooperative Multi-agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.25526v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "45a4fd86c8a536c7",
+      "title": "Agentic Knowledge Tracing: A Multi-Agent LLM Architecture for Stealth Assessment of Financial Literacy in Serious Games",
+      "url": "http://arxiv.org/abs/2606.25358v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "043c340d6a4a6b01",
+      "title": "Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Compromising Contextual Fidelity",
+      "url": "http://arxiv.org/abs/2606.24623v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "ad53e0201bf5cd83",
+      "title": "IMAGIN-4D: Image-Guided Controllable Interaction Generation",
+      "url": "http://arxiv.org/abs/2606.23675v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "2bf9e2b30f589c8f",
+      "title": "NavWM: A Unified Navigation World Model for Foresight-Driven Planning",
+      "url": "http://arxiv.org/abs/2606.24101v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "4aa4256262b78f34",
+      "title": "Stagnant Neuron: Towards Understanding the Plasticity Loss in Multi-Agent Reinforcement Learning Value Factorization Methods",
+      "url": "http://arxiv.org/abs/2606.25335v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "b3d64497a6703181",
+      "title": "GCT-MARL: Graph-Based Contrastive Transfer for Sample-Efficient Cooperative Multi-Agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.25073v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "f7664272360815f4",
+      "title": "ASALT: Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.24601v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "4fc25778d856bc76",
+      "title": "1000 Rallies: An Event-Camera Dataset and Real-Time Learned Ball-State Estimation for Robotic Table Tennis",
+      "url": "http://arxiv.org/abs/2606.25620v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "5bbc27deefc9541e",
+      "title": "Large-Scale Tunnel Air--Ground Collaboration With FLISP: Fast LiDAR-IMU Synchronized Path Planne",
+      "url": "http://arxiv.org/abs/2606.25393v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "c2826e5b29931eb9",
+      "title": "Swazure: Swarm Measurement of Pose for Flying Light Specks",
+      "url": "http://arxiv.org/abs/2606.25222v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "8c4ec4e7c51ec9b5",
+      "title": "Taxonomy of Risks on Automated Fact-Checking Systems Considering its Propagation",
+      "url": "http://arxiv.org/abs/2606.25645v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "f1b62c0fd848f3f7",
+      "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+      "url": "http://arxiv.org/abs/2606.26057v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "92ad8c5d85fa5edc",
+      "title": "Importance of Intent-Sharing for V2X-based Maneuver Coordination",
+      "url": "http://arxiv.org/abs/2606.24203v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "0feeee0d53c0f500",
+      "title": "Three-Step Hierarchical Transformer for Multi-Pedestrian Trajectory Prediction",
+      "url": "http://arxiv.org/abs/2606.23058v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "47939a059d4fdb3b",
+      "title": "Robustness and Leadership in Markov-switching Consensus Networks",
+      "url": "http://arxiv.org/abs/2606.25888v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "d227b917d55201b6",
+      "title": "Agentic evolution of physically constrained foundation models",
+      "url": "http://arxiv.org/abs/2606.25532v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
+      "key": "5914cc4a25371a93",
+      "title": "Training Dynamics of Neural Software Defect Predictors under Coupled Data-Quality Issues",
+      "url": "http://arxiv.org/abs/2606.24968v1",
+      "sent_at": "2026-06-25T07:57:39.410156+00:00"
+    },
+    {
       "key": "86093412d0b27985",
       "title": "Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound",
       "url": "http://arxiv.org/abs/2606.25978v1",
