@@ -1,3 +1,124 @@
 {
-  "sent": []
+  "sent": [
+    {
+      "key": "86093412d0b27985",
+      "title": "Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound",
+      "url": "http://arxiv.org/abs/2606.25978v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "979a556c4bf3a94a",
+      "title": "Rate-Aware Quantum-Inspired Trajectory Learning for Interference-Limited Multi-UAV Networks",
+      "url": "http://arxiv.org/abs/2606.25480v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "faa6d24b60b9faf6",
+      "title": "Reference-Free Heterogeneous Multi-Agent Reinforcement Learning for Grid-Friendly Tie-Line Power Shaping in Industrial Microgrids",
+      "url": "http://arxiv.org/abs/2606.25599v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "07170599885f8d58",
+      "title": "Decentralized Autonomous Traffic Management through Corridor Networks",
+      "url": "http://arxiv.org/abs/2606.23585v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "867b160b58ecc99f",
+      "title": "AeroCast: Probabilistic 3D Trajectory Prediction for Non-Cooperative Aerial Obstacles via Transformer-MDN Architecture",
+      "url": "http://arxiv.org/abs/2606.25122v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "699f435742273802",
+      "title": "OrthoTrack: Continuous 6-DoF UAV Trajectory Estimation Anchored in Public Orthophotos",
+      "url": "http://arxiv.org/abs/2606.25245v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "0af74d8f5e45b621",
+      "title": "CKM-Driven Communication-Aware UAV Intelligent Trajectory Optimization for Urban Inspection",
+      "url": "http://arxiv.org/abs/2606.24979v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "14aa88f923c31f7f",
+      "title": "Adaptive Machine Learning Framework for UAV Trajectory Optimization in O-RAN",
+      "url": "http://arxiv.org/abs/2606.24483v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "a796f7c81b20b3fe",
+      "title": "G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance",
+      "url": "http://arxiv.org/abs/2606.26017v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "6f70b1d2381f52be",
+      "title": "AI Coaching for Accelerating Human Skill Development with Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.25337v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "91a86496384feeb5",
+      "title": "SwarmFly: A simulation platform for UAV swarm experiment design and validation",
+      "url": "http://arxiv.org/abs/2606.25146v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "0f49005dca599c15",
+      "title": "The Hitchhiker's Guide to Agentic AI: From Foundations to Systems",
+      "url": "http://arxiv.org/abs/2606.24937v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "26710fe4096e27f2",
+      "title": "Safe and Generalizable Hierarchical Multi-Agent RL via Constraint Manifold Control",
+      "url": "http://arxiv.org/abs/2606.24010v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "1f886f41fe26883d",
+      "title": "From Rubble Simulation to Active Magnetic Mapping: Quantum Sensing for Disaster Response",
+      "url": "http://arxiv.org/abs/2606.25957v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "b5bc145b35556af5",
+      "title": "Generative AI for Safe and Photorealistic Drone Light Shows",
+      "url": "http://arxiv.org/abs/2606.25458v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "69b5ff0bd4eb6302",
+      "title": "Path-following Control of a Quadrotor using Quasi-Static Transverse Feedback Linearization",
+      "url": "http://arxiv.org/abs/2606.23218v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "cd452bfa54b8431c",
+      "title": "DynaMOMA: Instantaneous Prediction of Grasp Poses for Mobile Manipulation of Dynamic Objects",
+      "url": "http://arxiv.org/abs/2606.25295v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "07bb9e691bf11d53",
+      "title": "Scalable Online Flight Trajectory Optimization via Sequential Quadratic Programming for Urban Air Mobility in Ultra Low-Altitude Airspace",
+      "url": "http://arxiv.org/abs/2606.23008v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "0537c06dc31cb4fc",
+      "title": "Probabilistic Agents in Deterministic Audits: Evaluating Multi-Agent Systems for Automated Audits Based on the German IT-Grundschutz",
+      "url": "http://arxiv.org/abs/2606.25622v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    },
+    {
+      "key": "8dfb600661539fab",
+      "title": "SAFARI: Scaling Long Horizon Agentic Fault Attribution via Active Investigation",
+      "url": "http://arxiv.org/abs/2606.24626v1",
+      "sent_at": "2026-06-25T07:40:06.414013+00:00"
+    }
+  ]
 }
