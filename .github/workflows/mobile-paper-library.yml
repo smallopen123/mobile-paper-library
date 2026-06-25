@@ -1,0 +1,51 @@
+name: Mobile Paper Library
+
+on:
+  schedule:
+    # 09:00 Asia/Shanghai = 01:00 UTC
+    - cron: "0 1 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-library:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Build mobile paper library and notify
+        env:
+          QQ_SMTP_HOST: ${{ secrets.QQ_SMTP_HOST }}
+          QQ_SMTP_PORT: ${{ secrets.QQ_SMTP_PORT }}
+          QQ_SMTP_SSL: ${{ secrets.QQ_SMTP_SSL }}
+          QQ_SMTP_USER: ${{ secrets.QQ_SMTP_USER }}
+          QQ_SMTP_FROM: ${{ secrets.QQ_SMTP_FROM }}
+          QQ_SMTP_TO: ${{ secrets.QQ_SMTP_TO }}
+          QQ_SMTP_AUTH_CODE: ${{ secrets.QQ_SMTP_AUTH_CODE }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        run: python scripts/mobile_paper_library.py
+
+      - name: Commit generated library
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add docs data/sent_history.json
+          git diff --cached --quiet || git commit -m "Update mobile paper library"
+          git push
