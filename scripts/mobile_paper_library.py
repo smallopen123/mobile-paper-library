@@ -256,6 +256,13 @@ def extract_json(text: str) -> list[dict]:
     return json.loads(text)
 
 
+def safe_error(exc: Exception) -> str:
+    message = f"{type(exc).__name__}: {exc}"
+    message = re.sub(r"sk-[A-Za-z0-9_\-]+", "[redacted-openai-key]", message)
+    message = re.sub(r"sk-proj-[A-Za-z0-9_\-]+", "[redacted-openai-key]", message)
+    return message[:1200]
+
+
 def fallback_analysis(items: list[Item]) -> list[dict]:
     rows = []
     for item in items:
@@ -275,8 +282,10 @@ def fallback_analysis(items: list[Item]) -> list[dict]:
 def generate_analysis(items: list[Item]) -> list[dict]:
     api_key = os.getenv("OPENAI_API_KEY")
     if not api_key:
+        print("OpenAI analysis skipped: OPENAI_API_KEY is missing.")
         return fallback_analysis(items)
     model = os.getenv("OPENAI_MODEL") or "gpt-4.1-mini"
+    print(f"OpenAI analysis enabled: key_present=yes, model={model}")
     client = OpenAI(api_key=api_key)
     source = json.dumps([asdict(item) | {"key": item.key} for item in items], ensure_ascii=False, indent=2)
     prompt = f"""
@@ -305,8 +314,17 @@ def generate_analysis(items: list[Item]) -> list[dict]:
         data = extract_json(response.output_text)
         by_key = {row.get("key"): row for row in data if row.get("key")}
         fallback = {row["key"]: row for row in fallback_analysis(items)}
+        print(f"OpenAI analysis generated rows: {len(by_key)}")
         return [by_key.get(item.key, fallback[item.key]) for item in items]
     except Exception:
+        raise
+
+
+def generate_analysis_with_fallback(items: list[Item]) -> list[dict]:
+    try:
+        return generate_analysis(items)
+    except Exception as exc:
+        print(f"Using fallback analysis because OpenAI failed: {safe_error(exc)}")
         return fallback_analysis(items)
 
 
@@ -447,7 +465,7 @@ def main() -> None:
     selected = select_items(all_items, load_history())
     if len(selected) < MAX_ITEMS:
         raise RuntimeError(f"Only found {len(selected)} candidate papers.")
-    analysis = generate_analysis(selected)
+    analysis = generate_analysis_with_fallback(selected)
 
     daily_dir = DOCS_DIR / today
     daily_dir.mkdir(parents=True, exist_ok=True)
