@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-06-26</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-06-26 · 20 篇论文 · 免费模式 · 手机阅读版</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前为无 API 免费模式：页面提供英文摘要、PDF 链接、规则相关性和阅读建议。中文翻译可使用安卓浏览器自带网页翻译完成。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction</h2>
+              <p class="meta">Sangjin Han, Hoseong Jung, Jeongtae Her, Changhyun Choi, H. Jin Kim · arXiv cs.RO · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26661v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26661v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Motion forecasting is essential for autonomous driving systems to enable safe decision-making and planning in complex driving scenarios. While existing predictors excel at minimizing standard displacement errors, they often overlook the adherence to lane topology of multimodal predictions, particularly for lower-probability modes. Consequently, predicted trajectories may violate physical and logical constraints, making the prediction set unreliable for safety-critical planning. In this paper, we propose LAMP (Lane-Aligned Motion Primitives), a topology-aware forecasting framework that anchors multimodal prediction to structured motion primitives aligned with lane topology. Specifically, we use a VQ-VAE to learn shape-aware motion primitives as discrete intention queries, capturing spatiotemporal patterns beyond endpoint-based intentions. We further introduce a feasibility-aware intention selector trained with a lane-topology prior for filtering unreachable intention queries, guiding the decoder to prioritize topology-consistent intentions while preserving behavioral diversity. Extensive experiments on the Argoverse 2 dataset demonstrate that LAMP achieves prediction accuracy comparable to state-of-the-art baselines while outperforming them in feasibility and diversity metrics.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 trajectory prediction, motion forecasting。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>Bridging Performance and Generalization in Reinforcement Learning for Agile Flight</h2>
+              <p class="meta">Jonathan Green, Jiaxu Xing, Nico Messikommer, Angel Romero, Davide Scaramuzza · arXiv cs.RO · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27348v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27348v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Autonomous drone racing is a fundamentally challenging regime for autonomous aerial robots, requiring time-optimal control while operating under persistent actuation saturation. While reinforcement learning (RL) has achieved human-level performance in this domain, current methods fail to generalize; policies trained on specific environments often crash immediately in unseen configurations. This failure reflects the intrinsic difficulty of zero-shot generalization in agile flight, arising from high-dimensional task variation and the tight coupling between safety and performance at high speeds. Existing approaches that improve generalization impose a substantial cost on flight speed: control policies must significantly degrade performance to achieve even modest levels of generalization. In this work, we propose a framework for zero-shot generalization in agile flight for RL-based drone racing. By combining task-aware switching based on learning progress with a physically informed procedural track generator, the framework produces a fast and robust generalist policy without test-time adaptation. Our method achieves strong zero-shot performance across a wide range of unseen racetracks in the real world, demonstrating a 7.4x improvement in generalization over the state-of-the-art approaches, while maintaining competitive racing speeds. We validate our method&#x27;s results in both simulation and real-world settings, including a challenging vision-based, end-to-end control setting that operates without explicit state estimation, where all prior approaches fail to generalize.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 drone, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance</h2>
+              <p class="meta">Hang Yu, Ye Jin, Alessandro Canevaro, Julian Schmidt, Julian Jordan, Peizheng Li, Marc Kaufeld, Silvan Lindner, Johannes Betz, Wilhelm Stork · arXiv cs.RO · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26017v2" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26017v2" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>In autonomous driving, diffusion-based planners have emerged as a promising paradigm for robust motion planning in dense and interactive traffic, as they can effectively model diverse driving behaviors. However, their inherent stochasticity often requires explicit guidance during denoising to ensure safety and route adherence for robust closed-loop execution. Existing guidance typically relies on sparse, entity-centric geometric queries or post-hoc refinement, yielding limited situational awareness and fragile performance in interactive scenes. To address this issue, we propose G2DP (Grid-Guided Diffusion Planning), a diffusion-based planner that directly enforces dense environmental constraints through inference-time guidance. Specifically, G2DP constructs a differentiable spatio-temporal cost volume by fusing probabilistic future occupancy distributions with a route-progress map. By formulating this volume as a continuous safety energy functional, it injects dense gradients directly into the denoising loop, actively steering trajectory generation toward collision-free and progress-optimal regions. Extensive closed-loop evaluations show that G2DP achieves state-of-the-art performance on nuPlan, outperforming the strongest imitation-learning baseline by +7.2 points in reactive score. It further maintains top scores in zero-shot transfers to interPlan and DeepScenario benchmarks, with collision avoidance improving by +10.15 over the unguided approach on interPlan. These results demonstrate that spatio-temporal cost grids serve as an effective representation for robust guidance in diffusion-based planning.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 spatio-temporal, collision avoidance。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>NavIsaacLab: Generating Realistic Crowd via Parallel Robot Learning for Benchmarking Human-aware Navigation</h2>
+              <p class="meta">Bingyi Xia, Han Bao, Jingyu Zhu, Hanjing Ye, Yuhan Pang, Guangcheng Chen, Liang Lin, Wenjun Xu, Jiankun Wang · arXiv cs.RO · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26265v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26265v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Robot autonomous navigation that accounts for surrounding human activities is crucial for ensuring both safety and natural human-robot interaction in real-world environments shared by humans and robots. Simulation of complex and diverse navigation scenarios serves as the foundation for training reliable robot navigation policies and accurately evaluating the performance of algorithms, offering an efficient alternative to manual supervision of real data. However, current human-aware navigation research faces significant challenges due to the scarcity of diverse, high-quality scene data. Existing simulation platforms often rely on handcrafted rules to approximate pedestrian behavior and lack the capability to provide extensive sensor signals, typically assuming perfect observations. To address these limitations, this paper presents NavIsaacLab, a comprehensive framework for benchmarking and training human-aware navigation policies through physics-based and photo-realistic simulations of pedestrians and scenes. Based on Isaac Lab, the proposed framework employs photo-realistic scene rendering capabilities and supports parallel simulation on GPU, delivering real-time and accurate 3D visual feedback to robots. To enhance the realism of human behavior, a data-driven approach is employed that incorporates a trajectory diffusion model and an adversarial motion learning controller, enabling controllable, physics-based pedestrian simulation. Furthermore, the integration of diverse cross-scale scenes provides a robust benchmark for state-of-the-art human-aware navigation methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 robot learning, autonomous navigation。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision</h2>
+              <p class="meta">Mobin Habibpour, John Spodnik, Niloufar Alipour Talemi, Fatemeh Afghah · arXiv cs.CV · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27128v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27128v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Wildfire monitoring from UAVs requires reliable reasoning over complex aerial scenes, where smoke, scale variation, and occlusions often limit RGB-only interpretation. We introduce FlameVQA, a multiple-choice visual question answering benchmark for UAV-based wildfire intelligence built on FLAME 3, leveraging paired RGB imagery and radiometric thermal TIFFs for temperature-grounded, safety-critical reasoning. FlameVQA includes 34 multiple-choice questions per image spanning six operational capability groups, covering tasks such as detection, localization, distribution/coverage estimation, cross-modal reasoning, and flight planning. To ensure label reliability, we combine MLLM-assisted annotation with deterministic thermal rules and cross-question consistency checks, followed by human auditing. We also evaluate representative MLLMs on FlameVQA to provide baselines for future work. Results show strong performance when explicit cross-modal cues are available, but notable failures on presence detection under heavy smoke and on coverage estimation. These findings suggest that current MLLMs require domain-specific adaptation to better support disaster and wildfire monitoring. The dataset and benchmark code are open-source at github.com/mobiiin/WildFire_VQA</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>PhysiFormer: Learning to Simulate Mechanics in World Space</h2>
+              <p class="meta">Yiming Chen, Yushi Lan, Andrea Vedaldi · arXiv cs.CV · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27364v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27364v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>We present PhysiFormer, a diffusion transformer for physically-plausible 3D object motion. Unlike video world models that operate in view-dependent pixel space, PhysiFormer represents objects as 3D meshes expressed in world coordinates. Given the initial vertex positions and velocities, as well as object material type, rigid or elastic, the model samples future vertex trajectories. While related neural physics approaches build on ad-hoc latent spaces or explicitly enforce rigidity and causality, PhysiFormer shows that excellent results can be obtained without any such inductive biases, by casting vertex trajectory prediction as a single denoising diffusion process directly in world coordinates. The probabilistic formulation captures uncertainty in the learned dynamics, enabling diverse plausible futures from initial conditions, making this framework potentially useful for applications with unobserved uncertainty. The model features attention factorised over time, space, and objects for efficiency, enabling permutation-invariant multi-object reasoning without needing explicit object encoding. Trained on over 100k simulated trajectories, PhysiFormer generates rigid and elastic mechanics, and generalises to mixed-material settings, unseen real-world geometries, and larger object counts. It substantially outperforms autoregressive baselines in trajectory accuracy, rigidity preservation, and momentum-based physical consistency. Our results position coordinate-space diffusion as a promising step toward view-invariant, geometry-aware world modelling for robotics, graphics, and physical design. Visualisations, code, and models are available at https://yimingc9.github.io/physiformer.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 trajectory prediction, world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>Semantic Early-Stopping for Iterative LLM Agent Loops</h2>
+              <p class="meta">Sahil Shrivastava · arXiv cs.AI · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27009v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27009v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Multi-agent large language model (LLM) loops, for example a Writer that drafts and a Critic that revises, are almost always terminated by a fixed iteration cap (max_iterations). This is a syntactic kill-switch: it is blind to whether the answer is still improving, so it over-spends tokens on easy inputs and truncates hard ones. We study semantic early-stopping: the loop halts when consecutive draft embeddings stop changing in meaning (cosine distance with a patience window) and the answer&#x27;s measured quality stops improving. Our work makes three contributions. First, an honest theoretical footing: we prove deterministic termination and well-definedness and machine-check these claims, while treating the convergence of the distance sequence as an empirically tested conjecture rather than a (previously over-claimed) Banach contraction. Second, a judge-efficient evaluation protocol: we generate each question&#x27;s full trajectory once, replay every stopping policy over the identical drafts, and cache every LLM-judge call, yielding a strictly paired efficiency-versus-quality comparison at low cost; we further separate operational tokens (charged to a policy) from evaluation tokens (a measurement instrument). Third, an empirical study on multi-hop retrieval-augmented question answering (HotpotQA). On the 60-question test split, a judge-free semantic stopper reduces operational tokens by 38% relative to max_iterations at parity quality (Delta-IS = -0.004, p = 0.81), whereas the full quality-gated variant is counter-productive because its per-round judging dominates cost. An oracle that selects the best round attains +0.115 Information Score over every practical policy (p ~ 4e-11), reframing the problem from &quot;when to stop&quot; (easy) to &quot;which round is best&quot; (open).</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds</h2>
+              <p class="meta">Jiaming Bian, Bingliang Li, Yuehao Wu, Pichao Wang, Zhi Wang, Hailan Ma, Huadong Mo, Zhenhong Sun · arXiv cs.AI · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26964v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26964v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>As embodied AI and world models increasingly operate in dynamic 3D environments, visual perception must move beyond passively interpreting given observations toward actively deciding what to observe. We study this problem through camera planning in dynamic 3D story worlds, where the camera must not only generate smooth motion, but also decide what visual evidence should be acquired before it moves. We formulate this capability as Narrative-Grounded World Visual Attention, where the camera acts as an embodied observer that determines what to observe, how to compose the observation, and how to shift attention over time under narrative intent and physical 3D constraints. To realize this capability, we propose Look-Before-Move, a camera planning framework that separates observation specification from motion execution. It first builds a Semantic Observation Contract to convert directorial intent into executable visual constraints, then performs Monte Carlo Viewpoint Search to find narrative-compliant and geometrically feasible viewpoints, and finally applies Semantic Trajectory Grounding to connect selected viewpoints into continuous, collision-aware, and temporally coherent camera motion. We further construct a dynamic 3D Story World Benchmark based on StoryBlender, covering 50 stories, 457 scenes, and 1585 shots with animated characters, semantic scene configurations, and executable 3D environments. Experiments show that our framework improves subject perception, intent consistency, and trajectory quality over representative baselines, demonstrating the importance of organizing visual attention before generating camera motion.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 embodied ai, world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>Proposal-Conditioned Latent Diffusion for Closed-Loop Traffic Scenario Generation</h2>
+              <p class="meta">Shubham Vaijanath Phoolari, Aleyna Kara, Christoph Lauer, Steven Peters · arXiv cs.RO · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27123v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27123v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Closed-loop traffic simulation remains challenging because it must generate interactive multi-agent behaviors that are scene-consistent and controllable throughout rollout. Prior diffusion-based approaches achieve strong realism, but their computational cost can hinder deployment in time-constrained replanning loops for autonomous vehicle planning and simulation. We present a diffusion-based scenario generation framework conditioned on instance-centric scene context and multimodal proposal priors, with optional test-time guidance for shaping safety-critical behaviors. A compact action-latent representation and proposal-based initialization improve sampling efficiency and reduce per-step runtime without retraining. Experiments on the Waymo Open Motion Dataset demonstrate a favorable balance among realism, safety, and controllability across diverse interactive scenarios, while showing that test-time guidance enables systematic trade-offs among competing objectives.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>Autonomous Video Generation with Counterfactual Controllability for Self-Evolving World Models</h2>
+              <p class="meta">Xin Wang, Wenxuan Liu, Tongtong Feng, Wenwu Zhu · arXiv cs.CV · 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.24152v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.24152v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Existing literature claims that video generation essentially is world modelling. On the one hand, the claim is productive because it pushes generative AI beyond static images and toward temporally extended physical scenes. On the other hand, this claim dangerously relies on the belief that scaling visual prediction alone will automatically yield physical agents. We prefer a more accurate statement: video generation models learn a partial, implicit spatiotemporal world model, but not a fully grounded or controllable one. The reason is as follows: a model may generate a plausible video of a drone crossing a forest or a robot arm manipulating a cup, yet still fail to know which variables are controllable, which constraints belong to a particular body and which futures remain valid under intervention. The frontier in essence is not predictive realism alone, instead it emphasizes a self-evolving generative nature that requires the decisive criterion to be counterfactual controllability: the capability of asking what would happen under an action, to test whether the generated future can survive embodiment constraints and to feed the resulting action knowledge back into future imagination (generation). Therefore, in this paper we present a new perspective, i.e., autonomous video generation with counterfactual controllability is one promising way to realize self-evolving world models.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 drone, world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>Knowledge-augmented Agentic AI for Mental Health Medication Information Seeking</h2>
+              <p class="meta">Huizi Yu, Jian Liu, Wenkong Wang, Lingyao Li, Jiayan Zhou, Zhaoqian Xue, Xiang Li, Xinxin Lin, Zhiying Liang, Zhuoru Wu, Siyuan Ma, Xin Ma, Lizhou Fan · arXiv cs.AI · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26205v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26205v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Patients increasingly seek medication information online, yet safety knowledge for psychiatric drugs is split between regulatory adverse-event records, which are authoritative but abstract, and patient narratives, which are experience-near but unvalidated. Integrating them without conflating evidence and anecdote is especially consequential in psychiatry, where poorly contextualised information can amplify fear, nocebo responses, and non-adherence. Here we develop a provenance-aware, knowledge-graph-based multi-agent framework unifying 466,525 Reddit posts, 60,782 WebMD reviews, and twenty years of U.S. FDA Adverse Event Reporting System records for nine antidepressants. A large-language-model entity-recognition pipeline benchmarked against physician annotations reached highest F1 scores of 0.969 for medications and 0.973 for conditions. The two community platforms were far more concordant with each other (overlap up to a Jaccard similarity of 0.905) than with regulatory reports, indicating that patient-generated data form a partly independent safety signal. For sertraline, many adverse events appeared in community sources hundreds of days before the corresponding FDA date. A Neo4j knowledge graph grounded in ATC-N, ICD-10, and MedDRA vocabularies preserves provenance, keeping every claim traceable and regulatory facts distinct from patient experience. These results establish source-aware integration as a route to more auditable psychiatric medication information, with usefulness and patient benefit to be tested prospectively.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>Low Variance Trust Region Optimization with Independent Actors and Sequential Updates in Cooperative Multi-agent Reinforcement Learning</h2>
+              <p class="meta">Bang Giang Le, Viet Cuong Ta · arXiv cs.LG · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25526v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25526v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Cooperative multi-agent reinforcement learning assumes each agent shares the same reward function and can be trained effectively using the Trust Region framework of single-agent. Instead of relying on other agents&#x27; actions, the independent actors setting considers each agent to act based only on its local information, thus having more flexible applications. However, in the sequential update framework, it is required to re-estimate the joint advantage function after each individual agent&#x27;s policy step. Despite the practical success of importance sampling, the updated advantage function suffers from exponentially high variance problems, which likely result in unstable convergence. In this work, we first analyze the high variance advantage both empirically and theoretically. To overcome this limitation, we introduce a clipping objective to control the upper bounds of the advantage fluctuation in sequential updates. With the proposed objective, we provide a monotonic bound with sub-linear convergence to $ε$-Nash Equilibria. We further derive two new practical algorithms using our clipping objective. The experiment results on three popular multi-agent reinforcement learning benchmarks show that our proposed method outperforms the tested baselines in most environments. By carefully analyzing different training settings, our proposed method is highlighted with both stable convergence properties and the desired low advantage variance estimation. For reproducibility purposes, our source code is publicly available at https://github.com/giangbang/Low-Variance-Trust-Region-MARL.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>Agentic Knowledge Tracing: A Multi-Agent LLM Architecture for Stealth Assessment of Financial Literacy in Serious Games</h2>
+              <p class="meta">Gabriel Santos, Rita Julia, Marcelo Nascimento · arXiv cs.AI · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25358v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25358v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Assessing financial literacy during gameplay without disrupting the learning experience remains a key challenge in serious games for education. We present the Agentic BKT pipeline, a multi-agent large language model architecture for stealth assessment of financial competencies from open-ended gameplay events. The pipeline processes events from a 2D platformer serious game aligned with the OECD/INFE financial literacy framework through four phases: (1) the game captures every player decision as a structured event log; (2) an LLM event classifier labels each action on a four-point rubric validated against three domain experts (Fleiss kappa = 0.624, substantial agreement); (3) four domain-specific agents specializing in risk mitigation, investing, spending, and credit management perform session-level reasoning over behavioral trajectories, feeding per-competency Bayesian Knowledge Tracing that estimates mastery within each domain; and (4) an expert judge agent synthesizes the domain-level estimates into an overall mastery score. Evaluated with 193 K-12 participants across 264 game sessions, the Agentic BKT pipeline yields mastery estimates significantly correlated with learning gain (r = 0.276, p = 0.0001) and post-test scores (r = 0.333, p &lt; 0.0001) while showing no correlation with pre-test scores, providing both convergent and discriminant validity. The multi-agent approach approximately triples the predictive validity of a single-LLM baseline (r = 0.095, not significant) in this study, demonstrating that domain decomposition and session-level reasoning play a central role in capturing the multidimensional nature of financial literacy from gameplay</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Compromising Contextual Fidelity</h2>
+              <p class="meta">Yuanhe Zhao, Tianyu Zhang, Huafei Xing, Derek F. Wong, Jianbin Li, Tao Fang · arXiv cs.CL · 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.24623v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.24623v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Retrieval-Augmented Generation enhances large language models by incorporating external knowledge, but deploying it in sensitive scenarios risks privacy leakage via malicious prompts. To address this, we propose a multi-agent framework that sanitizes retrieved content through semantic rewriting. By employing three specialized agents for privacy extraction, semantic analysis, and reconstruction, our approach collaboratively removes sensitive identifiers while preserving the semantic core. We evaluate the framework on the ChatDoctor and Wiki-PII datasets across six large language models. Experimental results demonstrate a significant reduction in privacy leakage under targeted attacks. For instance, we reduced targeted information exposure in LLaMA-3-8B from 144 instances in the baseline to just 1. Furthermore, we maintain strong contextual fidelity with a BLEU-1 score of 0.122, outperforming the existing SAGE method&#x27;s 0.117. Finally, the framework operates as an asynchronous preprocessing module, introducing no additional latency to online inference, as all rewriting is executed as a one-time offline preprocessing step. To promote reproducibility, the source code of this work is publicly available at https://github.com/foursoils/Privacy-Preserving-RAG.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>UAV-MapFusion: RTK-Aligned Uncertainty-Aware Coarse-to-Fine Multi-Session UAV Mapping</h2>
+              <p class="meta">Feng Pan, Chunran Zheng, Bing Xue, Yukang Cui, Jiayu Wen, Zhiyu Chen, Wei Wang · arXiv cs.RO · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26928v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26928v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Large-scale point cloud maps are essential for robotics and spatial intelligence tasks. UAVs provide an efficient means for large-scale map acquisition; however, due to limited flight endurance and onboard storage, mapping a large-scale scene within a single flight remains difficult. Existing multi-session map merging methods can extend the mapping range, yet in UAV scenarios they still struggle to simultaneously suppress long-range drift and preserve local geometric accuracy. To address this issue, an uncertainty-aware multi-session point cloud map merging and coarse-to-fine optimization system is proposed. The proposed method first performs initial multi-session map merging based on a scene graph, and then incorporates RTK observations through an RTK spatiotemporal alignment module, where temporal offsets are estimated using Dynamic Time Warping (DTW), and continuous RTK constraints are recovered using Multi-Output Gaussian Processes (MOGP) under incomplete sampling and frame dropouts. On this basis, a unified uncertainty-aware factor graph is constructed, and local geometric accuracy is further improved through iterative plane-factor refinement. Experiments on real-world datasets validate the effectiveness and robustness of the proposed method. To facilitate further research and development in the community, our code and dataset will be publicly released.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>Learning Adversarial Augmentation Policies for Robust Garlic Seedling Detection</h2>
+              <p class="meta">Soeun Lee, Chanho Kim, Yeji Kang, YoungKi Hong, Byeongkeun Kang · arXiv cs.CV · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26828v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26828v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Accurate seedling detection during early growth stages is essential for timely replanting and effective crop management in precision agriculture. However, existing studies are mostly evaluated under relatively stable imaging conditions, such as UAV imagery or greenhouse environments, leaving robust detection under severe and spatially heterogeneous illumination in ground-based outdoor monitoring insufficiently explored. In addition, many illumination-robust detection methods rely on additional enhancement or feature-extraction modules, which increase inference-time overhead and are not tailored to seedling detection and downstream missing seedling localization. To address these gaps, we construct a new garlic seedling dataset captured using a ground-based monitoring platform under real outdoor field conditions with highly variable illumination. We further propose an illumination-robust seedling detection framework based on adversarial augmentation policy learning. The proposed method jointly optimizes a stochastic augmentation policy agent and an object detector, enabling the detector to learn robust representations under challenging visual conditions. A structural penalty is introduced to prevent unrealistic distortions while encouraging challenging augmentations during training. Extensive experiments show that the proposed approach achieves an AP$_{50}$ of 91.6%, improving the baseline by 0.9 percentage points and outperforming the previous best-performing method by 0.2 percentage points. For downstream missing seedling localization, it achieves 75.0% precision and a 67.0% F1-score, improving the baseline by 4.8 and 2.0 percentage points, respectively. These results demonstrate the effectiveness of the proposed framework for practical ground-based agricultural monitoring under complex outdoor lighting conditions without additional inference-time computational overhead.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>Stagnant Neuron: Towards Understanding the Plasticity Loss in Multi-Agent Reinforcement Learning Value Factorization Methods</h2>
+              <p class="meta">Zhengzhu Liu, Zeming Gao, Haoyuan Qin, Jiawei Hu, Junhao Wu, Miao Zhu, Haipeng Zhang, Chennan Ma, Siqi Shen, Cheng Wang · arXiv cs.LG · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25335v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25335v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Multi-Agent Reinforcement Learning (MARL) value factorization methods can suffer from a loss of plasticity, gradually failing to adapt when transferring to new task instances. We trace this issue to stagnant neurons, units whose gradient updates become negligibly small relative to their weights, thereby hindering learning. While existing plasticity injection methods exist, they prove ineffective for such neurons. To address this, we propose Knowledge-retentive Neuron-level PlastIcity Focusing InjEction (KNIFE), a novel method that directly targets stagnant neurons. KNIFE replaces each stagnant neuron with a composite unit comprising three specialized components: a frozen knowledge neuron to preserve acquired knowledge, a re-initialized active neuron to restore learning capacity, and a compensation neuron to ensure the combined output matches the original, thus maintaining previous learned cooperation knowledge. Extensive experiments on SMACv2, predator-prey, and matrix games demonstrate that KNIFE significantly outperforms state-of-the-art plasticity injection methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>GCT-MARL: Graph-Based Contrastive Transfer for Sample-Efficient Cooperative Multi-Agent Reinforcement Learning</h2>
+              <p class="meta">Animesh Animesh, Satheesh K Perepu, Kaushik Dey · arXiv cs.LG · 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25073v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25073v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>In cooperative multi-agent reinforcement learning (MARL), from a deployment perspective, it is challenging and expensive to train agents from scratch for each new environment or task. In this work, we propose GCT-MARL, a transfer learning framework that builds on the multi-view graph contrastive backbone of MAIL and augments it with a per-view, adaptively weighted alignment loss and a two-phase training protocol specifically designed for transfer across populations of varying sizes and compositions. We empirically demonstrate that the proposed framework markedly accelerates convergence on the target task relative to from-scratch training, in both homogeneous (within-faction, varying N) and heterogeneous (cross-faction and mixed unit-type) transfer scenarios. Furthermore, we show that the framework naturally supports continual learning by sequentially chaining the two-phase transfer protocol across a series of related tasks. Overall, this work provides a unified approach to mitigating key limitations in current MARL transfer methods with new insights at both methodological and empirical levels.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>ASALT: Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning</h2>
+              <p class="meta">Anurag Akula, Satheesh K. Perepu, Abhishek Sarkar, Kaushik Dey · arXiv cs.AI · 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.24601v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.24601v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Multi-agent reinforcement learning (MARL) addresses the problem of training multiple agents that pursue collaborative, competitive, or mixed objectives. Prior work has investigated transfer learning between source and target domains in MARL; however, the majority of existing approaches impose the constraint that the dimensionalities of the observation space and the global state space must be identical across domains. In this paper, we introduce a method that explicitly accommodates mismatched state-space dimensionalities between source and target domains. The proposed approach, ASALT, incorporates both observation-level and state-level adapters that map the target-domain observations and global states into a shared embedding space, thereby enabling more effective transfer of knowledge across both actors and critics. These adapters can generate embeddings that support efficient strategy transfer across heterogeneous domains. Experimental results on multiple configurations in standard benchmark environments demonstrate that ASALT surpasses existing baselines in terms of sample efficiency and global return in cooperative settings, but its effectiveness depends on the degree of mismatch between source and target domains. Furthermore, our findings indicate that ASALT mitigates negative transfer, which frequently constitutes a major obstacle when transferring policies between domains with differing observation and action spaces.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>PhysEditWorld: A Large-Scale Dataset Toward Physics-Editable World Models</h2>
+              <p class="meta">Bin Hu, Yanwen Ma, Jiehui Huang, Ziliang Zhang, Haoning Wu, Ruicheng Zhang, Yaokun Li, Zijun Wang, Yuechen Zhang, Chun-Mei Tseng, Hanhui Li, Shengju Qian, Jun Zhou, Kaipeng Zhang, Xiaodan Liang, Jiaya Jia, Xiu Li · arXiv cs.CV · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26694v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26694v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Recent game world models can synthesize visually plausible, action-conditioned rollouts. However, their interaction behaviors often remain limited to exploratory or wandering trajectories, and physical dynamics are typically learned as implicit correlations from data rather than as controllable variables. This limitation hinders their applicability to authored game environments, where physical rules are deliberately designed and require explicit manipulation. We introduce PhysEditWorld, a multimodal dataset with physical parameters, with a primary focus on gravity in this initial version. At its core, PhysEditWorld is built upon a replay paradigm implemented with a UE5 replay-and-rendering pipeline. Each scenario records a normalized action trace and replays the same initial state, character controller, action sequence, and camera policy under multiple gravity configurations, enabling controlled and attributable physical variation. PhysEditWorld contains 12 cinematic UE5 scenes, over 100 hours of gameplay interactions, and more than 60 million rendered rollout frames. Each sample provides synchronized multimodal signals, including RGB, depth, normals, audio, action traces, camera trajectory, engine states, semantic annotations, and explicit gravity labels. We further conduct initial utility studies on both generative video models and world understanding models, demonstrating that PhysEditWorld enables improved gravity-faithful dynamics modeling, enhances consistency under physical edits, and provides a scalable foundation for controllable world modeling research.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>

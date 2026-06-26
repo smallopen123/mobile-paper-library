@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "49d32cb85ae414e8",
+      "title": "LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction",
+      "url": "http://arxiv.org/abs/2606.26661v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "eef6c9a1edf3ce67",
+      "title": "Bridging Performance and Generalization in Reinforcement Learning for Agile Flight",
+      "url": "http://arxiv.org/abs/2606.27348v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "e7533df7d47a0acd",
+      "title": "G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance",
+      "url": "http://arxiv.org/abs/2606.26017v2",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "e7dacfc931f515a4",
+      "title": "NavIsaacLab: Generating Realistic Crowd via Parallel Robot Learning for Benchmarking Human-aware Navigation",
+      "url": "http://arxiv.org/abs/2606.26265v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "bc9c2e3e8114f1ec",
+      "title": "FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision",
+      "url": "http://arxiv.org/abs/2606.27128v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "440e434f6e5ae886",
+      "title": "PhysiFormer: Learning to Simulate Mechanics in World Space",
+      "url": "http://arxiv.org/abs/2606.27364v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "95bdc8b1adaab315",
+      "title": "Semantic Early-Stopping for Iterative LLM Agent Loops",
+      "url": "http://arxiv.org/abs/2606.27009v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "0ecdd86bd1a7c188",
+      "title": "Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds",
+      "url": "http://arxiv.org/abs/2606.26964v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "fccc59eebd17da17",
+      "title": "Proposal-Conditioned Latent Diffusion for Closed-Loop Traffic Scenario Generation",
+      "url": "http://arxiv.org/abs/2606.27123v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "11c244ea99cdab31",
+      "title": "Autonomous Video Generation with Counterfactual Controllability for Self-Evolving World Models",
+      "url": "http://arxiv.org/abs/2606.24152v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "d188423e72a6c4bb",
+      "title": "Knowledge-augmented Agentic AI for Mental Health Medication Information Seeking",
+      "url": "http://arxiv.org/abs/2606.26205v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "d1f511cb937370d9",
+      "title": "Low Variance Trust Region Optimization with Independent Actors and Sequential Updates in Cooperative Multi-agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.25526v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "45a4fd86c8a536c7",
+      "title": "Agentic Knowledge Tracing: A Multi-Agent LLM Architecture for Stealth Assessment of Financial Literacy in Serious Games",
+      "url": "http://arxiv.org/abs/2606.25358v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "043c340d6a4a6b01",
+      "title": "Privacy-Preserving RAG via Multi-Agent Semantic Rewriting: Achieving Confidentiality Without Compromising Contextual Fidelity",
+      "url": "http://arxiv.org/abs/2606.24623v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "558f0e759b1e65fe",
+      "title": "UAV-MapFusion: RTK-Aligned Uncertainty-Aware Coarse-to-Fine Multi-Session UAV Mapping",
+      "url": "http://arxiv.org/abs/2606.26928v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "0121d1b49443b5b0",
+      "title": "Learning Adversarial Augmentation Policies for Robust Garlic Seedling Detection",
+      "url": "http://arxiv.org/abs/2606.26828v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "4aa4256262b78f34",
+      "title": "Stagnant Neuron: Towards Understanding the Plasticity Loss in Multi-Agent Reinforcement Learning Value Factorization Methods",
+      "url": "http://arxiv.org/abs/2606.25335v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "b3d64497a6703181",
+      "title": "GCT-MARL: Graph-Based Contrastive Transfer for Sample-Efficient Cooperative Multi-Agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.25073v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "f7664272360815f4",
+      "title": "ASALT: Adaptive State Alignment for Lateral Transfer in Multi-agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.24601v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
+      "key": "77cdcd25fcc6ad3e",
+      "title": "PhysEditWorld: A Large-Scale Dataset Toward Physics-Editable World Models",
+      "url": "http://arxiv.org/abs/2606.26694v1",
+      "sent_at": "2026-06-26T05:07:08.578371+00:00"
+    },
+    {
       "key": "86093412d0b27985",
       "title": "Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound",
       "url": "http://arxiv.org/abs/2606.25978v1",
