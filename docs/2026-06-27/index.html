@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-06-27</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-06-27 · 20 篇论文 · 免费模式 · 手机阅读版</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前为无 API 免费模式：页面提供英文摘要、PDF 链接、规则相关性和阅读建议。中文翻译可使用安卓浏览器自带网页翻译完成。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>1000 Rallies: An Event-Camera Dataset and Real-Time Learned Ball-State Estimation for Robotic Table Tennis</h2>
+              <p class="meta">Raphaela Kreiser, Asude Aydin, Yin Bi, Claudio Fanconi, Peter Dürr, Naoya Takahashi · arXiv cs.RO · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25620v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25620v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Robotic table tennis has emerged as a compelling benchmark for real-time robotic perception due to its fast ball dynamics and stringent timing requirements. Accurate, high-frequency, and low-latency ball state estimation is critical for reliable trajectory prediction and timely control. Traditional frame-based cameras face an inherent trade-off: low frame rates leave temporal blind spots that miss fast-moving objects and high frame rates raise data and computational cost. Event cameras instead offer microsecond temporal resolution and, under sufficient illumination, remain largely free of motion blur even at high ball speeds. However, the community lacks large-scale datasets to develop and benchmark event-based perception in realistic sports scenarios. We address this gap by introducing the first large-scale event-camera dataset for table tennis, comprising over 1000 rallies from a diverse group of players ranging from amateurs to elite-level athletes. Each recording captures the event stream alongside 14 synchronized high-speed frame-based cameras at 200 FPS, which we use to produce 1 kHz pseudo ground-truth labels for ball position, velocity, and spin. Building on this dataset, we train a convolutional neural network robust to background player motion that jointly estimates the ball&#x27;s position and velocity in the image-plane from events. Treating the predicted velocity as an additional measurement in the Kalman filter reduces bounce-point prediction error by 36% relative to a position-only baseline. Finally, we close the perception-action loop by integrating the event-based system with a Stäubli robotic arm, enabling the first real-time human-robot table tennis rallies driven by event-based perception.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 trajectory prediction。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>ISAC for Sea-Air Networks: Predictive Beam Tracking under Sea Induced Disturbances</h2>
+              <p class="meta">Rui Zhang, Fuwang Dong, Wei Wang, Zhen Du · arXiv eess.SY · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26569v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26569v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>In sea-air communication networks composed of an uncrewed aerial vehicle (UAV) and an uncrewed surface vehicle (USV), the extended target characteristics and three degree of freedom motion of the USV under sea induced disturbances cause beam misalignment in the UAV&#x27;s tracking of the USV. To address these issues, this paper proposes a predictive beam tracking scheme based on integrated sensing and communication (ISAC) for sea-air networks. We develop a wide and narrow beam switching scheme based on sub-array selection, where a time allocation factor is optimized to balance robust state sensing in the wide beam mode and high-rate communication in the narrow beam mode. Specifically, a wide beam mode provides full USV coverage and state sensing, while a narrow beam mode exploits the estimated state for high-gain communication with the communication receiver (CR) mounted on the USV. To characterize the CR motion, a sea-air state evolution model is derived by jointly considering the surge, sway, yaw, and sea induced disturbances of the USV. For the extended target USV, the measurement equation is constructed from multiple scatterer observations, with the measurement noise caused by sea clutter modeled, and an extended Kalman filter (EKF) based CR state prediction and estimation method is developed. In addition, the effect of sea clutter on sensing accuracy is incorporated into the time allocation optimization problem to adjust the time of the wide beam mode. Simulation results demonstrate that the proposed scheme achieves higher tracking accuracy than the state-of-the-art benchmark schemes.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>Layered Outer-Loop Control for Disturbance-Robust Multi-Waypoint UAV Arrival</h2>
+              <p class="meta">Runfeng Ling · arXiv cs.RO · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26315v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26315v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Disturbance-robust UAV position control is easy to demonstrate in benign simulations but much harder to make fast in approach, well behaved near the target, and credible beyond a single benchmark. This letter presents a layered terminal-control architecture for multi-waypoint UAV position regulation together with a staged evaluation across PyBullet, PX4/Gazebo, and hardware. Phase I uses a PyBullet benchmark with stochastic wind for rapid structural selection, identifying a controller core that separates smooth approach generation, persistent-bias compensation, and supervised near-target terminal regulation. Phase II carries only that main architecture into a more demanding PX4/Gazebo closed loop, where the outer-loop controller acts through a cascaded flight stack with delay-sensitive settling and stronger transit-to-hover coupling. This step exposes which benchmark gains survive autopilot-mediated dynamics and which refinements collapse once the loop becomes more deployment-like. In Phase I, the bare controller attains 0.024 m mean late-stage wind error. In Phase II, the final controller is selected using a transfer-oriented rule emphasizing absence of benchmark priors, cross-scenario balance, and deployable supervisory logic. Strict is used as the primary reporting reference; the supplementary retrospective Grace analysis shows that part of the residual failure set is sensitive to completion semantics rather than gross waypoint-miss behaviour. The evaluation is completed on one Vicon-tracked Tello stack through a two-level hardware study. Taken together, the results suggest that benchmark success becomes more informative when the main controller design is separated from benchmark-specific refinement and remains defensible under harder closed-loop evaluation.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>Intracranial Aneurysm Classification and Segmentation via Tri-Axial ROI and Multi-Task Learning</h2>
+              <p class="meta">Pengcheng Shi, Kaiyuan Yang, Houjing Huang, Jiawei Chen, Yan Lu, Jiaqi Liu, Murong Xu, Bjoern Menze, Xinglin Zhang · arXiv cs.CV · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26706v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26706v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Intracranial aneurysms are often asymptomatic until rupture, which carries high mortality. Rupture risk assessment and treatment planning depend on both aneurysm morphology and anatomical location, yet existing automated methods remain limited to binary detection without fine-grained anatomical classification or multi-class segmentation. We present a multi-task framework that simultaneously performs multi-label classification, multi-class aneurysm segmentation, and multi-class vessel segmentation across 13 anatomical locations and four imaging modalities (CTA, MRA, T2, T1-post). Our two-stage approach combines a fast 2D tri-axial Region of Interest (ROI) extraction method with a 3D multi-task nnU-Net backbone. A dual-decoder design mitigates the extreme volume imbalance between aneurysm and vessel classes, while cross-attention pooling and modality-specific auxiliary heads improve feature learning across heterogeneous inputs. Our two-fold ensemble achieved 2nd place in the RSNA 2025 Intracranial Aneurysm Detection challenge. Code, model weights, and a 3D Slicer plugin are publicly available.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 risk assessment。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>Risk-Aware Selective Multimodal Driver Monitoring with Driver-State World Modeling</h2>
+              <p class="meta">Daosheng Qiu, Haozhuang Chi, Hao Su, Shu Long, Xinyue Miao, Yongle Dong, Wei Zhang · arXiv cs.RO · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26922v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26922v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Continuous driver monitoring in automated vehicles requires low-latency inference while avoiding unsafe decisions under uncertain driver states. Large vision-language models provide broad multimodal priors, but their latency and limited reliability in this setting make them unsuitable as always-on in-cabin monitors. We propose a cost-aware selective inference framework for deployable multimodal driver monitoring. The core system is a lightweight RGB-physiological student that combines in-cabin visual observations with window-level HR/EDA signals, and a learned gate that decides when to accept the fast prediction or abstain for safety intervention. Additional controls show that the learned scores contain sample-level information beyond scenario priors, while exact physiological synchronization remains a limitation. To incorporate predictive evidence, we further study a compact driver-state world modeling module that rolls out latent driver-state features and estimates future fast-model errors and counterfactual system-level action costs. On scenario-induced driver-demand recognition, the RGB-physiological student improves over RGB-only and physiology-only baselines, reaching 0.7440 Macro-F1 and 0.9099 balanced accuracy with 11.39M parameters and 3.08ms inference latency. Cost-aware selective inference reduces unsafe false negatives from 17.37% under always-fast inference to approximately 5% across seeds, while maintaining deployment-level latency. While driver-state world modeling offers valuable predictive signals, worst-group evaluations highlight persistent operating-point calibration drift. Ultimately, reliable edge driver monitoring requires advancing not only perception backbones, but also risk-aware selective control and group-robust calibration.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>Fast LeWorldModel</h2>
+              <p class="meta">Yuntian Gao, Xiangyu Xu · arXiv cs.LG · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26217v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26217v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Joint-Embedding Predictive Architectures (JEPAs), including recent LeWorldModel (LeWM), have become a promising foundation for reconstruction-free visual world models. For visual planning, however, LeWM evaluates candidate action sequences by repeatedly applying a local one-step latent transition model. This autoregressive rollout makes planning computationally expensive and exposes the predicted trajectory to accumulated latent errors as the horizon grows. We propose Fast LeWorldModel (Fast-LeWM), a fast latent world model that replaces repeated local rollout with action-prefix prediction. Given the current latent and a candidate action sequence, Fast-LeWM encodes its prefixes and predicts the future latents reached after executing those prefixes in parallel. By making action prefixes the basic prediction unit, Fast-LeWM directly models action effects accumulated to different extents over multiple horizons. This prefix-level supervision forces the model to learn how states continuously evolve under different action prefixes, rather than only fitting one-step state transitions. During planning, the predictor can use the last prefix token from the encoded action sequence to evaluate the corresponding future latent without explicitly rolling through each intermediate imagined state. Across multiple tasks, Fast-LeWM improves average success over LeWM while substantially reducing planning time, achieving lower open-loop latent loss whose growth becomes significantly slower as the rollout horizon increases.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>Resilient Output Containment under Undisclosed Leader Dynamics and Actuator Attacks</h2>
+              <p class="meta">Mohammadreza Nematollahi, Khashayar Khorasani, Nader Meskin · arXiv eess.SY · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27257v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27257v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>This work studies resilient output containment for heterogeneous linear multi-agent systems with actuator cyber-attacks over directed network topologies. The leaders generate bounded locally absolutely continuous trajectories; however, their dynamics, velocity bounds, and motion envelopes are undisclosed to the followers. The cyber-attack model includes state- and input-correlated, as well as bounded exogenous actuator false-data terms. A continuous two-layer adaptive control architecture is proposed. The first layer is a virtual-actuator reconfiguration layer that uses partial state measurements to compensate for actuator attacks in the local tracking-error dynamics. The second layer is a network interface that generates task-space commands via an adaptive interaction protocol. This protocol uses only neighbor-exchanged network-interface states whose dimensions match those of the plant output, and it does not require global graph knowledge for parameter tuning. For directed graphs, under a leader-rooted united spanning-tree condition, a nonsmooth Lyapunov analysis yields asymptotic containment at the command level. The physical outputs then converge to the leader convex hull up to a residual determined by the command-tracking local controllers. Simulation results using a network of quadrotors with damped suspended loads illustrate the performance of attack recovery and containment tracking.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Contexts</h2>
+              <p class="meta">Zhengyuan Liu, Stella Xin Yin, Min-Yen Kan, Nancy F. Chen · arXiv cs.CL · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27233v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.27233v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>We present a conceptual framework for analyzing dialogue in collaborative problem-solving contexts, with an emphasis on the emerging dynamics of human-AI and multi-agent collaboration. As intelligent systems become active agents capable of autonomous reasoning and strategic cooperation, understanding the dialogic interaction during collaborative problem solving is increasingly important for optimizing and evaluating such partnerships. Our framework addresses key limitations in current analytical approaches through a hierarchical two-layer coding scheme that integrates cognitive and non-cognitive problem solving with metacognitive regulatory mechanisms. We demonstrate its effectiveness and generalizability across nine datasets spanning multiple domains, and provide insights into how humans and agents coordinate their knowledge, skills, and efforts to solve complex problems, showing in particular that metacognitive regulation can be an essential discriminator of deeper collaboration.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems</h2>
+              <p class="meta">Changxin Lao, Fei Pan, Guozhuang Ma, Han Li, Huihuang Lin, Jijun Shi, Kangzhi Zhao, Kun Gai, Mo Zhou, Qinqin Zhou, Quan Chen, Ruochen Yang, Shifu Bie, Shuang Yang, Shuo Yang, Wenhao Li, Wentao Xie, Xiao Lv, Xuming Wang, Yijun Wang, Yiming Chen, Yusheng Huang, Zhongyuan Wang, Zibo Zhao, Zijie Zhuang, Baoning Xia, Chao Liu, Chaoyi Ma, Chubo He, Dawei Cong, Feng Jiang, Gang Wang, Guilin Xia, Hanwen Xu, Jiahong Xie, Jiahui Qiao, Jian Liang, Jiangfan Yue, Jing Wang, Jinghan Yang, Jinghui Jia, Kan Qin, Lei Wang, Ming Li, Peilin Song, Pengbo Xu, Qiang Luo, Ruiming Tang, Shiyang Liu, Shuxian Jin, Tao Wang, Tao Zhang, Xiang Gao, Xianghan Li, Yingsong Luo, Yiwen Ning, Yongcheng Liu, Yuan Guo, Zhaojie Liu, Zhenkai Cui · arXiv cs.AI · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26859v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26859v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Recommendation algorithm iteration is moving from an artisanal, engineer-bound process toward an industrialized research loop, but this transition remains blocked by a structural execution bottleneck: the idea-to-launch cycle still depends on human engineers to generate hypotheses, modify production code, launch A/B experiments, and attribute online results. Innovation therefore scales linearly with headcount rather than compounding with evidence, compute, and accumulated experimental knowledge. We present AgentX, a production-deployed multi-agent system that fundamentally restructures this production function. AgentX operates as a self-evolving development engine: it autonomously generates, implements, evaluates, and learns from recommendation experiments at a scale and pace that no manual workflow can sustain. The system orchestrates four tightly coupled stages in a closed loop. A Brainstorm Agent synthesizes evidence from historical experiments, system architecture, data analysis, and external research into ranked, executable proposals. A Developing Agent translates each proposal into production-ready code through repository-grounded generation and multi-dimensional reliability verification. An Evaluation Agent conducts safe online rollout with guardrail-vetoed A/B judgment, converting both successes and failures into structured knowledge assets. A Harness Evolution layer (SGPO) then distills execution trajectories into semantic-gradient updates that continuously sharpen the agents themselves -- making the system not merely automated, but self-improving.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>EGG: An Expert-Guided Agent Framework for Kernel Generation</h2>
+              <p class="meta">Yaochen Han, Ke Fan, Hongxu Jiang, Wanqi Xu, Weiyu Xie, Runhua Zhang, Chenhui Zhu, Yixiang Zhang · arXiv cs.AI · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26758v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26758v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>High-performance GPU kernels are critical for reducing the exponentially growing computational costs of large language models (LLMs), but their development heavily relies on manual tuning by domain experts. While recent advances in LLM-based approaches show promise for automating kernel generation, they still struggle to achieve both correctness and high performance. This limitation primarily arises from the lack of domain-specific optimization guidance, hindering effective exploration of the optimization space. We propose EGG, an Expert-Guided Agent Framework for Kernel Generation, which incorporates expert optimization principles to guide LLMs&#x27; decisions. Inspired by expert workflows, we decompose kernel generation into two hierarchical stages: 1) algorithmic structure design, which establishes a high-quality computational structure foundation; 2) hardware-specific tuning, which performs targeted adjustments through parallel mapping, tensor tiling, and memory optimization. This staged decomposition defines explicit optimization objectives, structuring the design space to achieve progressive refinement. To this end, a stage-aware multi-agent collaboration mechanism is designed for inter and intra-stage context management, ensuring stable optimization trajectories. Experiments on KernelBench and real-world workloads show that EGG achieves a 2.13x average speedup over PyTorch, outperforming existing agent-based and RL-based approaches.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>Socratic agents for autonomous scientific discovery in high-dimensional physical systems</h2>
+              <p class="meta">Xianrui Zeng, Pengfei Liu, Yirui Zang, Yang Shen, Fei Yu, Chunlei Yu, Minghao Liu, Yang Du · arXiv cs.AI · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26722v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26722v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>The automation of scientific discovery has reached an inflection point. While AI systems now operate instruments, optimize parameters and generate hypotheses, most remain procedural: they execute workflows fixed by human designers. True autonomous science demands epistemic autonomy--the capacity to construct, challenge and revise physical explanations in response to evidence. Here we introduce AHOIS, a multi-agent AI scientist that embeds Socratic midwifery into closed-loop experimentation. A physics-critic agent interrogates hypotheses through causal questioning, constraint checking, counterexample generation and falsification-criteria formulation. We evaluate AHOIS on a real multimode-fibre optical platform, a high-dimensional system with complex wave transformations, indirect detection, environmental drift and multi-modal acquisition. Without prior encoding schemes, classifiers or speckle models, the system autonomously proposed and validated a random-interference encoding hypothesis, discovered task-adaptive sparse-measurement strategies, diagnosed distinct failure modes (encoding instability, fluorescence contamination and detector noise) and translated a published imaging protocol into an executable workflow on a non-original configuration. The discovered encoding yielded 16x16 measurements with effective rank 56.9 and classification accuracies of 76.97% on MNIST and 83.17% on Fashion-MNIST. Ablations show that Socratic interrogation improves physical consistency, hypothesis completeness, uncertainty calibration and experimental-plan validity. These results establish a route from workflow automation towards evidence-grounded, self-correcting autonomous discovery in complex physical environments.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>HiLSVA: Design and Evaluation of a Human-in-the-Loop Agentic System for Scientific Visualization</h2>
+              <p class="meta">Kuangshi Ai, Patrick Phuoc Do, Chaoli Wang · arXiv cs.HC · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26614v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26614v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Large language model (LLM) agents enable natural language interaction for scientific visualization (SciVis). Still, prior systems have essentially prioritized autonomy over human analytical control, thereby limiting transparency and human oversight. We present HiLSVA, a human-in-the-loop agentic system that supports mixed-initiative SciVis workflows. HiLSVA integrates a plan-first multi-agent architecture with explicit human oversight, stepwise provenance tracking, and learn-at-test-time adaptation from user feedback. The system supports fluid handoff between humans and agents through both natural language and direct manipulation of visualizations, while sandboxed execution ensures safe, reproducible workflows. In doing so, HiLSVA reframes agentic SciVis as a collaborative process that augments, rather than replaces, human analytical reasoning. We evaluate HiLSVA through representative case studies and a controlled user study with twelve participants of varying expertise across multiple autonomy settings. Results show that mixed-initiative interaction improves task completion, user control, and workflow transparency across different levels of user expertise, while revealing a tradeoff between execution efficiency and human oversight. These findings highlight the importance of human-centered design in agentic SciVis and guide the development of future collaborative visualization systems. We encourage readers to explore our demo video, case studies, and source code at https://hilsva.github.io/.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>Taxonomy of Risks on Automated Fact-Checking Systems Considering its Propagation</h2>
+              <p class="meta">Jun Yajima, Tatsuya Oka, Takao Okubo · arXiv cs.CR · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25645v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25645v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>In recent years, the posting of fake news including disinformation and misinformation on social networking services (SNS) has become a social problem. To combat this fake news, fact-checking that is the process of assessing the veracity of posts on SNS has become increasingly important. While fact-checking is currently performed by fact-checking organizations, it is difficult to fact-check all posts on SNS. Therefore, the use of automated fact-checking systems is effective. Recent automated fact-checking systems utilize artificial intelligence and large language models, so there are risks of incorrect judgments and posting incorrect results on social media which can lead to the spread of misinformation or to engage in defamation. In this paper, as a first step toward enabling the safe use of automated fact-checking systems, we categorize the specific risks on automated fact-checking systems. In this categorizing, we consider a three-stage risk propagation: risk factors, hazardous situations, and harm. Our analysis revealed that 32 specific risks exist in automated fact-checking systems. In this paper, we utilize the categorized risks as analytical cues (guide words) to present the risk assessment of the automated fact-checking system DEFAME. This assessment result indicates that risks that cannot be derived using STRIDE, a conventional IT security risk assessment method can be derived using our guide words.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 risk assessment。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems</h2>
+              <p class="meta">Seth Dobrin, Łukasz Chmiel · arXiv cs.AI · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26057v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26057v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>AI agents are granted access to tools, APIs, and other infrastructure, making them active principals in those systems. The dominant approach places controls inside the agent&#x27;s own runtime: system prompts, output filters, and guardrail libraries. Any control in the agent&#x27;s address space is reachable by inputs that influence it; this generalizes to any AI system with sufficient reach into its own runtime, a class we term escapable AI systems. We identify four properties that an authorization mechanism must satisfy for architectural control rather than for cooperative requests: process separation, pre-action enforcement on a structurally only path, fail-closed at both the request and system levels, and externalized signed evidence verifiable outside the controlled system&#x27;s trust boundary. We position this layer as execution-time AI alignment, complementing training-time alignment (RLHF, Constitutional AI) and inference-time alignment. We present the Unfireable Safety Kernel, a Rust reference implementation realizing all four. Its fail-closed invariant is machine-checked at two levels: an SMT theorem (Z3) and an exhaustive bounded-model-checking proof of the production decision function (Kani, 4/4 harnesses). A Python-to-Rust migration was gated on byte-equivalence (1000/1000 fixtures; 17/17 adversarial classes). We evaluate the kernel governing a live, escapable AI system, a deterministic, self-improving world model, against an escape-seeking adversary driving its real self-modification seam: across 1,000 self-modifications, all 704 attempts on the safety-critical core are refused, with no escape; a further 300, under the operator kill switch, are also refused. A separate campaign of 6,240 authorization round-trips had no successful bypass. Against 3 contemporary systems claiming the agent control plane, the agent invokes control; here, it lacks that choice.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>IDEA: Insensitive to Dynamics Mismatch via Effect Alignment for Sim-to-Real Transfer in Multi-Agent Control</h2>
+              <p class="meta">Chenlong Liu, Zhuohui Zhang, Xinyan Chen, Zhipeng Wang, Bin Cheng, Bin He · arXiv cs.RO · 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26575v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26575v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Complex multi-agent control tasks remain challenging for traditional rule-based and model-based approaches, motivating the adoption of learning-based methods. However, learning-based methods often struggle with sim-to-real transfer because they rely on accurate dynamics modeling or system identification and learn policies in low-level control spaces that are highly sensitive to dynamics mismatch, making them costly and fragile in complex environments. To address this issue, we propose a sim-to-real method for multi-agent control, which is insensitive to dynamics mismatch via effect alignment. Our method combines random environmental structure with discrete semantic actions through closed-loop control, elevating policy learning to a semantic abstraction level. Additionally, we develop an action synchronization mechanism that mitigates inter-agent action timing mismatches, thereby enhancing the temporal consistency of the system. Experiments on four multi-agent navigation tasks demonstrate that our method substantially improves training efficiency over mainstream transfer methods and achieves higher success rates in real-world scenarios, thereby improving the robustness and deployment stability of multi-agent systems under dynamics mismatch.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization</h2>
+              <p class="meta">Jiading Gai, Shuai Zhang, Kaj Bostrom, Jin Huang, Vihang Patil, Haoyang Fang, Bernie Wang, Huzefa Rangwala, George Karypis · arXiv cs.LG · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26453v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26453v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>We present KernelPro, a closed-loop multi-agent system that automatically generates, profiles, and iteratively optimizes GPU kernel code by integrating large language model (LLM) code generation with hardware profiler feedback and pluggable bottleneck detection tools. KernelPro introduces four contributions: (1) a semantic feedback operator that encodes expert heuristics as pluggable micro-profiling tools, transforming raw hardware metrics into actionable natural language guidance; (2) a two-stage tool invocation architecture where roofline-based bottleneck classification filters which specialized analysis tools execute, combining kernel-level (ncu), instruction-level (SASS), and system-level (nsys) profiling; (3) a domain-adapted MCTS with progressive widening, asymmetric branching, log-reward calibration, dead-end pruning, and search memory for cross-iteration learning; and (4) direct CuTe source-level code generation via autonomous code search over the CUTLASS/CuTe codebase. On KernelBench, KernelPro achieves geometric mean speedups of 2.42x/4.69x/5.30x on Levels 1/2/3, establishing state-of-the-art performance across all difficulty levels. On VeOmni&#x27;s expert-optimized MoE training kernels, KernelPro achieves 1.23x over hand-tuned Triton by generating a from-scratch raw-CUDA+CuTe Hopper WGMMA kernel. Ablation studies demonstrate that each design component independently and significantly improves optimization quality: micro-profiling tools (p &lt; 0.0001 vs raw metrics), MCTS search (26% higher geometric mean vs greedy, p = 0.004), and proactive tool orchestration (23% improvement, p = 0.035). Finally, KernelPro is the first CUDA kernel coding agent to optimize energy efficiency beyond the speed-only focus of prior systems, demonstrating an 11.6% measured energy reduction at matched speed.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>Instruction Bleed: Cross-Module Interference in Prompt-Composed Agentic Systems</h2>
+              <p class="meta">Ching-Yu Lin, Yifan Liu · arXiv cs.AI · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26356v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.26356v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Practitioners of prompt-composed agentic systems report a recurring failure mode: editing one prompt module silently shifts the behavior of others despite no shared variable or executable dependency. We formalize this as compositional behavioral leakage (CBL): interference between modules sharing a context window. CBL is enabled by architectural non-isolation: transformer self-attention provides no formal boundary between concatenated modules. We probe CBL on a deployed job-evaluation agent (Claude Sonnet 4.6, 144 trials) through a reusable three-channel protocol that perturbs non-focal modules along volume, content, and form. Only the content channel produces a detectable paired effect (Cohen&#x27;s d = 0.63, bootstrap 95% CI excluding zero); no recommendation flipped -- a sub-threshold regime invisible to standard QA but compounding across the thousands of decisions a deployed agent makes. CBL is orthogonal to known agent-failure axes (adversarial injection, cognitive degradation, multi-agent fault propagation, privacy leakage). We contribute an operational definition, a reusable protocol, a falsifiable prediction set, and a system-class characterization, establishing cross-module interference measurement as a requirement for prompt-composed agent evaluation.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>Robustness and Leadership in Markov-switching Consensus Networks</h2>
+              <p class="meta">Sarah H. Cen, Vaibhav Srivastava, Naomi Ehrich Leonard · arXiv eess.SY · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25888v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25888v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>We investigate how time-varying interactions, modeled via a Markov switching graph (MSG), impact the robustness of noisy multi-agent dynamics in both continuous- and discrete-time settings. Our focus is on the steady-state performance of consensus and leader-follower tracking dynamics subject to stochastic noise. Using the framework of Markov jump linear systems (MJLS), we derive expressions for the steady-state covariance of each agent&#x27;s deviation from consensus and tracking error, respectively, and use them to quantify individual and group performance as a function of the interaction graphs and the switching dynamics. We extend established notions of robustness, certainty indices, and joint centrality from static graphs to the MSG setting. To gain analytical insight, we specialize our results to systems switching between two topologies and characterize how switching influences performance. Numerical simulations further illustrate how switching topologies affects system robustness in both coordination tasks.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>Agentic evolution of physically constrained foundation models</h2>
+              <p class="meta">Jiangwei Zhang, Wen Sun, Chong Wang, Shiyao Li, Cheng Che, Chunjing Han, Dan Meng, Jian Yang, Yu Wang, Rui Hou · arXiv cs.AI · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25532v1" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25532v1" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>Artificial intelligence increasingly drives automated scientific discovery, yet contemporary generalist agents lack physical grounding, frequently hallucinating hardware-incompatible designs. Here, we present a physically grounded, multi-agent discovery engine that autonomously architects hardware-compliant computing systems. Anchored by an Evolutionary Knowledge Graph structuring past scientific innovations, the framework extracts an &quot;algorithmic Chain-of-Thought&quot; to transform blind stochastic search into directed structural evolution. Applied to the extreme testbed of foundation model deployment, the engine evolved two hardware-aware compression methodologies surpassing human-engineered heuristics: Q-Enhance mitigates long-context accuracy loss in dense models, and MoE-Salient-AQ outperforms state-of-the-art manual sparse Mixture-of-Experts designs by 3.7% at sub-3-bit regimes. Utilizing a bandwidth-efficient Sensitivity Profile, we successfully deployed a massive 235-billion-parameter model onto a constrained dual-A100 server, reducing memory requirements by 75% with a marginal 0.64% accuracy degradation. By transforming unconstrained combinatorial search into knowledge-driven autonomy, this establishes a scalable hardware-software co-design paradigm for machine-driven discovery within strict physical boundaries.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>Control Barrier Function only Formation Tracking in Multi-Agent Systems</h2>
+              <p class="meta">S. Saharsh, Pushpak Jagtap · arXiv eess.SY · 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25452v2" target="_blank" rel="noopener">原文页面</a>
+                <a href="http://arxiv.org/pdf/2606.25452v2" target="_blank" rel="noopener">PDF链接</a>
+              </div>
+              <section><h3>English Abstract</h3><p>This paper presents a real-time control framework for formation tracking of heterogeneous multi-agent systems with non-linear dynamics. The proposed method formulates a single Control Barrier Function-like constraint within a quadratic optimization setting that addresses formation tracking. Relying on the relative information of neighboring agents, the controller is designed to operate without the need for manual parameter tuning or a separate nominal formation controller. The leader-follower framework is validated through simulations of moving formations.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>规则相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践阅读思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>

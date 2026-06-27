@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "4fc25778d856bc76",
+      "title": "1000 Rallies: An Event-Camera Dataset and Real-Time Learned Ball-State Estimation for Robotic Table Tennis",
+      "url": "http://arxiv.org/abs/2606.25620v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "b8b39fc40330797c",
+      "title": "ISAC for Sea-Air Networks: Predictive Beam Tracking under Sea Induced Disturbances",
+      "url": "http://arxiv.org/abs/2606.26569v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "c7929dd635fc6cc8",
+      "title": "Layered Outer-Loop Control for Disturbance-Robust Multi-Waypoint UAV Arrival",
+      "url": "http://arxiv.org/abs/2606.26315v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "452ae1639cfc1505",
+      "title": "Intracranial Aneurysm Classification and Segmentation via Tri-Axial ROI and Multi-Task Learning",
+      "url": "http://arxiv.org/abs/2606.26706v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "4e4c0a648f38bf2e",
+      "title": "Risk-Aware Selective Multimodal Driver Monitoring with Driver-State World Modeling",
+      "url": "http://arxiv.org/abs/2606.26922v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "cd8fa2e70101757c",
+      "title": "Fast LeWorldModel",
+      "url": "http://arxiv.org/abs/2606.26217v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "5e8b7b4ed96317f5",
+      "title": "Resilient Output Containment under Undisclosed Leader Dynamics and Actuator Attacks",
+      "url": "http://arxiv.org/abs/2606.27257v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "0ebbee67b277e059",
+      "title": "Bridging Talk and Thought: Understanding Dialogue Dynamics Across Collaborative Problem-Solving Contexts",
+      "url": "http://arxiv.org/abs/2606.27233v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "f1f0830adc308a39",
+      "title": "AgentX: Towards Agent-Driven Self-Iteration of Industrial Recommender Systems",
+      "url": "http://arxiv.org/abs/2606.26859v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "bf7d261fdcbb9bd6",
+      "title": "EGG: An Expert-Guided Agent Framework for Kernel Generation",
+      "url": "http://arxiv.org/abs/2606.26758v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "5776c60fe3d90a51",
+      "title": "Socratic agents for autonomous scientific discovery in high-dimensional physical systems",
+      "url": "http://arxiv.org/abs/2606.26722v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "eaf4d283ee3549a4",
+      "title": "HiLSVA: Design and Evaluation of a Human-in-the-Loop Agentic System for Scientific Visualization",
+      "url": "http://arxiv.org/abs/2606.26614v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "8c4ec4e7c51ec9b5",
+      "title": "Taxonomy of Risks on Automated Fact-Checking Systems Considering its Propagation",
+      "url": "http://arxiv.org/abs/2606.25645v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "f1b62c0fd848f3f7",
+      "title": "The Unfireable Safety Kernel: Execution-Time AI Alignment for AI Agents and Other Escapable AI Systems",
+      "url": "http://arxiv.org/abs/2606.26057v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "1e0ea33bce0f1868",
+      "title": "IDEA: Insensitive to Dynamics Mismatch via Effect Alignment for Sim-to-Real Transfer in Multi-Agent Control",
+      "url": "http://arxiv.org/abs/2606.26575v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "eabac26482bbbab5",
+      "title": "Optimizing CUDA like a Human: Micro-Profiling Tools as Expert Surrogates for LLM-Based GPU Kernel Optimization",
+      "url": "http://arxiv.org/abs/2606.26453v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "52666c9004cdc5a4",
+      "title": "Instruction Bleed: Cross-Module Interference in Prompt-Composed Agentic Systems",
+      "url": "http://arxiv.org/abs/2606.26356v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "47939a059d4fdb3b",
+      "title": "Robustness and Leadership in Markov-switching Consensus Networks",
+      "url": "http://arxiv.org/abs/2606.25888v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "d227b917d55201b6",
+      "title": "Agentic evolution of physically constrained foundation models",
+      "url": "http://arxiv.org/abs/2606.25532v1",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
+      "key": "9793abfbd06e23f7",
+      "title": "Control Barrier Function only Formation Tracking in Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2606.25452v2",
+      "sent_at": "2026-06-27T04:51:45.520429+00:00"
+    },
+    {
       "key": "49d32cb85ae414e8",
       "title": "LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction",
       "url": "http://arxiv.org/abs/2606.26661v1",
