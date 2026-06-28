@@ -9,6 +9,7 @@ import os
 import re
 import smtplib
 import ssl
+import time
 import textwrap
 import urllib.parse
 import xml.etree.ElementTree as ET
@@ -18,6 +19,7 @@ from pathlib import Path
 from typing import Iterable
 
 import requests
+from openai import OpenAI
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -61,11 +63,24 @@ class Item:
     authors: str
     summary: str
     score: float
+    title_zh: str = ""
+    summary_zh: str = ""
+    reading_hint_zh: str = ""
+    relevance_zh: str = ""
+    practice_zh: str = ""
 
     @property
     def key(self) -> str:
         raw = f"{self.title}|{self.url}".lower()
         return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+
+
+@dataclass
+class LLMConfig:
+    provider: str
+    api_key: str
+    model: str
+    base_url: str | None = None
 
 
 def load_env_file() -> None:
@@ -88,9 +103,18 @@ def require_env(name: str) -> str:
 
 
 def request_text(url: str) -> str:
-    response = requests.get(url, timeout=35)
-    response.raise_for_status()
-    return response.text
+    last_error: Exception | None = None
+    for attempt in range(3):
+        try:
+            response = requests.get(url, timeout=35)
+            response.raise_for_status()
+            return response.text
+        except Exception as exc:
+            last_error = exc
+            if attempt == 2:
+                raise
+            time.sleep(2 * (attempt + 1))
+    raise last_error if last_error else RuntimeError("request_text failed")
 
 
 def normalize(text: str) -> str:
@@ -257,6 +281,95 @@ def rule_based_notes(item: Item) -> dict[str, str]:
     }
 
 
+def resolve_llm_config() -> LLMConfig | None:
+    deepseek_api_key = os.getenv("DEEPSEEK_API_KEY")
+    if deepseek_api_key:
+        return LLMConfig(
+            provider="DeepSeek",
+            api_key=deepseek_api_key,
+            model=os.getenv("DEEPSEEK_MODEL") or "deepseek-chat",
+            base_url=os.getenv("DEEPSEEK_BASE_URL") or "https://api.deepseek.com",
+        )
+    return None
+
+
+def enrich_items_with_llm(items: list[Item]) -> list[Item]:
+    config = resolve_llm_config()
+    if not config:
+        return items
+
+    client_kwargs = {"api_key": config.api_key}
+    if config.base_url:
+        client_kwargs["base_url"] = config.base_url
+    client = OpenAI(**client_kwargs)
+
+    by_idx: dict[int, dict] = {}
+    batch_size = 5
+    for start in range(0, len(items), batch_size):
+        batch = items[start : start + batch_size]
+        compact = []
+        for offset, item in enumerate(batch, 1):
+            compact.append(
+                {
+                    "idx": start + offset,
+                    "title": item.title,
+                    "authors": item.authors,
+                    "source": item.source,
+                    "published": item.published,
+                    "summary": item.summary[:1600],
+                }
+            )
+
+        prompt = (
+            "你是科研论文中文整理助手。请基于给定论文列表，返回严格 JSON 数组。"
+            "数组每项字段必须包括：idx, title_zh, summary_zh, reading_hint_zh, relevance_zh, practice_zh。"
+            "summary_zh 需要忠实翻译英文摘要；reading_hint_zh 用1到2句提示如何阅读；"
+            "relevance_zh 用2到3句说明与低空经济安全、航迹预测或智能体的相关性；"
+            "practice_zh 用2到3句给出可落地实验或复现建议。不要输出 JSON 之外的任何文字。\n\n"
+            f"{json.dumps(compact, ensure_ascii=False)}"
+        )
+
+        response = client.chat.completions.create(
+            model=config.model,
+            messages=[
+                {"role": "system", "content": "你是严谨的科研中文翻译与解读助手。"},
+                {"role": "user", "content": prompt},
+            ],
+            temperature=0.2,
+        )
+        content = (response.choices[0].message.content or "").strip()
+        try:
+            json_match = re.search(r"\[.*\]", content, re.S)
+            payload = json.loads(json_match.group(0) if json_match else content)
+        except Exception:
+            payload = []
+        for entry in payload:
+            if "idx" in entry:
+                by_idx[int(entry["idx"])] = entry
+
+    enriched: list[Item] = []
+    for idx, item in enumerate(items, 1):
+        extra = by_idx.get(idx, {})
+        enriched.append(
+            Item(
+                title=item.title,
+                url=item.url,
+                pdf_url=item.pdf_url,
+                source=item.source,
+                published=item.published,
+                authors=item.authors,
+                summary=item.summary,
+                score=item.score,
+                title_zh=str(extra.get("title_zh", "")),
+                summary_zh=str(extra.get("summary_zh", "")),
+                reading_hint_zh=str(extra.get("reading_hint_zh", "")),
+                relevance_zh=str(extra.get("relevance_zh", "")),
+                practice_zh=str(extra.get("practice_zh", "")),
+            )
+        )
+    return enriched
+
+
 def page_base_url() -> str:
     explicit = os.getenv("PAGES_BASE_URL")
     if explicit:
@@ -368,6 +481,115 @@ def render_index(today: str, base_url: str) -> str:
 """
 
 
+def render_daily_page_deepseek(items: list[Item], today: str, base_url: str) -> str:
+    cards = []
+    for idx, item in enumerate(items, 1):
+        notes = rule_based_notes(item)
+        title_zh = item.title_zh or item.title
+        summary_zh = item.summary_zh or "当前未生成中文摘要翻译。"
+        reading_hint = item.reading_hint_zh or notes["reading_hint"]
+        relevance = item.relevance_zh or notes["relevance"]
+        practice = item.practice_zh or notes["practice"]
+        cards.append(
+            f"""
+            <article class="paper" id="paper-{idx}">
+              <div class="paper-num">{idx:02d}</div>
+              <h2>{html.escape(title_zh)}</h2>
+              <p>{html.escape(item.title)}</p>
+              <p class="meta">{html.escape(item.authors or "Unknown")} | {html.escape(item.source)} | {html.escape(item.published[:10])}</p>
+              <div class="links">
+                <a href="{html.escape(item.url)}" target="_blank" rel="noopener">Original Page</a>
+                <a href="{html.escape(item.pdf_url)}" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>{html.escape(summary_zh)}</p></section>
+              <section><h3>English Abstract</h3><p>{html.escape(item.summary)}</p></section>
+              <section><h3>中文阅读提示</h3><p>{html.escape(reading_hint)}</p></section>
+              <section><h3>相关性说明</h3><p>{html.escape(relevance)}</p></section>
+              <section><h3>实践思路</h3><p>{html.escape(practice)}</p></section>
+            </article>
+            """
+        )
+    nav = "\n".join(f'<a href="#paper-{idx}">{idx:02d}</a>' for idx in range(1, len(items) + 1))
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - {today}</title>
+  <style>
+    :root{{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}}
+    *{{box-sizing:border-box}}
+    body{{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}}
+    header{{background:#0b3b39;color:#fff;padding:26px 18px 22px}}
+    header .wrap,main{{max-width:920px;margin:0 auto}}
+    h1{{font-size:27px;line-height:1.22;margin:0 0 8px}}
+    .sub{{margin:0;color:#d6f2ee}}
+    main{{padding:18px 14px 64px}}
+    .toc{{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}}
+    .toc a{{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}}
+    .paper{{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}}
+    .paper-num{{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}}
+    h2{{font-size:20px;line-height:1.35;margin:0 38px 8px 0}}
+    h3{{font-size:16px;margin:18px 0 6px;color:#0b3b39}}
+    p{{margin:0 0 8px}}
+    .meta{{color:var(--muted);font-size:14px}}
+    .links{{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}}
+    .links a{{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}}
+    .notice{{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}}
+    .back{{display:inline-block;margin:14px 0 0;color:#d6f2ee}}
+    @media (max-width:520px){{h1{{font-size:23px}}h2{{font-size:18px}}.paper{{padding:16px 14px}}}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">{today} | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="{base_url}/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录">{nav}</nav>
+    {''.join(cards)}
+  </main>
+</body>
+</html>
+"""
+
+
+def render_index_deepseek(today: str, base_url: str) -> str:
+    entries = []
+    for path in sorted(DOCS_DIR.iterdir(), reverse=True):
+        if path.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", path.name):
+            label = path.name
+            entries.append(f'<li><a href="{base_url}/{label}/">{label} 前沿论文库</a></li>')
+    items = "\n".join(entries) or "<li>暂无归档。</li>"
+    return f"""<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库</title>
+  <style>
+    body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:#f4f6f8;color:#172033;line-height:1.7}}
+    main{{max-width:860px;margin:0 auto;padding:30px 18px 64px}}
+    h1{{font-size:28px;margin:0 0 8px}}
+    .muted{{color:#667085}}
+    ul{{list-style:none;padding:0;margin:22px 0}}
+    li{{margin:10px 0}}
+    a{{display:block;background:#fff;border:1px solid #d8dee9;border-radius:10px;padding:14px 16px;color:#0f766e;text-decoration:none;font-weight:800}}
+  </style>
+</head>
+<body>
+  <main>
+    <h1>低空经济前沿论文库</h1>
+    <p class="muted">最后更新：{today}。每天北京时间 05:00 自动生成，优先使用 DeepSeek 输出中文内容。</p>
+    <ul>{items}</ul>
+  </main>
+</body>
+</html>
+"""
+
+
 def send_email(subject: str, body: str) -> None:
     host = require_env("QQ_SMTP_HOST")
     port = int(require_env("QQ_SMTP_PORT"))
@@ -394,15 +616,16 @@ def main() -> None:
     selected = select_items(all_items, load_history())
     if len(selected) < MAX_ITEMS:
         raise RuntimeError(f"Only found {len(selected)} candidate papers.")
+    selected = enrich_items_with_llm(selected)
 
     daily_dir = DOCS_DIR / today
     daily_dir.mkdir(parents=True, exist_ok=True)
-    (daily_dir / "index.html").write_text(render_daily_page(selected, today, base_url), encoding="utf-8")
+    (daily_dir / "index.html").write_text(render_daily_page_deepseek(selected, today, base_url), encoding="utf-8")
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
-    (DOCS_DIR / "index.html").write_text(render_index(today, base_url), encoding="utf-8")
+    (DOCS_DIR / "index.html").write_text(render_index_deepseek(today, base_url), encoding="utf-8")
     save_history(selected)
 
-    top_titles = "\n".join(f"{idx}. {item.title}" for idx, item in enumerate(selected[:8], 1))
+    top_titles = "\n".join(f"{idx}. {item.title_zh or item.title}" for idx, item in enumerate(selected[:8], 1))
     body = textwrap.dedent(
         f"""
         今日低空经济前沿论文库已生成：
@@ -411,6 +634,19 @@ def main() -> None:
         当前为无 API 免费模式：网页包含 20 篇论文的英文摘要、原文页面、PDF 链接、规则相关性说明和实践阅读思路。
         如需中文翻译，可在安卓 Chrome/Edge 中打开页面后使用“翻译网页”。
 
+        今日部分条目：
+        {top_titles}
+
+        历史归档：
+        {base_url}/
+        """
+    ).strip()
+    body = textwrap.dedent(
+        f"""
+        今日低空经济前沿论文库已生成：
+        {base_url}/{today}/
+
+        当前页面优先展示 DeepSeek 生成的中文标题、中文摘要翻译和中文阅读提示。
         今日部分条目：
         {top_titles}
 
