@@ -1,6 +1,366 @@
 {
   "sent": [
     {
+      "key": "e154a13c48699d1e",
+      "title": "Temporal Logic Guidance for Action-Only Diffusion Policies with World Models",
+      "url": "http://arxiv.org/abs/2606.22729v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "626b852599557ff9",
+      "title": "KRVF: A Source-Aware Semantic Voxel World Representation for Edge Mobile Manipulation",
+      "url": "http://arxiv.org/abs/2606.26321v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "3779f96255e1bb45",
+      "title": "In-Context World Modeling for Robotic Control",
+      "url": "http://arxiv.org/abs/2606.26025v2",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "29aea891eceb3765",
+      "title": "USS: Unified Spatial-Semantic Prompts for Embodied Visual Tracking with Latent Dynamics Learning",
+      "url": "http://arxiv.org/abs/2606.25880v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "f1cbb14dcf72f835",
+      "title": "Stage-Aware and Roughness-Constrained Diffusion Policy for Multi-Stage Robotic Polishing",
+      "url": "http://arxiv.org/abs/2606.25754v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "d0cdbac86ac7428a",
+      "title": "One Body, Two Minds: Variable Autonomy Approach for a Co-embodied Robotic Hand",
+      "url": "http://arxiv.org/abs/2606.25575v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "1b27f43797e75744",
+      "title": "Causal-rCM: A Unified Teacher-Forcing and Self-Forcing Open Recipe for Autoregressive Diffusion Distillation in Streaming Video Generation and Interactive World Models",
+      "url": "http://arxiv.org/abs/2606.25473v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "faf193c4cac0bffc",
+      "title": "Hypergraph Normal World Models for Logical Visual Anomaly Detection",
+      "url": "http://arxiv.org/abs/2606.25368v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "f4d177db2c9c32ea",
+      "title": "Compact Object-Level Representations with Open-Vocabulary Understanding for Indoor Visual Relocalization",
+      "url": "http://arxiv.org/abs/2606.24767v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "0d44856bbafd7945",
+      "title": "ArtiTwinSplat: Interactable Digital Twin Reconstruction via Gaussian Splatting from RGB-D videos",
+      "url": "http://arxiv.org/abs/2606.24628v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "7f9cfaa6868de256",
+      "title": "World Models in Pieces: Structural Certification for General Agents",
+      "url": "http://arxiv.org/abs/2606.24842v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "b9c6612687a7752a",
+      "title": "World Value Models for Robotic Manipulation",
+      "url": "http://arxiv.org/abs/2606.24742v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "d6c4efe5c6503ba0",
+      "title": "Trimming the Long-Tail of Visual World Modeling Evaluation",
+      "url": "http://arxiv.org/abs/2606.24256v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "3b1544f9bd81ba6b",
+      "title": "Conformal Orbit-Valid Trust Horizons for Equivariant World Models",
+      "url": "http://arxiv.org/abs/2606.24946v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "895fe40feae7f94e",
+      "title": "When Do Conservation Laws Survive Learned Representations? Certified Horizons for Latent World Models",
+      "url": "http://arxiv.org/abs/2606.24945v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "c28e99d52b0c02e2",
+      "title": "Deep Learning Approaches for 3D Medical Scene Completion: From Geometric Modeling to Generative Paradigms",
+      "url": "http://arxiv.org/abs/2606.24180v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "2503fdfaad54153e",
+      "title": "Decentralized Coordination of Autonomous Traffic Through Advanced Air Mobility Corridors",
+      "url": "http://arxiv.org/abs/2606.23832v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "517fc5da4acf9270",
+      "title": "DynaWM: Dynamics-Aware Distillation with World Model and Momentum Targets for Smooth Locomotion over Continuous Stairs",
+      "url": "http://arxiv.org/abs/2606.24089v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "81dba7bf99f54f77",
+      "title": "DVL-DeepONet: A Physics-Guided Operator Learning for Resilient Underwater Navigation",
+      "url": "http://arxiv.org/abs/2606.23502v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "1fa2e64774bbaef9",
+      "title": "MeGAS: Thermomechanical Dynamic Gaussian Splatting for Thermophysical Scene Editing",
+      "url": "http://arxiv.org/abs/2606.23455v1",
+      "sent_at": "2026-06-28T03:43:38.213869+00:00"
+    },
+    {
+      "key": "e808a41401c5e236",
+      "title": "Multiplayer Reach-Avoid Differential Games with Defender-Side Information Delay",
+      "url": "http://arxiv.org/abs/2606.24542v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "bbd6ce61e77e347a",
+      "title": "Governed Shared Memory for Multi-Agent LLM Systems",
+      "url": "http://arxiv.org/abs/2606.24535v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "e9440f4609f844d9",
+      "title": "Diagnosing and Mitigating Compounding Failures in Agentic Persuasion via Taxonomic Strategy Retrieval",
+      "url": "http://arxiv.org/abs/2606.24976v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "6c7bd39976cc33de",
+      "title": "Varying Bundle Size Reactive Multi-Task Assignment using Selective Cost Estimation for Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2606.24462v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "31ad5c7ac712fc85",
+      "title": "ReM-MoA: Reasoning Memory Sustains Mixture-of-Agents Scaling",
+      "url": "http://arxiv.org/abs/2606.24437v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "1f72665d621906ca",
+      "title": "Agentic AI for Bilevel Long-Term Optimization of Policy-Driven Physical Layer Systems",
+      "url": "http://arxiv.org/abs/2606.24416v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "bac41c6082b77e4d",
+      "title": "ATRIA: Adaptive Traceable ECG Reporting with Iterative Agents",
+      "url": "http://arxiv.org/abs/2606.24392v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "b190852d7e13f0e9",
+      "title": "Litmus: Zero-Label, Code-Driven Metric Specification for Evaluating AI Systems",
+      "url": "http://arxiv.org/abs/2606.23403v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "dfa587bc1846088b",
+      "title": "Critique of Agent Model",
+      "url": "http://arxiv.org/abs/2606.23991v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "065bdc25ac60a588",
+      "title": "LaST-HD: Learning Latent Physical Reasoning from Scalable Human Data for Robot Manipulation",
+      "url": "http://arxiv.org/abs/2606.23685v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "b6855e0f12140a1c",
+      "title": "Causal Reward World Models: Zero-shot Reward Design for Automated Skill Generation",
+      "url": "http://arxiv.org/abs/2606.23280v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "ad2c241c38f9e698",
+      "title": "Active Inference as the Test-Time Scaling Law for Physical AI Agents",
+      "url": "http://arxiv.org/abs/2606.22813v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "55efdb1929709c43",
+      "title": "World Action Models Enable Continual Imitation Learning with Recurrent Generative Replays",
+      "url": "http://arxiv.org/abs/2606.27374v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "ffbe7977f0a6727a",
+      "title": "Hallucination in World Models is Predictable and Preventable",
+      "url": "http://arxiv.org/abs/2606.27326v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "4d0550ac16d24d77",
+      "title": "Not All Actions Are Equal: Rethinking Conditioning for Dexterous World Model",
+      "url": "http://arxiv.org/abs/2606.27325v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "20bcb5d6cbcc3cf0",
+      "title": "EO-WM: A Physically Informed World Model for Probabilistic Earth Observation Forecasting",
+      "url": "http://arxiv.org/abs/2606.27277v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "59aa9bb97436f371",
+      "title": "A Generalization Theory for JEPA-Based World Models",
+      "url": "http://arxiv.org/abs/2606.27014v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "ad28f3cd05d926ee",
+      "title": "Einstein World Models",
+      "url": "http://arxiv.org/abs/2606.26969v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "fca303b087b712fe",
+      "title": "LithoDreamer: A Physics-Informed World Model for Multi-Stage Computational Lithography",
+      "url": "http://arxiv.org/abs/2606.26713v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "083bab65617a9188",
+      "title": "Bridging Handheld and Teleoperated Supervision for Contact-Rich Manipulation via State-Gated Experts",
+      "url": "http://arxiv.org/abs/2606.26603v1",
+      "sent_at": "2026-06-28T03:40:27.476285+00:00"
+    },
+    {
+      "key": "71a330f9f56a5cfb",
+      "title": "AI-Empowered UAV-Assisted Backscatter Localization and ISAC for Zero-Energy IoT: A Comprehensive Survey",
+      "url": "http://arxiv.org/abs/2606.23125v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "2bf9e2b30f589c8f",
+      "title": "NavWM: A Unified Navigation World Model for Foresight-Driven Planning",
+      "url": "http://arxiv.org/abs/2606.24101v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "aab96d239734fc7e",
+      "title": "Semantic-Aware Autonomous Exploration for UAVs in Unknown Indoor Environments",
+      "url": "http://arxiv.org/abs/2606.22670v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "0460674d6ab710ca",
+      "title": "Large-Scale Tunnel Air-Ground Collaboration With FLISP: Fast LiDAR-IMU Synchronized Path Planner",
+      "url": "http://arxiv.org/abs/2606.25393v2",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "052aa286b16a6f57",
+      "title": "Verifiable Foundation Models for Robot Safety",
+      "url": "http://arxiv.org/abs/2606.23754v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "92ad8c5d85fa5edc",
+      "title": "Importance of Intent-Sharing for V2X-based Maneuver Coordination",
+      "url": "http://arxiv.org/abs/2606.24203v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "c2826e5b29931eb9",
+      "title": "Swazure: Swarm Measurement of Pose for Flying Light Specks",
+      "url": "http://arxiv.org/abs/2606.25222v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "0feeee0d53c0f500",
+      "title": "Three-Step Hierarchical Transformer for Multi-Pedestrian Trajectory Prediction",
+      "url": "http://arxiv.org/abs/2606.23058v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "ae332c8c0ae6017d",
+      "title": "BrainAgent: A Large Language Model-Driven Multi-Agent Framework for Autonomous Brain Signal Understanding",
+      "url": "http://arxiv.org/abs/2606.25400v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "d68155aa191024bf",
+      "title": "Offline Multi-agent Continual Cooperation via Skill Partition and Reuse",
+      "url": "http://arxiv.org/abs/2606.25389v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "5914cc4a25371a93",
+      "title": "Training Dynamics of Neural Software Defect Predictors under Coupled Data-Quality Issues",
+      "url": "http://arxiv.org/abs/2606.24968v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "f75bfcff55da94fe",
+      "title": "Neural Voxel Dynamics: Learning Implicit 3D Physics via Volumetric Feature Advection",
+      "url": "http://arxiv.org/abs/2606.26410v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "36302adeeb729402",
+      "title": "Beyond One-Size-Fits-All: Diagnosis-Driven Online Reinforcement Learning with Offline Priors",
+      "url": "http://arxiv.org/abs/2606.25527v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "364b241387a5d13d",
+      "title": "HERCULES: An Open-Source Simulation Framework for Heterogeneous Multi-Robot SLAM, Collaborative Perception, and Exploration",
+      "url": "http://arxiv.org/abs/2606.22756v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "fc392c83e298fc3c",
+      "title": "Line Drawings using LightBenders: Authoring and Illuminating",
+      "url": "http://arxiv.org/abs/2606.22499v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "c090bf629b7ff644",
+      "title": "Decoupling Reconnaissance and Exploitation: Measuring the Capability Boundaries of LLM-Based Web Penetration Testing",
+      "url": "http://arxiv.org/abs/2606.25332v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "669a82e3fa3abcaa",
+      "title": "To Isolate or to Score? Model-Adaptive Assessment for Cost-Efficient Multi-Agent RAG",
+      "url": "http://arxiv.org/abs/2606.25191v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "e5e0eef89dc91910",
+      "title": "Grading the Grader: Lessons from Evaluating an Agentic Data Analysis System",
+      "url": "http://arxiv.org/abs/2606.24839v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "a31857c868d8106b",
+      "title": "MANGO: Automated Multi-Agent Test Oracle Generation for Vision-Language-Action Models",
+      "url": "http://arxiv.org/abs/2606.24815v1",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
+      "key": "bdfd08bbcdf18e15",
+      "title": "Agentic Collaborative Cognition for Zero-Shot 3D Understanding",
+      "url": "http://arxiv.org/abs/2606.24649v2",
+      "sent_at": "2026-06-28T03:39:11.274079+00:00"
+    },
+    {
       "key": "4fc25778d856bc76",
       "title": "1000 Rallies: An Event-Camera Dataset and Real-Time Learned Ball-State Estimation for Robotic Table Tennis",
       "url": "http://arxiv.org/abs/2606.25620v1",
