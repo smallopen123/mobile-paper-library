@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-06-29</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-06-29 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>注意噪声：基于Transformer的交互感知轨迹预测模型对噪声数据的敏感性</h2>
+              <p>Mind the Noise: Sensitivity of Transformer-based Interaction-Aware Trajectory Prediction Models to Noisy Data</p>
+              <p class="meta">Shahab Salehi, Luca Lusvarghi, Miguel Sepulcre, Javier Gozalvez | arXiv cs.AI | 2026-06-19</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.21344v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.21344v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>轨迹预测使自动驾驶车辆能够预测周围物体（或智能体）的未来行为，从而最大化其驾驶的安全性和效率。最先进的基于Transformer的交互感知轨迹预测模型依赖注意力机制来捕捉多智能体交互并最大化预测精度，通常使用长距离高质量数据集进行训练和评估。这些数据集通常通过聚合来自多辆车或无人机数据并离线去除任何目标检测或跟踪噪声获得。然而，在实际部署中，关于周围物体状态（位置、速度、航向）的信息远非无噪声。物体状态估计受到感知不确定性和定位误差的影响，对于通过车联网通信接收到的物体，这些误差可能特别大。本文分析了噪声物体状态信息对一种最先进的基于Transformer的交互感知轨迹预测模型预测精度的影响。研究表明，随着噪声强度增加，轨迹预测精度会迅速恶化。数值结果显示，在低噪声水平下预测精度可降低1.3倍，在最高（但仍现实）噪声条件下可降低多达3.9倍。这些发现揭示了轨迹预测模型对噪声数据的强敏感性，强调了在推进实际部署时使用更现实的训练和评估数据集的必要性。</p></section>
+              <section><h3>English Abstract</h3><p>Trajectory prediction allows autonomous vehicles to anticipate the future behavior of surrounding objects (or agents) and, accordingly, maximize the safety and efficiency of their driving. State-of-the-art Transformed-based interaction-aware trajectory prediction models, which rely on attention mechanisms to capture multi-agent interactions and maximize prediction accuracy, are commonly trained and evaluated on long-range high-quality datasets. These datasets are typically obtained by aggregating data from multiple vehicles or drones and removing any object detection or tracking noise offline. Yet, information about a surrounding object&#x27;s state (its position, speed, heading) is far from being noiseless in real-world deployments. Object state estimation is affected by perception uncertainties and localization errors that can be particularly large for objects received via Vehicle-to-Everything (V2X) communications. In this paper, we analyze the impact of noisy object state information on the trajectory prediction accuracy of a state-of-the-art Transformer-based interaction-aware trajectory prediction model. Our study demonstrates that trajectory prediction accuracy can rapidly deteriorate as the noise intensity increases. Numerical results show that the prediction accuracy can reduce by a 1.3x factor under small noise levels and by as much as a 3.9x factor under the highest (yet realistic) noise conditions. These findings reveal the strong sensitivity of trajectory prediction models to noisy data, underscoring the need for more realistic training and evaluation datasets as well as noise mitigation strategies.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注摘要中噪声对预测精度影响的量化结果（1.3倍和3.9倍），再阅读实验设置部分了解噪声来源和类型。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中无人机等智能体的轨迹预测问题，揭示了噪声数据对预测安全性的显著影响。对于低空经济安全，理解并缓解感知噪声是提升航迹预测可靠性的关键。</p></section>
+              <section><h3>实践思路</h3><p>可复现实验：使用公开轨迹数据集（如nuScenes）添加不同水平的感知噪声（位置、速度），评估Transformer预测模型的性能下降。建议开发噪声鲁棒性训练策略，如数据增强或对抗训练。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>基于团队与目标条件强化学习和因子化分支定界的多智能体目标识别</h2>
+              <p>Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound</p>
+              <p class="meta">Thiago Thomas, Gabriel de Oliveira Ramos, Felipe Meneguzzi | arXiv cs.MA | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25978v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25978v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体目标识别要求观察者联合推断哪些智能体共同行动以及每个团队试图实现什么目标，因此假设空间随团队划分数量和每个团队的目标数量组合增长。无人机监控和协作机器人等实际应用仅暴露智能体的轨迹，这迫使观察者仅从行为中对团队-目标假设进行排序。基于分支定界的多智能体目标识别方法通过使用共享的团队与目标条件策略作为评分模型，在因子化分支定界搜索内部解决此问题。在受控的多智能体Blocksworld基准测试上，该方法在整个轨迹中返回与穷举搜索相同的排名最高的假设，同时将假设物化数量减少数个数量级，并显著降低累积识别运行时间。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent goal recognition asks an observer to jointly infer which agents act together and what each team is trying to achieve, so the hypothesis space grows combinatorially with the number of team partitions and goals per team. Real applications such as drone surveillance and collaborative robotics expose only the agents&#x27; trajectory, which forces the observer to rank team-goal hypotheses from behavior alone. Multi-Agent Goal Recognition with Branch-and-Bound (MAGR-BB) addresses this setting with a shared team- and goal-conditioned policy used as the scoring model inside a factorized branch-and-bound search. On a controlled multi-agent Blocksworld benchmark, MAGR-BB returns the same top-ranked hypothesis as exhaustive search throughout the trajectory while cutting hypothesis materialization by orders of magnitude and reducing cumulative recognition runtime substantially.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解因子化分支定界搜索如何高效缩小假设空间，以及团队与目标条件策略的作用。</p></section>
+              <section><h3>相关性说明</h3><p>该研究涉及从轨迹推断多智能体（如无人机集群）的意图和团队结构，对低空经济中智能体协同行为的理解与安全监控有直接意义。航迹预测不仅需要预测位置，还需识别意图，以提升安全性。</p></section>
+              <section><h3>实践思路</h3><p>可复现实验：使用多智能体轨迹数据集（如MADDPG环境），实现基于分支定界的目标识别算法，并与穷举搜索对比效率。建议在无人机协同场景中测试，验证其识别准确率和实时性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>面向干扰受限多无人机网络的速率感知量子启发轨迹学习</h2>
+              <p>Rate-Aware Quantum-Inspired Trajectory Learning for Interference-Limited Multi-UAV Networks</p>
+              <p class="meta">Khaoula Khaled, Muhammad Afaq, Ali Arshad Nasir, Zeeshan Kaleem | arXiv cs.MA | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25480v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25480v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机可在灾难和正常场景中提供按需、高容量连接。然而，它在轨迹优化中面临维度灾难的挑战，其中干扰受限环境和巨大搜索空间使得实时协调计算成本高昂。为克服这一挑战，我们提出了速率感知量子退火图压缩方案，该方案将速率感知图抽象与分散式强化学习相结合，实现可扩展、干扰感知的无人机协调。通过识别高吞吐量位置并引导无人机轨迹适应吞吐量最优区域，该方案有效平衡网络容量并维持服务质量要求。仿真结果表明，该方案优于现有方案，实现了59.4 Mbps的总吞吐量和23.9 Mbps的优先级用户吞吐量，分别比基线方案提升约15%和34%。</p></section>
+              <section><h3>English Abstract</h3><p>Unmanned aerial vehicle (UAV) can provide on-demand, high-capacity connectivity in disaster and normal situation. However, it faces a challenge of curse of dimensionality in trajectory optimization, where interference-limited environments and vast search spaces make real-time coordination computationally expensive. To overcome this challenge, we propose the Rate-Aware Quantum-Annealed Graph Condensation (RA-QAGC) scheme, which combines rate-aware graph abstraction with decentralized reinforcement learning to enable scalable, interference-aware UAV coordination. By identifying high throughput locations and guiding UAV trajectory adaptation toward throughput-optimal regions, RA-QAGC effectively balances network capacity by maintaining quality-of-service (QoS) requirements. Simulation results demonstrate the proposal outperformed over existing schemes by achieving 59.4 Mbps total throughput and 23.9 Mbps priority-user throughput, representing gains of approximately 15% and 34%, respectively, over the baseline schemes.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解速率感知图抽象如何简化问题，再关注量子启发方法在轨迹优化中的具体应用和性能提升。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中多无人机网络的轨迹优化问题，考虑了干扰和容量约束。其速率感知方法可提升无人机通信安全与效率，对航迹预测中的资源分配有借鉴意义。</p></section>
+              <section><h3>实践思路</h3><p>可复现实验：在模拟环境（如AirSim或Gazebo）中实现多无人机干扰模型，部署速率感知量子启发算法，对比传统强化学习方法的吞吐量和收敛速度。建议在真实无人机硬件上验证实时性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>通过决策树蒸馏对学习到的多智能体通信策略进行形式化验证</h2>
+              <p>Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation</p>
+              <p class="meta">Ahmad Farooq, Kamran Iqbal | arXiv cs.RO | 2026-06-17</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.19632v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.19632v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体强化学习使智能体能够通过涌现通信发展协调策略，但神经策略缺乏无人机集群和自动驾驶车队等安全关键机器人部署所需的形式化安全保证。我们提出了首个通过策略抽象对学习到的多智能体通信策略进行安全验证的端到端框架：神经策略被蒸馏为可解释的决策树，然后进行形式化验证，经验验证确认验证的安全属性可迁移到原始网络。我们的四阶段流程包括：从智能体观测中提取领域特定特征、实现97.9%±1.2%保真度的决策树蒸馏、自动转换为PRISM概率模型检查器规范（具有完整的特征到状态变量对应）、以及通过成对分解与联合界聚合及经验邻居建模对概率计算树逻辑属性进行组合验证。评估用于5-7个智能体多无人机协调的向量量化变分信息瓶颈策略，我们验证了18个涵盖安全性、活性和协作的时间逻辑属性，实现了88.9%的属性满足率，所有五个安全阈值均满足（碰撞概率0.3% vs 阈值1%）。原始神经策略的蒙特卡洛验证确认验证的安全属性迁移偏差≤0.6个百分点（95%置信区间）。离散VQ-VIB消息证明...</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent reinforcement learning (MARL) enables agents to develop coordination strategies through emergent communication, but neural policies lack the formal safety guarantees required for safety-critical robotic deployment in drone swarms and autonomous vehicle fleets. We present the first end-to-end framework for safety verification of learned multi-agent communication policies through policy abstraction: neural policies are distilled into interpretable decision trees, then formally verified, with empirical validation confirming that verified safety properties transfer to original networks. Our four-stage pipeline consists of domain-specific feature extraction from agent observations, decision tree distillation achieving 97.9% +/- 1.2% fidelity to neural policies, automated translation to PRISM probabilistic model checker specifications with complete feature-to-state-variable correspondence, and compositional verification of Probabilistic Computation Tree Logic (PCTL) properties via pairwise decomposition with union-bound aggregation and empirical neighbor modeling. Evaluating Vector-Quantized Variational Information Bottleneck (VQ-VIB) policies for multi-drone coordination with 5-7 agents, we verify 18 temporal logic properties across safety, liveness, and cooperation, achieving 88.9% property satisfaction with all five safety thresholds satisfied (0.3% collision probability vs. 1% threshold). Monte Carlo validation of original neural policies confirms that verified safety properties transfer with &lt;=0.6 percentage-point deviation (95% CI). Discrete VQ-VIB messages provide +11.6 to +13.6 percentage-point fidelity advantages over continuous methods, enabling 3-4x faster verification. Our framework provides empirically validated safety verification for distilled policy abstractions, serving as a practical bridge between deep MARL and formal safety workflows for multi-robot deployment.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解决策树蒸馏如何将黑盒神经策略转化为可验证形式，再关注形式化验证的具体属性和结果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究为低空经济中无人机集群的安全通信与协调提供了形式化验证方法，直接提升系统安全性。航迹预测模型也可借鉴此框架进行安全属性验证，确保预测结果可靠。</p></section>
+              <section><h3>实践思路</h3><p>可复现实验：使用多智能体强化学习环境（如MADRL），训练VQ-VIB通信策略，实现决策树蒸馏和PRISM验证流程。建议在无人机避碰场景中验证碰撞概率等安全属性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>面向工业微电网友好型联络线功率整形的无参考异构多智能体强化学习</h2>
+              <p>Reference-Free Heterogeneous Multi-Agent Reinforcement Learning for Grid-Friendly Tie-Line Power Shaping in Industrial Microgrids</p>
+              <p class="meta">Daniyaer Paizulamua, Lin Cheng, Fashun Shi, Haoyu Zheng, Pengfei He, Haiwang Zhong | arXiv eess.SY | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25599v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25599v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>联络线功率整形是工业微电网友好运行的关键要求。本文研究钢铁工业微电网中多时间尺度异构可调资源的协调，以塑造考虑多目标的友好型联络线功率轨迹。提出了一种顺序异构智能体协调框架，其中过程负荷、氢储能和电池储能被建模为功能异构的智能体，具有跨角色观测、异步决策间隔、角色特定奖励和评论家。该设计捕捉了不同资源对联络线功率轨迹的异构时间效应，并缓解了模糊的信用分配和弱智能体间协调。为确保可行的实时执行，将基于过程知识的动作掩蔽和可行性投影嵌入策略执行中，并开发了针对具有不同动作结构和决策间隔的智能体的角色感知多时间尺度演员-评论家训练方案。使用真实可再生能源和电力市场数据的数值研究表明，该框架有效消除了对预定义参考轨迹的依赖，实现了自适应的1分钟在线决策，平均计算时间仅0.4毫秒每步，且零生产故障。与原始运行相比，该框架将总购电成本、合同需求超出时间和累计爬坡超出分别降低了91.27%、98.64%和96.91%。这些结果表明所提出的框架...</p></section>
+              <section><h3>English Abstract</h3><p>Tie-line power (TLP) shaping is a key requirement for the grid-friendly operation of industrial microgrids (IMGs). This paper studies the coordination of multi-timescale heterogeneous adjustable resources in a steel IMG to shape a grid-friendly TLP trajectory considering multiple objectives. A sequential heterogeneous-agent coordination (SHAC) framework is proposed, where process loads, hydrogen storage, and battery storage are modeled as functionally heterogeneous agents with cross-role observations, asynchronous decision intervals, role-specific rewards and critics. This design captures the heterogeneous temporal effects of different resources on the TLP trajectory and alleviates ambiguous credit assignment and weak inter-agent coordination. To ensure feasible real-time execution, process-knowledge-based action masking and feasibility projection are embedded into policy execution, and a role-aware multi-timescale actor--critic training scheme is developed for agents with different action structures and decision intervals. Numerical studies using real renewable generation and electricity market data show that SHAC effectively eliminates the dependence on predefined reference trajectories and enables adaptive 1-min online decision-making, achieving zero production failures with an average computational time of only 0.4 ms per step. Compared with the original operation, SHAC reduces the total grid purchase cost, contract-demand exceedance time, and cumulative ramp excess by 91.27\%, 98.64\%, and 96.91\%, respectively. These results demonstrate that the proposed framework improves the economic efficiency and grid friendliness of industrial microgrid operation while satisfying strict process-safety constraints and real-time computational requirements.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解异构智能体如何建模不同资源（过程负荷、储能），再关注无参考轨迹的在线决策机制和性能提升。</p></section>
+              <section><h3>相关性说明</h3><p>该研究涉及多智能体协调与轨迹优化，其异构智能体建模和实时决策方法可迁移至低空经济中无人机与地面设施的协同。航迹预测中的多智能体协调可借鉴其信用分配和异步决策策略。</p></section>
+              <section><h3>实践思路</h3><p>可复现实验：在微电网仿真平台（如OpenDSS或MATLAB/Simulink）中实现异构智能体框架，对比传统基于参考轨迹的方法。建议在真实工业微电网数据上测试，验证在线决策的鲁棒性和效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>RSC：基于混合预测控制与在线重配置的大规模集群分散式刚性编队飞行</h2>
+              <p>RSC: Decentralized Rigid Formation Flocking for Large-Scale Swarms via Hybrid Predictive Control and Online Reconfiguration</p>
+              <p class="meta">Ganyu Zou, Linhan Wang, Chen Dai, Siji Chen, Chang-Tien Lu | arXiv cs.RO | 2026-06-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.04248v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.04248v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>分散式刚性编队飞行要求一群自主智能体在移动过程中保持预定的几何构型，仅依赖局部感知和通信。然而，现有的分散式控制方法在杂乱环境中难以维持严格的智能体间距离约束，常陷入局部极小值死锁、产生高频控制振荡或在避障时灵活性有限，导致成功率低。为解决这些限制，我们提出了刚性集群控制（RSC），一种用于大规模刚性编队飞行的分散式控制框架。为通过鲁棒的长期规划逃离局部极小值同时确保短期安全，RSC 在一个混合架构中集成了有限时域轨迹预测与反应式人工势场（APF）安全控制器。此外，为加速穿越障碍后的编队重组而不中断任务执行，RSC 引入了一种基于稳定角色交换的在线领导者-跟随者重配置机制。在包含25架无人机的挑战性杂乱环境中的广泛评估表明，RSC 可靠地统一了刚性编队保持、避障和目标跟踪。在严格的成功标准（无碰撞运行且最大相对边长误差低于10%）下，RSC 实现了83%的成功率，显著优于现有启发式和基于学习的基线方法（成功率低于5%）。</p></section>
+              <section><h3>English Abstract</h3><p>Decentralized rigid formation flocking requires a swarm of autonomous agents to maintain a predetermined geometric configuration while moving, relying solely on local sensing and communication. However, existing decentralized control methods struggle to maintain strict inter-agent distance constraints in cluttered environments, often suffering from local minima deadlocks, high frequency control oscillations, or limited flexibility during obstacle navigation, resulting in low success rate. To address these limitations, we propose Rigid Swarm Control (RSC), a decentralized control framework for large-scale rigid formation flocking. To escape local minima via robust long-term planning while ensuring short-term safety, RSC integrates finite-horizon trajectory predictions with a reactive artificial potential field (APF) safety controller within a hybrid architecture. Furthermore, to accelerate formation reassembly after obstacle traversal without interrupting task execution, RSC introduces an online leader-follower reconfiguration mechanism based on stable role exchange. Extensive evaluations in challenging cluttered environments with 25 UAVs demonstrate that RSC reliably unifies rigid formation maintenance, obstacle avoidance, and target tracking. Under strict success criteria - collision-free operation with a maximum relative edge-length error below 10%, RSC achieves an 83% success rate, significantly outperforming existing heuristic and learning-based baselines that fall below 5%.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注混合控制架构如何结合长期预测与短期安全，再理解在线重配置机制对编队重组效率的提升。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中大规模无人机集群的安全编队飞行问题，其分散式控制框架可增强集群在复杂环境中的避障和任务执行能力。提出的轨迹预测与安全控制器结合的方法，对航迹预测的鲁棒性和实时性有重要参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境中复现其混合控制架构，使用25架无人机在随机障碍物场景中测试编队保持和避障成功率。进一步可尝试将在线重配置机制应用于实际四旋翼集群，验证其在动态障碍物下的角色交换效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>LAMP：面向可行轨迹预测的车道对齐运动基元</h2>
+              <p>LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction</p>
+              <p class="meta">Sangjin Han, Hoseong Jung, Jeongtae Her, Changhyun Choi, H. Jin Kim | arXiv cs.RO | 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26661v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.26661v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>运动预测对于自动驾驶系统在复杂驾驶场景中实现安全决策和规划至关重要。虽然现有预测器在最小化标准位移误差方面表现出色，但它们常常忽略了多模态预测对车道拓扑的遵循，尤其是对于低概率模式。因此，预测轨迹可能违反物理和逻辑约束，使得预测集对于安全关键规划不可靠。在本文中，我们提出 LAMP（车道对齐运动基元），一种拓扑感知的预测框架，将多模态预测锚定到与车道拓扑对齐的结构化运动基元上。具体来说，我们使用 VQ-VAE 学习形状感知的运动基元作为离散意图查询，捕获超越基于端点意图的时空模式。我们进一步引入了一个可行性感知的意图选择器，该选择器使用车道拓扑先验进行训练，用于过滤不可达的意图查询，引导解码器优先考虑拓扑一致的意图，同时保持行为多样性。在 Argoverse 2 数据集上的大量实验表明，LAMP 实现了与最先进基线相当的预测精度，同时在可行性和多样性指标上优于它们。</p></section>
+              <section><h3>English Abstract</h3><p>Motion forecasting is essential for autonomous driving systems to enable safe decision-making and planning in complex driving scenarios. While existing predictors excel at minimizing standard displacement errors, they often overlook the adherence to lane topology of multimodal predictions, particularly for lower-probability modes. Consequently, predicted trajectories may violate physical and logical constraints, making the prediction set unreliable for safety-critical planning. In this paper, we propose LAMP (Lane-Aligned Motion Primitives), a topology-aware forecasting framework that anchors multimodal prediction to structured motion primitives aligned with lane topology. Specifically, we use a VQ-VAE to learn shape-aware motion primitives as discrete intention queries, capturing spatiotemporal patterns beyond endpoint-based intentions. We further introduce a feasibility-aware intention selector trained with a lane-topology prior for filtering unreachable intention queries, guiding the decoder to prioritize topology-consistent intentions while preserving behavioral diversity. Extensive experiments on the Argoverse 2 dataset demonstrate that LAMP achieves prediction accuracy comparable to state-of-the-art baselines while outperforming them in feasibility and diversity metrics.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解 VQ-VAE 如何学习运动基元以及可行性感知意图选择器如何利用车道拓扑先验过滤不可行预测。</p></section>
+              <section><h3>相关性说明</h3><p>该研究对低空经济中无人机航迹预测有直接启示，其拓扑感知方法可类比于空域结构（如航路、禁飞区）约束下的轨迹预测。通过将预测锚定到结构化基元，可提升航迹的可行性和安全性，避免违反空域规则。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机航迹预测数据集上复现 LAMP 框架，将空域拓扑（如航路点、高度限制）替代车道拓扑。评估其在多模态预测中保持可行性和多样性的能力，并与传统基于端点的预测方法对比。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>弥合强化学习在敏捷飞行中的性能与泛化能力</h2>
+              <p>Bridging Performance and Generalization in Reinforcement Learning for Agile Flight</p>
+              <p class="meta">Jonathan Green, Jiaxu Xing, Nico Messikommer, Angel Romero, Davide Scaramuzza | arXiv cs.RO | 2026-06-25</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.27348v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.27348v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>自主无人机竞速是自主空中机器人的一个根本性挑战领域，需要在持续执行器饱和下进行时间最优控制。虽然强化学习（RL）在该领域已达到人类水平性能，但当前方法无法泛化；在特定环境上训练的策略通常会在未见过的配置中立即坠毁。这种失败反映了敏捷飞行中零样本泛化的内在困难，源于高维任务变化以及高速下安全与性能之间的紧密耦合。现有提高泛化能力的方法会显著牺牲飞行速度：控制策略必须大幅降低性能才能实现哪怕适度的泛化。在这项工作中，我们提出了一种基于 RL 的无人机竞速敏捷飞行零样本泛化框架。通过将基于学习进度的任务感知切换与物理信息化的程序化赛道生成器相结合，该框架产生了一个快速且鲁棒的通用策略，无需测试时自适应。我们的方法在现实世界中各种未见过的赛道上实现了强大的零样本性能，与最先进方法相比泛化能力提升了7.4倍，同时保持了有竞争力的竞速速度。我们在仿真和现实环境中验证了方法的结果，包括一个具有挑战性的基于视觉的端到端控制设置，该设置无需显式状态估计，而所有先前方法在此设置中均无法泛化。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous drone racing is a fundamentally challenging regime for autonomous aerial robots, requiring time-optimal control while operating under persistent actuation saturation. While reinforcement learning (RL) has achieved human-level performance in this domain, current methods fail to generalize; policies trained on specific environments often crash immediately in unseen configurations. This failure reflects the intrinsic difficulty of zero-shot generalization in agile flight, arising from high-dimensional task variation and the tight coupling between safety and performance at high speeds. Existing approaches that improve generalization impose a substantial cost on flight speed: control policies must significantly degrade performance to achieve even modest levels of generalization. In this work, we propose a framework for zero-shot generalization in agile flight for RL-based drone racing. By combining task-aware switching based on learning progress with a physically informed procedural track generator, the framework produces a fast and robust generalist policy without test-time adaptation. Our method achieves strong zero-shot performance across a wide range of unseen racetracks in the real world, demonstrating a 7.4x improvement in generalization over the state-of-the-art approaches, while maintaining competitive racing speeds. We validate our method&#x27;s results in both simulation and real-world settings, including a challenging vision-based, end-to-end control setting that operates without explicit state estimation, where all prior approaches fail to generalize.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解零样本泛化在敏捷飞行中的挑战，再关注任务感知切换和程序化赛道生成如何协同提升泛化能力。</p></section>
+              <section><h3>相关性说明</h3><p>该研究对低空经济中智能体（如无人机）在未知环境中的安全自主飞行至关重要，其零样本泛化能力可减少对特定场景的依赖。提出的框架可应用于航迹预测，使预测模型在未见过的空域或任务条件下仍能保持高性能和安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境中复现其程序化赛道生成和任务感知切换机制，测试不同赛道复杂度下的泛化性能。进一步在真实无人机上部署基于视觉的端到端控制策略，评估其在未知环境中的零样本飞行成功率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>OrthoTrack：锚定于公开正射影像的连续六自由度无人机轨迹估计</h2>
+              <p>OrthoTrack: Continuous 6-DoF UAV Trajectory Estimation Anchored in Public Orthophotos</p>
+              <p class="meta">Oussema Dhaouadi, Zuria Bauer, Johannes Michael Meier, Olaf Wysocki, Marc Pollefeys, Daniel Cremers | arXiv cs.CV | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25245v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25245v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>连续六自由度位姿估计对于自主无人机操作至关重要。然而，现有的视觉里程计和 SLAM 方法会累积漂移，并仅产生相对的、尺度不确定的轨迹。而单帧地理定位则丢弃了时间连续性，并且对于实时使用来说仍然太慢。我们提出 OrthoTrack，一个无需训练的系统，仅使用公开可用的正射影像和表面模型作为地图先验，来估计连续的六自由度无人机轨迹。OrthoTrack 将关键帧与正射影像进行匹配，并通过表面模型将对应点提升到度量三维空间。然后，它利用光流将这些锚定于地图的对应点传播到中间帧，从而在每一帧产生绝对的、度量尺度的位姿，无需 GPS 或事后对齐。我们还引入了 MovingDrone 数据集，这是一个大规模基准，将逼真的无人机序列与密集的六自由度真值以及包括多时相正射影像在内的共配准多模态地理数据配对。在 MovingDrone 和真实世界基准上，OrthoTrack 在单个 GPU 上实时运行。它大幅优于所有基线方法，甚至包括那些接收了理想尺度和对齐信息的方法。通过依赖公开可用的地理数据，OrthoTrack 能够部署到新区域而无需特定地点的适配。</p></section>
+              <section><h3>English Abstract</h3><p>Continuous 6-DoF pose estimation is essential for autonomous UAV operations. Yet, existing visual odometry and SLAM methods accumulate drift and yield only relative, up-to-scale trajectories. Single-frame geo-localization, in turn, discards temporal continuity and remains too slow for real-time use. We present OrthoTrack, a training-free system that estimates continuous 6-DoF UAV trajectories using only publicly available orthophotos and surface models as a map prior. OrthoTrack matches keyframes against the orthophoto and lifts correspondences to metric 3D via the surface model. It then propagates these map-anchored correspondences to intermediate frames with optical flow, producing absolute, metrically scaled poses at every frame without GPS or post-hoc alignment. We also introduce the MovingDrone Dataset, a large-scale benchmark pairing photorealistic UAV sequences with dense 6-DoF ground truth and co-registered multi-modal geodata including multi-temporal orthophotos. On MovingDrone and real-world benchmarks, OrthoTrack runs in real time on a single GPU. It outperforms all baselines by a large margin, even those receiving oracle scale and alignment. By relying on publicly available geodata, OrthoTrack enables deployment to new regions without site-specific adaptation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解其无需训练、仅依赖公开地理数据的特点，再关注关键帧匹配与光流传播如何实现连续绝对位姿估计。</p></section>
+              <section><h3>相关性说明</h3><p>该研究为低空经济中无人机在无 GPS 环境下的安全导航提供了关键支撑，其连续六自由度轨迹估计可增强航迹预测的准确性。通过利用公开正射影像，可降低部署成本，适用于城市低空物流、巡检等场景的实时定位。</p></section>
+              <section><h3>实践思路</h3><p>可在公开正射影像和表面模型数据上复现 OrthoTrack，使用无人机飞行视频测试其位姿估计精度和实时性。进一步可将其集成到无人机自主导航系统中，评估其在 GPS 拒止环境下的轨迹跟踪性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>通过走廊网络实现分散式自主交通管理</h2>
+              <p>Decentralized Autonomous Traffic Management through Corridor Networks</p>
+              <p class="meta">Jasmine Jerry Aloor, Aadarsh Govada, Hamsa Balakrishnan | arXiv cs.MA | 2026-06-22</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.23585v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.23585v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>随着自主飞行器大规模引入且交通密度增加，集中式管理变得不足以协调大量有人和无人飞行器。因此，专用先进空中交通（AAM）走廊被提出用于组织高密度自主交通流。为自主飞行器在轨迹规划中提供可扩展的灵活性，推动了在 AAM 走廊中开发分散式交通管理方法的需求。在这项工作中，我们扩展了一种多智能体强化学习（MARL）方法，以应对空中走廊网络中分散式交通流管理的挑战。我们在单一走廊设置中训练的策略，以零样本方式在日益复杂的多走廊网络（包含合并和分叉组合）上进行测试。实验结果表明，学习到的行为能够很好地迁移到具有不同交通密度、网络几何形状和异构飞行器性能的场景中，无需集中协调或模型重新训练。我们根据对走廊边界的符合度、完成率、平均速度、行驶距离以及飞行器间间隔的保持来评估系统级性能。我们发现，尽管我们的策略仅需要局部协调的进入、穿越和退出行为，但它们共同在走廊网络中产生了理想的交通流。</p></section>
+              <section><h3>English Abstract</h3><p>As autonomous aircraft are introduced at scale and traffic density increases, centralized management becomes insufficient to coordinate the large numbers of crewed and uncrewed aircraft. Dedicated Advanced Air Mobility (AAM) corridors have therefore been proposed for organizing high-density autonomous traffic flows. The desire to scalably provide autonomous aircraft flexibility in trajectory planning motivates the development of decentralized approaches to traffic management in AAM corridors. In this work, we extend a multi-agent reinforcement learning (MARL) approach to address the challenge of decentralized traffic flow management in air corridor networks. We test policies trained in a single-corridor setting on increasingly complex multi-corridor networks with combinations of merges and splits in a zero-shot manner. Experimental results demonstrate that learned behaviors transfer well to scenarios with varying traffic density, network geometry, and heterogeneous vehicle performance, without needing centralized coordination or model retraining. We evaluate system-level performance in terms of conformance to corridor boundaries, completion rates, average speeds, distance traveled, and maintenance of inter-aircraft separation. We find that although our policies require only locally coordinated entry, traversal, and exit behaviors, they collectively produce desirable traffic flows through the corridor network.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解分散式 MARL 在单一走廊中的训练方式，再关注其零样本迁移到复杂多走廊网络的能力。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中高密度自主飞行器交通管理的关键挑战，其分散式方法可提升空域安全性和效率。通过零样本迁移，可适应不同空域结构和交通条件，对航迹预测和智能体协同有重要参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境中构建包含合并和分叉的走廊网络，复现其 MARL 训练和零样本测试流程。评估不同交通密度和飞行器性能下的系统级指标，并尝试将策略部署到实际无人机集群中验证其可扩展性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>AeroCast：基于Transformer-MDN架构的非合作空中障碍物概率性三维轨迹预测</h2>
+              <p>AeroCast: Probabilistic 3D Trajectory Prediction for Non-Cooperative Aerial Obstacles via Transformer-MDN Architecture</p>
+              <p class="meta">Syed Izzat Ullah, Jose Baca | arXiv cs.RO | 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25122v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25122v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在共享空域中运行的自主飞行器必须预测非合作障碍物的未来位置，以便在碰撞变得不可避免之前规划规避机动。与共享意图的合作系统不同，非合作障碍物（如鸟类、失控无人机或碎片）表现出多模态运动，确定性预测器无法充分表示。现有方法要么依赖循环编码器顺序传播时间信息，限制了其捕捉机动起始的远程运动学前兆的能力，要么产生点预测，无法向下游规划器提供分布信息。本文提出了AeroCast，一个概率性轨迹预测框架，它结合了Transformer编码器和混合密度网络输出头，以预测未来三维位移的每时间步高斯混合分布。一个平移不变连续位移编码和一个面向校准的训练目标解决了特定于基于混合的空中轨迹预测的输入设计和模式退化挑战。在一个涵盖九种运动类别的混合真实与合成四旋翼飞行器语料库上，AeroCast在五秒预测范围内将平均位移误差和最终位移误差相对于基线降低了约50%，并在所有比较方法中实现了最低的负对数似然和连续排名概率得分。消融分析确定速度输入和模型容量是预测质量的主要贡献因素。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous aerial vehicles operating in shared airspace must predict the future positions of non-cooperative obstacles to plan evasive maneuvers before a collision becomes unavoidable. Unlike cooperative systems that share intent, non-cooperative obstacles such as birds, uncontrolled drones, or debris exhibit multi-modal motion that deterministic predictors cannot adequately represent. Existing methods either rely on recurrent encoders that propagate temporal information sequentially, limiting their ability to capture long-range kinematic precursors of maneuver initiation, or produce point forecasts that provide no distributional information to downstream planners. This paper presents AeroCast, a probabilistic trajectory prediction framework that combines a Transformer encoder with a Mixture Density Network output head to predict per-timestep Gaussian mixture distributions over future three-dimensional displacements. A translation-invariant consecutive displacement encoding and a calibration-oriented training objective address the input design and mode-degeneracy challenges specific to mixture-based aerial trajectory prediction. On a hybrid real-and-synthetic quadrotor corpus spanning nine motion categories, AeroCast reduces Average Displacement Error and Final Displacement Error by approximately 50% relative to the baselines over a five-second horizon, and achieves the lowest negative log-likelihood and Continuous Ranked Probability Score among all compared methods. Ablation analysis identifies velocity input and model capacity as the primary contributors to prediction quality, and positional encoding as essential for long-horizon trajectory coherence. AeroCast inference completes in 0.1ms per sample, compatible with real-time onboard deployment at 100Hz.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注Transformer-MDN架构如何结合概率输出与序列编码，以及消融分析中速度输入和模型容量的贡献。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中非合作障碍物的轨迹预测问题，是航迹预测领域的前沿方法。其概率性预测框架能有效处理无人机、鸟类等多模态运动，对提升低空飞行安全具有重要价值。</p></section>
+              <section><h3>实践思路</h3><p>可基于公开的四旋翼飞行器数据集复现AeroCast模型，重点验证其概率预测输出（如高斯混合分布）在规避碰撞场景中的效果。建议对比传统循环神经网络基线，评估其在多模态运动下的预测性能提升。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>JPPD：具有可微分安全引导的联合预测-规划扩散模型用于智能交通系统中的动态障碍物规避</h2>
+              <p>JPPD: Joint Prediction_Planning Diffusion with Differentiable Safety Guidance for Dynamic Obstacle Avoidance in Intelligent Transportation Systems</p>
+              <p class="meta">Jiahao Wu, Shengwen Yu | arXiv cs.RO | 2026-06-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.20686v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.20686v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>共享空间交通运行要求低速自主平台在行人、服务机器人、微出行用户、手推车及其他道路使用者之间安全高效地导航。大多数现有系统将这一问题分解为轨迹预测后接运动规划，这造成了单向信息流：预测的参与者未来轨迹影响机器人规划，但选定的机器人规划无法影响预测的多智能体演化。本文提出了一个联合预测-规划扩散框架，将参与者预测和机器人规划视为一个单一的条件轨迹生成问题，其中模型使用具有跨轨迹注意力的因果Transformer从一个耦合分布中采样未来的机器人轨迹和所有参与者轨迹。为了取代启发式排斥后处理，该框架引入了可微分安全势引导，一个时变占用概率势，其梯度直接引导联合采样器，并使用条件流匹配来减少推理步骤，同时保持多模态轨迹多样性。评估强调共享空间运行效果，包括接近碰撞、阻塞时间、诱导参与者偏离、急刹车事件和嵌入延迟，而不是将平均位移误差和最终位移误差作为主要结果。在场景基础仿真、自然行人回放、Isaac Sim验证和ROS/Orin部署中的实验表明，联合采样改善了尾部安全性和运行效率。</p></section>
+              <section><h3>English Abstract</h3><p>Shared-space transportation operation requires low-speed autonomous platforms to navigate safely and efficiently among pedestrians, service robots, micromobility users, carts, and other road users. Most existing systems decompose this problem into trajectory prediction followed by motion planning, which creates one-way information flow: predicted participant futures influence the robot plan, but the selected robot plan cannot influence the predicted multi-agent evolution. This paper presents a joint prediction-planning diffusion framework that treats participant prediction and robot planning as a single conditional trajectory generation problem, where the model samples the future robot trajectory and all participant trajectories from one coupled distribution using a causal Transformer with cross-trajectory attention. To replace heuristic repulsive post-processing, the framework introduces differentiable safety potential guidance, a time-varying occupancy-probability potential whose gradient directly guides the joint sampler, and conditional flow matching is used to reduce inference steps while preserving multimodal trajectory diversity. The evaluation emphasizes shared-space operational effects, including near misses, blockage time, induced participant deviation, hard-braking events, and embedded latency, rather than treating average displacement error and final displacement error as the main result. Experiments in scenario-grounded simulation, naturalistic pedestrian replay, Isaac Sim validation, and ROS/Orin deployment show that joint sampling improves tail safety and runtime efficiency over a separated prediction-then-planning baseline.</p></section>
+              <section><h3>中文阅读提示</h3><p>注意理解联合预测-规划框架如何通过可微分安全势引导替代传统后处理，以及评估指标如何从误差转向运行安全效果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究针对低空经济中无人机与地面交通共享空间的安全导航问题，其联合预测-规划方法能有效处理动态障碍物规避。可微分安全引导机制为低空智能体在复杂环境中的安全决策提供了新思路。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境（如Isaac Sim）中复现JPPD框架，重点测试其在行人密集或无人机混杂场景下的安全性能。建议对比传统分解式预测-规划方法，评估联合采样对减少接近碰撞和阻塞时间的实际效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>基于推理大语言模型的长时域船舶轨迹与目的地预测</h2>
+              <p>Towards Long-Horizon Vessel Trajectory and Destination Forecasting with Reasoning Large Language Models</p>
+              <p class="meta">Hongwei Wang, Miao Zhou, Fengde Wang, Yuting Wang, Jiewen Yu, Jun-Yan He, Bohao Qu, Wanbing Zhang, Xiuju Fu, Qing Guo, Zipei Fan, Yingying Xing, Yi Yuan | arXiv cs.AI | 2026-06-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.08633v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.08633v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>长时域海上轨迹预测对于航运管理、物流规划和海上风险分析非常重要，然而月度级别的预测仍未得到充分研究。现有的深度学习方法主要关注短期和中期坐标外推，并且往往难以在长时间跨度内保持路线可行性和目的地正确性。本文研究了使用具有推理能力的大语言模型进行联合长时域船舶轨迹和目的地预测，并开发了一个基于带可验证奖励的强化学习（RLVR）的海事大语言模型后训练框架。构建了一个基于AIS的基准数据集，包含60天历史轨迹和30天预测范围，其中轨迹被转换为语义文本表示用于RL提示构建。RLVR通过强制执行物理有效性、提供早期加权轨迹监督以及通过层次匹配和课程学习评估目的地正确性，使大语言模型与海事预测目标对齐。实验结果表明，RLVR训练的大语言模型在零样本大语言模型和代表性深度学习基线上有显著改进，尤其是在与目的地相关的指标上。在评估的RLVR训练变体中，4B大语言模型实现了最佳整体性能，这表明奖励兼容优化和任务特定容量匹配比简单地使用更大的8B或14B大语言模型更重要。结果还表明，在有限的微调数据下，LSTM仍然是一个强大的深度学习基线，而Transformer架构则表现出不同的特性。</p></section>
+              <section><h3>English Abstract</h3><p>Long-horizon maritime trajectory prediction is important for shipping management, logistics planning, and maritime risk analysis, yet month-level forecasting remains insufficiently studied. Existing deep learning methods mainly focus on short- and mid-term coordinate extrapolation and often struggle to preserve route feasibility and destination correctness over extended horizons. This paper investigates joint long-horizon vessel trajectory and destination forecasting with reasoning-capable large language models, and develops a Maritime LLM post-training framework based on Reinforcement Learning with Verifiable Reward (RLVR). An AIS-based benchmark is constructed with 60-day historical trajectories and 30-day forecasting horizons, where trajectories are converted into semantic textual representations for RL prompt construction. RLVR aligns LLMs with maritime forecasting objectives by enforcing physical validity, providing early-weighted trajectory supervision, and evaluating destination correctness through hierarchical matching and curriculum learning. Experimental results show that RLVR-trained LLMs substantially improve over zero-shot LLMs and representative deep learning baselines, especially on destination-related metrics. Among the evaluated RLVR-trained variants, 4B LLMs achieve the best overall performance, suggesting that reward-compatible optimization and task-specific capacity matching are more important than simply using larger 8B or 14B LLMs. The results also show that LSTM remains a strong deep learning baseline under limited fine-tuning data, while Transformer-style spatio-temporal models typically require larger datasets and richer structured inputs. Overall, this work advances semantic, verifier-aligned maritime forecasting for operational decision support.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注RLVR框架如何将物理约束和目的地正确性融入大语言模型训练，以及4B模型优于更大模型这一反直觉发现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的长时域预测方法可迁移至低空经济中无人机或飞行器的长期航迹预测，尤其是物流配送等场景。其基于大语言模型的推理能力为处理复杂航路约束和目的地预测提供了新范式。</p></section>
+              <section><h3>实践思路</h3><p>可基于AIS数据或低空飞行数据构建类似语义文本表示，复现RLVR训练框架。建议重点测试4B大语言模型在长时域航迹预测中的性能，并与LSTM等基线对比，验证其目的地预测准确性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>基于信道知识地图的通信感知无人机智能轨迹优化用于城市巡检</h2>
+              <p>CKM-Driven Communication-Aware UAV Intelligent Trajectory Optimization for Urban Inspection</p>
+              <p class="meta">Yang Xiaomeng, Jia Ziye, Zhu Qiuming, Wu Qihui | arXiv cs.LG | 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.24979v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.24979v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机越来越多地用于城市巡检任务，其中可靠的通信至关重要，但由于严重的空间信道异质性而具有挑战性。为了解决这个问题，本文关注多无人机任务的通信感知路径规划，并提出了一个信道知识地图驱动的轨迹规划框架，该框架集成了信道建模和轨迹决策。具体来说，我们应用扩散模型构建时间累积的信道知识地图，并以低飞行开销实现准确感知，利用稀疏观测数据重建高保真全局信道质量分布。基于信道知识地图，我们提出了一种全局到局部图注意力网络软演员-评论家算法。图注意力网络优化复杂的组合节点排序问题，生成一个最优且通信感知的巡检目标序列。随后，软演员-评论家算法执行连续动作控制，以确保飞行路径的平滑性并动态避开通信衰减区域。仿真结果表明，所提出的方法有效地引导无人机通过高质量信道区域，而无需依赖实时信道反馈，显著提高了轨迹效率和通信可靠性。</p></section>
+              <section><h3>English Abstract</h3><p>Unmanned aerial vehicles (UAVs) are increasingly employed in urban inspection tasks, where reliable communication is critical but challenging due to the severe spatial channel heterogeneity. To address the issue, in this paper, we focus on the communication-aware path planning for multi-UAV tasks, and propose a channel knowledge map (CKM)-driven trajectory planning framework which integrates the channel modeling and trajectory decision-making. Specifically, we apply the diffusion model to construct a time-accumulated CKM and achieve the accurate perception with low flight overhead, which leverages the sparse observation data to reconstruct the high-fidelity global channel quality distribution. Based on the CKM, we propose a global-to-local graph attention network soft actor-critic algorithm. The graph attention network optimizes the complex combinatorial node ordering problem, generating an optimal and communication-aware sequence for the inspection targets. Subsequently, the soft actor-critic algorithm performs continuous action control to ensure the smoothness of the flight path and dynamically avoid communication attenuation areas. Simulation results demonstrate that the proposed method effectively guides UAVs through high-quality channel regions without dependence on real-time channel feedback, significantly improving both the trajectory efficiency and communication reliability.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解扩散模型如何从稀疏数据重建信道知识地图，以及图注意力网络与软演员-评论家算法如何协同优化轨迹。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接解决低空经济中无人机巡检的通信安全与路径规划问题，其通信感知轨迹优化方法可提升无人机在复杂城市环境中的作业可靠性。信道知识地图的构建为低空智能体提供了环境感知新维度。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境中复现信道知识地图构建与轨迹优化框架，使用公开城市地图和射线追踪数据。建议对比有无信道感知的轨迹规划，评估通信质量提升和飞行效率变化。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>O-RAN中用于无人机轨迹优化的自适应机器学习框架</h2>
+              <p>Adaptive Machine Learning Framework for UAV Trajectory Optimization in O-RAN</p>
+              <p class="meta">Chenrui Sun, Swarna Bindu Chetty, Gianluca Fontanesi, Mahnaz Arvaneh, Walid Saad, Hamed Ahmadi | arXiv eess.SP | 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.24483v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.24483v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在6G蜂窝系统中部署无人机作为开放无线电单元为实现可扩展和自适应网络覆盖提供了有前景的机会。然而，在动态和陌生环境中优化无人机轨迹仍然是一个关键挑战，特别是在每个新场景中都需要大量重新训练。本文介绍了一个新颖的无人机轨迹优化框架，该框架在O-RAN架构内集成了增强的持续迁移学习。所提出的系统维护一个预训练模型库，并采用模型选择机制来识别和迁移来自最相关环境的知识，从而最小化适应时间并提高效率。当没有足够相似的模型可用时，一个由持续改进支持的备用模型可确保基线性能。该框架利用真实城市地图和射线追踪技术来增强学习可靠性并改进轨迹规划。仿真结果表明，与从头开始重新训练相比，所提出的基于模型选择的迁移学习方法将收敛时间减少了44%至56%，与没有模型选择的传统迁移学习相比，减少了高达40%。</p></section>
+              <section><h3>English Abstract</h3><p>The deployment of unmanned aerial vehicles (UAV) as open radio units (O-RUs) in 6G cellular systems presents a promising opportunity to achieve scalable and adaptive network coverage. However, optimizing UAV trajectories in dynamic and unfamiliar environments remains a critical challenge, particularly due to the need for extensive retraining in each new scenario. In this paper, we introduce a novel UAV trajectory optimization framework that integrates enhanced continual transfer learning within the O-RAN architecture. The proposed system maintains a library of pre-trained models and employs a model selection mechanism to identify and transfer knowledge from the most relevant environments, minimizing adaptation time and improving efficiency. When no sufficiently similar model is available, a fallback model empowered by continuous refinements ensures baseline performance. The framework leverages real-world city maps and ray tracing techniques to enhance learning reliability and improve trajectory planning. Simulation results demonstrate that the proposed model selection-based transfer learning approach reduces convergence time by 44% to 56% compared to retraining from scratch, and up to 40% compared to traditional transfer learning without model selection.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注模型选择机制如何通过迁移学习减少适应时间，以及备用模型如何保证基线性能。</p></section>
+              <section><h3>相关性说明</h3><p>该研究针对低空经济中无人机作为通信节点的轨迹优化问题，其迁移学习框架能快速适应新环境，提升部署效率。O-RAN架构的集成为实现低空通信网络的智能管理提供了可行方案。</p></section>
+              <section><h3>实践思路</h3><p>可在O-RAN仿真平台中复现该迁移学习框架，使用真实城市地图和射线追踪数据。建议对比不同迁移策略（如从头训练、无模型选择迁移）的收敛时间和轨迹质量，验证模型选择机制的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance</h2>
+              <p>G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance</p>
+              <p class="meta">Hang Yu, Ye Jin, Alessandro Canevaro, Julian Schmidt, Julian Jordan, Peizheng Li, Marc Kaufeld, Silvan Lindner, Johannes Betz, Wilhelm Stork | arXiv cs.RO | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26017v2" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.26017v2" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>In autonomous driving, diffusion-based planners have emerged as a promising paradigm for robust motion planning in dense and interactive traffic, as they can effectively model diverse driving behaviors. However, their inherent stochasticity often requires explicit guidance during denoising to ensure safety and route adherence for robust closed-loop execution. Existing guidance typically relies on sparse, entity-centric geometric queries or post-hoc refinement, yielding limited situational awareness and fragile performance in interactive scenes. To address this issue, we propose G2DP (Grid-Guided Diffusion Planning), a diffusion-based planner that directly enforces dense environmental constraints through inference-time guidance. Specifically, G2DP constructs a differentiable spatio-temporal cost volume by fusing probabilistic future occupancy distributions with a route-progress map. By formulating this volume as a continuous safety energy functional, it injects dense gradients directly into the denoising loop, actively steering trajectory generation toward collision-free and progress-optimal regions. Extensive closed-loop evaluations show that G2DP achieves state-of-the-art performance on nuPlan, outperforming the strongest imitation-learning baseline by +7.2 points in reactive score. It further maintains top scores in zero-shot transfers to interPlan and DeepScenario benchmarks, with collision avoidance improving by +10.15 over the unguided approach on interPlan. These results demonstrate that spatio-temporal cost grids serve as an effective representation for robust guidance in diffusion-based planning.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 spatio-temporal, collision avoidance。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>NavIsaacLab: Generating Realistic Crowd via Parallel Robot Learning for Benchmarking Human-aware Navigation</h2>
+              <p>NavIsaacLab: Generating Realistic Crowd via Parallel Robot Learning for Benchmarking Human-aware Navigation</p>
+              <p class="meta">Bingyi Xia, Han Bao, Jingyu Zhu, Hanjing Ye, Yuhan Pang, Guangcheng Chen, Liang Lin, Wenjun Xu, Jiankun Wang | arXiv cs.RO | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.26265v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.26265v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Robot autonomous navigation that accounts for surrounding human activities is crucial for ensuring both safety and natural human-robot interaction in real-world environments shared by humans and robots. Simulation of complex and diverse navigation scenarios serves as the foundation for training reliable robot navigation policies and accurately evaluating the performance of algorithms, offering an efficient alternative to manual supervision of real data. However, current human-aware navigation research faces significant challenges due to the scarcity of diverse, high-quality scene data. Existing simulation platforms often rely on handcrafted rules to approximate pedestrian behavior and lack the capability to provide extensive sensor signals, typically assuming perfect observations. To address these limitations, this paper presents NavIsaacLab, a comprehensive framework for benchmarking and training human-aware navigation policies through physics-based and photo-realistic simulations of pedestrians and scenes. Based on Isaac Lab, the proposed framework employs photo-realistic scene rendering capabilities and supports parallel simulation on GPU, delivering real-time and accurate 3D visual feedback to robots. To enhance the realism of human behavior, a data-driven approach is employed that incorporates a trajectory diffusion model and an adversarial motion learning controller, enabling controllable, physics-based pedestrian simulation. Furthermore, the integration of diverse cross-scale scenes provides a robust benchmark for state-of-the-art human-aware navigation methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 robot learning, autonomous navigation。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>BitTP: The Lightweight Trajectory Prediction Model with BitLLM for Edge-Devices</h2>
+              <p>BitTP: The Lightweight Trajectory Prediction Model with BitLLM for Edge-Devices</p>
+              <p class="meta">Mincheol Kang, Hyunjin Lim, Bomin Kang, Daehee Park | arXiv cs.AI | 2026-05-28</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2605.29705v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2605.29705v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Trajectory prediction is a fundamental task for autonomous systems, requiring complex reasoning about multi-agent interactions and intents. Large language models (LLMs) have recently been adopted for this task, as they provide strong contextual reasoning and interpretable, language-based trajectory representations. However, these LLM-based predictors are extremely memory- and compute-intensive, making them difficult to deploy on resource-constrained edge devices such as on-board computers in autonomous robots. To bridge this gap, we propose BitTP, which converts an LLM-based trajectory predictor into a lightweight bitlinear architecture. We demonstrate that weight-only quantization to 1.58-bit (BitTP-Weight) is optimal. Crucially, activations must remain in full precision, as quantizing them leads to severe degradation and instability in spatio-temporal reasoning. Empirically, BitTP-Weight not only preserves but improves prediction quality over the full-precision (BF16) LLM baseline, reducing ADE by 14.29% and FDE by 20.97% on average, while simultaneously reducing memory usage and inference latency relative to other quantization methods. These results demonstrate that carefully designed quantization acts as an effective regularizer, enabling the practical deployment of sophisticated LLM-based reasoning on edge devices. Code is available at: https://github.com/MintCat98/BitTP.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 trajectory prediction, spatio-temporal, multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>AI Coaching for Accelerating Human Skill Development with Reinforcement Learning</h2>
+              <p>AI Coaching for Accelerating Human Skill Development with Reinforcement Learning</p>
+              <p class="meta">Wei Wang, Enlin Gu, Antonio Loquercio, Haimin Hu, Rahul Mangharam | arXiv cs.RO | 2026-06-24</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25337v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25337v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>AI copilots can substantially boost human performance through shared control, but excessive assistance can induce over-reliance and skill atrophy. This paper studies how an embodied AI agent can act as a coach that accelerates human motor-skill development. We argue that effective coaching requires strategic scaffolding and stepping back that are aligned with the learner&#x27;s capability, allowing productive failures that drive learning. We formalize the interactive AI coaching process as a non-cooperative dynamic game in which the learner optimizes task performance while the coach targets the learner&#x27;s independent competence. Building on this formalism, we develop a reinforcement learning framework combining adaptive shared control with probabilistic models of the coach&#x27;s causal influence on skill evolution, enabling tractable training of coaching policies. A comprehensive user study (N=33) on first-person-view drone racing shows significant gains in human learning outcomes over state-of-the-art AI coaching baselines.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 drone, embodied ai, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>SwarmFly: A simulation platform for UAV swarm experiment design and validation</h2>
+              <p>SwarmFly: A simulation platform for UAV swarm experiment design and validation</p>
+              <p class="meta">Abhishek Phadke, Karthik Kumar Vasudeva, Abhishek Joshi | arXiv cs.RO | 2026-06-23</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.25146v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.25146v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>The initial development phase of UAV swarms largely depends on simulation for experimental design and validation, yet existing open-source tools are often unmaintained, have steep learning curves, or are built around a single fixed scenario. The need for a comprehensive, modular simulation platform is a recognized research gap. This paper presents SwarmFly, a MATLAB-based simulation and test platform for multi- UAV swarms that addresses these gaps. SwarmFly combines a real-time operational map, four swarm coordination modes (leader-follower, decentralized, heterogeneous relay, and heterogeneous speed), simulated IMU telemetry, and IP-based geolocation with a plugin architecture that lets researchers add behaviors, fault models, and analysis tools without touching the core code. Eight bundled plugins extend the base simulator into a full test harness. The SwarmFly platform exposes multi-agent aerial swarms to a wide range of internal and external disruptions, enabling observation and quantification of underlying swarm control and behavioral mechanisms. This study verifies and characterizes each subsystem through eight experiments that measure formation accuracy, wind tolerance, fault recovery, energy endurance, and airspace compliance. The platform runs entirely in MATLAB. Its modular design supports straightforward extension toward hardware-in-the-loop testing, larger swarms, and higher-fidelity dynamics. An open-source release is available at [https://github.com/abhishekphadke/SwarmFly.git]</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 uav, multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>
