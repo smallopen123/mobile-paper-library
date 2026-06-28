@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "49d32cb85ae414e8",
+      "title": "LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction",
+      "url": "http://arxiv.org/abs/2606.26661v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "eef6c9a1edf3ce67",
+      "title": "Bridging Performance and Generalization in Reinforcement Learning for Agile Flight",
+      "url": "http://arxiv.org/abs/2606.27348v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "e7533df7d47a0acd",
+      "title": "G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance",
+      "url": "http://arxiv.org/abs/2606.26017v2",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "e7dacfc931f515a4",
+      "title": "NavIsaacLab: Generating Realistic Crowd via Parallel Robot Learning for Benchmarking Human-aware Navigation",
+      "url": "http://arxiv.org/abs/2606.26265v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "86093412d0b27985",
+      "title": "Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound",
+      "url": "http://arxiv.org/abs/2606.25978v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "979a556c4bf3a94a",
+      "title": "Rate-Aware Quantum-Inspired Trajectory Learning for Interference-Limited Multi-UAV Networks",
+      "url": "http://arxiv.org/abs/2606.25480v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "faa6d24b60b9faf6",
+      "title": "Reference-Free Heterogeneous Multi-Agent Reinforcement Learning for Grid-Friendly Tie-Line Power Shaping in Industrial Microgrids",
+      "url": "http://arxiv.org/abs/2606.25599v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "07170599885f8d58",
+      "title": "Decentralized Autonomous Traffic Management through Corridor Networks",
+      "url": "http://arxiv.org/abs/2606.23585v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "867b160b58ecc99f",
+      "title": "AeroCast: Probabilistic 3D Trajectory Prediction for Non-Cooperative Aerial Obstacles via Transformer-MDN Architecture",
+      "url": "http://arxiv.org/abs/2606.25122v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "699f435742273802",
+      "title": "OrthoTrack: Continuous 6-DoF UAV Trajectory Estimation Anchored in Public Orthophotos",
+      "url": "http://arxiv.org/abs/2606.25245v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "0af74d8f5e45b621",
+      "title": "CKM-Driven Communication-Aware UAV Intelligent Trajectory Optimization for Urban Inspection",
+      "url": "http://arxiv.org/abs/2606.24979v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "14aa88f923c31f7f",
+      "title": "Adaptive Machine Learning Framework for UAV Trajectory Optimization in O-RAN",
+      "url": "http://arxiv.org/abs/2606.24483v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "6f70b1d2381f52be",
+      "title": "AI Coaching for Accelerating Human Skill Development with Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.25337v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "91a86496384feeb5",
+      "title": "SwarmFly: A simulation platform for UAV swarm experiment design and validation",
+      "url": "http://arxiv.org/abs/2606.25146v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "4dccd7d3a64ccf99",
+      "title": "Mind the Noise: Sensitivity of Transformer-based Interaction-Aware Trajectory Prediction Models to Noisy Data",
+      "url": "http://arxiv.org/abs/2606.21344v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "4fd92a1e4e9a3a14",
+      "title": "Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation",
+      "url": "http://arxiv.org/abs/2606.19632v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "4496b61c25adb245",
+      "title": "RSC: Decentralized Rigid Formation Flocking for Large-Scale Swarms via Hybrid Predictive Control and Online Reconfiguration",
+      "url": "http://arxiv.org/abs/2606.04248v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "10daed72f1691044",
+      "title": "JPPD: Joint Prediction_Planning Diffusion with Differentiable Safety Guidance for Dynamic Obstacle Avoidance in Intelligent Transportation Systems",
+      "url": "http://arxiv.org/abs/2606.20686v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "369e08a520fdef8e",
+      "title": "Towards Long-Horizon Vessel Trajectory and Destination Forecasting with Reasoning Large Language Models",
+      "url": "http://arxiv.org/abs/2606.08633v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
+      "key": "036829130f1df21b",
+      "title": "BitTP: The Lightweight Trajectory Prediction Model with BitLLM for Edge-Devices",
+      "url": "http://arxiv.org/abs/2605.29705v1",
+      "sent_at": "2026-06-28T03:50:11.287940+00:00"
+    },
+    {
       "key": "e154a13c48699d1e",
       "title": "Temporal Logic Guidance for Action-Only Diffusion Policies with World Models",
       "url": "http://arxiv.org/abs/2606.22729v1",
@@ -481,30 +601,6 @@
       "sent_at": "2026-06-27T04:51:45.520429+00:00"
     },
     {
-      "key": "49d32cb85ae414e8",
-      "title": "LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction",
-      "url": "http://arxiv.org/abs/2606.26661v1",
-      "sent_at": "2026-06-26T05:07:08.578371+00:00"
-    },
-    {
-      "key": "eef6c9a1edf3ce67",
-      "title": "Bridging Performance and Generalization in Reinforcement Learning for Agile Flight",
-      "url": "http://arxiv.org/abs/2606.27348v1",
-      "sent_at": "2026-06-26T05:07:08.578371+00:00"
-    },
-    {
-      "key": "e7533df7d47a0acd",
-      "title": "G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance",
-      "url": "http://arxiv.org/abs/2606.26017v2",
-      "sent_at": "2026-06-26T05:07:08.578371+00:00"
-    },
-    {
-      "key": "e7dacfc931f515a4",
-      "title": "NavIsaacLab: Generating Realistic Crowd via Parallel Robot Learning for Benchmarking Human-aware Navigation",
-      "url": "http://arxiv.org/abs/2606.26265v1",
-      "sent_at": "2026-06-26T05:07:08.578371+00:00"
-    },
-    {
       "key": "bc9c2e3e8114f1ec",
       "title": "FlameVQA: A Physically-Grounded UAV Wildfire VQA Benchmark with Radiometric Thermal Supervision",
       "url": "http://arxiv.org/abs/2606.27128v1",
@@ -601,69 +697,9 @@
       "sent_at": "2026-06-26T05:07:08.578371+00:00"
     },
     {
-      "key": "86093412d0b27985",
-      "title": "Multi-Agent Goal Recognition with Team- and Goal-Conditioned Reinforcement Learning and Factorized Branch-and-Bound",
-      "url": "http://arxiv.org/abs/2606.25978v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "979a556c4bf3a94a",
-      "title": "Rate-Aware Quantum-Inspired Trajectory Learning for Interference-Limited Multi-UAV Networks",
-      "url": "http://arxiv.org/abs/2606.25480v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "faa6d24b60b9faf6",
-      "title": "Reference-Free Heterogeneous Multi-Agent Reinforcement Learning for Grid-Friendly Tie-Line Power Shaping in Industrial Microgrids",
-      "url": "http://arxiv.org/abs/2606.25599v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "07170599885f8d58",
-      "title": "Decentralized Autonomous Traffic Management through Corridor Networks",
-      "url": "http://arxiv.org/abs/2606.23585v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "867b160b58ecc99f",
-      "title": "AeroCast: Probabilistic 3D Trajectory Prediction for Non-Cooperative Aerial Obstacles via Transformer-MDN Architecture",
-      "url": "http://arxiv.org/abs/2606.25122v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "699f435742273802",
-      "title": "OrthoTrack: Continuous 6-DoF UAV Trajectory Estimation Anchored in Public Orthophotos",
-      "url": "http://arxiv.org/abs/2606.25245v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "0af74d8f5e45b621",
-      "title": "CKM-Driven Communication-Aware UAV Intelligent Trajectory Optimization for Urban Inspection",
-      "url": "http://arxiv.org/abs/2606.24979v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "14aa88f923c31f7f",
-      "title": "Adaptive Machine Learning Framework for UAV Trajectory Optimization in O-RAN",
-      "url": "http://arxiv.org/abs/2606.24483v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
       "key": "a796f7c81b20b3fe",
       "title": "G2DP: Diffusion Planning with Spatio-Temporal Grid Guidance",
       "url": "http://arxiv.org/abs/2606.26017v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "6f70b1d2381f52be",
-      "title": "AI Coaching for Accelerating Human Skill Development with Reinforcement Learning",
-      "url": "http://arxiv.org/abs/2606.25337v1",
-      "sent_at": "2026-06-25T08:09:29.553271+00:00"
-    },
-    {
-      "key": "91a86496384feeb5",
-      "title": "SwarmFly: A simulation platform for UAV swarm experiment design and validation",
-      "url": "http://arxiv.org/abs/2606.25146v1",
       "sent_at": "2026-06-25T08:09:29.553271+00:00"
     },
     {
