@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "695091b6113c9bb2",
+      "title": "hia-gat: A Heterogeneous Interaction-Aware Graph Attention Network For Frame-Level Traffic Conflict Risk Prediction On Freeways",
+      "url": "http://arxiv.org/abs/2606.27577v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "94c5d0dd2f391be1",
+      "title": "SpatialUAV: Benchmarking Spatial Intelligence for Low-Altitude UAV Perception, Collaboration, and Motion",
+      "url": "http://arxiv.org/abs/2606.27876v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "77139edcad42fe85",
+      "title": "PhysisForcing: Physics Reinforced World Simulator for Robotic Manipulation",
+      "url": "http://arxiv.org/abs/2606.28128v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "be825d63678cec3d",
+      "title": "From Detection to Action: Using LLM Agents for Fault-Tolerant Control",
+      "url": "http://arxiv.org/abs/2606.28011v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "04d55594f9b50f40",
+      "title": "Look-Before-Move: Narrative-Grounded World Visual Attention in Dynamic 3D Story Worlds",
+      "url": "http://arxiv.org/abs/2606.26964v2",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "f957920de93729a9",
+      "title": "When Multi-Robot Systems Meet Agentic AI:Towards Embodied Collective Intelligence",
+      "url": "http://arxiv.org/abs/2606.27929v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "d78dd91bdf339fb2",
+      "title": "AirGroundBench: Probing Spatial Intelligence in Multimodal Large Models under Heterogeneous Multi-View Embodied Collaboration",
+      "url": "http://arxiv.org/abs/2606.28049v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "1da662696c4928f8",
+      "title": "Swarm sign language: motion-based communication between drones",
+      "url": "http://arxiv.org/abs/2606.27883v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "90e98e7d86cb16b8",
+      "title": "Explainable AI for Biodiversity Monitoring and Ecological Image Analysis",
+      "url": "http://arxiv.org/abs/2606.27667v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "9bdc72814e2d14aa",
+      "title": "Directing the World: Fast Autoregressive Video Generation with Compositional Human-Camera Control",
+      "url": "http://arxiv.org/abs/2606.27964v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "f5d9c38b4e346fab",
+      "title": "CascadeOcc: Rethinking 3D Occupancy World Models with Cascaded VQ Representations",
+      "url": "http://arxiv.org/abs/2606.27644v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "f323f89266098add",
+      "title": "SemCityLoc: Aerial 6DoF Localization Using Semantic 3D City Models",
+      "url": "http://arxiv.org/abs/2606.27444v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "039413985eb17012",
+      "title": "Grounded Iterative Language Planning: How Parameterized World Models Reduce Hallucination Propagation in LLM Agents",
+      "url": "http://arxiv.org/abs/2606.27806v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "185fcc862fcc5351",
+      "title": "Agent-Native Immune System: Architecture, Taxonomy, and Engineering",
+      "url": "http://arxiv.org/abs/2606.28270v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "935b24a15b3c0a53",
+      "title": "LLawCo: Learning Laws of Cooperation for Modeling Embodied Multi-Agent Behavior",
+      "url": "http://arxiv.org/abs/2606.28182v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "a0fb885169c023ed",
+      "title": "Triadic Werewolf: A Jester Role for Multi-Hop Theory of Mind in LLMs",
+      "url": "http://arxiv.org/abs/2606.27909v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "32f8bf42bc2ade25",
+      "title": "Textual Belief States for World Models: Identifiable Representation Learning Under Strict Mediation",
+      "url": "http://arxiv.org/abs/2606.27681v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "2c2f878c6d0a0f2d",
+      "title": "ReWorld: Learning Better Representations for World Action Models",
+      "url": "http://arxiv.org/abs/2606.27504v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "b05070dd13fe3a45",
+      "title": "When Does Personality Composition Matter for Multi-Agent LLM Teams?",
+      "url": "http://arxiv.org/abs/2606.27443v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
+      "key": "cb174a51ca00aeee",
+      "title": "Delayed Verification Destabilizes Multi-Agent LLM Belief: Instability Thresholds and Optimal Corrector Placement",
+      "url": "http://arxiv.org/abs/2606.27409v1",
+      "sent_at": "2026-06-29T22:09:34.068252+00:00"
+    },
+    {
       "key": "49d32cb85ae414e8",
       "title": "LAMP: Lane-Aligned Motion Primitives for Feasible Trajectory Prediction",
       "url": "http://arxiv.org/abs/2606.26661v1",
