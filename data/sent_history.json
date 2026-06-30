@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "b4e2b9b643c85ae0",
+      "title": "MOAR Planner: Multi-Objective and Adaptive Risk-Aware Path Planning for Infrastructure Inspection with a UAV",
+      "url": "http://arxiv.org/abs/2606.30575v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "5f5dd1d7a03d6573",
+      "title": "Cognitive World Models for Process-Level Social Influence Evaluation",
+      "url": "http://arxiv.org/abs/2606.29495v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "2c80d79219787c59",
+      "title": "Realtime Wind Estimation using Low Cost Quadrotor Uncrewed Aerial Vehicles",
+      "url": "http://arxiv.org/abs/2606.30581v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "ddc3ea7d22e27762",
+      "title": "Multi-UAV Formation Cooperative Obstacle Avoidance and Adaptive Shape Deformation Control in Complex Environments Based on BI-APF-RRT and Affine Transformation",
+      "url": "http://arxiv.org/abs/2606.29755v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "d621a5d32d7acb6a",
+      "title": "OWMDrive: Causality-Aware End-to-End Autonomous Driving via 4D Occupancy World Model",
+      "url": "http://arxiv.org/abs/2606.30421v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "dac62cc1a02d2b5f",
+      "title": "AUSLUN: A Fixed-Hover UAV--USV System for GNSS-Denied Maritime Search and Navigation",
+      "url": "http://arxiv.org/abs/2606.29875v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "adedd67b2235d01e",
+      "title": "MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2606.30602v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "5a37f815a3615642",
+      "title": "Budgeted Act-or-Defer Multi-Agent LLM Deliberation with Local Reliability Bounds",
+      "url": "http://arxiv.org/abs/2606.29654v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "5cf5c04d3b5eec12",
+      "title": "ACPO: Agent-Chained Policy Optimization for Multi-Agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.30072v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "31294afcc924c4e7",
+      "title": "HiComm: Hierarchical Communication for Multi-agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.29126v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "5cd0ca6e31af83ec",
+      "title": "Beyond 2D Matching: A Unified Single-Stage Framework for Geometry-Aware Cross-View Object Geo-Localization",
+      "url": "http://arxiv.org/abs/2606.30576v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "a8f9565ff9a6307e",
+      "title": "AERIS: Aerial-Edge Role-Driven Intelligence at Runtime via Orchestrated Language-Model Swarm",
+      "url": "http://arxiv.org/abs/2606.30151v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "acc88db891d39e73",
+      "title": "AerialMetric: Benchmarking and Adapting UAV Monocular Metric Depth Estimation in the Real World",
+      "url": "http://arxiv.org/abs/2606.29716v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "2ffe8fff883456b1",
+      "title": "MF-UAVPose6D: A Model-Free Monocular 6-DoF Pose Estimation Framework for Fixed-Wing UAVs",
+      "url": "http://arxiv.org/abs/2606.29697v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "eec95539ecd5efea",
+      "title": "Pondering the Way: Spatial-perceiving World Action Model for Embodied Navigation",
+      "url": "http://arxiv.org/abs/2606.29908v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "4dae11d8f1a9b6b8",
+      "title": "Beyond Point Estimates for Glaucoma Visual Field Forecasting with Diffusion Models",
+      "url": "http://arxiv.org/abs/2606.30417v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "8ebb12e9e5555c6f",
+      "title": "Attractor States Emerge in Multi-Turn LLM Conversations",
+      "url": "http://arxiv.org/abs/2606.30571v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "9b88292bdb53e460",
+      "title": "Linguistic Firewall: Geometry as Defense in Multi-Agent Systems Routing",
+      "url": "http://arxiv.org/abs/2606.30555v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "8438699eeb26a89d",
+      "title": "COHORT: Collaborative Orchestration for Hardening via Offensive Replay on Emulated Topologies",
+      "url": "http://arxiv.org/abs/2606.30479v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
+      "key": "f0f2ac8d833d3ff9",
+      "title": "Translating Natural Language to Strategic Temporal Specifications via LLMs",
+      "url": "http://arxiv.org/abs/2606.30441v1",
+      "sent_at": "2026-06-30T22:16:40.120944+00:00"
+    },
+    {
       "key": "695091b6113c9bb2",
       "title": "hia-gat: A Heterogeneous Interaction-Aware Graph Attention Network For Frame-Level Traffic Conflict Risk Prediction On Freeways",
       "url": "http://arxiv.org/abs/2606.27577v1",

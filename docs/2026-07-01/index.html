@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-01</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-01 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>MOAR规划器：用于无人机基础设施检查的多目标自适应风险感知路径规划</h2>
+              <p>MOAR Planner: Multi-Objective and Adaptive Risk-Aware Path Planning for Infrastructure Inspection with a UAV</p>
+              <p class="meta">Louis Petit, Alexis Lussier Desbiens | arXiv cs.RO | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30575v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30575v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机检查的自主导航问题仍然具有挑战性，因为它需要在靠近障碍物的情况下有效导航，同时考虑动态风险因素，如天气条件、通信可靠性和电池续航。本文介绍了MOAR路径规划器，它解决了任务中风险演变的复杂性。它提供实时轨迹调整，同时优化安全性、时间和能量。该规划器采用了一种风险感知成本函数，该函数集成了预计算成本图、损伤成本和插入成本的新概念，以及一个自适应速度规划框架。通过这种方式，使用状态和动作空间的离散表示在图中搜索最优路径。该方法通过仿真和实际飞行测试进行了评估。结果表明，其能够生成覆盖广泛评估指标的实时轨迹：约为流行算法覆盖范围的90%。所提出的框架有助于使无人机在关键任务中更自主、更可靠地导航。</p></section>
+              <section><h3>English Abstract</h3><p>The problem of autonomous navigation for UAV inspection remains challenging as it requires effectively navigating in close proximity to obstacles, while accounting for dynamic risk factors such as weather conditions, communication reliability, and battery autonomy. This paper introduces the MOAR path planner which addresses the complexities of evolving risks during missions. It offers real-time trajectory adaptation while concurrently optimizing safety, time, and energy. The planner employs a risk-aware cost function that integrates pre-computed cost maps, the new concepts of damage and insertion costs, and an adaptive speed planning framework. With that, the optimal path is searched in a graph using a discrete representation of the state and action spaces. The method is evaluated through simulations and real-world flight tests. The results show the capability to generate real-time trajectories spanning a broad range of evaluation metrics: around 90% of the range occupied by popular algorithms. The proposed framework contributes by enabling UAVs to navigate more autonomously and reliably in critical missions.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解问题背景和MOAR规划器的核心创新点。然后重点关注第III节的方法描述和第IV节的实验结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接针对低空经济中无人机基础设施检查的安全导航问题，提出了考虑动态风险（如天气、通信）的路径规划方法。其风险感知成本函数和自适应速度规划框架可应用于低空飞行器的航迹预测与安全优化。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其仿真实验，使用公开的无人机动力学模型和障碍物环境，实现MOAR规划器并与A*、RRT*等基线算法对比。进一步可在实际四旋翼无人机平台上部署，测试其在真实天气和通信干扰下的性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>用于过程级社会影响力评估的认知世界模型</h2>
+              <p>Cognitive World Models for Process-Level Social Influence Evaluation</p>
+              <p class="meta">Minghui Ma, Bin Guo, Han Wang, Mengqi Chen, Jingqi Liu, Yan Liu, Zhiwen Yu | arXiv cs.AI | 2026-06-28</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29495v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29495v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>社会影响力对话通过改变内部认知状态来改变用户行为。核心评估问题是用户的信念、欲望、意图和情绪在对话过程中是否发生可测量的变化，这是一个面向过程的标准，表面级别的文本指标（BLEU/ROUGE）或单一分数的LLM判断都无法捕捉。我们提出了认知世界模型（CogWM），一个基于LLM的用户模型，它将多轮对话评估从“用户说了什么”重新定义为“用户的内部认知状态如何演变”。CogWM联合预测BDI/E认知状态和用户话语，并作为用户模拟器和评估平台，使用一个三级评估框架，涵盖轮次级保真度、轨迹级状态动态和任务级综合评分。通过在四个社会影响力场景中的150,454个用户轮次样本上使用我们的“总结与分配”（SaA）注释流程进行训练，CogWM达到了77.6%的情绪准确率（是GPT-5.5的2.1倍）。在3600次多智能体判别试验中，它通过认知影响力区分了六个商业智能体，其中Llama-4-Scout排名第一（CTS +0.233）。CogWM将社会影响力对话评估从终端判断转变为过程跟踪。</p></section>
+              <section><h3>English Abstract</h3><p>Social influence dialogue changes user behavior by altering internal cognitive states. The central evaluation question is whether the user&#x27;s beliefs, desires, intentions, and emotions measurably change over the course of conversation, a process-oriented criterion that neither surface-level text metrics (BLEU/ROUGE) nor single-score LLM judgments can capture. We propose the \textbf{Cog}nitive \textbf{W}orld \textbf{M}odel \textbf{(CogWM)}, an LLM-based user model that reframes multi-turn dialogue evaluation from ``what did the user say&#x27;&#x27; to ``how did the user&#x27;s internal cognitive state evolves.&#x27;&#x27; CogWM jointly predicts BDI/E cognitive states and user utterances and serves as both a user simulator and an evaluation platform, using a three-tier evaluation framework that covers turn-level fidelity, trajectory-level state dynamics, and task-level composite scoring. Trained via our \textbf{S}ummarize-\textbf{a}nd-\textbf{A}llocate \textbf{(SaA)} annotation pipeline on 150,454 user-turn samples across four social influence scenarios, CogWM achieves 77.6\% emotion accuracy (2.1$\times$ over GPT-5.5). In 3600 multi-agent discrimination trials, it distinguishes six commercial agents by their cognitive influence, with Llama-4-Scout ranking first (CTS +0.233). CogWM moves social influence dialogue evaluation from terminal judgment to process tracking. We have released our code\footnote{\scriptsize Code: https://github.com/lucianma05-create/CogWM} and models\footnote{Model: https://www.modelscope.cn/models/LucianMa/CogWM-14B}.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先阅读摘要和引言，理解CogWM的动机和核心思想。然后重点看第III节的方法和第IV节的实验，特别是三级评估框架和SaA注释流程。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的认知世界模型可用于评估低空经济中智能体（如无人机、自动驾驶车辆）的决策过程，通过建模其内部状态（如意图、信念）来预测航迹或行为。其过程级评估框架为多智能体系统的安全交互提供了新的分析工具。</p></section>
+              <section><h3>实践思路</h3><p>可以复现CogWM模型，使用其开源的代码和模型，在低空经济场景（如无人机编队、空中交通管理）中构建用户模拟器。通过收集对话数据，训练模型评估智能体的认知状态演变，并对比传统评估指标。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>使用低成本四旋翼无人机进行实时风速估计</h2>
+              <p>Realtime Wind Estimation using Low Cost Quadrotor Uncrewed Aerial Vehicles</p>
+              <p class="meta">Hiranya Udagedara, Mahdis Bisheban | arXiv cs.RO | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30581v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30581v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在环境监测以及野火等应急响应应用中，风速测量至关重要。四旋翼无人机因其机动性、紧凑尺寸和成本效益而成为风速估计的流行平台。许多研究使用扩展卡尔曼滤波器（EKF）基于四旋翼动力学模型估计风速。然而，大多数研究仅使用悬停的四旋翼进行风速估计，其他研究则使用近线性轨迹来估计近似恒定的速度。此外，EKF的性能受限于其对当前状态附近非线性四旋翼动力学的线性化近似，这限制了在高度非线性场景（包括有风条件）中的准确性。本研究提出使用无迹卡尔曼滤波器（UKF），一种非线性估计器，在保持四旋翼无人机轨迹的同时提供准确的风速估计。四旋翼在特殊欧几里得群SE(3)上建模，并通过使用几何控制器保持四旋翼飞行路径的数值模拟来评估该方法。结果表明，随着模拟非线性的增加，UKF始终优于EKF。这证明了UKF作为高度非线性场景中可靠估计器的潜力，能够在提供准确风速估计的同时，以最小偏差保持轨迹。</p></section>
+              <section><h3>English Abstract</h3><p>In environmental monitoring as well as emergency response applications such as wildfires, wind velocity measurement is essential. Quadrotor UAVs have become popular platforms for wind velocity estimation due to their maneuverability, compact size, and cost-effectiveness. Numerous studies use the Extended Kalman Filter (EKF) to estimate the wind velocity based on the quadrotor dynamic model. However, most of them use hovering quadrotors only for wind estimation, others use a near-linear trajectory to estimate near-constant velocities. Furthermore, EKF performance is constrained by its reliance on linearized approximations of the nonlinear quadrotor dynamics around current states, limiting accuracy in highly nonlinear scenarios, including windy conditions. This study proposes the use of an Unscented Kalman Filter (UKF), a nonlinear estimator to provide accurate wind estimations while maintaining the trajectory of the quadrotor UAV. The quadrotor is modeled on the Special Euclidean group SE(3) and the approach is evaluated through numerical simulations using a geometric controller to maintain quadrotor flight paths. The results indicate that as the nonlinearity of the simulation increases, the UKF consistently outperforms the EKF. This demonstrates the potential of the UKF as a reliable estimator for highly nonlinear scenarios, capable of maintaining the trajectory with minimal deviation while providing accurate wind velocity estimations.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解问题背景和UKF相对于EKF的优势。然后重点看第III节的方法和第IV节的仿真结果，特别是非线性度增加时的性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接针对低空经济中无人机飞行安全的关键因素——风速估计，提出了基于UKF的实时方法。准确的风速估计对于低空飞行器的航迹预测和路径规划至关重要，尤其是在恶劣天气条件下。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其仿真实验，使用四旋翼动力学模型和几何控制器，实现UKF和EKF进行风速估计。进一步可在低成本四旋翼平台上部署UKF，通过机载传感器（如IMU、GPS）数据实时估计风速，并验证其在真实飞行中的性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>基于BI-APF-RRT和仿射变换的复杂环境下多无人机编队协同避障与自适应形状变形控制</h2>
+              <p>Multi-UAV Formation Cooperative Obstacle Avoidance and Adaptive Shape Deformation Control in Complex Environments Based on BI-APF-RRT and Affine Transformation</p>
+              <p class="meta">Yiliang Wu, Weican Chen, Yendo Hu | arXiv cs.RO | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29755v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29755v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>针对复杂障碍物环境中多无人机编队运动时避障灵活性与编队完整性难以共存，以及传统人工势场法（APF）容易陷入局部最优的问题，提出了一种融合BI-APF-RRT和仿射变换的多无人机编队协同避障算法。首先，摒弃传统的APF质心路径规划方法，采用目标偏置的双向人工势场法RRT（BI-APF-RRT）算法，为领航者编队的质心进行全局无碰撞路径规划。通过引入改进的人工势场和三次B样条插值，保证了全局路径的平滑性和快速收敛性。其次，以生成的全局路径作为编队质心的引导轨迹，结合仿射变换矩阵（包括非均匀缩放和旋转），使得编队能够根据与障碍物的距离自适应变形，同时沿最优路径移动。最后，跟随者通过分布式控制律跟踪领航者，使整个编队无需解散即可安全穿越复杂障碍区域。</p></section>
+              <section><h3>English Abstract</h3><p>Aiming at the problem that obstacle avoidance flexibility and formation integrity are difficult to coexist in multi-UAV formation motion in complex obstacle environments , and that the traditional artificial potential field (APF) method easily falls into local optima, a cooperative obstacle avoidance algorithm for multi-UAV formations integrating BI-APF-RRT and affine transformation is proposed. First, abandoning the traditional APF centroid path planning method , a goal-biased Bidirectional Artificial Potential Field method RRT (BI-APF-RRT) algorithm is adopted to conduct global collision-free path planning for the centroid of the leader formation. By introducing an improved artificial potential field and cubic B-spline interpolation, the smoothness and rapid convergence of the global path are ensured. Secondly, using the generated global path as the guiding trajectory for the formation&#x27;s centroid , combined with an affine transformation matrix (including non-uniform scaling and rotation) , the formation can adaptively deform based on the distance to obstacles while moving along the optimal path. Finally, the followers track the leaders through a distributed control law , enabling the entire formation to safely cross complex obstacle areas without disassembling.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解问题背景和算法框架。然后重点看第III节的方法，特别是BI-APF-RRT算法和仿射变换变形控制部分。最后看第IV节的仿真结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接针对低空经济中多无人机编队的安全飞行问题，提出了协同避障和自适应变形控制方法。其算法可应用于无人机物流配送、空中巡检等场景，确保编队在复杂环境中保持安全与完整性。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其仿真实验，使用ROS/Gazebo搭建多无人机编队仿真环境，实现BI-APF-RRT路径规划和仿射变换变形控制。进一步可在实际四旋翼无人机编队上部署，测试其在真实障碍物环境中的避障和变形性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>OWMDrive：基于4D占用世界模型的因果感知端到端自动驾驶</h2>
+              <p>OWMDrive: Causality-Aware End-to-End Autonomous Driving via 4D Occupancy World Model</p>
+              <p class="meta">Junjie Cheng, Ruiqi Song, Ye Wu, Nanxing Zeng, Ximiao Li, Yunfeng Ai | arXiv cs.CV | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30421v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30421v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>自动驾驶系统正稳步向端到端范式发展，以缓解基于规则的流水线在复杂交通环境中适应性有限的问题。然而，大多数现有的基于学习的方法仍然从当前场景的静态表示中做出决策，没有明确的未来推演或对交通交互中时间因果动态的建模。这种限制通常会导致在高不确定性条件下（如遮挡和意外事件）产生不稳定或过于保守的规划。为了克服这些挑战，我们引入了OWMDrive，一个基于占用世界模型进行多步3D占用预测的生成式端到端驾驶框架，该预测作为条件先验来指导基于扩散的规划。规划器以当前观测和预测的未来状态为条件，迭代优化轨迹候选，以生成增强的驾驶轨迹。通过显式建模未来时间范围内的场景演变，OWMDrive捕捉了关键的时空因果依赖关系，从而产生更具前瞻性和鲁棒性的轨迹生成。大量实验表明，OWMDrive显著提高了规划的可靠性和安全性，尤其是在具有挑战性和部分可观测的驾驶场景中。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous driving systems are steadily moving toward end-to-end paradigms to mitigate the limited adaptability of rule-based pipelines in complex traffic environments. However, most existing learning-based methods still make decisions from static representations of the current scene, without explicit future rollouts or modeling of the temporal causal dynamics in traffic interactions. This limitation often results in unstable or overly conservative planning under high-uncertainty conditions, such as occlusions and unexpected events. To overcome these challenges, we introduce OWMDrive, a generative end-to-end driving framework built upon an Occupancy World Model for multi-step 3D occupancy forecasting, which serves as a conditional prior to guide diffusion-based planning. Conditioned on both current observations and predicted future states, the planner iteratively refines trajectory candidates to generate a reinforced driving trajectory. By explicitly modeling scene evolution over future horizons, OWMDrive captures key spatiotemporal causal dependencies, which leads to more foresighted and robust trajectory generation. Extensive experiments demonstrate that OWMDrive significantly improves planning reliability and safety, especially in challenging and partially observable driving scenarios.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解OWMDrive的动机和核心创新点。然后重点看第III节的方法，特别是占用世界模型和扩散规划器部分。最后看第IV节的实验，关注其在遮挡和意外事件下的表现。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的基于占用世界模型的端到端规划方法，通过显式建模未来场景演变和因果依赖关系，可应用于低空经济中无人机的航迹预测与安全规划。其处理遮挡和不确定性场景的能力对低空飞行安全至关重要。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其仿真实验，使用公开的自动驾驶数据集（如nuScenes）训练占用世界模型和扩散规划器。进一步可将其迁移到无人机场景，使用低空数据集（如UAVDT）进行训练和测试，评估其在航迹预测和避障中的性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>AUSLUN：一种用于GNSS拒止环境下海上搜索与导航的固定悬停无人机-无人船系统</h2>
+              <p>AUSLUN: A Fixed-Hover UAV--USV System for GNSS-Denied Maritime Search and Navigation</p>
+              <p class="meta">Siyuan Yang, Zikai Jia, Hailiang Kuang, Xiaoyu He, Qizhi Guo, Yihao Dong, Shaoming He | arXiv cs.RO | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29875v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29875v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>全球导航卫星系统（GNSS）拒止会阻止无人水面艇（USV）发现远处的船只并保持全局参考的接近方式。本文提出了AUSLUN（自动无人机搜索、定位与USV导航），一种固定悬停的空中-水面系统，它使用一架沿海无人机（UAV），该无人机通过视觉-惯性里程计（VIO）估计自身位姿，作为远程传感和导航锚点。核心设计将传感运动从无人机平移转移到变焦吊舱，并通过三个耦合元素形成闭环：多边形感知的环形吊舱扫描、模态感知的方位-距离定位，以及带有视觉丢失恢复的目标相对USV引导。相同的门控递归估计器对非合作目标使用激光测距，对合作USV使用数据链测距。搜索规划仿真表明，与匹配的固定扇区扫描相比，自适应偏航边界减少了扫描时间和冗余覆盖；GPS参考的现场数据表明，门控递归估计器在定位精度上优于非递归基线。一次集成的海上任务进一步展示了从搜索到导航的完整序列，包括一次故意触发的视觉丢失恢复。这些结果确立了在沿海GNSS拒止环境中，固定悬停无人机辅助接近静止目标的可行性和运行边界。源代码和视频演示可在 https://github.com/xirhxq/pod_search 和 https://youtu.be/S-5RkJs35JI 公开获取。</p></section>
+              <section><h3>English Abstract</h3><p>Global navigation satellite system (GNSS) denial can prevent an unmanned surface vehicle (USV) from both finding a distant vessel and maintaining a globally referenced approach. This paper presents AUSLUN (Automatic UAV Search, Localization, and USV Navigation), a fixed-hover aerial-surface system that uses a coastal unmanned aerial vehicle (UAV), which estimates its own pose through visual-inertial odometry (VIO), as a long-range sensing and navigation anchor. The central design shifts sensing motion from UAV translation to a zoom pod and closes the loop through three coupled elements: polygon-aware annular pod scanning, modality-aware bearing-range localization, and target-relative USV guidance with visual-loss recovery. The same gated recursive estimator uses laser range for the non-cooperative target and datalink range for the cooperative USV. Search-planning simulations show that the adaptive yaw bounds reduce scan time and redundant coverage relative to a matched fixed-sector scan, and GPS-referenced field data show that the gated recursive estimator outperforms non-recursive baselines in localization accuracy. An integrated maritime mission further demonstrates the complete search-to-navigation sequence, including a deliberately triggered visual-loss recovery. These results establish the feasibility and operating boundary of fixed-hover UAV assistance for stationary-target approach in coastal GNSS-denied environments. The source code and a video demonstration are publicly available at https://github.com/xirhxq/pod_search and https://youtu.be/S-5RkJs35JI.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注系统架构图（固定悬停无人机+变焦吊舱+门控递归估计器），再阅读仿真与现场实验的对比结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接针对低空经济中无人机在GNSS拒止环境下的海上搜索与导航问题，与低空安全紧密相关。其提出的固定悬停无人机作为导航锚点的方法，为航迹预测和智能体协同提供了新的技术路径。</p></section>
+              <section><h3>实践思路</h3><p>可复现其核心算法：基于门控递归估计器的方位-距离定位模块，以及多边形感知的环形吊舱扫描策略。建议在Gazebo或AirSim仿真环境中搭建无人机-无人船协同场景，验证其在GNSS拒止下的搜索与导航性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>MESA：优先保护脆弱通信通道以保障多智能体系统安全</h2>
+              <p>MESA: Prioritizing Vulnerable Communication Channels for Securing Multi-Agent Systems</p>
+              <p class="meta">Kunyang Li, Kyle Domico, Jonathan Gregory, Patrick McDaniel | arXiv cs.CR | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30602v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30602v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体系统（MAS）越来越多地用于自动化复杂、分布式的工作流程。然而，它们智能体间的通信通道引入了新的攻击面，这些攻击面仍未被充分理解且难以防御。在本文中，我们探讨了防御者应如何在观察到攻击之前，优先分配有限的安全工作来保护脆弱的通信通道。我们的动机源于观察到通道级别的攻击影响高度不均匀：单个被攻破的边可占攻击总成功率的75%。我们提出了Mesa，一个无标签的框架，用于主动排序哪些MAS边最关键——即如果被攻破，最可能影响系统决策。Mesa结合了六个图论度量和两个动态探针（消融和掩蔽），无需攻击轨迹。我们在三个不同的MAS场景、八种网络拓扑和来自Qwen、Llama和Gemma系列的五个开源LLM上，针对动态错误信息攻击流水线评估了Mesa。Mesa排序与经验性的每条边攻击成功率强相关，平均Spearman ρ=+0.60（峰值+0.73）。在资源受限的防御部署中，监控Mesa排序前10%的边拦截到的成功攻击约为随机分配的3倍。我们还在不同的攻击者和防御者模型以及LangGraph工作流下进一步测试了Mesa，并描述了其在自适应攻击和高冗余图下的局限性。总体而言，我们的结果表明，MAS中的边级风险通常是集中的。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent systems (MAS) are increasingly used to automate complex, distributed workflows. However, their inter-agent communication channels introduce new attack surfaces that remain poorly understood and are difficult to defend against. In this paper, we address how defenders should prioritize limited security effort to protect vulnerable communication channels before attacks are observed. This is motivated by our observation that the channel-level attack impact is highly non-uniform: a single compromised edge can account for up to 75% of total attack success. We introduce Mesa, a label-free framework for proactively ranking which MAS edges are most security-critical -- that is, most likely to affect the system&#x27;s decision if compromised. Mesa combines six graph-theoretic metrics and two dynamic probes (ablation and masking) without requiring attack traces. We evaluate Mesa against a dynamic misinformation attack pipeline across three diverse MAS scenarios, eight network topologies, and five open-source LLMs from Qwen, Llama, and Gemma families. Mesa rankings correlate strongly with empirical per-edge attack success rate, achieving mean Spearman $ρ=+0.60$ (peaking at $+0.73$). In resource-constrained defense deployment, monitoring the top 10% of Mesa-ranked edges intercepts about 3x the successful attacks as random allocation. We further test Mesa under varying attacker and defender models and LangGraph workflows and characterize its limits under adaptive attacks and high-redundancy graphs. Overall, our results show that edge-level risk in MAS is often concentrated and predictable, allowing proactive hardening of multi-agent infrastructures.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读方法部分中Mesa框架的六个图论度量和两个动态探针的设计，以及实验结果中排序与攻击成功率的相关系数。</p></section>
+              <section><h3>相关性说明</h3><p>该论文研究多智能体系统通信通道的安全优先级排序，直接关系到低空经济中无人机集群、车联网等智能体系统的通信安全。其提出的无标签风险评估框架可用于识别低空智能体网络中关键脆弱链路，提升整体安全性。</p></section>
+              <section><h3>实践思路</h3><p>可复现Mesa框架的核心：基于图论度量（如介数中心性）和动态探针（消融与掩蔽）对通信边进行排序。建议在ROS2或类似的多智能体仿真平台上，构建一个包含8个节点的网络拓扑，模拟错误信息攻击并验证Mesa排序的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>基于预算的“行动或推迟”多智能体LLM协商与局部可靠性界限</h2>
+              <p>Budgeted Act-or-Defer Multi-Agent LLM Deliberation with Local Reliability Bounds</p>
+              <p class="meta">Mengdie Flora Wang, Haochen Xie, Guanghui Wang, Devin Zhang, Jae Oh Woo | arXiv cs.AI | 2026-06-28</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29654v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29654v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体LLM之间的协商可以改善推理，但部署时需要决定当前答案何时足够可靠以采取行动，以及何时应升级到人工审查。我们将其形式化为基于预算的“行动或推迟”决策。在每一轮中，系统将辩论前缀映射到一个低维状态，使用校准数据计算状态条件正确性的k近邻下置信界限，并且仅当该界限超过用户指定的可靠性阈值时才采取行动。该证书通过分解β=δ+α+ε_act来控制错误行动，将校准失败、残余行动风险和表示差距分开。该保证是有条件的，而非分布自由的：它依赖于有效的局部偏差包络和行动区域表示差距界限，每个假设都配有伪造风格的诊断。由于相同的绝对错误行动预算在不同难度的任务中具有不同含义，我们仅使用训练数据，相对于每个任务的最终轮次错误来设定预算，并通过归一化的预算使用率WA/β来评估安全性。在六个基准测试中，针对九个基线，该方法在激活的数据集上使用了预先声明预算的9-12%，达到了高达84%的自动化和96%的行动准确率；在压力测试数据集上，它选择推迟而非强制不可靠的自动化。该方法无需依赖每个任务的事后阈值搜索，而是在部署前前瞻性地将用户声明的错误行动预算转换为一个可审计的“行动或推迟”操作点。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent deliberation among LLMs can improve reasoning, but deployment requires deciding when the current answer is reliable enough to act on and when it should be escalated to human review. We formulate this as budgeted act-or-defer decision making. At each round, the system maps the debate prefix to a low-dimensional state, computes a $k$-nearest-neighbor lower confidence bound on state-conditional correctness using calibration data, and acts only when the bound exceeds a user-specified reliability threshold. The certificate controls wrong actions through the decomposition $β= δ+ α+ \varepsilon_{\mathrm{act}}$, separating calibration failure, residual action risk, and representation gap. The guarantee is conditional, not distribution-free: it relies on a valid local bias envelope and an action-region representation-gap bound, and each assumption is paired with falsification-style diagnostics. Because the same absolute wrong-action budget has different meanings across tasks of different difficulty, we set budgets relative to each task&#x27;s final-round error using training data only, and evaluate safety by normalized budget usage $\mathrm{WA}/β$. On six benchmarks against nine baselines, the method uses 9--12% of the pre-declared budget on activated datasets, reaching up to 84% automation and 96% acted-on accuracy; on stress-test datasets, it defers rather than forcing unreliable automation. Rather than relying on per-task post-hoc threshold search, the method prospectively converts a user-declared wrong-action budget into an auditable act-or-defer operating point before deployment, under explicitly stated assumptions.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解“行动或推迟”决策框架和k近邻下置信界限的计算方式，再关注其在六个基准测试上的自动化率和行动准确率结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的基于预算的可靠性决策机制，可用于低空经济中智能体（如无人机、无人船）的自主决策与安全控制。其“行动或推迟”框架为航迹预测中的不确定性管理提供了新思路，确保在低置信度时及时转交人工控制，提升安全性。</p></section>
+              <section><h3>实践思路</h3><p>可复现其核心算法：基于k近邻下置信界限的“行动或推迟”决策模块。建议在LLM协商仿真环境中（如使用LangGraph），设定不同的错误行动预算，验证该方法在自动化率和安全性之间的平衡效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>ACPO：用于多智能体强化学习的智能体链式策略优化</h2>
+              <p>ACPO: Agent-Chained Policy Optimization for Multi-Agent Reinforcement Learning</p>
+              <p class="meta">Daiki E. Matsunaga, Junho Na, Tri Wahyu Guntara, Scott Sanner, Pascal Poupart, Jongmin Lee, Kee-Eung Kim | arXiv cs.AI | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30072v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30072v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体强化学习（MARL）中的合作任务要求智能体共同最大化共享回报。在集中训练与分散执行（CTDE）范式下，策略梯度一直难以直接计算。先前的方法主要遵循两种途径：使用集中式评论家的独立因子化更新，缺乏没有价值分解假设的通用联合改进保证；或者交替最佳响应更新，可能收敛到次优的纳什均衡。在本文中，我们展示了联合策略梯度允许每个智能体项的精确分散分解，每个项由每个智能体的得分函数和分散式评论家构成。基于此分解，我们开发了智能体链式策略优化（ACPO），其中行动者独立训练，它们的更新共同构成联合策略梯度上的单一步骤。这一结果的核心是将同时联合决策序列化，其中智能体一次一个地提交动作，每个动作都基于对先前动作的信念进行条件化。该信念作为协调机制，将独立的每个智能体更新捆绑成一个联合梯度步骤。我们在多机器人仓库、SMACv2和MA-MuJoCo上评估了ACPO，它优于强基线，并且随着智能体数量的增加，差距扩大。</p></section>
+              <section><h3>English Abstract</h3><p>Cooperative tasks in Multi-Agent Reinforcement Learning (MARL) require agents to collectively maximize a shared return. Under the Centralized Training with Decentralized Execution (CTDE) paradigm, policy gradients have remained difficult to compute directly. Prior methods largely follow two approaches: independent factorized updates with centralized critics, which lack general joint-improvement guarantees without value decomposition assumptions, or alternating best-response updates, which can converge to suboptimal Nash Equilibria. In this paper, we show the joint policy gradient admits an exact decentralized decomposition of per-agent terms, each formed from per-agent score functions and decentralized critics. Based on this decomposition, we develop Agent-Chained Policy Optimization (ACPO), where actors are trained independently, with their updates together constituting a single step on the joint policy gradient. Central to this result is a serialized view of the simultaneous joint decision in which agents commit actions one at a time, each conditioning on a belief over preceding actions. The belief acts as the coordination mechanism which ties the independent per-agent updates into a joint gradient step. We evaluate ACPO on Multi-Robot Warehouse, SMACv2, and MA-MuJoCo, where it outperforms strong baselines, with the gap widening as the number of agents grows.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解联合策略梯度的精确分散分解公式，以及序列化联合决策中信念作为协调机制的设计。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的ACPO算法解决了多智能体强化学习中策略梯度难以直接计算的问题，对低空经济中无人机集群的协同航迹规划与控制具有重要价值。其分散式训练与执行框架可提升多智能体系统的可扩展性和安全性。</p></section>
+              <section><h3>实践思路</h3><p>可复现ACPO算法：基于其联合策略梯度分解公式，在Multi-Robot Warehouse或SMACv2环境中实现智能体链式更新。建议对比独立Q学习、VDN等基线，验证其在智能体数量增加时的性能优势。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>HiComm：用于多智能体强化学习的分层通信</h2>
+              <p>HiComm: Hierarchical Communication for Multi-agent Reinforcement Learning</p>
+              <p class="meta">Runze Zhao, Dongruo Zhou, Sumit Kumar Jha, Nathaniel D. Bastian, Ankit Shah | arXiv cs.AI | 2026-06-28</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29126v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29126v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>合作式多智能体强化学习（MARL）通常依赖通信来缓解部分可观测性，然而大多数现有协议将消息视为扁平稠密向量，脱离了它们所总结的观测结构。这种设计忽略了许多合作环境中一个重要的归纳偏置来源，其中观测自然遵循一个层次结构，例如组和实体。我们提出了HiComm，一个即插即用的通信模块，它将消息植根于发送者的分层观测中。HiComm是接收者驱动的：接收者发出一个查询，层次结构通过一个三阶段解码过程解析，该过程首先选择一个组，然后选择一个发送者，再选择该组内的一个实体，返回相应的特征切片作为消息。这将通信从非结构化向量传输转变为对发送者观测层次的结构化信息检索。我们使用直通Gumbel-Softmax进行可微离散选择，以及一个轻量级的共享投影设计来实例化该机制，该设计可附加到标准MARL流水线上。在具有不同观测结构和协调需求的合作MARL任务上的实验表明，HiComm匹配或超越了代表性的学习通信基线，同时每个接收者每回合的通信量减少了高达23倍。</p></section>
+              <section><h3>English Abstract</h3><p>Cooperative multi-agent reinforcement learning (MARL) often relies on communication to mitigate partial observability, yet most existing protocols treat messages as flat dense vectors detached from the structure of the observations they summarize. This design overlooks an important source of inductive bias in many cooperative environments, where observations naturally follow a hierarchy such as groups and entities. We propose \textsc{HiComm}, a plug-in communication module that grounds messages in the sender&#x27;s hierarchical observation. \textsc{HiComm} is receiver-driven: the receiver issues a query, and the hierarchy is resolved through a three-stage decoding process that first selects a group, then a sender, and then an entity within that group, returning the corresponding feature slice as the message. This converts communication from unstructured vector transmission into structured information retrieval over the sender&#x27;s observation hierarchy. We instantiate this mechanism with Straight-Through Gumbel-Softmax for differentiable discrete selection and a lightweight shared projection design that attaches to standard MARL pipelines. Experiments across cooperative MARL tasks with different observation structures and coordination demands show that \textsc{HiComm} matches or outperforms representative learned communication baselines while reducing communication volume by up to $23\times$ per receiver per episode.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解接收者驱动的三阶段解码过程（组→发送者→实体），再关注其与基线相比在通信量减少和性能保持上的实验结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的分层通信机制HiComm，通过结构化信息检索大幅减少通信量，对低空经济中无人机集群的通信效率与安全性有重要意义。其接收者驱动设计可降低通信负载，提升航迹预测与协同控制中的实时性。</p></section>
+              <section><h3>实践思路</h3><p>可复现HiComm模块：基于直通Gumbel-Softmax实现三阶段离散选择，并将其集成到QMIX或MAPPO等标准MARL算法中。建议在SMAC或Multi-Robot Warehouse环境中，对比HiComm与TarMAC等基线在通信量和任务成功率上的表现。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>超越2D匹配：面向几何感知的跨视角目标地理定位的统一单阶段框架</h2>
+              <p>Beyond 2D Matching: A Unified Single-Stage Framework for Geometry-Aware Cross-View Object Geo-Localization</p>
+              <p class="meta">Liyao Wang, Ruipu Wu, Haojun Xu, Lei Shi, Linjiang Huang, Si Liu | arXiv cs.CV | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30576v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30576v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>跨视角目标地理定位旨在从查询视图（如地面或无人机）中，在带有地理标签的参考图像（如卫星图像）中定位目标物体。现有方法严重依赖2D外观匹配，并受限于缺乏几何元数据、多样化提示和标准视场图像的数据集。为解决这些相互关联的挑战，我们首先引入了\dataset，这是一个大规模、高保真的建筑数据集，包含超过22万对地面-卫星和无人机-卫星图像对。它提供了多模态提示（点、框、掩码）和相机姿态，以实现灵活的目标指代和显式空间建模。此外，我们提出了一种新颖的单阶段几何感知地理定位框架，该框架基于置换等变3D基础模型$π^3$构建。通过无缝整合视觉特征、指代提示和可学习的任务令牌，我们的模型在单次前向传播中适应继承的3D先验，以联合预测边界框、分割掩码和相机姿态。我们还引入了一种对比损失，利用卫星视图作为通用锚点，隐式对齐地面和无人机表示，从而无需三元组训练数据即可实现零样本的地面到无人机定位。大量实验表明，我们的方法显著优于现有最先进方法，在未见场景和新颖的跨视图设置中展现出卓越的泛化能力。</p></section>
+              <section><h3>English Abstract</h3><p>Cross-view object geo-localization (CVOGL) aims to locate a target object from a query view (e.g., ground or drone) within a geo-tagged reference image (e.g., satellite). Existing approaches heavily rely on 2D appearance matching and are constrained by limited datasets lacking geometric metadata, diverse prompts, and standard field-of-view imagery. To address these intertwined challenges, we first introduce \dataset, a large-scale, high-fidelity building dataset comprising over 220,000 ground-satellite and drone-satellite pairs. It provides multi-modal prompts (points, boxes, masks) and camera poses to enable flexible target referring and explicit spatial modeling. Furthermore, we propose a novel single-stage Geometry-Aware Geo-localization framework (GAGeo), built upon the permutation-equivariant 3D foundation model $π^3$. By seamlessly integrating visual features, referring prompts, and learnable task tokens, our model adapts the inherited 3D prior to jointly predict bounding boxes, segmentation masks, and camera poses in a single forward pass. Additionally, we introduce a contrastive loss that utilizes the satellite view as a universal anchor, implicitly aligning ground and drone representations to enable zero-shot ground-to-drone localization without requiring triplet training data. Extensive experiments demonstrate that our approach significantly outperforms state-of-the-art methods, exhibiting exceptional generalization ability in unseen scenes and novel cross-view setups.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解问题定义和现有方法的局限性。然后重点关注方法部分中GAGeo框架的设计，特别是如何利用3D先验和对比损失实现跨视图对齐。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的跨视角目标地理定位技术可直接应用于低空经济中的无人机视觉导航与目标跟踪，通过融合地面、无人机和卫星多源视角，提升航迹预测的环境感知精度。其几何感知框架和对比损失机制为智能体在复杂低空场景下的鲁棒定位提供了新思路。</p></section>
+              <section><h3>实践思路</h3><p>可基于其公开数据集，复现GAGeo框架在无人机-卫星图像对上的定位性能。实验可聚焦于评估不同视角、高度和天气条件下的定位精度，并尝试将对比损失机制迁移至其他多模态感知任务。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>AERIS：通过编排语言模型群体实现空中边缘角色驱动的运行时智能</h2>
+              <p>AERIS: Aerial-Edge Role-Driven Intelligence at Runtime via Orchestrated Language-Model Swarm</p>
+              <p class="meta">Jiabin Lou, Haopeng Wang, Xinyu Liu, Yu Zhang, Rongye Shi, Wenjun Wu | arXiv cs.RO | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30151v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30151v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>将大型语言模型集成到机器人系统中有望增强自主性，但实际部署仍受到严格的心跳约束调度和有限计算能力的限制。我们提出了AERIS：一个用于空中平台的边缘部署框架。它将专用的小型语言模型与轻量级感知和控制模块组织成可在运行时实例化的角色，并根据资源变化在不同执行器间动态重新绑定这些角色，从而将智能能力推向边缘。AERIS通过一种注意力-子目标对齐机制实现长程指令分解，该机制涉及在消息中注释当前活跃的指令步骤，从而逐步逼近长期目标。我们在高保真无人机视觉与语言导航基准上评估了AERIS。在心跳定时执行机制下，AERIS在低频规划器和高频控制器之间维持稳定的感知-决策-控制循环，支持实时闭环运行。我们通过两个专注于规划和快速响应的真实世界实验进一步验证了其可部署性。补充材料中提供了演示视频。</p></section>
+              <section><h3>English Abstract</h3><p>Integrating large language models into robotic systems holds promise for enhancing autonomy, yet practical deployment remains constrained by strict heartbeat-constrained scheduling and limited computational power. We propose AERIS: an edge deployment framework for aerial platforms. It organizes dedicated small language models combined with lightweight perception and control modules into roles that can be instantiated at runtime, and dynamically rebinds them across different executors as resources change, thereby pushing intelligent capabilities to the edge. AERIS achieves long-horizon instruction decomposition through an attention-subgoal alignment mechanism, which involves annotating the currently active instruction step in messages, thereby progressively approaching long-term objectives. We evaluate AERIS on a high-fidelity UAV Vision-and-Language Navigation benchmark. Under a heartbeat-timed execution mechanism, AERIS maintains a stable perception-decision-control loop between a low-frequency planner and a high-frequency controller, supporting real-time closed-loop operation. We further validate its deployability through two real-world experiments focused on planning and fast response. A demonstration video is provided in the supplementary materials.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解AERIS的核心动机和边缘部署挑战。然后重点阅读方法部分，理解角色编排和注意力-子目标对齐机制的具体实现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的边缘部署框架直接服务于低空经济中的无人机自主导航与任务规划，通过将语言模型智能推向边缘，解决了实时性与计算资源受限的矛盾。其注意力-子目标对齐机制可提升无人机在复杂低空环境中的长程航迹规划能力。</p></section>
+              <section><h3>实践思路</h3><p>可基于其高保真无人机视觉与语言导航基准，复现AERIS框架的实时闭环控制实验。实验可聚焦于评估不同心跳频率下规划与控制循环的稳定性，并尝试将角色编排机制应用于其他边缘智能体。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>AerialMetric：在现实世界中基准测试和适配无人机单目度量深度估计</h2>
+              <p>AerialMetric: Benchmarking and Adapting UAV Monocular Metric Depth Estimation in the Real World</p>
+              <p class="meta">Zhongqiang Song, Guanying Chen, Yuqi Zhang, Yin Zou, Chuanyu Fu, Zhiyuan Yuan, Chuan Huang, Shuguang Cui, Xiaochun Cao | arXiv cs.CV | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29716v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29716v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文解决了无人机航拍图像中的单目度量深度估计问题。尽管近期数据驱动方法在地面场景中取得了显著进展，但主要基于街景和室内数据集训练的模型在应用于空中视角时表现出显著的领域差异。为应对这些挑战，我们引入了AerialMetric，这是一个旨在评估和促进无人机空中视角下单目度量深度估计适配的基准数据集。该数据集由四个互补的子集组成，这些子集来自不同来源，共同涵盖了真实世界摄影测量数据、受控空中采集设置、逼真合成场景以及野外互联网图像。总计，AerialMetric提供了52K真实世界和16K合成图像-深度对，并带有可靠的度量真值。基于此数据集，我们对现有最先进模型在空中设置下进行了系统评估，并研究了视角、高度和相机参数对度量深度预测的影响。此外，通过在我们的数据集上微调代表性度量深度模型，我们建立了一个全面的空中基准，并在多样化的航拍图像上取得了最先进的性能。我们的数据集、代码和模型权重已在https://kuieless.github.io/AerialMetric-ECCV2026-page/公开。</p></section>
+              <section><h3>English Abstract</h3><p>This paper addresses the problem of monocular metric depth estimation in aerial UAV imagery. Although recent data-driven methods have achieved remarkable progress in ground-level scenarios, models trained primarily on street-view and indoor datasets exhibit significant domain gaps when applied to aerial viewpoints. To tackle these challenges, we introduce AerialMetric, a benchmark dataset designed to evaluate and facilitate the adaptation of monocular metric depth estimation under UAV aerial viewpoints. The dataset consists of four complementary subsets collected from different sources, jointly covering real-world photogrammetry data, controlled aerial acquisition settings, photorealistic synthetic scenes, and in-the-wild Internet imagery. Totally, AerialMetric provides 52K real-world and 16K synthetic image-depth pairs with reliable metric ground truth. Based on this dataset, we conduct systematic evaluations of existing state-of-the-art models under aerial settings and investigate the impact of viewpoint, altitude, and camera parameters on metric depth prediction. In addition, by fine-tuning representative metric depth model on our dataset, we establish a comprehensive aerial benchmark and achieve state-of-the-art performance across diverse aerial imagery. Our dataset, code, and model weight are publicly available at https://kuieless.github.io/AerialMetric-ECCV2026-page/.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解空中单目深度估计的领域差异问题。然后重点阅读数据集构建部分和实验评估部分，特别是不同视角和高度对深度预测的影响。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提供的空中单目深度估计基准和适配方法，对低空经济中的无人机自主避障、航迹规划和环境感知至关重要。准确的度量深度信息可显著提升无人机在低空复杂场景下的安全导航能力。</p></section>
+              <section><h3>实践思路</h3><p>可基于其公开数据集和模型权重，复现并评估不同深度估计模型在无人机视角下的性能。实验可聚焦于分析高度、视角和相机参数对深度预测精度的影响，并尝试将微调后的模型集成到无人机实时感知系统中。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>MF-UAVPose6D：一种面向固定翼无人机的无模型单目6自由度姿态估计框架</h2>
+              <p>MF-UAVPose6D: A Model-Free Monocular 6-DoF Pose Estimation Framework for Fixed-Wing UAVs</p>
+              <p class="meta">Juanqin Liu, Leonardo Plotegher, Eloy Roura, Shaoming He | arXiv cs.CV | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29697v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29697v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>对于无人驾驶飞行器而言，估计六自由度姿态对于空域态势感知、目标跟踪和反无人机操作至关重要。然而，非合作目标通常缺乏计算机辅助设计模型和关键点先验，使得现有的基于模型或关键点匹配的方法难以可靠应用。为应对这些挑战，本文提出了MF-UAVPose6D，一种面向固定翼无人机的无模型单目6自由度姿态估计框架。在推理时，该方法仅以单张红绿蓝图像和相机内参作为输入。它首先通过热图引导的中心定位获得稳定的目标锚点，引入视角感知模块来建模观测射线先验，利用动态拓扑采样来补充来自机翼、机身和尾翼的弱结构线索，并采用解耦的平移-旋转姿态解码机制来估计6自由度姿态。此外，我们构建了FW-UAV6DPose合成数据集，涵盖了不同距离、视角和姿态下的固定翼无人机观测。实验结果表明，MF-UAVPose6D无需计算机辅助设计模型即可实现准确高效的单目6自由度姿态估计，并在远距离旋转估计、深度恢复和联合姿态评估中展现出强大的鲁棒性。</p></section>
+              <section><h3>English Abstract</h3><p>For uncrewed aerial vehicles (UAVs), estimating six-degree-of-freedom (6-DoF) poses is essential for airspace situational awareness, target tracking, and counter-UAV operations. However, non-cooperative targets usually lack computer-aided design (CAD) models and keypoint priors, making existing model-based or keypoint-matching methods difficult to apply reliably. To address these challenges, this paper proposes MF-UAVPose6D, a model-free monocular 6-DoF pose estimation framework for fixed-wing UAVs. During inference, the method takes only a single red-green-blue (RGB) image and camera intrinsics as input. It first obtains a stable target anchor through heatmap-guided center localization, introduces a Perspective-Aware Module (PAM) to model observation-ray priors, exploits Dynamic Topological Sampling (DTS) to complement weak structural cues from the wings, fuselage, and tail, and adopts a decoupled translation-rotation pose decoding mechanism to estimate the 6-DoF pose. In addition, we construct the FW-UAV6DPose synthetic dataset, which covers fixed-wing UAV observations across diverse distances, viewpoints, and poses. Experimental results show that MF-UAVPose6D achieves accurate and efficient monocular 6-DoF pose estimation without requiring CAD models, and demonstrates strong robustness in long-range rotation estimation, depth recovery, and joint pose evaluation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解无模型姿态估计的挑战。然后重点阅读方法部分，理解视角感知模块和动态拓扑采样的设计原理。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的无模型姿态估计框架可直接应用于低空经济中的无人机目标跟踪与反无人机系统，通过单目视觉精确估计非合作固定翼无人机的6自由度姿态，提升空域态势感知和航迹预测的准确性。</p></section>
+              <section><h3>实践思路</h3><p>可基于其提供的FW-UAV6DPose合成数据集，复现MF-UAVPose6D框架并评估其在真实无人机图像上的姿态估计精度。实验可聚焦于不同距离和视角下的鲁棒性测试，并尝试将框架迁移至旋翼无人机场景。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>思考路径：面向具身导航的空间感知世界动作模型</h2>
+              <p>Pondering the Way: Spatial-perceiving World Action Model for Embodied Navigation</p>
+              <p class="meta">Hong Chen, Daqi Liu, Zehan Zhang, Haiguang Wang, Tianhao Lu, Longfei Yan, Haiyang Sun, Fangzhen Li, Hongwei Xie, Bing Wang, Guang Chen, Hangjun Ye, Yihua Tan | arXiv cs.RO | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.29908v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.29908v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>现有的基于世界模型的视觉导航规划器通常遵循验证中心范式，将目标意图与轨迹生成解耦。这种方法存在候选依赖、计算开销大以及采样动作与预测视觉不一致等问题。为解决这些问题，我们提出了SWAM，一个以任务为中心的联合观测-动作生成框架。给定起始和目标RGB观测，SWAM通过单次推理同时生成中间RGB-D序列和相应的动作轨迹，促进目标一致的轨迹生成并提高空间可行性。虽然SWAM在训练期间利用深度伪标签来内化空间先验，但在推理时仅需单目RGB输入。我们进一步引入了一个视觉引导的动作细化模块和一个轨迹尺度正则化损失，以强制运动与视觉线索之间的细粒度对齐，同时稳定不同距离下的预测。大量实验表明，SWAM在成功率、轨迹精度和推理效率方面显著优于最先进的两阶段规划器，并在未见环境中展现出强大的零样本泛化能力。</p></section>
+              <section><h3>English Abstract</h3><p>Existing world model-based planners for visual navigation typically follow a verification-centric paradigm, decoupling goal intent from trajectory synthesis. This approach suffers from candidate dependence, heavy computational overhead, and inconsistencies between sampled actions and predicted visuals. To address these issues, we propose SWAM (Spatial-perceiving World Action Model), a task-centric joint observation-action generation framework. Given start and goal RGB observations, SWAM performs single-pass inference to simultaneously generate intermediate RGB-D sequences and corresponding action trajectories, promoting goal-consistent trajectory generation and improved spatial feasibility. While SWAM leverages depth pseudo-labels during training to internalize spatial priors, it requires only monocular RGB input at inference time. We further introduce a visual-guided action refinement module and a trajectory-scale regularization loss to enforce fine-grained alignment between motion and visual cues while stabilizing predictions across varying distances. Extensive experiments show that SWAM significantly outperforms state-of-the-art two-stage planners in success rate, trajectory accuracy, and inference efficiency, while demonstrating robust zero-shot generalization to unseen environments.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解现有世界模型规划器的局限性。然后重点阅读方法部分，理解SWAM如何实现联合观测-动作生成以及视觉引导的动作细化。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的空间感知世界动作模型直接服务于低空经济中的无人机自主导航与航迹规划，通过联合生成视觉观测和动作序列，提升了智能体在未知环境中的导航成功率。其零样本泛化能力对低空复杂场景下的安全导航具有重要意义。</p></section>
+              <section><h3>实践思路</h3><p>可基于其方法描述，复现SWAM框架并在公开的视觉导航基准上进行评估。实验可聚焦于比较SWAM与两阶段规划器在成功率、轨迹精度和推理速度上的差异，并尝试将深度伪标签训练策略应用于其他导航任务。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>超越点估计：基于扩散模型的青光眼视野预测</h2>
+              <p>Beyond Point Estimates for Glaucoma Visual Field Forecasting with Diffusion Models</p>
+              <p class="meta">Marta Colmenar Herrera, Pablo Márquez Neila, Şerife Seda Kucur Ergünay, Martin S. Zinkernagel, Raphael Sznitman | arXiv cs.CV | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30417v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30417v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>预测视野对于青光眼的个性化监测和治疗规划至关重要。由于疾病进展的异质性和测量变异性，这一过程本身具有不确定性，然而现有大多数方法仅产生单一的确定性预测，无法体现这种不确定性。我们将视野预测表述为一个概率预测问题，并利用条件去噪扩散模型，从不规则随访间隔的纵向观测中生成可能的未来视野分布。在两个独立的视野队列上的实验表明，基于扩散的预测为临床相关的视野指标生成了校准良好的分布。当简化为标准点估计时，所提出的方法在准确率上优于临床基线和先前的基于学习的方法，达到了最先进的水平。我们的结果凸显了分布建模在视野预测中的优势，并支持从点估计预测向具有不确定性意识的、临床可解释的青光眼风险评估转变。</p></section>
+              <section><h3>English Abstract</h3><p>Forecasting visual fields (VFs) is critical for personalized monitoring and treatment planning in glaucoma. This is inherently uncertain due to heterogeneous disease progression and measurement variability, yet most existing methods produce single deterministic predictions that fail to represent this uncertainty. We formulate VF forecasting as a probabilistic prediction problem and the use of conditioned denoising diffusion models to generate distributions of plausible future VFs from longitudinal observations with irregular follow-up intervals. Experiments on two independent VF cohorts show that diffusion-based predictions produce well-calibrated distributions for clinically relevant VF measures. When reduced to a standard point-estimate, the proposed approach achieves state-of-the-art accuracy compared to clinical baselines and prior learning-based methods. Our results highlight the advantages of distributional modeling for VF forecasting and support a shift from point-estimate prediction toward uncertainty-aware, clinically interpretable risk assessment in glaucoma.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和结论部分，了解扩散模型如何用于概率预测；然后重点关注实验部分，对比点估计与分布建模的性能差异。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的概率预测方法可应用于低空经济中的航迹预测，通过生成未来航迹的分布来量化不确定性，提升飞行安全。扩散模型能够处理不规则时间序列，适用于无人机等动态环境下的轨迹预测。</p></section>
+              <section><h3>实践思路</h3><p>可复现该扩散模型框架，将其应用于无人机航迹预测数据集，比较点估计与概率分布预测在安全评估中的效果。实验时需注意处理不规则采样间隔，并设计校准指标评估预测分布的质量。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>多轮大语言模型对话中涌现的吸引子状态</h2>
+              <p>Attractor States Emerge in Multi-Turn LLM Conversations</p>
+              <p class="meta">Ting-Wen Ko, Jonas Geiping | arXiv cs.LG | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30571v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30571v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>大语言模型越来越多地被用于开放式多智能体场景，但模型间交互的长期动态仍知之甚少。我们研究开放式大语言模型讨论是否表现出类似吸引子的行为，即对话最终趋于的、与主题无关的稳定行为集合。在7个大语言模型和20个有争议话题上，我们比较了自我对弈和混合对弈的二元辩论，追踪了表示空间中的轨迹、话语特征和立场。我们发现自我对弈轨迹是模型特定的吸引子，在混合对弈中会不对称地吸引其对话伙伴，影响其他模型的风格选择和行文。例如，Claude Haiku是潜在空间中其他模型的强吸引子，对应其他模型采用其元评论等特征，而GPT-4.1 nano等模型则特别易受影响。我们的结果表明，开放式大语言模型交互在一定程度上可从模型特定吸引子预测，但受结构化和不对称的伙伴影响所塑造。总体而言，我们的分析揭示了开放式多智能体交互的复杂行为，希望能有助于设计、预测和监控现实世界中的自主智能体系统。</p></section>
+              <section><h3>English Abstract</h3><p>Large language models (LLMs) are increasingly used in open-ended multi-agent settings, but the long-run dynamics of model--model interaction remain poorly understood. We study whether open-ended LLM discussions exhibit attractor-like behavior, i.e. topic-independent stable sets of behaviors which conversations settle into. Across 7 LLMs and 20 controversial topics, we compare self-play and mixed-play dyadic debates, tracking trajectories in representation space, discourse traits, and stances. We find self-play trajectories to be model-specific attractors that draw their conversation partners asymmetrically in mixed-play debates, influencing the other models&#x27; stylistic choices and behavior. For example, Claude Haiku is a strong attractor of other models in latent space, corresponding to other models taking on its traits like metacommentary, and models like GPT-4.1 nano are especially malleable. Our results suggest that open-ended LLM interactions are partially predictable from model-specific attractors, but shaped by structured and asymmetric partner influence. Overall, our analysis sheds some light on the complex behavior of open-ended multi-agent interaction, which we hope is helpful in designing, predicting, and monitoring autonomous agentic systems in the real world.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解“吸引子”概念及其在对话动态中的含义；然后重点阅读实验设计部分，了解如何通过表示空间和话语特征识别吸引子。</p></section>
+              <section><h3>相关性说明</h3><p>该研究揭示了多智能体系统中模型间交互的长期动态规律，对低空经济中多无人机协同决策和航迹预测有重要启示。理解智能体间的吸引子效应有助于预测多智能体系统的集体行为，提升安全监控能力。</p></section>
+              <section><h3>实践思路</h3><p>可复现该实验框架，在模拟的多无人机通信场景中测试不同模型间的吸引子效应。实验时需记录对话轨迹和决策特征，分析模型间的不对称影响，并评估其对协同航迹规划稳定性的影响。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>语言防火墙：多智能体系统路由中的几何防御</h2>
+              <p>Linguistic Firewall: Geometry as Defense in Multi-Agent Systems Routing</p>
+              <p class="meta">Dvir Alsheich, Adar Peleg, Ben Hagag, Rom Himelstein, Amit Levi, Avi Mendelson | arXiv cs.AI | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30555v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30555v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>大语言模型的快速集成推动了多智能体系统的发展，其中专业智能体协作执行复杂工作流。这些环境中的有效编排需要稳健的路由机制，以高效地将任务分配给最合适的智能体。然而，现有路由器从根本上依赖于未经验证的代理指标，从文本自我描述到静态替代表示，来评估智能体的能力。这种对非经验数据的依赖造成了智能体预期画像与其实际操作能力之间的关键差距，引入了严重的安全漏洞。恶意智能体可以轻易歪曲其能力或隐藏后门，从而规避标准外部分析和静态表示学习技术。在这项工作中，我们引入了ANTAP（自动非文本智能体选择器），一种评估驱动的路由架构，它摒弃间接代理指标，转而采用主动能力测试。通过动态查询智能体以经验性地确定其真实能力，ANTAP将性能提炼为共享语义空间中的固定行为算子。在推理时，路由通过纯粹的非文本代数投影执行，建立了一道“语言防火墙”，使得基于元数据的攻击无法表达。在我们的实验中，ANTAP对基于描述的注入攻击实现了接近零的攻击成功率，而基于描述的路由基线则达到67.3%及以上。针对自适应嵌入攻击，ANTAP也取得了成功。</p></section>
+              <section><h3>English Abstract</h3><p>The rapid integration of Large Language Models (LLMs) has driven the evolution of Multi-Agent Systems (MAS), where specialized agents collaborate to execute complex workflows. Effective orchestration in these environments requires robust routing mechanisms to efficiently allocate tasks to the most suitable agent. However, existing routers fundamentally rely on unverified proxies, ranging from textual self-descriptions to static surrogate representations, to gauge an agent&#x27;s competence. This reliance on non-empirical data creates a critical gap between an agent&#x27;s projected profile and its actual operational capabilities, introducing severe security vulnerabilities. Malicious agents can easily misrepresent their proficiencies or harbor covert backdoors that evade both standard external analysis and static representation-learning techniques. In this work, we introduce ANTAP (Automatic Non-Textual Agent Picker), an evaluation-driven routing architecture that discards indirect proxies in favor of active capability testing. By dynamically querying agents to ascertain their true competencies empirically, ANTAP distills performance into fixed behavioral operators within a shared semantic space. At inference time, routing is performed via a purely non-textual algebraic projection, establishing a &quot;linguistic firewall&quot; that renders metadata-based attacks inexpressible. In our experiments, ANTAP achieves near-zero ASR against description-based injection attacks, compared to 67.3\% and above for the description-based router baseline. Against adaptive embedding attacks, ANTAP achieves substantially lower ASR than the embedding-based baseline, with a 20\% reduction, while remaining resilient to description manipulation by design.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读引言和问题定义，理解现有路由机制的安全漏洞；然后重点阅读ANTAP架构部分，了解其如何通过主动测试和代数投影实现防御。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的安全路由机制对低空经济中多无人机系统的任务分配和通信安全至关重要。通过主动能力测试而非依赖描述，可防止恶意无人机伪装能力，保障航迹预测和协同决策的可靠性。</p></section>
+              <section><h3>实践思路</h3><p>可复现ANTAP框架，在模拟的多无人机任务分配场景中测试其防御效果。实验时需设计描述注入攻击和自适应嵌入攻击，比较ANTAP与传统基于描述的路由在安全性和任务完成率上的差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>COHORT：基于攻击回放与仿真拓扑的协同加固编排</h2>
+              <p>COHORT: Collaborative Orchestration for Hardening via Offensive Replay on Emulated Topologies</p>
+              <p class="meta">Chen Frydman, Aviram Zilberman, Rubin Krief, Abed Showgan, Andres Murillo, Sekiya Motoyoshi, Asaf Shabtai, Yuval Elovici, Rami Puzis | arXiv cs.NI | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30479v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30479v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在企业网络中缓解已观测到的攻击者通常需要数周的专业工作：分析师针对该攻击者制定缓解措施，在不破坏生产环境的情况下进行验证，并确认其能阻断特定攻击。该过程依赖专家判断，且无法安全地在生产网络上进行测试。COHORT是首个实现可部署缓解措施自动化流程的端到端框架。一个角色分解的多智能体大语言模型工作流提出候选方案，将其实现为真实设备命令，并通过批评循环进行优化，所有这些都在运行真实厂商固件（防火墙、交换机、路由器）的高保真GNS3仿真器上进行。每个候选方案通过攻击回放进行评估：在缓解后的网络上重新执行原始攻击者，与未缓解的基线进行配对比较，而非使用先前仿真、混合和配置生成工作中采用的奖励信号或专家判断代理指标。另外两个检查补充了回放：连通性回归检查（局域网ping和互联网HTTP探测）拒绝破坏合法局域网或互联网连接的缓解措施；累积评估将批准的缓解措施叠加到持久状态上，以揭示复合效应。在三种拓扑和四种攻击场景（勒索软件、横向移动、DNS外泄、数据窃取）中，46.7%生成的缓解措施在回放下既能阻断攻击又能保持连通性，是使用相同模型和工具访问的单智能体基线的4.4倍。一个演示视频展示了该框架的流程。</p></section>
+              <section><h3>English Abstract</h3><p>Mitigating an observed adversary in an enterprise network typically takes weeks of expert work: an analyst derives a mitigation tailored to that adversary, validates it without breaking production, and verifies it disrupts the specific attack. The procedure relies on expert judgment and cannot safely be exercised against the production network. COHORT is the first end-to-end framework to automate this procedure for deployable mitigations. A role-decomposed multi-agent LLM workflow proposes candidates, implements them as real device commands, and refines them through a critique loop, all on a high-fidelity GNS3 emulator running real vendor firmware (firewall, switch, router). Each candidate is evaluated by offensive replay: re-executing the original adversary on the mitigated network for a paired comparison against the unmitigated baseline, rather than the reward-signal or expert-judgment proxies used in prior simulation, hybrid, and configuration-generation work. Two further checks complement replay: a connectivity-regression check (LAN ping and internet HTTP probe) rejects mitigations that disrupt legitimate LAN or internet connectivity, and a cumulative evaluation stacks approved mitigations onto a persistent state to surface compound effects. Across three topologies and four attack scenarios (ransomware, lateral movement, DNS exfiltration, data theft), 46.7% of generated mitigations both disrupt the attack and preserve connectivity under replay, 4.4 times the rate of a single-agent baseline using the same model and tool access. A demo video walking through the framework is available with our released artifacts.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解COHORT解决的问题和核心创新；然后重点阅读方法部分，理解多智能体工作流和攻击回放评估机制。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的多智能体协同自动化缓解框架可应用于低空经济中无人机网络的实时安全防护。通过仿真环境中的攻击回放，可验证缓解措施对航迹预测和通信系统的有效性，提升整体安全性。</p></section>
+              <section><h3>实践思路</h3><p>可复现COHORT框架，在模拟的无人机网络拓扑中测试其对网络攻击的自动化缓解能力。实验时需设计多种攻击场景，比较多智能体协同与单智能体基线的缓解效果和连通性保持率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>通过大语言模型将自然语言翻译为策略性时序规约</h2>
+              <p>Translating Natural Language to Strategic Temporal Specifications via LLMs</p>
+              <p class="meta">Marco Aruta, Francesco Improta, Vadim Malvone, Aniello Murano, Vladana Perlic | arXiv cs.MA | 2026-06-29</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.30441v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.30441v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>系统需求的严格形式化是多智能体系统验证的基本前提。然而，编写正确的形式化规约众所周知是一项易错、耗时且需要专业知识密集的任务。这一困难在多智能体系统中更为突出，因为需求必须捕捉策略能力和时序目标。目前，尚无成熟的方法论可从自然语言推导出多智能体系统规约。我们提出了一个框架，利用大语言模型将策略需求的自然语言描述翻译为形式良好的ATL/ATL*公式。由于没有可用的数据集支持自然语言到ATL/ATL*翻译任务的监督学习，我们创建并整理了一个新颖的、经专家验证的数据集，用于训练和评估微调模型。在保留测试集上，根据与大语言模型评判者（与专家标注最一致）的评估，小规模开放权重模型（3-7B参数）的领域内微调与强大的少样本专有API基线相当。我们最好的微调系统达到了0.84的语义准确率，在统计上与最强的少样本专有基线（0.86）相当，同时保持了需求在本地处理。我们进一步发现，评判者的可靠性与生成器的强度成反比。开放权重的Llama-3.3-70B最接近人类判断，而最强的专有模型是最不可靠的评判者，过度拒绝参考的忠实释义。为了评估生成规约的实际适用性，我们将它们嵌入到实际应用中。</p></section>
+              <section><h3>English Abstract</h3><p>A rigorous formalization of system requirements is a fundamental prerequisite for the verification of Multi-Agent Systems (MAS). However, writing correct formal specifications is well known as an error-prone, time-consuming, and expertise-intensive task. This difficulty is further accentuated in MAS, where requirements must capture strategic abilities and temporal objectives. At present, there is no established methodology for deriving MAS specifications from natural language. We present a framework for translating Natural Language descriptions of strategic requirements into well-formed ATL/ATL* formulas using Large Language Models (LLMs). Since no available dataset supports supervised learning for the NL-to-ATL/ATL* translation task, we create and curate a novel expert-validated dataset, employed for training and evaluating fine-tuned models. On a held-out test set, evaluated under the LLM judge that best agrees with expert annotations, in-domain fine-tuning of small open-weight models (3 - 7B parameters) matches strong few-shot proprietary API baselines. Our best fine-tuned system reaches 0.84 semantic accuracy, statistically on par with 0.86 for the strongest few-shot proprietary baseline, while keeping requirements on-premises. We further find that judge reliability is inverse to generator strength. The open-weight Llama-3.3-70B tracks human verdicts most closely, whereas the strongest proprietary models are the least reliable judges, over-rejecting faithful paraphrases of the reference. To assess the practical applicability of the generated specifications, we embed our tool to an existing strategic logics model checker, enabling non-expert users to specify strategic properties in natural language.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解自然语言到形式规约翻译的挑战；然后重点阅读数据集构建和实验部分，了解微调模型与专有基线的性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的自然语言到策略规约翻译框架可应用于低空经济中无人机协同任务的规约生成。通过将飞行安全需求自动转化为形式化规约，可支持多无人机系统的形式化验证，提升航迹预测和协同决策的可靠性。</p></section>
+              <section><h3>实践思路</h3><p>可复现该翻译框架，收集低空经济场景中的自然语言安全需求，构建领域数据集并微调小规模模型。实验时需评估生成规约的语义准确率，并验证其在多无人机系统验证工具中的可用性。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>
