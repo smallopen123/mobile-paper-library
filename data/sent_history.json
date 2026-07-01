@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "b805451c7cbba9d8",
+      "title": "Diffusion-based 4D Trajectory Prediction and Distributed Control for UAV Swarms",
+      "url": "http://arxiv.org/abs/2606.31197v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "4ca6154eb36fe895",
+      "title": "Robust Autonomous UAV Landing on Maritime Platforms via Multimodal Agentic AI and Active Wave Compensation",
+      "url": "http://arxiv.org/abs/2606.31613v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "772635a3806d9d4c",
+      "title": "Sampling-Based Coordination-Informed Multi-Objective Multi-Robot Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2606.30893v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "d4105be0c71b05e1",
+      "title": "Energy-Optimal Spatial Iterative Learning within a Virtual Tube",
+      "url": "http://arxiv.org/abs/2606.31487v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "78de2352754f98bd",
+      "title": "Autonomous UAV Navigation for Individual Wildlife Re-Identification",
+      "url": "http://arxiv.org/abs/2606.31772v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "47b92e2e4c5d49bf",
+      "title": "DynFly: Dynamic-Aware Continuous Trajectory Generation for UAV Vision-Language Navigation in Urban Environments",
+      "url": "http://arxiv.org/abs/2606.31654v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "fd7ee71025239489",
+      "title": "Ground Plane-Aided Extrinsic Calibration of Inertial and RGB-D Sensors for Uncrewed Aerial Vehicles",
+      "url": "http://arxiv.org/abs/2606.31019v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "65082569039d566b",
+      "title": "Wind and State Estimation on SE(3): Comparative Evaluation of EKF and UKF with Continuous and Discrete Quadrotor Models",
+      "url": "http://arxiv.org/abs/2606.30804v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "ceaf3264b2931057",
+      "title": "RRT-Rope: A deterministic shortening approach for fast near-optimal path planning in large-scale uncluttered 3D environments",
+      "url": "http://arxiv.org/abs/2606.31948v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "49552818b591a342",
+      "title": "AeroVerse-SatAgent: UAV-Satellite Collaborative Spatial Reasoning Inspired by the Dual Visual Pathway Theory of Cognitive Neuroscience",
+      "url": "http://arxiv.org/abs/2606.31467v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "0261bff1627a26f3",
+      "title": "MultiUAV-Plat: An LLM-Oriented Platform, Benchmark and Framework for Multi-UAV Collaborative Task Planning",
+      "url": "http://arxiv.org/abs/2606.31073v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "b044a62a37df69a2",
+      "title": "Agentic-Ideation: Sample Efficient Agentic Trajectories Synthesis for Scientific Ideation Agents",
+      "url": "http://arxiv.org/abs/2606.31229v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "383058bfd1622479",
+      "title": "Teaching LLMs to Recommend and Defer in Underrepresented Epilepsy Care",
+      "url": "http://arxiv.org/abs/2606.31036v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "2cc25f815fe61a4c",
+      "title": "CSTrader: A Testbed for Language-Grounded Trading in a Community-Driven Virtual Asset Market",
+      "url": "http://arxiv.org/abs/2606.31461v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "12ee9a88df827224",
+      "title": "DDIAgents: Mechanism-Conditioned Context Flow for Drug-Drug Interaction Prediction",
+      "url": "http://arxiv.org/abs/2606.31085v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "5d89ee4c72fec976",
+      "title": "Dynamic Scheduling for Flexible Manufacturing Systems Based on Multi-Agent Deep Reinforcement Learning and Petri Nets",
+      "url": "http://arxiv.org/abs/2606.31737v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "63238a1b477fa581",
+      "title": "Stabilization Learning: A Paradigm Transition Bridging Control Theory and Machine Learning",
+      "url": "http://arxiv.org/abs/2606.31562v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "1cac33b8ca66aab9",
+      "title": "Smart charging of large fleets of Electric Vehicles: Independent Multi-Agent Reinforcement Learning approaches",
+      "url": "http://arxiv.org/abs/2606.31347v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "fc3ced5e8a95bb79",
+      "title": "Long-term Traffic Simulation via Structured Autoregressive Modeling",
+      "url": "http://arxiv.org/abs/2606.31209v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
+      "key": "b3f7a72f12a7982d",
+      "title": "HyPOLE: Hyperproperty-Guided Multi-Agent Reinforcement Learning under Partial Observation",
+      "url": "http://arxiv.org/abs/2606.30966v1",
+      "sent_at": "2026-07-01T22:18:45.708237+00:00"
+    },
+    {
       "key": "b4e2b9b643c85ae0",
       "title": "MOAR Planner: Multi-Objective and Adaptive Risk-Aware Path Planning for Infrastructure Inspection with a UAV",
       "url": "http://arxiv.org/abs/2606.30575v1",
