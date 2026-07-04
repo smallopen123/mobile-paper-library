@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "3818827b992f0b5a",
+      "title": "Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation",
+      "url": "http://arxiv.org/abs/2607.01794v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "192cf23929d401aa",
+      "title": "NEUROSYMLAND: Neuro-Symbolic Landing-Site Assessment for Robust and Edge-Deployable UAV Autonomy",
+      "url": "http://arxiv.org/abs/2607.02277v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "410ac3e8bb88a92a",
+      "title": "Real-Time Visual Intelligence on Low-Cost UAVs: A Modular Approach for Tracking, Scanning, and Navigation",
+      "url": "http://arxiv.org/abs/2607.02298v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "d4005f8f9974d889",
+      "title": "Seek to Segment: Active Perception for Panoramic Referring Segmentation",
+      "url": "http://arxiv.org/abs/2607.02497v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "5f2352c5348bcfdb",
+      "title": "What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates",
+      "url": "http://arxiv.org/abs/2607.02507v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "1a84a8fb35d75ed5",
+      "title": "Copewell: A Multi-Agent Swarm Architecture for Equitable Mental Wellness Support",
+      "url": "http://arxiv.org/abs/2607.02245v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "840653d866659900",
+      "title": "Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks",
+      "url": "http://arxiv.org/abs/2607.02210v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "45a3396fd81dfd26",
+      "title": "Reference-Governed Distributed Safe Gradient Flow for Safe Optimal Output Agreement of Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2607.02192v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "5370eb812f0d5a47",
+      "title": "Traceable Fault Diagnosis for Battery Energy Storage Systems via Retrieval-Augmented Multi-Agent O&M Assistant",
+      "url": "http://arxiv.org/abs/2607.01992v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "2c0545af3b64a637",
+      "title": "SimWorlds: A Multi-Agent System for Dynamic 3D Scene Creation",
+      "url": "http://arxiv.org/abs/2607.01766v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "81d215846bd81397",
+      "title": "Mean Field Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.01525v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "1a67af8f9d8a57d0",
+      "title": "Teaching Vision-Language-Action Models What to See and Where to Look",
+      "url": "http://arxiv.org/abs/2607.01658v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "54f9741e50c5ae77",
+      "title": "Online Segment 3D Gaussians via Launching Virtual Drones",
+      "url": "http://arxiv.org/abs/2607.01628v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "85af69be0c7cf1b7",
+      "title": "ACID: Action Consistency via Inverse Dynamics for Planning with World Models",
+      "url": "http://arxiv.org/abs/2607.02403v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "8a3425962dcef536",
+      "title": "Overview of Risk Assessment and Management for Intelligent Systems under the AI Act and Beyond",
+      "url": "http://arxiv.org/abs/2607.02197v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "cd8b712bc0851ac1",
+      "title": "AIriskEval-edu: New Dataset for Risk Assessment in AI-mediated K-12 Educational Explanations",
+      "url": "http://arxiv.org/abs/2607.01934v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "dbd718887fa00787",
+      "title": "Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems",
+      "url": "http://arxiv.org/abs/2607.02376v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "668b6509a5ebc794",
+      "title": "Liquid Latent State Dynamics for Interpretable Turbofan Degradation Modeling",
+      "url": "http://arxiv.org/abs/2607.01986v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "d71d3d8ef18e7150",
+      "title": "QFedAgent: Quantum-Enhanced Personalized Federated Learning for Multi-Agent Activity Recognition",
+      "url": "http://arxiv.org/abs/2607.02426v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
+      "key": "16e064735e001de5",
+      "title": "Learning to Evolve Scenes: Reasoning about Human Activities with Scene Graphs",
+      "url": "http://arxiv.org/abs/2607.02425v1",
+      "sent_at": "2026-07-04T21:59:46.712151+00:00"
+    },
+    {
       "key": "b805451c7cbba9d8",
       "title": "Diffusion-based 4D Trajectory Prediction and Distributed Control for UAV Swarms",
       "url": "http://arxiv.org/abs/2606.31197v1",

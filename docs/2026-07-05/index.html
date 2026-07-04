@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-05</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-05 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation</h2>
+              <p>Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation</p>
+              <p class="meta">Shenghui Zhang, YuXuan Gao, Songwei Zhao, Jifeng Hu, Zijing Zhang, Hechang Chen | arXiv cs.RO | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01794v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01794v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>With the rapid development of autonomous aerial systems, Unmanned Aerial Vehicles (UAVs) are increasingly deployed in applications such as inspection, environmental monitoring, and rescue, creating growing demand for reliable autonomous navigation. However, autonomous UAV navigation in dense environments remains challenging under sparse perception and dynamic constraints. Most reinforcement learning (RL) methods lack explicit safety mechanisms, leading to unsafe exploration, unstable training, and risky behaviors, especially during high-speed flight. Even in safe RL approaches, safety is often enforced by projecting policy outputs onto a safe action set, which may introduce instability. Meanwhile, many learning-based methods rely on dense inputs or large networks, increasing computational burden and limiting lightweight onboard deployment. Facing the above challenges, we propose a safety-constrained perception-control integrated framework for UAV navigation. A lightweight network encodes sparse observations into collision-risk-aware features using asymmetric and depthwise separable convolutions. We formulate the task as a constrained Markov decision process within a hierarchical control architecture and solve it using a Lagrangian-based safe PPO algorithm. Curriculum learning further improves training stability. Experiments with varying obstacle densities and flight speeds demonstrate higher success rates, improved safety, and better efficiency than existing reinforcement learning baselines.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 unmanned aerial vehicle, uav, autonomous navigation, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>NEUROSYMLAND: Neuro-Symbolic Landing-Site Assessment for Robust and Edge-Deployable UAV Autonomy</h2>
+              <p>NEUROSYMLAND: Neuro-Symbolic Landing-Site Assessment for Robust and Edge-Deployable UAV Autonomy</p>
+              <p class="meta">Weixian Qian, Tianyi Yang, Sebastian Schroder, Yao Deng, Jiaohong Yao, Xiao Cheng, Richard Han, Xi Zheng | arXiv cs.RO | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02277v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02277v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Safe landing-site assessment in unstructured environments remains a key challenge for autonomous UAV deployment, as vision-only learning approaches often degrade under terrain variability and provide limited transparency in safety decisions. We present NEUROSYMLAND, a neuro-symbolic landing-site assessment system that integrates lightweight perception with explicit safety reasoning. The framework constructs a probabilistic semantic scene graph from onboard visual input and evaluates candidate landing regions using symbolic constraints capturing terrain flatness, obstacle clearance, and spatial consistency, enabling structured reasoning under perceptual uncertainty while maintaining edge-feasible execution. Across 72 simulated landing scenarios spanning diverse terrains, NEUROSYMLAND achieves 61 successful assessments, outperforming four competitive baselines (37-57 successes). To evaluate deployability, we further conduct 100 hardware-in-the-loop trials with randomized initial poses, profiling end-to-end latency, stage-wise execution time, and system-level metrics including CPU/GPU utilization, memory footprint, and power consumption. Results demonstrate improved robustness and interpretability with bounded edge-resource usage. Profiling shows that symbolic reasoning contributes only a small fraction of end-to-end latency, while the main computational cost arises from perception and PSSG construction. These results demonstrate the feasibility of deploying the landing-site assessment stack on edge-constrained UAV hardware, and all source code, datasets, prompts, and symbolic rule refinement examples are released in an open-source repository</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>Real-Time Visual Intelligence on Low-Cost UAVs: A Modular Approach for Tracking, Scanning, and Navigation</h2>
+              <p>Real-Time Visual Intelligence on Low-Cost UAVs: A Modular Approach for Tracking, Scanning, and Navigation</p>
+              <p class="meta">Andrei-Marian Ungureanu, Stelian Spînu | arXiv cs.RO | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02298v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02298v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous drones are rapidly transforming modern warfare and civil applications alike. This paper presents the development of an integrated intelligent drone system designed to serve as a personal assistant. Leveraging the DJI Tello drone platform, we implemented a modular architecture that integrates three core artificial intelligence functionalities: facial detection, facial recognition, and depth estimation from monocular vision. A web-based interface enables seamless drone control and real-time video monitoring, while a Python-based server processes visual data and executes inference pipelines using lightweight neural models optimized for embedded systems. Unlike existing commercial solutions, this system emphasizes accessibility, low-cost hardware, and open-source technologies. The system demonstrates robust performance in real-world conditions, including person tracking, indoor scanning, and autonomous line following using virtual sensors. This project validates the applicability of advanced AI techniques in real-time robotic systems and illustrates the feasibility of deploying them on constrained hardware, providing a foundation for future research in autonomous UAVs for military, rescue, and surveillance missions.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 uav, drone。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>Seek to Segment: Active Perception for Panoramic Referring Segmentation</h2>
+              <p>Seek to Segment: Active Perception for Panoramic Referring Segmentation</p>
+              <p class="meta">Song Tang, Shuming Hu, Xincheng Shuai, Henghui Ding, Yu-Gang Jiang | arXiv cs.CV | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02497v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02497v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Existing referring segmentation models passively process static images captured from fixed perspectives, limiting their applicability in Embodied AI, where agents must perform active perception in the continuous 360$^\circ$ environments. To bridge this gap, we introduce a novel task: Active Panoramic Referring Segmentation (APRS). In this setting, an agent is required to adjust its viewing direction ($Δθ, Δφ$) to explore the 360$^\circ$ environment, seeking the object specified by a user instruction for segmentation. To tackle this challenging task, we propose PanoSeeker, a memory-augmented agent for efficient APRS. Rather than relying on heuristic scanning, PanoSeeker integrates a Vision-Language Model (VLM) with EgoSphere, an explicit spatial visual memory. By progressively integrating sequential local observations into a unified 360$^\circ$ representation, EgoSphere enables the agent to plan efficient and non-redundant search trajectories. Once the target is found, the agent performs active viewpoint alignment and outputs the segmentation mask. Furthermore, we curate an expert-annotated search trajectory dataset with memory timelines for Supervised Fine-Tuning, followed by Reinforcement Learning post-training to explicitly optimize PanoSeeker&#x27;s exploration efficiency. Extensive experiments on our newly established APRS benchmark demonstrate that PanoSeeker achieves superior search efficiency and segmentation accuracy, significantly outperforming adapted state-of-the-art baselines.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 embodied ai, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates</h2>
+              <p>What LLM Agents Say When No One Is Watching: Social Structure and Latent Objective Emergence in Multi-Agent Debates</p>
+              <p class="meta">Arman Ghaffarizadeh, Danyal Mohaddes, Aliakbar Izadkhah, Shahriar Noroozizadeh | arXiv cs.AI | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02507v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02507v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>LLM agents will increasingly act in socially structured settings where role, audience, and relational context can shape what is advantageous or costly to say. We study whether such social structure, without any explicit objective in the prompt, changes what an agent expresses publicly relative to an off-the-record (OTR) channel elicited under the same condition. We introduce a dual-channel debate framework in which agents produce public utterances that enter the shared history alongside OTR responses that are recorded but never shown to the other participant. Across 10 models, 3 scenarios, and 5 variations within each scenario, alignment-inducing settings produce systematic public-OTR divergence in the targeted agent, with its decision divergence rising from a $\sim$3% baseline to roughly 40%. The effect is consistent across four aggregate analyses: stance, semantic similarity, natural language inference, and survey responses. In some cases, the OTR response explicitly attributes public accommodation to relational pressures, such as career risk or sponsorship obligation. The findings suggest that agent evaluation should extend beyond explicit goals and detect emergent objectives. We present a dual-channel evaluation framework and complementary behavioral measures that operationalize this assessment.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>Copewell：一种用于公平心理健康支持的多智能体群体架构</h2>
+              <p>Copewell: A Multi-Agent Swarm Architecture for Equitable Mental Wellness Support</p>
+              <p class="meta">Seren Yenikent, Jack Vinijtrongjit, Katherine Ng | arXiv cs.AI | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02245v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02245v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>心理健康障碍影响着全球近十亿人，然而在低收入和中等收入国家，由于劳动力短缺、成本障碍和污名化，75%的患者未接受任何治疗。当前基于AI的健康解决方案主要依赖单一模式的对话界面，这类界面存在高放弃率，并且无法根据用户动态情绪状态提供可衡量的即时缓解。本文提出了Copewell，一种新颖的多智能体群体系统，旨在通过以人为中心的AI原则扩大心理健康支持的覆盖面。我们的架构引入了三项技术创新：(1) 一个整合自我报告、生理和情境数据的多源评估框架，以减轻算法偏差；(2) 使用Russell情感环状模型进行效价-唤醒情绪映射，将用户路由至专门的AI智能体；(3) 结合对话支持与循证感官健康方案的双模式干预交付。我们研究了Copewell开发背后的社会技术设计考量，包括隐私优先架构、通过专用伦理监督智能体嵌入的伦理监督，以及由心理健康从业者参与的设计。早期的从业者参与和测试版部署为设计决策提供了信息，并确定了未来实证评估的方向。这项工作通过展示技术架构如何从初始阶段就实现公平与安全原则，为负责任的AI讨论做出了贡献。</p></section>
+              <section><h3>English Abstract</h3><p>Mental health disorders affect nearly one billion people globally, yet 75% of individuals in low- and middle-income countries receive no treatment due to workforce shortages, cost barriers, and stigma. Current AI-powered wellness solutions predominantly rely on single-mode conversational interfaces that suffer high abandonment rates and fail to provide measurable, immediate relief calibrated to users&#x27; dynamic emotional states. This paper presents Copewell, a novel multi-agent swarm system designed to expand access to mental wellness support through human-centered AI principles. Our architecture introduces three technical innovations: (1) a multi-source assessment framework integrating self-reported, physiological, and contextual data to mitigate algorithmic bias; (2) valence-arousal emotion mapping using Russell&#x27;s Circumplex Model of Affect to route users to specialized AI agents; and (3) dual-mode intervention delivery combining conversational support with evidence-based sensory wellness protocols. We examine the sociotechnical design considerations underlying Copewell&#x27;s development, including a privacy-first architecture, embedded ethical oversight through a dedicated Ethics Supervisor agent, and participatory design informed by mental health practitioners. Early practitioner engagement and beta deployment inform design decisions and identify directions for future empirical evaluation. This work contributes to responsible AI discourse by demonstrating how technical architecture can operationalize equity and safety principles from inception.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要了解系统核心创新（多源评估、情绪映射、双模式干预），再关注社会技术设计部分以理解其公平性与安全性考量。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的多智能体群体架构与低空经济中无人机集群的协同安全监控有相似性，其多源评估和智能体路由机制可借鉴用于航迹预测中的多传感器融合与异常检测。此外，其隐私优先和伦理监督设计对低空经济中智能体系统的安全合规部署具有参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可复现其多源评估框架，在低空无人机集群场景中集成GPS、IMU和气象数据，模拟动态环境下的智能体路由。实验可设计为对比单模式与多模式评估在航迹预测准确性上的差异，并验证隐私保护机制的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>基于关键性的自主电信网络AI智能体决策护栏验证</h2>
+              <p>Criticality-Based Guard Rail Validation for AI Agent Decisions in Autonomous Telecom Networks</p>
+              <p class="meta">Ravi Kant Sharma | arXiv cs.AI | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02210v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02210v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>向完全自主的电信网络（自主网络级别4-5）演进要求AI/ML智能体在无需人工干预的情况下做出实时网络决策。然而，目前缺乏标准化的运行时机制来在单个推理输出触发实时网络状态变更之前进行拦截和验证，这带来了错误自主决策的风险。本文提出了护栏验证（GRV）框架，这是一种可标准化的运行时架构，用于在执行前拦截和验证AI驱动的决策。该框架在多个加权维度上评估决策——包括行动范围、行动类型、服务关键性、智能体自主级别、可逆性和时间行为模式——以确定关键性级别。基于此级别，应用分级验证机制：执行并记录、边界检查、独立智能体验证或多智能体共识。该框架还提供跨智能体冲突检测，具有基于关键性的优先级解决和运行时合规性日志记录，以满足监管要求（例如欧盟AI法案第14条）。我们介绍了架构、算法流程、O-RAN部署模型，并评估了针对电信领域已知AI/ML攻击的威胁覆盖范围。</p></section>
+              <section><h3>English Abstract</h3><p>The evolution toward fully autonomous telecommunications networks (Autonomous Network Levels 4-5) requires AI/ML agents to make real-time network decisions without human intervention. However, no standardized runtime mechanism exists to intercept and validate individual inference outputs before they trigger live network state changes, creating risks of erroneous autonomous decisions. This paper proposes the Guard Rail Validation (GRV) framework, a standardizable runtime architecture for intercepting and validating AI-driven decisions before execution. The framework evaluates decisions across multiple weighted dimensions -- including action scope, action type, service criticality, agent autonomy level, reversibility, and temporal behavioural patterns -- to determine a criticality level. Based on this level, graduated validation mechanisms are applied: execute-with-logging, bounds checking, independent agent validation, or multi-agent consensus. The framework additionally provides cross-agent conflict detection with criticality-weighted priority resolution and runtime conformance logging for regulatory compliance (e.g., EU AI Act Article 14). We present the architecture, algorithmic procedures, O-RAN deployment model, and evaluate threat coverage against known AI/ML attacks in telecommunications.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读GRV框架的分级验证机制和跨智能体冲突检测部分，理解其如何通过关键性评估实现安全决策。</p></section>
+              <section><h3>相关性说明</h3><p>该论文的护栏验证框架直接适用于低空经济中无人机航迹预测与决策的安全保障，其分级验证机制可防止错误航迹指令执行。跨智能体冲突检测对多无人机协同场景中的路径冲突解决具有直接借鉴意义。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机航迹预测仿真环境中实现GRV框架，模拟不同关键性级别下的决策拦截与验证。实验可设计为对比有无护栏验证时错误航迹指令的执行率，并测试多无人机冲突检测的准确性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>基于参考的分布式安全梯度流用于多智能体系统的安全最优输出一致性</h2>
+              <p>Reference-Governed Distributed Safe Gradient Flow for Safe Optimal Output Agreement of Multi-Agent Systems</p>
+              <p class="meta">Zhanglin Shangguan, Wei Xiao, Bo Yang, Xinping Guan | arXiv eess.SY | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02192v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02192v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文研究了具有输出安全约束的非线性多智能体系统的安全最优输出一致性问题。现有的安全反馈优化方法通常通过被控对象输入直接实现梯度流动态，这可能需要高阶控制障碍函数（HOCBFs）。由此产生的导数链设计对调参敏感，并可能引入改变稳态最优解的额外平衡条件。我们提出了一种基于参考的两层架构，将下层输出调节与上层分布式优化分离。上层通过一阶控制障碍函数约束过滤参考梯度流，这更易于调参并保留原始一致问题的稳态最优性结构。下层使用基于内模的输出调节器，配合依赖参考的Lyapunov函数，由此构建动态安全裕度（DSMs）以证明瞬态输出安全性。我们证明了前向不变性、DSM兼容条件下的最优解保持性，以及通过Lyapunov小增益论证的收敛性。仿真验证了安全收敛性，展示了相对于基于HOCBF的反馈优化的优势，并演示了用于逃离非凸障碍物引起的虚假平衡的自适应切向目标塑造。</p></section>
+              <section><h3>English Abstract</h3><p>This paper studies safe optimal output agreement for nonlinear multi-agent systems with output safety constraints. Existing safe feedback optimization methods often implement gradient-flow dynamics directly through the plant input, which may require high-order control barrier functions (HOCBFs). The resulting derivative-chain design is tuning-sensitive and can introduce additional equilibrium conditions that alter the steady-state optimal solution. We propose a reference-governed two-layer architecture that separates lower-layer output regulation from upper-layer distributed optimization. The upper layer filters the reference gradient flow through first-order control barrier function constraints, which are easier to tune and preserve the steady-state optimality structure of the original agreement problem. The lower layer uses an internal-model-based output regulator with a reference-dependent Lyapunov function, from which dynamic safety margins (DSMs) are constructed to certify transient output safety. We prove forward invariance, optimal-solution preservation under DSM-compatibility conditions, and convergence via a Lyapunov small-gain argument. Simulations validate safe convergence, show advantages over HOCBF-based feedback optimization, and demonstrate adaptive tangential objective shaping for escaping spurious equilibria induced by nonconvex obstacles.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解两层架构的分离设计（上层优化+下层调节），再关注动态安全裕度（DSM）的构建与收敛性证明。</p></section>
+              <section><h3>相关性说明</h3><p>该论文的安全最优一致性方法可直接应用于低空经济中无人机编队的航迹规划，其两层架构可确保航迹满足安全约束（如避障）的同时实现最优协同。动态安全裕度概念可用于实时评估航迹预测的瞬态安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在多无人机编队仿真中实现该两层架构，对比其与基于HOCBF的方法在避障和收敛速度上的表现。实验可设计为不同障碍物密度下的安全航迹生成，并验证DSM对瞬态安全的保障效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>基于检索增强的多智能体运维助手的电池储能系统可追溯故障诊断</h2>
+              <p>Traceable Fault Diagnosis for Battery Energy Storage Systems via Retrieval-Augmented Multi-Agent O&amp;M Assistant</p>
+              <p class="meta">Jiangdi Ru, Bing Li, Yage Huang, Ding Wang, Keru Hua | arXiv cs.AI | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01992v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01992v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>大规模电池储能系统（BESS）的运维决策需要结合警报、电池级测量、设备拓扑、诊断表、历史案例和维护文档。监控平台可以标记阈值违规，但通常无法解释电压不一致、电阻漂移、短路风险、容量差异或热异常是否需要干预。本摘要介绍了一种可追溯的BESS故障诊断助手，它使用检索增强的多智能体推理来连接运行数据、领域知识、视觉证据和报告生成。通过BESS特定的任务路由、模式约束的自然语言数据库访问、混合文本-图像检索和基于证据的答案合成，提高了可靠性。报告了路由、数据库访问和诊断推理的初步内部评估。</p></section>
+              <section><h3>English Abstract</h3><p>Large-scale battery energy storage systems (BESSs) require O&amp;M decisions that combine alarms, cell-level measurements, device topology, diagnostic tables, historical cases, and maintenance documents. Monitoring platforms can flag threshold violations, but they often cannot explain whether voltage inconsistency, resistance drift, short-circuit risk, capacity divergence, or thermal abnormality needs intervention. This digest presents a traceable BESS fault-diagnosis assistant that uses retrieval-augmented multi-agent reasoning to connect operational data, domain knowledge, visual evidence, and report generation. Reliability is improved through BESS-specific task routing, schema-constrained natural-language database access, hybrid text-image retrieval, and evidence-based answer synthesis. Preliminary internal evaluation is reported for routing, database access, and diagnostic reasoning.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注检索增强多智能体推理的架构设计，特别是任务路由和混合检索如何提升诊断可追溯性。</p></section>
+              <section><h3>相关性说明</h3><p>该论文的检索增强多智能体方法可应用于低空经济中无人机系统的故障诊断与航迹异常分析，其多源数据融合（运行数据、领域知识、视觉证据）对航迹预测中的异常检测具有参考价值。可追溯性设计有助于低空安全事件的审计与复盘。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机航迹预测系统中实现类似的检索增强多智能体架构，集成飞行日志、气象数据和历史故障案例。实验可设计为对比有无检索增强时故障诊断的准确率和可解释性，并测试任务路由的效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>SimWorlds：用于动态3D场景创建的多智能体系统</h2>
+              <p>SimWorlds: A Multi-Agent System for Dynamic 3D Scene Creation</p>
+              <p class="meta">Chunjiang Liu, Xiaoyuan Wang, Haoyu Chen, Yizhou Zhao, Ming-Hsuan Yang, László A. Jeni | arXiv cs.AI | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01766v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01766v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>LLM智能体越来越多地被用于以程序化方式将自然语言翻译成3D场景，但现有系统专注于静态输出。仅从文本生成动态4D场景——其中液体流动、粒子发射、刚体级联和铰接机构运动——仍然在很大程度上未被探索，尽管它们作为可编辑内容和视频生成及具身AI的物理基础训练数据具有价值。两个挑战使动态情况与静态文本到场景的工作不同：智能体必须在一个连贯的场景中共同协调空间布局、多个物理求解器、时间序列、相机和光照，并且从渲染视频中验证运动正确性比判断单张图像根本更难。我们提出了SimWorlds：一个从文本生成动态、可编辑4D场景的多智能体框架，具有Blender特定的程序化知识、驱动固定有序构建阶段的规划器-编码器-审查器工作流、由确定性验证器强制执行的分层场景协议，以及一套运行时状态检查工具套件，用于捕捉渲染图像无法揭示的机制故障。我们还引入了4DBuildBench，一个用于评估从文本提示生成的程序化动态3D场景的视觉保真度和物理一致性的基准。实验表明，SimWorlds优于先前的动态Blender生成基线。</p></section>
+              <section><h3>English Abstract</h3><p>LLM agents are increasingly used to translate natural language into 3D scenes in a procedural way, but existing systems focus on static output. Dynamic 4D scenes from text alone, in which liquids flow, particles emit, rigid bodies cascade, and articulated mechanisms move, remain largely unexplored despite their value as editable content and as physics-grounded training data for video generation and embodied AI. Two challenges set the dynamic case apart from static text-to-scene work: an agent must jointly coordinate spatial layout, multiple physics solvers, temporal sequencing, camera, and lighting in a single coherent scene, and verifying motion correctness from rendered video is fundamentally harder than judging a single image. We present SimWorlds: a multi-agent framework that produces dynamic, editable 4D scenes from text, with Blender-specific procedural knowledge, a planner-coder-reviewer workflow driving a fixed ordered sequence of construction stages, a layered scene protocol enforced by a deterministic verifier, and a runtime-state inspection tool suite that catches mechanism failures the rendered image cannot reveal. We also introduce 4DBuildBench, a benchmark for assessing both visual fidelity and physical consistency of the procedural dynamic 3D scenes generated from text prompts. Experiments show that SimWorlds outperforms prior dynamic Blender generation baselines.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读多智能体框架的工作流（规划器-编码器-审查器）和运行时状态检查工具，理解其如何确保动态场景的物理一致性。</p></section>
+              <section><h3>相关性说明</h3><p>该论文的多智能体框架和物理一致性验证方法可应用于低空经济中无人机航迹预测的可视化仿真，其动态4D场景生成能力可用于模拟复杂环境下的航迹变化。运行时状态检查工具对航迹预测中的异常检测与验证具有参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机航迹预测仿真中借鉴SimWorlds的规划器-编码器-审查器工作流，生成动态4D航迹场景。实验可设计为对比有无物理一致性验证时航迹模拟的准确性，并测试运行时状态检查工具对航迹异常的检测能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>平均场强化学习</h2>
+              <p>Mean Field Reinforcement Learning</p>
+              <p class="meta">René Carmona, Mathieu Laurière | arXiv math.OC | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01525v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01525v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本专著通过马尔可夫决策过程的视角，介绍了平均场强化学习，该过程源于具有平均场相互作用和共同噪声的大规模随机控制。从多智能体强化学习与平均场控制的联系出发，它建立了必要的概率、数学和控制理论框架，以制定代表性智能体学习问题，分析其与有限种群系统的关系，并研究一般模型和线性二次模型。内容包括动态规划原理、混沌传播极限、表格Q学习和策略梯度方法的理论分析。还讨论了数值实现，包括表格方案和深度强化学习方法（如深度确定性策略梯度）。目标是让读者在平均场控制理论和强化学习方法之间建立一座连贯的桥梁，强调问题的数学结构以及为大规模随机种群设计易处理的学习方法。</p></section>
+              <section><h3>English Abstract</h3><p>This monograph provides an introduction to mean field reinforcement learning through the lens of Markov decision processes arising from large-population stochastic control with mean field interactions and common noise. Starting from the connection between multi-agent reinforcement learning and mean field control, it develops the probabilistic, mathematical, and control-theoretic framework needed to formulate representative-agent learning problems, analyze their relationship with finite-population systems, and study both general and linear-quadratic models. The presentation includes dynamic programming principles, propagation-of-chaos limits, and theoretical analyses of tabular Q-learning and policy-gradient methods. It also discusses numerical implementations, including tabular schemes and deep reinforcement learning methods such as deep deterministic policy gradient. The goal is to give readers a coherent bridge between mean field control theory and reinforcement learning methodology, emphasizing the mathematical structure of the problems and the design of tractable learning approaches for large stochastic populations.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读引言部分，了解平均场强化学习的基本动机和与多智能体系统的联系；然后重点关注动态规划原理和理论分析章节，以掌握核心数学框架。</p></section>
+              <section><h3>相关性说明</h3><p>平均场强化学习为大规模无人机集群或低空飞行器群的协同控制提供了理论基础，可应用于低空经济中的航迹规划和冲突解决。其理论框架有助于分析大量智能体（如无人机）在低空环境中的集体行为，提升航迹预测的准确性和安全性。</p></section>
+              <section><h3>实践思路</h3><p>可基于论文中的表格Q学习或策略梯度方法，在仿真环境中（如AirSim或Gazebo）实现一个简化的大规模无人机集群航迹规划实验。复现时需关注平均场相互作用项和共同噪声的建模，并对比有限种群与无限种群下的性能差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>教视觉-语言-动作模型看什么和看哪里</h2>
+              <p>Teaching Vision-Language-Action Models What to See and Where to Look</p>
+              <p class="meta">Yuguang Yang, Canyu Chen, Zhewen Tan, Yizhi Wang, Zichao Feng, Chunyang Liu, Kehua Sheng, Juan Zhang, Linlin Yang, Baochang Zhang, Yan Wang, Bo Zhang, Xianbin Cao | arXiv cs.CV | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01658v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01658v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉-语言-动作（VLA）模型已成为端到端自动驾驶的一种有前景的范式。然而，现有VLA的训练严重依赖于以文本为中心的视觉问答和思维链推理数据，这强调语言推理而非基于动作的规划。因此，学习到的表示捕获了语义知识，但缺乏可靠轨迹预测所需的空间依赖性。我们提出了DriveTeach-VLA，一个明确教VLA看什么和看哪里的框架。驾驶感知视觉蒸馏（DVD）将驾驶特定的感知先验注入视觉编码器，而2D轨迹引导提示（2D-TGP）提供与可行驾驶轨迹对齐的空间条件。它们共同形成了一个视觉引导的学习流程：看什么（DVD预训练）——看哪里（TGP引导的SFT）——如何行动（TGP引导的GRPO）。DriveTeach-VLA在NAVSIM和nuScenes上达到了最先进的性能。我们的代码可在https://github.com/ShivaTeam/DriveTeach-VLA获取。</p></section>
+              <section><h3>English Abstract</h3><p>Vision-Language-Action (VLA) models have emerged as a promising paradigm for end-to-end autonomous driving. However, existing VLAs&#x27; training relies heavily on text-centric visual question answering and chain-of-thought reasoning data, which emphasizes linguistic reasoning rather than action-grounded planning. As a result, the learned representations capture semantic knowledge but lack spatial dependencies crucial for reliable trajectory prediction. We propose DriveTeach-VLA, a framework that explicitly teaches VLAs what to see and where to look. Driving-aware Vision Distillation (DVD) injects driving-specific perceptual priors into the vision encoder, while 2D Trajectory-Guided Prompts (2D-TGP) provide spatial conditioning aligned with feasible driving trajectories. Together, they form a vision-guided learning pipeline: what to see (DVD pretraining) - where to look (TGP-guided SFT) - how to act (TGP-guided GRPO). DriveTeach-VLA achieves the state-of-the-art performance on NAVSIM and nuScenes. Our code is available at: https://github.com/ShivaTeam/DriveTeach-VLA.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读方法部分，理解DVD和2D-TGP的具体设计及其如何解决现有VLA模型的空间依赖性问题；然后查看实验部分以验证性能提升。</p></section>
+              <section><h3>相关性说明</h3><p>该框架中的轨迹预测方法可直接应用于低空经济中的无人机或飞行器航迹预测，通过视觉引导提升预测的空间准确性。其强调动作接地规划的思路，有助于增强低空智能体在复杂环境中的安全决策能力。</p></section>
+              <section><h3>实践思路</h3><p>可在自动驾驶或无人机数据集（如nuScenes或UAVDT）上复现DriveTeach-VLA，重点关注DVD预训练和2D-TGP引导的微调步骤。实验时需对比有无视觉引导的轨迹预测误差，并评估在低空场景下的泛化能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>通过发射虚拟无人机在线分割3D高斯体</h2>
+              <p>Online Segment 3D Gaussians via Launching Virtual Drones</p>
+              <p class="meta">Liwei Liao, Rongjie Wang, Ronggang Wang | arXiv cs.CV | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01628v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01628v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>3D高斯体的交互式分割为3D场景的实时操作提供了引人注目的机会，这得益于3D高斯泼溅（3DGS）的实时渲染能力。然而，现有方法在原始3DGS场景上开始交互式分割之前，需要耗时的逐场景设置——通常需要几十秒甚至几分钟。这种设置涉及多视图掩码准备、掩码提升和特征蒸馏，成为在线应用的主要瓶颈。为了解决这一限制，我们旨在完全消除交互式3DGS分割的设置阶段，同时保持分割时间在实用范围内（低于1秒）。在这项工作中，我们提出了SAGO（在线分割任意高斯体），一个新颖的无设置交互式3DGS分割框架。通过引入虚拟无人机，我们的方法将3D分割问题重新定义为在线下一个最佳视角（NBV）规划任务，该任务在马尔可夫过程中公式化。大量实验表明，SAGO可以在亚秒级延迟内直接从3D高斯体中提取干净的3D资产，从而支持广泛的下游应用，如对象操作和场景编辑。此外，与之前的无设置3DGS分割框架相比，我们的方法实现了超过50倍的加速。</p></section>
+              <section><h3>English Abstract</h3><p>Interactive segmentation of 3D Gaussians offers a compelling opportunity for real-time manipulation of 3D scenes, thanks to the real-time rendering capability of 3D Gaussian Splatting (3DGS). However, existing methods require a time-consuming per-scene setup - typically tens of seconds or even minutes - before interactive segmentation can begin on a raw 3DGS scene. This setup involves multi-view mask preparation, mask lifting, and feature distillation, creating a major bottleneck for online applications. To address this limitation, we aim to completely eliminate the setup stage for interactive 3DGS segmentation while keeping the segmentation time practical (under 1 second). In this work, we present SAGO (Segment Any Gaussians Online), a novel setup-free framework for interactive 3DGS segmentation. By introducing virtual drones, our method reframes the 3D segmentation problem as an online Next-Best-View (NBV) planning task formulated within a Markov process. Extensive experiments demonstrate that SAGO can extract clean 3D assets directly from 3D Gaussians with sub-second latency, thereby enabling a broad range of downstream applications such as object manipulation and scene editing. Moreover, our method achieves over a 50x speedup compared to the previous setup-free 3DGS segmentation frameworks.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读引言和问题定义部分，了解现有方法的瓶颈和SAGO的创新点；然后重点看方法部分中虚拟无人机和NBV规划的设计细节。</p></section>
+              <section><h3>相关性说明</h3><p>虚拟无人机的概念可直接映射到低空经济中的无人机集群，用于实时3D场景理解和分割，提升低空环境感知能力。其在线分割能力有助于无人机在动态低空环境中快速识别障碍物或目标，增强航迹预测和避障的安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在3DGS渲染的场景中复现SAGO，使用虚拟无人机模拟低空飞行器的视角选择。实验时需测试不同场景下的分割延迟和精度，并评估其在实时无人机导航任务中的适用性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>ACID：通过逆动力学实现动作一致性以用于世界模型规划</h2>
+              <p>ACID: Action Consistency via Inverse Dynamics for Planning with World Models</p>
+              <p class="meta">Gawon Seo, Dongwon Kim, Suha Kwak | arXiv cs.RO | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02403v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02403v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>基于动作条件世界模型的决策时规划已成为具身控制的一种流行范式。然而，标准规划成本仅根据候选动作的预测终端状态与目标的接近程度来评判，忽略了中间过渡的可实现性——预测轨迹可能看起来令人信服，而环境实际 rollout 却偏离了它。在本文中，我们提出了ACID，一个引入循环动作一致性的决策时规划框架：由逆动力学模型从预测过渡中反向推断出的动作应恢复被条件化的动作。我们通过一个尺度不变的自适应权重将此每步残差纳入规划成本。在四个动作条件世界模型和六个任务（涵盖刚性和可变形操作、关节控制和视觉导航）上，ACID一致地改进了规划，并以显著更少的规划计算量匹配了基线的准确性。</p></section>
+              <section><h3>English Abstract</h3><p>Decision-time planning with action-conditioned world models has become a popular paradigm for embodied control. However, the standard planning cost judges a candidate solely by how close its predicted terminal state lies to the goal, leaving the realizability of the intermediate transitions unchecked -- a predicted trajectory can look convincing while the environment rollout drifts away from it. In this paper, we propose ACID, a decision-time planning framework that introduces cycle action consistency: the action inferred backward from a predicted transition by an inverse dynamics model should recover the one that was conditioned on. We fold this per-step residual into the planning cost via a scale-invariant adaptive weight. Across four action-conditioned world models and six tasks spanning rigid and deformable manipulation, articulated control, and visual navigation, ACID consistently improves planning and matches the baseline&#x27;s accuracy with substantially less planning compute.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解标准规划成本的局限性，然后重点阅读ACID中循环动作一致性的定义和自适应权重的设计；最后查看实验部分以了解其在不同任务上的表现。</p></section>
+              <section><h3>相关性说明</h3><p>该框架中的动作一致性机制可应用于低空经济中无人机或飞行器的航迹预测，确保预测轨迹的中间状态在物理上可实现，提升规划的安全性。其逆动力学模型有助于在复杂低空环境中验证动作序列的可行性，减少预测偏差。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境（如MuJoCo或PyBullet）中复现ACID，应用于无人机航迹规划任务。实验时需对比有无循环动作一致性的规划效果，并评估在动态障碍物场景下的鲁棒性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>《人工智能法案》及更广泛背景下智能系统风险评估与管理综述</h2>
+              <p>Overview of Risk Assessment and Management for Intelligent Systems under the AI Act and Beyond</p>
+              <p class="meta">Javier Irigoyen, Roberto Daza, Aythami Morales, Julian Fierrez, Ruben Tolosana, Ruben Vera-Rodriguez, Francisco Jurado, Alvaro Ortigosa | arXiv cs.CY | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02197v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02197v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>社会和新兴的基于风险的AI监管框架强调了对AI系统进行严格风险评估以确保其安全可靠的必要性。针对这一需求，本文概述了AI风险评估（识别和分析）与管理方法。它首先回顾了推动系统性AI风险评估需求的全球监管格局。然后，我们描述了文献中识别的AI相关风险谱系，从技术故障到伦理和社会影响。随后，它回顾了为AI系统提出的关键风险评估方法，重点关注通用框架。本文强调了最佳实践并揭示了方法论上的差距，指出了AI风险评估进一步研究的领域。</p></section>
+              <section><h3>English Abstract</h3><p>The society and emerging risk-based regulatory frameworks for AI underscore the need for rigorous risk assessment to ensure safe and reliable AI systems. In response to this imperative, this paper presents an overview of AI risk assessment (identification and analysis) and management methodologies. It begins by reviewing the worldwide regulatory landscape that drives the need for systematic AI risk assessment. Then we characterize the spectrum of AI-related risks identified in the literature, from technical failures to ethical and social impacts. Subsequently, it reviews key risk assessment methodologies proposed for AI systems, focusing on general frameworks. The paper highlights best practices and illuminates methodological gaps, highlighting areas for further research on AI risk assessment.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读引言和监管格局部分，了解AI风险评估的背景和驱动力；然后重点关注风险谱系和评估方法部分，以掌握核心概念和框架。</p></section>
+              <section><h3>相关性说明</h3><p>该综述为低空经济中智能系统（如无人机和飞行器）的安全风险评估提供了方法论基础，有助于识别航迹预测和智能体决策中的潜在风险。其强调的监管框架可指导低空经济中AI系统的合规性设计，提升整体安全性。</p></section>
+              <section><h3>实践思路</h3><p>可基于论文中的风险评估框架，对低空经济中的航迹预测模型进行风险分析，识别技术故障和伦理风险。实践时需结合具体场景（如城市低空物流），并参考最佳实践设计缓解措施。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>AIriskEval-edu：面向人工智能辅助K-12教育解释的风险评估新数据集</h2>
+              <p>AIriskEval-edu: New Dataset for Risk Assessment in AI-mediated K-12 Educational Explanations</p>
+              <p class="meta">Javier Irigoyen, Roberto Daza, Francisco Jurado, Julian Fierrez, Ruben Tolosana, Alvaro Ortigosa, Enrique Blas, Aythami Morales | arXiv cs.CL | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01934v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01934v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本工作介绍了AIriskEval-edu-db2，这是一个新数据集，旨在训练和评估基于大语言模型的审计员，用于对K-12年级教学内容进行可解释的教学风险评估。该数据集包含来自170个精选ScienceQA问题的1639条解释，涵盖科学、语言艺术和社会科学。对于每个问题，数据集包含一位人类教师撰写的解释，以及由大语言模型模拟的、与不同教学风险相关的教师档案生成的11条解释。我们提出了一个与既定教育标准相符的全面风险评分标准，涵盖五个互补维度：事实准确性、深度与完整性、重点与相关性、学生水平适宜性以及意识形态偏见。一个关键贡献是增加了785条带有结构化可解释性注释的解释，包括风险定位和风险描述。这些注释通过半自动过程并经过专家教师验证生成。最后，我们展示了验证实验，比较了最先进的专有模型与轻量级本地Llama 3.1 8B模型在教学风险检测和可解释性评估方面的表现。这些实验评估了在AIriskEval-edu-db2上进行监督微调是否能使本地可部署模型在教育审计和评估任务中接近或超越更强的前沿模型，同时保护隐私。</p></section>
+              <section><h3>English Abstract</h3><p>This work introduces AIriskEval-edu-db2, a new dataset designed to train and evaluate auditors based on LLMs for an explainable pedagogical risk assessment in instructional content for grades K-12. The dataset comprises 1,639 explanations from 170 curated ScienceQA questions, covering science, language arts, and social sciences. For each question, the dataset includes an explanation written by a human teacher alongside 11 explanations generated by LLM-simulated teacher profiles associated with distinct pedagogical risks. We propose a comprehensive risk rubric aligned with established educational standards that covers five complementary dimensions: factual precision, depth and completeness, focus and relevance, student-level appropriateness, and ideological bias. A key contribution is the addition of 785 explanations with structured explainability annotations, including risk localization and risk description. The annotations are produced through a semi-automatic process with expert teacher validation. Finally, we present validation experiments comparing state-of-the-art proprietary models with a lightweight local Llama 3.1 8B model in both the pedagogical risk detection and the explainability assessment. These experiments evaluate whether supervised fine-tuning on AIriskEval-edu-db2 enables a locally deployable model to approach or outperform stronger frontier models while preserving privacy in educational auditing and assessment tasks.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注摘要中关于数据集构建和风险评分标准的描述，再查看验证实验部分以了解模型性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的风险评估框架和可解释性方法可迁移至低空经济安全领域，用于评估无人机航迹规划或智能体决策中的潜在风险。其结构化风险标注思路有助于构建可审计的航迹预测模型。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将数据集中的风险评分标准应用于低空飞行场景，构建类似的风险标注数据集。实验可复现其半自动标注流程，并测试本地部署模型在航迹风险检测中的效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>面向安全关键实时自主系统的硬件强制语义协调</h2>
+              <p>Hardware-Enforced Semantic Coordination for Safety-Critical Real-Time Autonomous Systems</p>
+              <p class="meta">Uwe M. Borghoff, Paolo Bottoni, Remo Pareschi | arXiv cs.AI | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02376v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02376v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>近期智能体人工智能的进展正在产生日益复杂的自主系统，这些系统集成了大语言模型、世界模型、优化引擎、专用神经架构、自主平台和人类操作员。虽然当前许多研究侧重于提升推理能力，但安全关键的实时部署还需要在不确定性下并发运行的异构组件之间进行有界且可验证的协调。在需要有限延迟、确定性协调和可强制执行的安全保证的领域中，软件介导的协调存在根本性限制。因此，我们提出了一种硬件强制语义协调架构，其中选定的协调语义通过现场可编程门阵列直接在硬件层面实现。该方法基于基于主题的通信空间Petri网框架，该框架将语义推理与交互管理分离。在此方法中，选定的TB-CSPN协调机制被映射到FPGA原语上，创建了一个硬件原生的语义协调层。重点不在于加速，而在于直接在硬件中强制执行时间同步、语义门控、授权约束和有界协调行为。语义推理保持自适应且由软件驱动，而嵌入式协调语义则变得确定。</p></section>
+              <section><h3>English Abstract</h3><p>Recent advances in agentic AI are producing increasingly complex autonomous systems that integrate large language models, world models, optimization engines, specialized neural architectures, autonomous platforms, and human operators. While much current research focuses on improving reasoning capabilities, safety-critical real-time deployment also requires bounded and verifiable coordination among heterogeneous components operating concurrently under uncertainty. Software-mediated coordination presents fundamental limitations in domains where bounded latency, deterministic coordination, and enforceable safety guarantees are essential. Hence, we propose a hardware-enforced semantic coordination architecture in which selected coordination semantics are implemented directly at the hardware level via field-programmable gate arrays (FPGAs). The approach builds on the Topic-Based Communication Space Petri Net (TB-CSPN) framework, which separates semantic reasoning from interaction management. In this approach, selected TB-CSPN coordination mechanisms are mapped onto FPGA primitives, creating a hardware-native semantic coordination layer. Focus is not on acceleration, but on enforcing temporal synchronization, semantic gating, authorization constraints, and bounded coordination behavior directly in hardware. Semantic reasoning remains adaptive and software-driven, while embedded coordination semantics become deterministic.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解硬件强制协调如何解决软件协调的延迟和确定性不足问题，以及FPGA实现的具体机制。</p></section>
+              <section><h3>相关性说明</h3><p>该架构直接适用于低空经济中多无人机系统的安全协调，确保航迹冲突消解和避碰决策的确定性执行。其硬件强制语义可保障航迹预测与智能体控制之间的实时同步。</p></section>
+              <section><h3>实践思路</h3><p>可基于FPGA开发原型系统，实现无人机编队中航迹协调的硬件语义层。实验可复现TB-CSPN到FPGA的映射过程，并测试其在多智能体场景下的延迟和确定性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>用于可解释涡扇发动机退化建模的液态潜状态动力学</h2>
+              <p>Liquid Latent State Dynamics for Interpretable Turbofan Degradation Modeling</p>
+              <p class="meta">Weizhi Nie, Weijie Wang, Yuting Su | arXiv cs.LG | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01986v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01986v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>用于预测的多变量时间序列模型通常通过点预测精度进行评估，但其内部状态很少揭示连贯的退化过程。我们研究了液态神经网络作为C-MAPSS基准上飞机发动机健康监测的潜动力学模型。所提出的模型将历史窗口编码为潜状态，使用液态转移模型演化该状态，并解码未来的传感器观测值。为了将健康演化与运行条件变化分离，潜状态被分解为退化和条件两个分量。剩余使用寿命、单调风险和潜一致性损失监督退化分量，而条件预测和去相关损失则阻止运行条件泄漏。在FD001至FD004上，完全解耦模型将整体传感器预测RMSE从GRU基线的0.2438降低到0.2266，在多条件子集FD002和FD004上改进最大。学习到的退化状态也形成了更清晰的时间退化轴，平均状态速度斯皮尔曼相关系数达到0.5960。直接剩余使用寿命回归对于GRU基线仍然更强，表明所提出的表示目前作为退化动力学的可解释世界模型比作为校准的寿命回归器更有效。这些结果表明，液态潜动力学可以桥接预测性维护预测和可检查的健康状态建模。</p></section>
+              <section><h3>English Abstract</h3><p>Multivariate time-series models for prognostics are often evaluated by point prediction accuracy, yet their internal states rarely expose a coherent degradation process. We study liquid neural networks as latent dynamics models for aircraft engine health monitoring on the C-MAPSS benchmark. The proposed model encodes a history window into a latent state, evolves that state with a liquid transition model, and decodes future sensor observations. To separate health evolution from operating-condition variation, the latent state is factorized into degradation and condition components. Remaining useful life, monotonic risk, and latent-consistency losses supervise the degradation component, while condition prediction and decorrelation losses discourage operating-condition leakage. Across FD001--FD004, the full disentangled model improves overall sensor forecasting RMSE from 0.2438 for a GRU baseline to 0.2266, with the largest gains on the multi-condition subsets FD002 and FD004. The learned degradation state also forms a clearer temporal degradation axis, reaching an average state-speed Spearman correlation of 0.5960. Direct remaining-useful-life regression remains stronger for the GRU baseline, indicating that the proposed representation is currently more effective as an interpretable world model for degradation dynamics than as a calibrated lifetime regressor. These results suggest that liquid latent dynamics can bridge predictive maintenance forecasting and inspectable health-state modeling.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注潜状态分解为退化和条件分量的设计，以及液态神经网络如何提升可解释性。</p></section>
+              <section><h3>相关性说明</h3><p>该模型的可解释退化状态建模方法可直接用于无人机发动机或电池的健康监测，提升航迹预测中设备状态估计的可靠性。其液态动力学思想可应用于智能体在低空环境中的长期行为预测。</p></section>
+              <section><h3>实践思路</h3><p>可在C-MAPSS数据集上复现液态潜状态模型，并尝试将其迁移至无人机传感器数据。实验重点验证退化状态的可解释性及其对剩余寿命预测的辅助作用。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>QFedAgent：面向多智能体活动识别的量子增强个性化联邦学习</h2>
+              <p>QFedAgent: Quantum-Enhanced Personalized Federated Learning for Multi-Agent Activity Recognition</p>
+              <p class="meta">Quoc Bao Phan, Tuy Tan Nguyen | arXiv cs.LG | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02426v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02426v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>联邦学习使得跨分布式设备进行协作模型训练成为可能，而无需共享原始数据，因此适用于隐私敏感的机器人传感应用。然而，多智能体系统生成异构且非独立同分布的多模态传感器流，这会降低传统联邦学习算法的性能，而经典融合模块会引入大量参数开销和通信成本。本文提出了QFedAgent，一个用于多智能体活动识别的混合量子-经典个性化联邦学习框架。该方法集成了一个变分量子电路融合模块，通过量子态编码和纠缠来建模加速度计-陀螺仪交互，仅需72个量子旋转参数，而基于经典多层感知器的融合需要33K个参数，实现了约10倍的总参数减少。在基于主体非独立同分布划分的OPPORTUNITY数据集上的实验表明，平均测试准确率达到97.7%，证实了参数高效的量子融合与传统联邦基线相比仍具有竞争力。</p></section>
+              <section><h3>English Abstract</h3><p>Federated learning (FL) enables collaborative model training across distributed devices without sharing raw data, making it suitable for privacy-sensitive robotic sensing applications. However, multi-agent systems generate heterogeneous and non-independent and identically distributed (non-IID) multimodal sensor streams that degrade conventional FL algorithms, while classical fusion modules introduce substantial parameter overhead and communication cost. This paper proposes QFedAgent, a hybrid quantum-classical personalized FL framework for multi-agent activity recognition. The approach integrates a variational quantum circuit fusion module that models accelerometer--gyroscope interactions through quantum state encoding and entanglement, requiring only 72 quantum rotation parameters versus 33K in classical multi-layer perceptron-based fusion, achieving approximately 10x total parameter reduction. Experiments on the OPPORTUNITY dataset under subject-based non-IID partitions demonstrate 97.7% mean test accuracy, confirming that parameter-efficient quantum fusion remains competitive with conventional federated baselines.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注量子融合模块如何减少参数并保持性能，以及联邦学习框架如何适应多智能体非独立同分布数据。</p></section>
+              <section><h3>相关性说明</h3><p>该框架可应用于低空经济中多无人机协同感知，通过联邦学习保护各无人机传感器数据隐私，同时利用量子融合高效处理异构航迹数据。其个性化设计有助于适应不同无人机的飞行模式。</p></section>
+              <section><h3>实践思路</h3><p>可在OPPORTUNITY数据集上复现QFedAgent，并尝试将其迁移至无人机活动识别场景。实验重点验证量子融合在减少通信开销和参数方面的优势。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>学习演化场景：利用场景图推理人类活动</h2>
+              <p>Learning to Evolve Scenes: Reasoning about Human Activities with Scene Graphs</p>
+              <p class="meta">Francesca Pistilli, Simone Alberto Peirone, Giuseppe Averta | arXiv cs.CV | 2026-07-02</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.02425v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.02425v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>理解人类在与周围世界交互时的行为对于具身人工智能的许多应用至关重要。第一人称视频对于这个问题尤其具有信息量，因为它们很好地捕捉了活动如何随时间重塑场景。然而，现有方法通常依赖于隐式的视觉或语言对齐表示，忽略了对场景动态的结构化推理。我们认为，人类-环境交互的显式、可组合和可编辑表示可以在丰富的接地活动理解中发挥关键作用。为此，我们引入了SG-Ego，一个大规模注释集，它扩展了Ego4D，加入了时空场景图，其中关系三元组随时间巩固为场景状态的显式时间演化描述。为了对这种表示进行推理，我们提出了GLEN，一个基于图的模型，它在场景图序列上操作，既将它们与文本动作对齐，又建模它们的时间演化。此外，我们提出了活动驱动图编辑预测问题，这是一个新任务，它将场景动态视为一系列基于持续动作的结构化变换，从而能够显式推理场景如何随时间变化。我们在多个下游任务上验证了我们的方法，涵盖检索基准如EgoMCQ和EgoCVR，以及长时推理基准如EXPLORE-Bench和新引入的A-GEF。与原始视频基线相比，GLEN取得了强劲的结果，并且在通常仅由多模态大语言模型处理的推理设置中表现出色。</p></section>
+              <section><h3>English Abstract</h3><p>Understanding human behavior while interacting with the surrounding world is crucial for many applications of embodied AI. First-person videos are particularly informative for this problem, as they well capture how activities reshape the scene over time. However, existing approaches often rely on implicit visual or language-aligned representations, disregarding structured reasoning over the scene dynamic. We argue that explicit, compositional and editable representations of human-environment interactions can play a crucial role for rich grounded activity understanding. To this end, we introduce SG-Ego, a large scale annotation set extending Ego4D with spatio-temporal scene graphs, where relations triplets are consolidated over time into explicit time-evolving descriptions of the scene state. To reason over this representation, we propose GLEN, a graph-based model that operates over scene graph sequences to both align them with textual actions and model their temporal evolution. In addition, we formulate the activity-driven graph-edit forecasting (A-GEF) problem, a novel task that casts scene dynamics as a sequence of structured transformations conditioned on ongoing actions, enabling explicit reasoning about how scenes change over time. We validate our approach across multiple downstream tasks, spanning retrieval benchmarks as EgoMCQ and EgoCVR, as well as long-horizon reasoning benchmarks as EXPLORE-Bench and the newly introduced A-GEF. GLEN achieves strong results compared to raw video baselines and it excels in reasoning settings, typically addressed only with MLLMs, while enabling controllable and structured predictions of scene dynamics driven by human activities. We believe our results establish spatio-temporal scene graphs, together with models that reason over them, as strong compositional and interpretable representations for video understanding and potentially beyond.</p></section>
+              <section><h3>中文阅读提示</h3><p>理解场景图如何表示活动驱动的场景变化，以及GLEN模型如何实现结构化推理。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的场景图推理方法可用于低空经济中无人机对地面活动的理解，通过结构化表示预测航迹变化。其活动驱动图编辑预测思想可应用于智能体在动态环境中的航迹规划。</p></section>
+              <section><h3>实践思路</h3><p>可在Ego4D数据集上复现SG-Ego注释和GLEN模型，并尝试将其应用于无人机视角下的活动识别。实验重点验证场景图在航迹预测中的可解释性。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>
