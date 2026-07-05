@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "a65d1c5e341df14d",
+      "title": "Communication-Aware and Safety-Aware UAV Control via Predictive Latent Models",
+      "url": "http://arxiv.org/abs/2607.00288v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "abbf4bdb0c196035",
+      "title": "Distributed Containment of a Compromised Agent through Repulsive Cages",
+      "url": "http://arxiv.org/abs/2607.01230v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "2d67ce6018864fc1",
+      "title": "Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching",
+      "url": "http://arxiv.org/abs/2607.01378v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "de06aa7b28c75f77",
+      "title": "Geometry-Aware Cross-Height Channel Knowledge Map Prediction for UAV-Assisted Communications With Uncertainty-Guided 3D Sensing",
+      "url": "http://arxiv.org/abs/2607.00887v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "4686c72a9e4e6552",
+      "title": "Queue-Aware Graph Reinforcement Learning for UAV-ISAC-Assisted Maritime Data Collection",
+      "url": "http://arxiv.org/abs/2607.00324v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "fdf6d4855042e541",
+      "title": "WaveLander: A Generalizable Hierarchical Control Framework for UAV Landing on Wave-Disturbed Platforms via Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.01281v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "a9e8b63c805f33c8",
+      "title": "DroneFINE: Domain-Aware Parameter-Efficient Fine-Tuning of Vision-Language Detectors for Drone Images",
+      "url": "http://arxiv.org/abs/2607.00338v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "d777e6d336289826",
+      "title": "Robots Ask the Way: Communication-Enabled Social Navigation",
+      "url": "http://arxiv.org/abs/2607.01044v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "2150ac92a27bbd8c",
+      "title": "DynFly: Dynamic-Aware Continuous Trajectory Generation for UAV Vision-Language Navigation in Urban Environments",
+      "url": "http://arxiv.org/abs/2606.31654v2",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "a9fded8b02baeee7",
+      "title": "What's Hidden Matters: Identifying Planning-Critical Occluded Agents using Vision-Language Models",
+      "url": "http://arxiv.org/abs/2607.00283v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "60f5ea0ff513585b",
+      "title": "How Much Do RF Drone Benchmarks Overstate? A Controlled Study and Theory of Data Leakage in UAV Signal Identification",
+      "url": "http://arxiv.org/abs/2607.01025v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "90f78437388c6be5",
+      "title": "DroneIQA-VLE: Multi-Task Drone Image Quality Assessment via Vision-Language Ensemble",
+      "url": "http://arxiv.org/abs/2607.00416v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "98429a9d5d3adc8d",
+      "title": "AI Native Games: A Survey and Roadmap",
+      "url": "http://arxiv.org/abs/2607.00527v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "14066acacae8f56a",
+      "title": "Agri-SAGE: Simulation-Grounded Multi-Agent LLM for Context-Aware Agricultural Advisory Generation",
+      "url": "http://arxiv.org/abs/2607.00454v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "5c15685eeef32351",
+      "title": "Managed Autonomy at Runtime: Gear-Based Safety and Governance for Single- and Multi-Agent Cyber-Physical Systems",
+      "url": "http://arxiv.org/abs/2607.00334v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "fa1d31b9c8691b7d",
+      "title": "Simulation Based Reward Function Validation for Multi-Agent On Orbit Inspection",
+      "url": "http://arxiv.org/abs/2607.01367v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "cab65bdbfaa874e0",
+      "title": "Personalization as Inverse Planning: Learning Latent Design Intents for Agentic Slide Generation via Structural Denoising",
+      "url": "http://arxiv.org/abs/2607.00407v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "9d3fe5545b58fedf",
+      "title": "Dynamic Scheduling for Flexible Manufacturing Systems Based on Multi-Agent Deep Reinforcement Learning and Petri Nets",
+      "url": "http://arxiv.org/abs/2606.31737v2",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "2e30db36779046f0",
+      "title": "SD-RouteFusion: Ego-Trajectory Prediction with SD-Map Route Conditioning",
+      "url": "http://arxiv.org/abs/2607.01139v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
+      "key": "663a83c541c3ff92",
+      "title": "Learning When to Listen: Gated Affect Fusion for Human Motion Prediction",
+      "url": "http://arxiv.org/abs/2607.00296v1",
+      "sent_at": "2026-07-05T22:02:39.553976+00:00"
+    },
+    {
       "key": "3818827b992f0b5a",
       "title": "Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation",
       "url": "http://arxiv.org/abs/2607.01794v1",

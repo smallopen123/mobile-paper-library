@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-06</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-06 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>基于预测潜在模型的通信与安全感知无人机控制</h2>
+              <p>Communication-Aware and Safety-Aware UAV Control via Predictive Latent Models</p>
+              <p class="meta">Hamid Shiri, Mehdi Bennis | arXiv eess.SY | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00288v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00288v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文提出了一种用于在部分可观测和不确定环境动态下运行的无人机系统的通信感知与风险感知预测潜在控制框架。该框架将联合嵌入预测架构与概率性通信和安全约束相结合，以联合优化无人机的运动与传输功率。学习到的潜在模型生成递归的多步展开，使控制器能够预测未来的运动、信道退化和碰撞风险。这些预测被整合到一个统一的安全感知优化框架中，用于主动的、能量感知的轨迹和通信调整。仿真结果表明，在有限带宽和动态不确定性下，该框架的性能接近理想的分析预测控制器，并优于反应式约束和无约束基线。在带宽受限情况下，该框架将终端误差（即无人机到目标的最终距离）降低了约3倍，中断持续时间降低了约18倍，同时降低了通信能量和碰撞风险。这些改进仅以适度的运动能量开销为代价，展示了机动努力、通信可靠性和操作安全性之间的有利权衡。</p></section>
+              <section><h3>English Abstract</h3><p>This article presents a communication-aware and risk-aware predictive latent control (CRPL) framework for unmanned aerial vehicle (UAV) systems operating under partial observability and uncertain environment dynamics. CRPL integrates a joint-embedding predictive architecture (JEPA) with probabilistic communication and safety constraints to jointly optimize UAV motion and transmission power. The learned latent model generates recursive multi-step rollouts, enabling the controller to anticipate future motion, channel degradation, and collision risk. These predictions are incorporated into a unified safety-aware optimization framework for proactive, energy-aware trajectory and communication adaptation. Simulation results show that CRPL closely approaches the performance of an oracle analytical predictive controller and outperforms reactive constrained and unconstrained baselines under limited bandwidth and dynamic uncertainty. In the bandwidth-limited regime, CRPL reduces terminal error, i.e., the final UAV-to-goal distance, by up to a factor of approximately $3$ and outage duration by up to approximately $18$, while also lowering communication energy and collision risk. These improvements are achieved with only a moderate motion-energy overhead, demonstrating a favorable trade-off among mobility effort, communication reliability, and operational safety.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先关注摘要中关于框架如何整合通信与安全约束的描述，然后查看仿真结果中具体的性能提升倍数，以理解其实际效果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济安全中的无人机控制问题，通过联合优化通信与安全约束来降低碰撞风险和通信中断。其预测潜在模型能够预测未来轨迹和风险，与航迹预测领域高度相关。框架中的智能体（无人机）在部分可观测环境下自主决策，体现了智能体在复杂环境中的协同与安全运行。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其仿真实验，使用公开的无人机动力学和信道模型，实现联合嵌入预测架构与安全约束优化。实验重点在于对比不同带宽和动态不确定性下的终端误差和中断持续时间，验证框架的鲁棒性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>通过排斥笼实现对受损智能体的分布式围堵</h2>
+              <p>Distributed Containment of a Compromised Agent through Repulsive Cages</p>
+              <p class="meta">Luigi Petruzziello, Camilla Fioravanti, Gabriele Oliva | arXiv eess.SY | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01230v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01230v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机集群和网络物理多智能体系统越来越多地部署在需要协调运动、分布式决策和自主性的安全关键任务中。当合法智能体被劫持并受敌对高层命令驱动时，会产生重大安全风险。本文不关注恶意智能体的检测与隔离，而是利用自主平台中常见的结构特性：低层碰撞避免模块通常作为独立的安全层实现，即使在高层受损时也可能保持激活。基于此特性，我们提出一个分布式围堵框架，利用受损智能体未受损的避碰响应作为间接驱动通道。防御智能体选择其几何构型来塑造目标所经历的排斥场，目标是将其保持在规定的可接受区域内，并在需要时将其引导至期望目的地。该交互被建模为一个在线斯塔克尔伯格博弈，其中防御者作为领导者，对手通过选择目标命令做出反应。利用支撑函数和法锥论证，我们推导出鲁棒单步围堵的精确几何特征，并引入排斥笼的概念。这些结果定义了一个集中式斯塔克尔伯格预言机，并激发了一种基于局部通信和动态场估计的完全分布式在线近似。我们证明了相对于集中式基准的次线性动态遗憾界，量化了网络诱导效应的影响。</p></section>
+              <section><h3>English Abstract</h3><p>UAV swarms and cyber-physical multi-agent systems are increasingly deployed in safety-critical missions that require coordinated motion, distributed decision making, and autonomy. A major security risk arises when a legitimate agent is hijacked and driven by adversarial high-level commands. Rather than focusing on detection and isolation of malicious agents, we exploit a structural property common in autonomous platforms: low-level collision-avoidance modules are typically implemented as independent safety layers and may remain active even under high-level compromise. Building on this property, we propose a distributed containment framework that uses the compromised agent&#x27;s uncompromised avoidance response as an indirect actuation channel. Defender agents select their geometric configuration to shape the repulsive field experienced by the target, with the goal of keeping it inside a prescribed admissible region and, when required, steering it toward a desired destination. The interaction is modeled as an online Stackelberg game in which defenders act as leaders and the adversary reacts by choosing the target command. Using support-function and normal-cone arguments, we derive an exact geometric characterization of robust one-step containment and introduce the notion of a repulsive cage. These results define a centralized Stackelberg oracle and motivate a fully distributed online approximation based on local communication and dynamic field estimation. We prove sublinear dynamic-regret bounds with respect to the centralized benchmark, quantifying the effect of network-induced estimation errors and temporal variability of the stage-wise optimum. Simulations validate the approach and corroborate the theory.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解“排斥笼”的几何概念以及如何利用受损智能体的避碰模块作为控制通道。注意区分集中式理论分析与分布式在线近似实现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接关系到低空经济安全中的无人机集群安全，提出了一种在智能体被劫持情况下的分布式围堵策略。其利用避碰模块作为间接控制通道的思想，为航迹预测和智能体安全控制提供了新的视角。框架中的防御智能体需要预测目标智能体的反应，体现了智能体间的交互与预测。</p></section>
+              <section><h3>实践思路</h3><p>可以基于多智能体仿真平台（如Gazebo、AirSim）实现该分布式围堵算法。实验设计应包括：设置一个受损智能体，让防御智能体通过局部通信形成排斥笼，并评估围堵成功率和动态遗憾界。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>基于约束流匹配的视觉-语言-动作模型神经符号安全引导</h2>
+              <p>Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching</p>
+              <p class="meta">William English, Hao Zheng, Rickard Ewetz | arXiv cs.RO | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01378v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01378v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉-语言-动作模型在机器人操作任务中展现出有前景的泛化能力，但其实际部署仍受限于缺乏有效的安全措施。具体而言，现有安全措施仅能防止机器人下一步动作引起的碰撞。本文提出了一种针对基于流匹配的视觉-语言-动作模型的神经符号安全引导机制，实现了预测性碰撞避免。基于流匹配的视觉-语言-动作模型通过迭代神经流匹配过程预测轨迹（一系列动作）来确定下一步动作。我们的方法将安全执行表述为一个最小范数约束优化问题，在噪声中间轨迹预测的去噪过程中纠正安全违规。通过分析预测轨迹并在迭代去噪过程中应用修正，我们的方法能够在碰撞变得不可避免之前预见它们。这种符号约束满足与神经轨迹生成的交错实现了预测性碰撞避免，而非反应式干预。在SafeLIBERO基准测试中，我们的方法实现了82.8%的碰撞避免率和81.6%的任务成功率，分别比单步方法提高了6.3%和19.8%，在长期任务中收益最大，因为此时复合分布偏移最为显著。</p></section>
+              <section><h3>English Abstract</h3><p>Vision-Language-Action (VLA) models have demonstrated promising generalization capabilities across robotic manipulation tasks, yet their real-world deployment remains limited by the lack of effective safety measures. Specifically, existing safety measures only prevent collisions caused by the robot&#x27;s next action. In this paper, we propose a neuro-symbolic safety guidance mechanism for flow matching based VLAs that enables predictive collision avoidance. Flow matching based VLAs determine the next actions by predicting a trajectory (a sequence of actions) through an iterative neural flow matching process. Our method formulates safety enforcement as a minimum-norm constrained optimization problem that corrects safety violations during the denoising process of noisy intermediate trajectory predictions. By analyzing predicted trajectories and applying corrections during iterative denoising, our approach anticipates collisions before they become unavoidable. This interleaving of symbolic constraint satisfaction with neural trajectory generation enables predictive collision avoidance rather than reactive intervention. On the SafeLIBERO benchmark, our method achieves 82.8% collision avoidance and 81.6% task success, a 6.3% and 19.8% improvement respectively over single-step methods, with the largest gains on long-horizon tasks where compounding distribution shift is most pronounced. Video demonstrations of our approach are included on our project page at https://willenglish.tech/SafetyGuidedFlowMatching/.</p></section>
+              <section><h3>中文阅读提示</h3><p>注意区分“预测性碰撞避免”与“反应式干预”的区别，并关注神经符号方法如何将符号约束与神经流匹配过程结合。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的预测性碰撞避免机制对低空经济安全中的无人机航迹预测具有重要参考价值，尤其是在复杂动态环境中。其神经符号框架将符号安全约束与神经轨迹生成结合，可应用于智能体（如无人机）的安全路径规划。该方法在长期任务中的显著提升，对需要长时间自主运行的无人机系统尤为重要。</p></section>
+              <section><h3>实践思路</h3><p>可以在机器人操作或无人机仿真环境中复现该神经符号安全引导方法。实验重点在于对比其与单步安全方法在长期任务中的碰撞避免率和任务成功率，验证预测性机制的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>面向无人机辅助通信的几何感知跨高度信道知识图预测与不确定性引导的3D感知</h2>
+              <p>Geometry-Aware Cross-Height Channel Knowledge Map Prediction for UAV-Assisted Communications With Uncertainty-Guided 3D Sensing</p>
+              <p class="meta">Zhihan Zeng, Amir Hussain, Yue Xiu, Phee Lep Yeoh, Lu Chen, Zhongpei Zhang, Guan Gui | arXiv cs.CV | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00887v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00887v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>低空无人机通常需要从仅在少数高度层收集的稀疏观测中推断跨高度范围的信道知识。为应对这一挑战，本文研究了在几何丰富的城市环境中，用于无人机辅助通信的高度条件化跨高度信道知识图预测。我们开发了一个几何感知的条件预测框架，结合城市场景先验、稀疏多高度观测和目标高度描述符，在未观测的目标高度重建密集的信道知识图。进一步引入不确定性头来表征预测置信度，并支持在运动和安全性约束下进行成本感知的在线无人机感知。在分层空中信道知识图基准上的实验表明，所提出的特征金字塔网络-Transformer在未见场景零样本和传统补丁随机协议下均取得了最佳整体性能，均方根误差分别降至5.347dB和1.111dB，而最强基线3D-RadioDiff分别为6.937dB和1.221dB。此外，应用我们的未见场景少样本自适应后，均方根误差从零样本预测的5.347dB进一步降至10样本双高度支持的3.518dB，而不确定性引导的成本感知感知策略将主动重建从初始化的6.94dB提升至感知预算40时的4.79dB，优于仅不确定性感知的5.08dB和随机空中采样的5.84dB。</p></section>
+              <section><h3>English Abstract</h3><p>Low-altitude Unmanned Aerial Vehicles (UAVs) often need to infer channel knowledge across a range of heights from only sparse observations collected at a few altitude layers. To address this challenge, this paper studies height-conditioned cross-height channel knowledge map (CKM) prediction for UAV-assisted communications in geometry-rich urban environments. We develop a geometry-aware conditional prediction framework that combines urban scene priors, sparse multi-altitude observations, and target-height descriptors to reconstruct dense CKMs at unobserved target heights. An uncertainty head is further introduced to characterize prediction confidence and to support cost-aware online UAV sensing under motion and safety constraints. Experiments on a layered aerial CKM benchmark show that the proposed Feature Pyramid Network (FPN)-Transformer achieves the best overall performance under both unseen-scene zero-shot and legacy patch-random protocols, reducing the Root Mean Square Error (RMSE) to 5.347dB and 1.111dB, respectively, compared with 6.937dB and 1.221dB for the strongest baseline 3D-RadioDiff. Moreover, after applying our unseen-scene few-shot adaptation, the RMSE further decreases from 5.347dB in zero-shot prediction to 3.518dB with 10-shot two-height support, while the uncertainty-guided cost-aware sensing policy improves active reconstruction from 6.94dB at initialization to 4.79dB at sensing budget 40, outperforming uncertainty-only sensing at 5.08dB and random aerial sampling at 5.84dB.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注如何利用几何先验和稀疏观测进行跨高度信道预测，以及不确定性引导的感知策略如何提升重建性能。注意比较不同方法在均方根误差上的数值差异。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接服务于低空经济中的无人机辅助通信，通过预测信道知识图来优化通信性能，是低空安全通信的关键技术。其几何感知预测框架和不确定性引导的感知策略，可应用于无人机航迹预测中的环境建模与感知。智能体（无人机）需要根据预测的信道信息调整自身行为，体现了智能体在不确定环境中的决策能力。</p></section>
+              <section><h3>实践思路</h3><p>可以基于公开的城市环境数据集和信道模型，复现特征金字塔网络-Transformer预测框架。实验设计应包括零样本和少样本场景下的信道知识图预测，并对比不确定性引导感知策略与随机采样的性能差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>面向无人机集成感知与通信辅助海洋数据采集的队列感知图强化学习</h2>
+              <p>Queue-Aware Graph Reinforcement Learning for UAV-ISAC-Assisted Maritime Data Collection</p>
+              <p class="meta">Bohan Li, Min Ye, Haochen Liu, Yongkang Gong, Ning Gao, Jie Nie, Pei Xiao, Xiuzhen Cheng | arXiv eess.SY | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00324v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00324v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文研究了高空平台辅助的稀疏协作集成感知与通信在无人机海洋监测中的应用。一支旋翼无人机舰队感知漂流浮标，收集其监测数据，并将局部后验估计报告给执行融合和稀疏协作控制的高空平台。该模型明确考虑了空间相关的海域场、感知浮标动力学、雷达散射截面和杂波感知、融合后验克拉美-罗下界以及推进能量受限的无人机机动性。长期目标被建模为一个队列加权缓冲收集马尔可夫决策过程，而非瞬时吞吐量，其中每个浮标维护一个缓冲观测积压。由此产生的长期设计被表述为一个混合离散-连续问题，包含感知、通信、机动性、安全、缓冲收集和机载能量约束。为了在不使用确定性优化器替代学习的情况下解决组合关联部分，我们提出了一个结构化的可行关联图-多智能体强化学习框架。一个异构图编码器生成候选边逻辑值，一个掩码顺序b-匹配策略采样合法的无人机-浮标关联，同时精确满足无人机负载和浮标集群约束。然后指定了类似MAPPO的训练过程、独立的队列状态值评论家和一致性验证协议，以支持可复现的训练。在拥挤海洋场景下的仿真结果表明，所提出的策略改善了累积性能。</p></section>
+              <section><h3>English Abstract</h3><p>This paper studies high-altitude platform (HAP)-assisted sparse cooperative integrated sensing and communication (ISAC) for UAV-enabled ocean monitoring. A fleet of rotary-wing UAVs senses drifting buoys, collects their monitoring data, and reports local posterior estimates to a HAP that performs fusion and sparse cooperation control. The model explicitly accounts for a spatially correlated sea-patch field, patch-aware buoy dynamics, RCS- and clutter-aware echo sensing, fused posterior Cramér-Rao bounds (PCRBs), and propulsion-energy-limited UAV mobility. The long-horizon objective is cast as a queue-weighted buffered-collection Markov decision process rather than instantaneous throughput, where each buoy maintains a backlog of buffered observations. The resulting long-horizon design is formulated as a mixed discrete-continuous problem with sensing, communication, mobility, safety, buffered-collection, and onboard-energy constraints. To address the combinatorial association component without replacing learning by a deterministic optimizer, we propose a structured feasible-association graph-MARL framework. A heterogeneous graph encoder produces candidate-edge logits, and a masked sequential b-matching policy samples legal UAV-buoy associations while exactly satisfying UAV-load and buoy-cluster constraints. A MAPPO-style training procedure, an independent queue-state value critic, and a consistency-verification protocol are then specified to support reproducible training. Simulation results on congested maritime scenarios show that the proposed policy improves the cumulative queue-weighted collection utility by about 106\% over the rate-driven deterministic decoder, maintains a large margin across sea-state sweeps and medium-to-heavy traffic loads, and transfers to larger networks without fine-tuning.</p></section>
+              <section><h3>中文阅读提示</h3><p>注意理解问题建模中的关键元素：队列加权马尔可夫决策过程、混合离散-连续约束、以及图-多智能体强化学习框架如何解决组合关联问题。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中的海洋监测应用，涉及无人机集群的感知、通信与安全机动。其队列感知的长期优化框架与航迹预测相关，因为无人机需要预测未来数据收集需求来规划路径。智能体（无人机和浮标）之间的协同与关联匹配，体现了多智能体系统在复杂环境中的安全与高效运行。</p></section>
+              <section><h3>实践思路</h3><p>可以基于多智能体强化学习库（如RLlib、PyMARL）复现该图-多智能体强化学习框架。实验应模拟拥挤海洋场景，对比所提策略与基线在累积数据收集量和能量效率上的表现，并验证队列感知机制的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>WaveLander：一种基于强化学习的无人机在波浪扰动平台上着陆的通用分层控制框架</h2>
+              <p>WaveLander: A Generalizable Hierarchical Control Framework for UAV Landing on Wave-Disturbed Platforms via Reinforcement Learning</p>
+              <p class="meta">Chun-Kit Li, Iok Long Sit, Ming Fung Siu, Ka Yu Kui, Hin Wang Lin, Pengyu Wang, Ling Shi | arXiv cs.RO | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01281v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01281v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机在波浪扰动的海洋平台上自主着陆仍然具有挑战性，原因在于平台运动随机、姿态时变以及着陆条件不确定。现有的基于模型的方法通常需要精确的运动预测和在线优化，而端到端学习方法可能面临训练复杂度高和可解释性有限的问题。本文提出了WaveLander，一种通过强化学习实现的分层控制框架，它将垂直着陆决策与低层飞行稳定控制解耦。强化学习策略将紧凑的平台相对观测映射为标量垂直速度参考值，而传统的低层飞行控制器则保持姿态稳定和横向跟踪。这种表述将动态平台着陆简化为一个低维、具有时间感知的控制问题，并在没有显式切换规则的情况下实现了平滑的着陆行为。在随机波浪引起的平台运动下的仿真结果表明，WaveLander实现了稳健的着陆性能，并能泛化到未见过的扰动条件，展示了基于分层学习的控制用于海洋无人机回收的潜力。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous landing of unmanned aerial vehicles (UAVs) on wave-disturbed marine platforms remains challenging due to stochastic platform motion, time-varying platform attitude, and uncertain touchdown conditions. Existing model-based methods often require accurate motion prediction and online optimization, while end-to-end learning approaches may suffer from high training complexity and limited interpretability. This paper presents WaveLander, a hierarchical control framework via reinforcement learning (RL) that decouples vertical landing decision-making from low-level flight stabilization. The RL policy maps a compact platform-relative observation to a scalar vertical velocity reference, while a conventional low-level flight controller maintains attitude stability and lateral tracking. This formulation reduces dynamic platform landing to a low-dimensional, timing-aware control problem and enables smooth landing behavior without explicit switching rules. Simulation results under randomized wave-induced platform motions show that WaveLander achieves robust landing performance and generalizes to unseen disturbance conditions, demonstrating the potential of hierarchical learning-based control for marine UAV recovery.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先阅读引言和问题定义部分，了解无人机在波浪扰动平台上着陆的挑战。然后重点阅读方法部分，理解分层控制框架如何将决策与控制解耦。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接涉及低空经济中无人机在复杂动态环境（海洋平台）下的安全着陆问题，与低空经济安全高度相关。其分层控制框架和强化学习方法可借鉴用于无人机在低空经济其他场景（如城市楼顶、移动车辆）的自主着陆，提升航迹规划的鲁棒性和安全性。</p></section>
+              <section><h3>实践思路</h3><p>可基于仿真环境（如Gazebo或AirSim）复现WaveLander的分层控制框架，验证其在模拟波浪扰动下的着陆性能。进一步可尝试将框架迁移至其他动态平台（如移动车辆）场景，评估其泛化能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>DroneFINE：面向无人机图像的视觉语言检测器的域感知参数高效微调</h2>
+              <p>DroneFINE: Domain-Aware Parameter-Efficient Fine-Tuning of Vision-Language Detectors for Drone Images</p>
+              <p class="meta">Ke Wu, Yanan Zhang, Yingjie Gao, Wenhao Li, Chenyu Zhou, XinZhu Ma, Jiaxin Chen, Di Huang | arXiv cs.CV | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00338v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00338v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在开放动态环境中工作的无人机的目标检测是一项极具挑战性的任务。虽然视觉语言模型为通用目标检测提供了强大的解决方案，但由于视觉语言模型预训练数据与航拍图像之间存在显著的领域差距，将其适应到无人机场景仍然困难。主流的参数高效微调方法在弥合这一差距上效果不佳，因为视觉语言模型的“自然场景、前景主导”的视觉先验与无人机数据的“鸟瞰视角、背景主导、小目标”特征不匹配。为解决此问题，我们提出了DroneFINE，一种新颖的参数高效微调范式，包含两个为基于视觉语言模型的无人机图像检测器量身定制的域感知互补模块。具体来说，设计了一种名为HyperAdapter的数据依赖、前景感知、多路径自适应机制，它克服了参数高效微调的静态结构约束。此外，还开发了一种名为SemanticGate的背景抑制算法，这是一种文本条件引导策略，利用背景词汇主动引导模型抑制无关区域的响应。在VisDrone和UAVDT上的大量实验表明，DroneFINE显著优于现有的参数高效微调方法，并在大幅减少可训练参数数量的同时，实现了与全微调相当的性能。</p></section>
+              <section><h3>English Abstract</h3><p>Object detection for Unmanned Aerial Vehicles (UAVs) working in open and dynamic environments is a highly challenging task. While Vision-Language Models (VLMs) have offered a powerful solution for universal object detection, adapting them to UAV scenarios remains non-trivial due to a substantial domain gap between VLM pre-training data and aerial imagery. The prevailing Parameter-Efficient Fine-Tuning (PEFT) methods prove ineffective in bridging this gap, as VLMs&#x27; &quot;natural-scene, foreground-dominant&quot; visual priors misalign with the &quot;bird&#x27;s-eye-view, background-dominant, small-object&quot; characteristics of UAV data. To address this issue, we propose DroneFINE, a novel PEFT paradigm comprising two domain-aware complementary modules tailored for VLM-based drone image detectors. Specifically, a data-dependent, foreground-aware, and multi-path adaptation mechanism named HyperAdapter is designed, which overcomes the static structural constraints of PEFT. In addition, a background suppression algorithm named SemanticGate is developed. It is a text-conditioned guidance strategy that employs background vocabulary to actively guide the model in suppressing responses from irrelevant regions. Extensive experiments on VisDrone and UAVDT demonstrate that DroneFINE significantly outperforms existing PEFT methods and achieves performance comparable to full fine-tuning while substantially reducing the number of trainable parameters.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解无人机目标检测中领域差距的核心问题。然后重点阅读方法部分，理解HyperAdapter和SemanticGate两个模块的设计原理。</p></section>
+              <section><h3>相关性说明</h3><p>该研究聚焦于提升无人机在复杂环境下的目标检测能力，这是低空经济安全中感知系统的关键环节。准确的航拍目标检测可为航迹预测和智能体决策提供更可靠的输入，例如识别障碍物、动态目标等，从而增强低空飞行的安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在VisDrone或UAVDT数据集上复现DroneFINE，对比其与全微调及其他参数高效微调方法的性能。进一步可尝试将DroneFINE应用于自定义的低空经济场景数据集（如城市低空障碍物检测），验证其域适应能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>机器人问路：具备通信能力的社会导航</h2>
+              <p>Robots Ask the Way: Communication-Enabled Social Navigation</p>
+              <p class="meta">Valentino Sacco, Luca Scofano, Indro Spinelli, Fabio Galasso | arXiv cs.RO | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01044v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01044v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在多智能体环境中运行的辅助自主机器人需要有效的策略来在多个居民中定位特定个体。当前的社会导航方法侧重于反应性碰撞避免和轨迹适应，但缺乏通过人机通信主动收集信息的机制。我们引入了具备通信能力的社会导航（CommNav）。在这个新任务中，机器人智能体主动向居民寻求帮助，通过请求关于最近目击、位置和移动的信息来定位目标个体。为了评估CommNav，我们扩展了Habitat 3.0，创建了Habitat 3.0c，这是一个支持多人类环境并带有信息交换协议的通信增强变体。将我们的通信模块（COMM）添加到最先进的社会导航模型中，使得任务成功率提高了10个百分点。我们进一步通过评估在LLM生成的指令和从人类研究中收集的口语化指令上训练的模型，研究了从结构化数据到自然语言的过渡。我们的实验表明：（i）显式的人机通信显著增强了多人导航性能；（ii）在通信预训练任务上预训练COMM有效应对了偶发交互信号的挑战；（iii）导航策略对自然的、口语化的人类语言具有高度鲁棒性，其任务成功率与使用完美结构化数据的模型在统计上相似。</p></section>
+              <section><h3>English Abstract</h3><p>Assistive autonomous robots operating in multi-agent environments require efficient strategies to locate specific individuals among multiple residents. Current social navigation methods focus on reactive collision avoidance and trajectory adaptation, but lack mechanisms to proactively gather information through human-robot communication. We introduce Communication-enabled Social Navigation (CommNav). In this novel task, robotic agents actively seek assistance from residents to locate target individuals by requesting information about recent sightings, locations, and movements. To evaluate CommNav, we extend Habitat 3.0 to create Habitat 3.0c, a communication-enabled variant supporting multi-human environments with information exchange protocols. Adding our communication module (COMM) to a state-of-the-art social navigation model yields a 10 percentage-point improvement in Episode Success. We further investigate the transition from structured data to natural language by evaluating models trained on LLM-generated instructions and on colloquial instructions collected from a human study. Our experiments reveal that: (i) explicit human-robot communication substantially enhances multi-person navigation performance; (ii) pre-training COMM on a communication pretext task effectively addresses the challenge of occasional interaction signals; and (iii) the navigation policy is highly robust to natural, colloquial human language, achieving an episode success statistically similar to the model using perfect structured data.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先阅读引言和CommNav任务定义，理解人机通信在导航中的新作用。然后重点阅读方法部分，了解通信模块的设计和实验设置。</p></section>
+              <section><h3>相关性说明</h3><p>该研究探讨了智能体（机器人）通过通信获取信息以提升导航性能，这与低空经济中无人机作为智能体需要与地面站或其他无人机交互的场景相关。其通信机制可启发无人机在复杂低空环境中通过询问或共享信息来优化航迹规划，例如避开未知障碍或寻找目标，从而提升整体安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在Habitat 3.0c仿真环境中复现CommNav，验证通信模块对导航成功率的提升。进一步可尝试将通信机制应用于多无人机协同导航场景，评估其在信息共享和避障方面的效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>DynFly：面向城市环境中无人机视觉语言导航的动态感知连续轨迹生成</h2>
+              <p>DynFly: Dynamic-Aware Continuous Trajectory Generation for UAV Vision-Language Navigation in Urban Environments</p>
+              <p class="meta">Wen Jiang, Hanfang Liang, Li Wang, Kangyao Huang, Wang Xu, Wei Fan, Jinyuan Liu, Shaoyu Liu, Hongwei Duan, Bin Xu, Xiangyang Ji, Huaping Liu | arXiv cs.RO | 2026-06-30</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.31654v2" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.31654v2" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多模态大模型的最新进展通过增强高层感知和推理，显著提升了无人机视觉语言导航。然而，现有方法主要关注预测离散动作、局部目标或稀疏航点，而从导航意图到可执行无人机运动的连续过渡仍然建模不足。这种运动接口差距限制了生成轨迹的连续性、稳定性和可执行性。为解决此问题，我们提出了DynFly，一个动态感知的连续轨迹生成框架，它弥合了高层导航推理与可执行无人机运动之间的鸿沟。DynFly通过一个轻量级轨迹生成层连接高层导航意图和连续无人机运动。具体来说，它将专家轨迹表示为B样条控制点空间，并采用Spline-DiT生成器通过流匹配学习条件轨迹生成。此外，我们引入了面向无人机的动态感知监督，包括位置、有限差分速度、有限差分加速度、航向一致性和局部目标对齐，使生成的轨迹更好地满足无人机运动特性。我们的轨迹生成框架也可以与现有的无人机视觉语言导航框架集成，同时保留其原始的视觉语言推理流程。在OpenUAV无人机视觉语言导航基准上的大量实验表明，DynFly提高了导航性能和轨迹质量。在Test Unseen Full分割上，DynFly将最强基线的NDT指标提升了4.69。</p></section>
+              <section><h3>English Abstract</h3><p>Recent advances in multimodal large models have significantly improved UAV vision-language navigation (UAV-VLN) by enhancing high-level perception and reasoning. However, existing methods mainly focus on predicting discrete actions, local targets, or sparse waypoints, while the continuous transition from navigation intent to executable UAV motion remains weakly modeled. This motion-interface gap limits the continuity, stability, and executability of generated UAV trajectories. To address this gap, we propose DynFly, a dynamic-aware continuous trajectory generation framework that bridges high-level navigation reasoning and executable UAV motion. DynFly bridges high-level navigation intent and continuous UAV motion through a lightweight trajectory generation layer. Specifically, it represents expert trajectories in B-spline control-point space and employs a Spline-DiT generator to learn conditional trajectory generation via flow matching. Furthermore, we introduce UAV-oriented dynamic-aware supervision over position, finite-difference velocity, finite-difference acceleration, heading consistency, and local target alignment, enabling the generated trajectories to better satisfy UAV motion characteristics. And our trajectory generation framework can also be integrated with an existing UAV-VLN framework while preserving its original visual-language reasoning pipeline. Extensive experiments on the OpenUAV UAV-VLN benchmark show that DynFly improves both navigation performance and trajectory quality. On the Test Unseen Full split, DynFly improves the strongest baseline by 4.69 NDTW, 2.40 SDTW, 2.14 SR points and 4.87 OSR points, while reducing NE by 4.51 m.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，理解现有无人机视觉语言导航中运动接口差距的问题。然后重点阅读方法部分，了解B样条表示、Spline-DiT生成器和动态感知监督的设计。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对无人机在城市环境中的连续轨迹生成问题，是低空经济中航迹预测和规划的核心技术。其动态感知监督和连续轨迹生成方法可提升无人机在复杂城市低空环境中的飞行安全性和稳定性，并可与视觉语言导航结合，实现更智能的自主飞行。</p></section>
+              <section><h3>实践思路</h3><p>可在OpenUAV基准上复现DynFly，对比其与现有离散动作或稀疏航点方法的轨迹质量和导航性能。进一步可尝试将DynFly集成到实际无人机平台，测试其在真实城市环境中的连续轨迹生成和可执行性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>隐藏之物至关重要：利用视觉语言模型识别对规划至关重要的被遮挡智能体</h2>
+              <p>What&#x27;s Hidden Matters: Identifying Planning-Critical Occluded Agents using Vision-Language Models</p>
+              <p class="meta">Amirhosein Chahe, Tyler Naes, Jovin D&#x27;sa, Faizan M. Tariq, Sangjae Bae, Lifeng Zhou, David Isele | arXiv cs.RO | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00283v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00283v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>自动驾驶汽车必须在复杂环境中安全导航，其中对规划至关重要的智能体可能被遮挡而不可见。当前的方法通常对所有遮挡采用统一的保守处理，导致不必要的防御性驾驶，或者推断隐藏空间而不估计其对规划器的影响。这项工作通过使视觉语言模型能够识别和推理对自车轨迹最关键的特定隐藏智能体，弥合了感知与规划之间的关键差距。我们引入了一个新颖的框架，该框架使用规划KL散度（一种信息论度量）来系统地识别和排序被遮挡的智能体，基于它们对自车规划的影响。利用这种规划感知排序，我们使用专家视觉语言模型（GPT-5）生成丰富的结构化注释，捕捉完成此任务所需的视觉证据和推理过程。我们将此框架应用于nuScenes数据集，创建了一个专注于高影响场景的新基准。我们在广泛的一般用途和领域自适应视觉语言模型上进行了全面实验，表明在我们的规划KL散度引导数据上进行微调，在所有模型上都带来了显著的性能提升。值得注意的是，我们的结果表明，较小的微调模型显著优于其更大的零样本对应模型，并且我们的规划KL散度引导数据选择策略比随机采样提高了约30%的性能。我们的工作提出了第一个系统性的方法，用于训练视觉语言模型关注对规划至关重要的遮挡，从而实现更语义化的导航。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous vehicles must safely navigate complex environments where planning-critical agents may be hidden from view. Current approaches often treat all occlusions with uniform conservatism, yielding needlessly defensive driving, or they infer hidden spaces without estimating the impact on the planner. This work bridges the critical gap between perception and planning by enabling Vision-Language Models (VLMs) to identify and reason about the specific hidden agents that are most critical to the ego-vehicle&#x27;s trajectory. We introduce a novel framework that uses Planning KL-divergence (PKL), an information-theoretic metric, to systematically identify and rank occluded agents based on their impact on the ego vehicle&#x27;s plan. Using this planning-aware ranking, we employ an expert VLM (GPT-5) to generate rich, structured annotations that capture the visual evidence and reasoning required for this task. We apply this framework to the nuScenes dataset to create a new benchmark focused on high-impact scenarios. We conduct comprehensive experiments on a wide range of general-purpose and domain-adapted VLMs, demonstrating that fine-tuning on our PKL-guided data yields dramatic performance improvements across all models. Notably, our results show that smaller, fine-tuned models significantly outperform their much larger zero-shot counterparts, and that our PKL-guided data selection strategy improves performance by approximately 30\% over random sampling. Our work presents the first systematic approach for training VLMs to focus on planning-critical occlusions, enabling more semantically grounded and efficient risk assessment in autonomous driving.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先阅读摘要和引言，理解自动驾驶中处理遮挡智能体的挑战。然后重点阅读方法部分，了解规划KL散度如何用于识别关键遮挡智能体，以及如何利用视觉语言模型生成注释。</p></section>
+              <section><h3>相关性说明</h3><p>该研究关注自动驾驶中因遮挡导致的安全隐患，与低空经济中无人机在复杂城市环境（如高楼、树木遮挡）下的安全飞行高度相关。其方法可启发无人机航迹预测系统识别并推理被遮挡的障碍物或动态目标，从而提前规划更安全的航迹，避免碰撞风险。</p></section>
+              <section><h3>实践思路</h3><p>可在nuScenes数据集上复现该框架，使用规划KL散度筛选关键遮挡场景，并微调视觉语言模型。进一步可尝试将方法迁移至无人机航拍数据集，评估其在识别低空环境中被遮挡障碍物方面的效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>射频无人机基准测试究竟夸大了多少？——无人机信号识别中数据泄漏的控制实验与理论</h2>
+              <p>How Much Do RF Drone Benchmarks Overstate? A Controlled Study and Theory of Data Leakage in UAV Signal Identification</p>
+              <p class="meta">David Shulman | arXiv physics.app-ph | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01025v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01025v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>射频（RF）传感是反无人机系统（counter-UAS）防御的核心技术，因为它利用了无人机与其操作员之间的控制、遥测和视频链路。基于RF的无人机检测与识别报告的准确率通常非常高，但许多是通过交叉验证获得的，该方法将少量连续记录分割成短片段。这可能导致同一记录的近似重复片段同时出现在训练集和测试集中，造成数据泄漏。我们通过理论和测量研究了这一泄漏问题。我们形式化了片段级交叉验证的乐观偏差，并利用Cover的函数计数定理证明，当独立记录数量R相对于特征维度d较小时，分类器可以精确记忆记录到标签的映射。特别是，当2R小于或约等于d时，这种情况可能发生。在这些条件下，朴素准确率接近1，通胀差距接近1 - ACC*，其中ACC*是贝叶斯准确率。只有当R增长超过这个可分性阈值时，通胀才会缓解。一个包含10个种子的受控合成实验证实了预测曲线：随着记录特定的干扰变化增加，朴素平衡准确率从贝叶斯水平上升到1.0，而诚实的记录分组评估下降到随机水平，差距达到约0.5。在公开的DroneRF数据集上，合并的留一记录交叉验证显示，无人机类型识别（AR与Bebop）从朴素宏F1分数0.74下降。</p></section>
+              <section><h3>English Abstract</h3><p>Radio-frequency (RF) sensing is a central modality for counter-unmanned-aerial-system (counter-UAS) defence because it exploits the control, telemetry, and video links between a drone and its operator. Reported accuracies for RF-based drone detection and identification are often very high, but many are obtained using cross-validation that splits a small number of continuous recordings into short segments. This can place near-duplicate slices of the same recording in both training and test partitions, creating data leakage. We study this leakage problem through theory and measurement. We formalise the optimism of segment-level cross-validation and show, using Cover&#x27;s function-counting theorem, that a classifier can exactly memorise the recording-to-label map when the number of independent recordings, R, is small relative to the feature dimension, d. In particular, this can occur when 2R is less than or approximately equal to d. Under these conditions, naive accuracy approaches 1, and the inflation gap approaches 1 - ACC*, where ACC* is the Bayes accuracy. The inflation eases only once R grows beyond this separability threshold. A controlled synthetic experiment with 10 seeds confirms the predicted curves: naive balanced accuracy rises from the Bayes level toward 1.0 as recording-specific nuisance variation grows, while honest recording-grouped evaluation declines to chance, with a gap reaching about 0.5. On the public DroneRF dataset, pooled leave-one-recording-out cross-validation shows drone type identification, AR versus Bebop, collapsing from a naive macro-F1 of 0.74 to 0.46, the two-class chance level. A leakage-pathway ablation attributes essentially all of the inflation to segment-level leakage.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读引言和理论部分，理解数据泄漏问题的严重性；然后查看实验部分，了解具体量化结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接针对低空经济安全中的无人机射频识别问题，揭示了现有基准测试的潜在缺陷，对航迹预测和智能体系统的可靠性评估具有重要警示意义。理解数据泄漏有助于设计更鲁棒的无人机检测与识别系统，提升低空安全监控的准确性。</p></section>
+              <section><h3>实践思路</h3><p>可复现其合成实验，验证数据泄漏对分类器性能的影响；在公开的DroneRF数据集上实施留一记录交叉验证，评估自身模型的真实性能。建议在开发无人机射频识别系统时，严格采用记录级而非片段级的数据划分方法。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>DroneIQA-VLE：基于视觉-语言集成的多任务无人机图像质量评估</h2>
+              <p>DroneIQA-VLE: Multi-Task Drone Image Quality Assessment via Vision-Language Ensemble</p>
+              <p class="meta">Wei Sun, Weixia Zhang, Hongjian Zhan, Mingkai Lu, Yixuan Gao, Guangtao Zhai | arXiv cs.CV | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00416v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00416v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>我们提出了DroneIQA-VLE，这是我们针对ICME 2026 Drone-IQA大挑战赛（面向低空无人机图像的目标感知图像质量评估）的解决方案。该框架通过集成两个互补的流程来联合预测全局、目标和背景质量分数：(1) 带有任务回归头的SigLIP2视觉编码器，以及(2) 用于质量分数回归的LoRA适配Qwen3.5-9B多模态大语言模型。最终的全局质量预测通过对两个流程的输出进行算术平均得到。我们的方法在挑战赛中获得了第二名，证明了其有效性。代码可在https://github.com/sunwei925/DroneIQA-VLE获取。</p></section>
+              <section><h3>English Abstract</h3><p>We present DroneIQA-VLE, our solution to the ICME 2026 Drone-IQA Grand Challenge on Target-aware Image Quality Assessment for Low-altitude UAV Images. The framework jointly predicts global, target, and background quality scores by ensembling two complementary pipelines: (1) SigLIP2 vision encoders with multi-task regression heads, and (2) a LoRA-adapted Qwen3.5-9B multimodal large language model for quality score regression. The final global quality prediction is obtained by arithmetically averaging the outputs of both pipelines. Our method achieves 2nd place in the challenge, demonstrating its effectiveness. The code is available at https://github.com/sunwei925/DroneIQA-VLE.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读方法部分，了解两个互补流程的集成方式；然后查看实验结果，评估其性能优势。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接服务于低空经济中的无人机图像质量评估，对无人机航拍数据的质量监控至关重要。高质量的图像是航迹预测和智能体视觉感知的基础，该工作可提升低空安全监控系统的数据可靠性。</p></section>
+              <section><h3>实践思路</h3><p>可复现其双流程集成框架，在自有无人机图像数据集上测试性能；利用其开源代码，针对特定低空场景（如城市、农田）微调模型，实现定制化质量评估。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>AI原生游戏：综述与路线图</h2>
+              <p>AI Native Games: A Survey and Roadmap</p>
+              <p class="meta">Zhiyue Xu, Fandi Meng, Kaijie Xu, Clark Verbrugge, Simon Lucas, Jian Zhao | arXiv cs.AI | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00527v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00527v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>生成式AI现在使游戏能够在运行时生成对话、任务、角色、图像和世界。然而，仅生成本身并不能使游戏成为AI原生，也不能保证可玩性。本文通过运行时生成式AI是否构成核心循环来定义AI原生游戏：如果移除或简单替换AI组件，核心玩法将崩溃或发生根本性改变。这个反事实标准将AI原生游戏与AI增强游戏、边界制品、聊天机器人、酒馆式角色扮演、程序化内容生成和AI辅助生产区分开来。使用这一定义，我们筛选候选制品并分析了53个公开可用的AI原生游戏和原型。我们引入了一个双轴G/N分类法：G轴捕捉面向玩家的游戏类型，而N轴捕捉使生成式AI对游戏不可或缺的主导AI机制。语料库集中在以语言为中心的设计上，特别是叙事冒险、认知交互和生成式叙事，而语义裁决、多智能体模拟、生成式构建和关系/同伴游戏等类别则较少被代表。我们认为核心设计问题是将语义开放性组织成稳定的游戏玩法。AI原生设计依赖于机械不变量：目标、规则、状态、反馈、节奏和玩家代理，这些使得开放的AI输出可解释且有意义。我们以可控生成、AI即机制设计、多模态和多智能体系统以及交互式叙事的路线图作为结论。</p></section>
+              <section><h3>English Abstract</h3><p>Generative AI now enables games to produce dialogue, quests, characters, images, and worlds at runtime. Yet generation alone does not make a game AI-native, nor does it guarantee playability. This paper defines AI-native games by whether runtime generative AI is constitutive of the core loop: if the AI component were removed or trivially replaced, the central form of play would collapse or become fundamentally different. This counterfactual criterion separates AI-native games from AI-augmented games, boundary artifacts, chatbots, tavern-style role-play, procedural content generation, and AI-assisted production. Using this definition, we screen candidate artifacts and analyze 53 publicly available AI-native games and prototypes. We introduce a dual-axis G/N taxonomy: the G-axis captures player-facing game type, while the N-axis captures the dominant AI mechanic that makes generative AI indispensable to play. The corpus is concentrated around language-forward designs, especially narrative adventure, epistemic interaction, and generative narrative, while categories such as semantic adjudication, multi-agent simulation, generative construction, and relationship/companion play remain less represented. We argue that the central design problem is organizing semantic openness into stable gameplay. AI-native design depends on mechanical invariants: goals, rules, state, feedback, pacing, and player agency that make open-ended AI outputs interpretable and consequential. We conclude with a roadmap for controllable generation, AI-as-mechanic design, multimodal and multi-agent systems, inference economics, evaluation, safety, and regulation.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读定义部分，理解AI原生游戏的核心标准；然后浏览G/N分类法和案例分析，了解当前设计空间。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的AI原生游戏概念和设计原则，对低空经济中的智能体系统（如无人机编队、空中交通管理）具有启发意义。其关于多智能体模拟和语义裁决的讨论，可应用于航迹预测中的多智能体协作与决策。</p></section>
+              <section><h3>实践思路</h3><p>可借鉴其G/N分类法，分析现有低空经济智能体系统的AI原生程度；尝试将生成式AI作为核心机制，设计用于航迹预测或安全监控的交互式模拟环境。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>Agri-SAGE：基于模拟的多智能体大语言模型用于上下文感知的农业咨询生成</h2>
+              <p>Agri-SAGE: Simulation-Grounded Multi-Agent LLM for Context-Aware Agricultural Advisory Generation</p>
+              <p class="meta">Vedant Balasubramaniam, Geetha Charan, Manojkumar Patil, Rohit P Suresh, V Priyanka, Kodur Sai Vinay Sathvik, Y. Narahari | arXiv cs.AI | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00454v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00454v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>农业咨询系统面临一个基本矛盾：静态的农艺指南提供一致、基于证据的建议，但对季节内变异和动态不确定性视而不见。最近由大语言模型驱动的咨询系统则面临另一种风险，即生成农艺上可信但生理上不可信的建议。Agri-SAGE是一个闭环框架，旨在通过将基于检索的多智能体LLM推理与基于APSIM的生物物理模拟相结合，来解决上述两个局限性，以生成和验证农艺咨询。为了评估该框架，我们通过10年的回顾性分析，评估了三种推理方法，即Plan-and-Solve、Tree of Thoughts和Reflexion。所有三种方法都显著优于静态的PoP（实践包）基线，其中Tree of Thoughts实现了令人印象深刻的峰值产量。同时，Reflexion通过利用跨季节的情景记忆，以显著更低的计算成本实现了可比的农艺成果。</p></section>
+              <section><h3>English Abstract</h3><p>Agricultural advisory systems face a fundamental tension: static agronomic guidelines offer consistent, evidence-based recommendations, yet remain blind to in-season variability and dynamic uncertainties. Recent advisory systems powered by LLMs are liable for a different risk of generating recommendations that are agronomically credible but physiologically unconvincing. Agri-SAGE is a closed-loop framework designed to resolve the above two limitations by integrating retrieval-grounded multi-agent LLM reasoning with APSIM-based biophysical simulation, to generate and validate agronomic advisories. To assess this framework, we evaluate three reasoning approaches, namely Plan-and-Solve, Tree of Thoughts, and Reflexion, over a 10-year retrospective analysis. All three significantly outperform static PoP (Package-of-Practice) baselines, with Tree of Thoughts achieving impressive peak yields. At the same time, Reflexion achieves comparable agronomic outcomes at substantially lower computational cost by leveraging cross-seasonal episodic memory.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读框架设计部分，理解检索增强推理与生物物理模拟的集成方式；然后比较三种推理方法的性能差异。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的闭环框架对低空经济中的智能体系统具有借鉴意义，特别是其将LLM推理与物理模拟相结合的方法。类似地，可应用于航迹预测，将LLM推理与无人机动力学模拟结合，生成更可靠的预测。</p></section>
+              <section><h3>实践思路</h3><p>可复现其框架，将APSIM替换为无人机动力学模拟器，测试不同推理方法在航迹预测中的效果；尝试将跨季节记忆机制应用于多智能体无人机编队的协同规划。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>运行时管理自主性：基于档位的单/多智能体信息物理系统安全与治理</h2>
+              <p>Managed Autonomy at Runtime: Gear-Based Safety and Governance for Single- and Multi-Agent Cyber-Physical Systems</p>
+              <p class="meta">Srini Ramaswamy, Wang Miaosheng | arXiv cs.AI | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00334v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00334v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>自主智能体，无论是LLM驱动的软件智能体还是机器人物理智能体，在缺乏持续人类监督运行时都面临一类常见的故障模式：未验证动作导致的安全违规、无约束循环导致的行为不稳定以及未处理错误状态导致的连续性损失。我们开发了\system{}，一个离散时间控制系统，它结合了五个执行档位（\Gobs{}, \Gsug{}, \Gplan{}, \Gexec{}, \Gint{}）与效用门控调度和事件驱动回退。对于单智能体情况，我们证明了单调稳定性、执行安全性、最终稳定、回退完备性以及与档位约束马尔可夫决策过程的等价性。对于多智能体信息物理系统（CPS），我们应用已建立的\smart{}管理自主生命周期，并将运行时证据映射到其四个治理状态（\Stable{}/\Meta{}/\Assisted{}/\Regulated{}）。共识门控、群体级Lyapunov分析、每个智能体的档位权限以及会合控制提供了分布式安全性和稳定性保证，包括在所述假设下的零碰撞。我们在一个三智能体UR5机器人装配单元上，使用来自NIST“机器人手臂位置精度退化测量”数据集校准的故障幅度，在10,000个蒙特卡洛回合中评估了生成的运行时。它实现了99.6%的异常检测率，而单智能体基线为2.1%，检测延迟降低了3.5倍，并提供了正式的工作空间安全证书。执行档位作为\smart{}运行时下的微级权限。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous agents, whether LLM-driven software agents or robotic physical agents, face a common class of failure modes when operating without continuous human oversight: safety violations from unverified actions, behavioral instability from unconstrained loops, and continuity loss from unhandled error states. We develop \system{}, a discrete-time control system that combines five execution gears (\Gobs{}, \Gsug{}, \Gplan{}, \Gexec{}, \Gint{}) with utility-gated dispatch and event-driven fallback. For the single-agent case, we prove monotonic stability, execution safety, eventual stabilization, fallback completeness, and equivalence to a gear-constrained Markov decision process. For multi-agent cyber-physical systems (CPS), we apply the established \smart{} managed-autonomy lifecycle and map runtime evidence into its four governance states (\Stable{}/\Meta{}/\Assisted{}/\Regulated{}). Consensus gating, swarm-level Lyapunov analysis, per-agent gear authority, and rendezvous control provide distributed safety and stability guarantees, including zero collision under the stated assumptions. We evaluate the resulting runtime on a three-agent UR5 robotic assembly cell using fault magnitudes calibrated from the NIST \emph{Degradation Measurement of Robot Arm Position Accuracy} dataset across 10,000 Monte Carlo episodes. It achieves a 99.6\% anomaly detection rate versus 2.1\% for the single-agent baseline, reduces detection latency by $3.5\times$, and supplies a formal physical-workspace safety certificate. The execution gears act as micro-level permissions beneath the \smart{} runtime governance states, separating action control from autonomy governance.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读系统架构和档位定义部分，理解其安全治理机制；然后查看实验部分，了解其在多智能体场景下的性能表现。</p></section>
+              <section><h3>相关性说明</h3><p>该论文直接针对低空经济安全中的多智能体系统（如无人机编队）的运行时安全与治理问题。其档位控制和安全证明方法可应用于航迹预测中的冲突避免和异常处理，提升低空飞行的安全性。</p></section>
+              <section><h3>实践思路</h3><p>可复现其档位控制系统，在无人机仿真环境（如AirSim）中测试单/多无人机场景下的安全性能；尝试将其异常检测机制集成到现有航迹预测系统中，实现运行时安全监控。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>基于仿真的多智能体在轨检测奖励函数验证</h2>
+              <p>Simulation Based Reward Function Validation for Multi-Agent On Orbit Inspection</p>
+              <p class="meta">Patrick Quinn, Bala Prenith Reddy Gopu, George M. Nehma, Madhur Tiwari | arXiv cs.MA | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01367v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01367v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>一种针对检测航天器群控制的提议方法是多智能体强化学习（MARL）。虽然MARL已在先前工作中用于此目的，但所使用的奖励函数侧重于到达目标周围一组有限的预定检测点。在这项工作中，我们基于对轨道上被检测物体的3D重建分析，研究并开发了一种用于MARL检测任务的通用奖励函数。由于奖励函数是通用的，可以评估任意位置的任意数量的图像，我们也允许训练好的智能体完全控制何时收集图像。通过这种方法，我们不仅为特定的MARL检测任务收集了最佳实践的见解，而且还获得了对MARL背景之外的更广泛检测任务具有启发意义的关键要点。</p></section>
+              <section><h3>English Abstract</h3><p>A proposed method for the control of groups of inspection spacecraft is Multi-Agent Reinforcement Learning (MARL). While MARL has already been employed for this purpose in previous work, the reward functions used focus on reaching a finite set of predetermined inspection points around the target. In this work, we study and develop a generalized reward function for the MARL inspection task informed by the analysis of 3D reconstructions of inspected objects in orbit. Because the reward function is generalized such that any number of images at arbitrary locations may evaluated, we also allow trained agents to have complete control over when images are collected. With this approach, we gather insights into best practices for not only the specific MARL inspection task, but also gain key takeaways informative to the broader inspection task outside of a MARL context.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要了解核心贡献（通用奖励函数），再关注实验部分验证其有效性。</p></section>
+              <section><h3>相关性说明</h3><p>该研究涉及多智能体在轨检测，与低空经济中无人机群协同安全监测高度相关。其通用奖励函数设计可借鉴于低空飞行器航迹规划与冲突避免。智能体自主决策能力对低空经济中的动态任务调度有参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可复现其MARL框架，在仿真环境中（如AirSim或Gazebo）模拟多无人机协同检测任务。实验可对比通用奖励函数与固定点奖励函数的性能差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>个性化作为逆向规划：通过结构去噪学习智能体幻灯片生成的潜在设计意图</h2>
+              <p>Personalization as Inverse Planning: Learning Latent Design Intents for Agentic Slide Generation via Structural Denoising</p>
+              <p class="meta">Tianci Liu, Zihan Dong, Linjun Zhang, Haoyu Wang, jing Gao, Emre Kiciman, Ranveer Chandra, Wei-Ting Chen | arXiv cs.AI | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00407v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00407v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>幻灯片设计需要个性化定制演示文稿主题和页面布局。然而，当前基于AI智能体的方法难以处理细粒度的页面级设计。它们仅依赖预设模板或用户冗长的指令，无法捕捉潜在的设计意图，导致页面级幻灯片个性化（PSP）问题未得到解决。为弥补这一差距，本工作将PSP表述为一个逆向规划问题。我们提出学习一种设计意图，而不假设任何关于所使用的具体执行工具（例如PowerPoint、Beamer）的知识。然而，放弃对这些工具的控制使得问题难以进行端到端优化。为克服这一点，我们提出了SPIRE，一个近似解决PSP的原则性框架。通过有意破坏干净幻灯片的视觉结构，SPIRE创建了一个可验证的去噪任务，其中两个智能体通过强化学习（RL）学习协作改进可执行设计。我们证明了结构去噪是PSP的一个一致替代，并且多智能体公式严格降低了RL中的策略梯度方差。大量实验证明了SPIRE的优越性。</p></section>
+              <section><h3>English Abstract</h3><p>Slide design requires personalizing both deck themes and page layouts. Yet, current AI agent-based methods struggle with fine-grained, page-level design. Solely relying on prespecified templates or user verbose instructions, they fail to capture latent design intents, leaving Page-level Slide Personalization (PSP) unresolved. To close this gap, this work formulates PSP as an inverse planning problem. We propose to learn a design intent without assuming any knowledge of the specific executing tools (e.g., PowerPoint, Beamer) being used. However, relinquishing control over these tools makes the problem intractable to optimize end-to-end. To overcome this, we propose SPIRE, a principled framework to solve PSP approximately. By intentionally corrupting the visual structures of clean slides, SPIRE creates a verifiable task to denoise the corruption, whereby two agents learn to collaboratively refine executable designs via reinforcement learning (RL). We present a proof that structural denoising is a consistent surrogate for PSP, and that the multi-agent formulation strictly reduces policy gradient variance in RL. Extensive experiments demonstrate the superiority of SPIRE.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解逆向规划与结构去噪的核心思想，以及多智能体协作机制。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的多智能体协作与逆向规划思想可应用于低空经济中多无人机协同任务规划。其潜在意图学习机制有助于提升航迹预测的适应性。智能体间的协作策略对低空交通管理中的冲突解决有借鉴意义。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将SPIRE框架应用于无人机编队任务规划，通过结构去噪学习编队意图。实验可设计不同任务场景，验证多智能体协作效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>基于多智能体深度强化学习与Petri网的柔性制造系统动态调度</h2>
+              <p>Dynamic Scheduling for Flexible Manufacturing Systems Based on Multi-Agent Deep Reinforcement Learning and Petri Nets</p>
+              <p class="meta">Zhou He, Ning Li, Ruotian Liu, Liang Li, Carla Seatzu | arXiv eess.SY | 2026-06-30</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2606.31737v2" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2606.31737v2" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文研究了在动态事件（如新订单到达、临时订单取消和机器故障）下柔性制造系统（FMS）的动态调度问题。传统方法在此类条件下实现实时响应往往面临重大挑战。为解决此问题，调度问题被表述为带时间Petri网的马尔可夫决策过程（MDP），其中系统的未来演化仅取决于当前标识和随后执行的变迁，与历史轨迹无关。MDP的状态空间和动作空间利用Petri网的基础可达图（一种紧凑的状态空间表示）概念构建，以缓解状态爆炸问题，从而加速模型训练收敛。同时，通过将逐步指导与终端评估相结合，构建了分层密集奖励函数。然后，采用多智能体近端策略优化算法，在集中训练与分散执行的范式下进行模型训练，以提高调度效率。进行了涉及典型动态事件的数值实验，结果表明，所提方法能有效处理动态事件，并相比传统方法实现更优的调度性能。</p></section>
+              <section><h3>English Abstract</h3><p>This paper investigates dynamic scheduling for flexible manufacturing systems (FMSs) subject to dynamic events, such as new order arrivals, temporary order cancellations, and machine failures. Traditional methods often face significant challenges in achieving real-time responsiveness under such conditions. To address this issue, the scheduling problem is formulated as a Markov decision process (MDP) with timed Petri nets, where the future evolution of the system depends exclusively on the current marking and the subsequently executed transitions, independent of historical trajectories. The state space and action space of the MDP are constructed using the notion of basis reachability graph (a compact state space representation) of Petri nets to alleviate the state explosion problem, thereby accelerating model training convergence. Meanwhile, a hierarchical dense reward function is constructed by integrating stepwise guidance with terminal evaluation. Then, a multi-agent proximal policy optimization algorithm is employed for model training under the centralized training and decentralized execution paradigm to improve scheduling efficiency. Numerical experiments are conducted involving typical dynamic events, and the results demonstrate that the proposed method can effectively handle dynamic events and achieve superior scheduling performance compared with conventional approaches.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注Petri网与MDP的建模方法，以及分层奖励函数的设计细节。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的动态调度方法可直接应用于低空经济中无人机航迹的动态规划与冲突避免。其处理动态事件（如新任务、故障）的能力对低空交通管理至关重要。多智能体框架适用于多无人机协同任务调度。</p></section>
+              <section><h3>实践思路</h3><p>可复现其Petri网建模与多智能体PPO算法，在仿真环境中模拟无人机动态调度。实验可引入随机事件（如航线变更、无人机故障），验证调度鲁棒性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>SD-RouteFusion：基于标准地图路线条件的自我轨迹预测</h2>
+              <p>SD-RouteFusion: Ego-Trajectory Prediction with SD-Map Route Conditioning</p>
+              <p class="meta">Sviatoslav Voloshyn, Bruno K. W. Martens, Wangxin Liu, Jakob Vinkås, Junsheng Fu | arXiv cs.CV | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.01139v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.01139v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文提出了SD-RouteFusion，一种可部署的端到端自我轨迹预测方法，它融合了前置摄像头、车辆运动学以及从标准定义（SD）地图导出的导航路线。与依赖高精（HD）地图几何的方法不同，SD-RouteFusion将学习目标与可扩展且可投入生产的SD地图路线输入对齐，实现了无需HD地图基础设施的路线感知预测。首先，我们证明了SD地图路线先验提供了强大的长时域语义先验。通过对包含48万个驾驶场景（覆盖10个欧洲国家和美国）的大规模真实世界数据集进行全面研究，我们量化了SD路线条件化的价值：在8秒预测时域下，引入SD地图路线相比仅使用图像和运动学基线，平均位移误差（ADE）降低了10.5%，而我们的完整融合策略实现了16.9%的ADE降低。该融合策略由双假设设计与门控分类器组成，以确保在路线损坏和视觉不确定性下的鲁棒性。最后，为支持更广泛的评估，我们发布了一个SD路线生成工具包，该工具包可在所有包含自我姿态和未来轨迹的数据集上实现SD路线条件化的自我轨迹预测。总之，SD-RouteFusion为大规模鲁棒、路线感知的自我轨迹预测建立了一条实用路径。</p></section>
+              <section><h3>English Abstract</h3><p>This paper presents SD-RouteFusion, a deployable end-to-end ego-trajectory prediction method that fuses a front-facing camera, vehicle kinematics, and a navigation route derived from a Standard Definition (SD) map. Unlike approaches that rely on High Definition (HD) map geometry, SD-RouteFusion aligns the learning objective with scalable and production-ready SD-map route inputs, enabling route-aware prediction without requiring HD-map infrastructure. First, we demonstrate that SD-map route prior provides a powerful long-horizon semantic prior. Through a comprehensive study on a large-scale real-world dataset comprising 480k driving scenarios across 10 European countries and the U.S., we quantify the value of SD-route conditioning: incorporating SD-map routes yields a 10.5% ADE improvement over an image-and-kinematics baseline, while our full fusion strategy achieves a 16.9% ADE reduction given a prediction horizon of 8 seconds. The fusion strategy consists of a dual-hypothesis design paired with a gated classifier, to ensure robustness under route corruption and visual uncertainty. Finally, to support broader evaluation, we release an SD-route generation toolkit that enables SD-route-conditioned ego-trajectory prediction on all datasets containing ego pose and future trajectories. Together, SD-RouteFusion establishes a practical path toward robust, route-aware ego-trajectory prediction at scale.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解SD地图路线如何作为先验信息提升预测精度，以及融合策略的设计。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的轨迹预测方法对低空经济中无人机航迹预测具有直接参考价值。其利用低成本地图（SD地图）替代高精地图的思路，可降低低空飞行器部署成本。路线条件化预测可提升低空交通管理的安全性与效率。</p></section>
+              <section><h3>实践思路</h3><p>可复现其融合策略，在无人机数据集上测试SD地图路线条件化预测。实验可对比有无路线先验的预测精度，并验证门控机制对噪声的鲁棒性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>学习何时倾听：用于人体运动预测的门控情感融合</h2>
+              <p>Learning When to Listen: Gated Affect Fusion for Human Motion Prediction</p>
+              <p class="meta">Jingni Huang | arXiv cs.CV | 2026-07-01</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.00296v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.00296v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在无约束的真实世界视频中进行人体运动预测仍然具有挑战性，原因在于未来行为的模糊性和嘈杂多模态观测的存在。虽然面部情感可能提供补充的行为线索，但其在运动预测框架内的实际效用和机制边界仍知之甚少。在这项工作中，我们进行了一项系统性研究，调查了在真实环境中情感条件化预测的效用和时间限制。我们建立了一个严格的多模态流程，将MediaPipe身体姿态轨迹与HSEmotion面部情感表示相结合，并引入了门控情感变换器（GAT）来动态调节跨模态信息流。通过在严格受试者间协议下进行广泛的多时域评估，我们证明了与仅使用姿态的基线相比，朴素的早期跨模态拼接会持续降低预测精度。相反，我们提出的门控机制通过自适应控制情感流来稳定跨模态整合。关键的是，使用打乱和随机化情感输入进行的受控反事实实验表明，学习到的门成功抑制了非结构化的跨模态噪声，同时仍对合理的情感信号保持响应。此外，我们的实证结果表明，面部情感特征仅在短到中时域窗口（例如30帧）内提供有界、依赖于时域的预测线索，而长期轨迹仍主要由内在的运动学连续性主导。</p></section>
+              <section><h3>English Abstract</h3><p>Human motion forecasting in unconstrained real-world videos remains challenging due to the ambiguity of future behaviors and the presence of noisy multimodal observations. While facial affect potentially provides complementary behavioral cues, its practical utility and mechanistic boundaries within motion forecasting frameworks remain poorly understood. In this work, we present a systematic study investigating the utility and temporal limitations of affect-conditioned forecasting in-the-wild. We establish a rigorous multimodal pipeline combining MediaPipe body pose trajectories with HSEmotion facial affect representations, and introduce the Gated Affect Transformer (GAT) to dynamically regulate cross-modal information flow. Through extensive multi-horizon evaluations under a strict subject-wise protocol, we demonstrate that naive early cross-modal concatenation consistently degrades forecasting accuracy relative to pose-only baselines. Conversely, our proposed gating mechanism stabilizes cross-modal integration by adaptively controlling the affective stream. Crucially, controlled counterfactual experiments using shuffled and randomized affect inputs reveal that the learned gate successfully suppresses unstructured cross-modal noise while remaining responsive to plausible affective signals. Furthermore, our empirical results indicate that facial affect features provide bounded, horizon-dependent predictive cues strictly within short-to-medium windows (e.g., 30 frames), whereas long-term trajectories remain predominantly governed by intrinsic kinematic continuity. Our findings provide empirical evidence that facial affect should be regarded as a complementary behavioral cue rather than a dominant driver of future motion, offering practical guidance for selective multimodal fusion in unconstrained human motion forecasting.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注门控机制如何动态融合多模态信息，以及情感特征的时间有效性。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的多模态融合与门控机制可应用于低空经济中无人机航迹预测，例如融合视觉与传感器数据。其情感特征的时间限制分析，对理解不同模态信息的有效时域有启发。智能体学习“何时倾听”的策略，可提升航迹预测的鲁棒性。</p></section>
+              <section><h3>实践思路</h3><p>可复现其门控融合框架，在无人机轨迹预测任务中融合视觉与IMU数据。实验可设计不同时域窗口，验证门控机制对噪声的抑制效果。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>
