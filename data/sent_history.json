@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "9a91eae1b3780284",
+      "title": "Image-Domain Tilt Constrained Distributed Fusion for Maneuvering UAV Tracking with Multi-Camera Electro-Optical Observations",
+      "url": "http://arxiv.org/abs/2607.01008v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "d7d1d2f83f48f007",
+      "title": "3D HAMSTER: Bridging Planning and Control in Hierarchical Vision Language Action Models through 3D Trajectory Guidance",
+      "url": "http://arxiv.org/abs/2606.31329v2",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "d39a4f6500e26c3c",
+      "title": "Rethinking Foundation Model Collaboration: Enhancing Specialized Models through Proxy Task Reasoning",
+      "url": "http://arxiv.org/abs/2606.31157v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "a3dfb1105045dd3e",
+      "title": "PiLoT v2: Pixel-to-Orthogonal Map Alignment for Free-view UAV Geo-localization",
+      "url": "http://arxiv.org/abs/2606.31098v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "2398c5193e3b7c60",
+      "title": "Actuator Reality Shaping for Zero-Shot Sim-to-Real Robot Learning",
+      "url": "http://arxiv.org/abs/2607.02205v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "22318cd5b842ef38",
+      "title": "UA-ChatDev: Uncertainty-Aware Multi-Agent Collaboration for Reliable Software Development",
+      "url": "http://arxiv.org/abs/2607.02186v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "2c89c4c91f367d98",
+      "title": "PhysMani: Physics-principled 3D World Model for Dynamic Object Manipulation",
+      "url": "http://arxiv.org/abs/2607.01938v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "3d2857250df5e29c",
+      "title": "CausalSteward: An Agentic Divide-Conquer-Combine Copilot for Causal Discovery",
+      "url": "http://arxiv.org/abs/2607.01936v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "e54b73fbfea3c541",
+      "title": "C2E: Boosting Ego-Only 3D Object Detection via Multi-Teacher Contrastive Knowledge Distillation",
+      "url": "http://arxiv.org/abs/2607.01827v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "64638d2cba7948fe",
+      "title": "MMBench-Live: A Continuously Evolving Benchmark for Multimodal Models",
+      "url": "http://arxiv.org/abs/2607.01813v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "dde8d8e086923f87",
+      "title": "Diverse Evidence, Better Forecasts: Multi-Agent Deliberation Under Information Asymmetry",
+      "url": "http://arxiv.org/abs/2607.01661v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "1ffdd5728a459aac",
+      "title": "BOUNDARY_SYNC: Measuring Communication-Induced Representational Coupling in Multi-Agent LLM Systems",
+      "url": "http://arxiv.org/abs/2607.01600v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "0b41ec161d9a3165",
+      "title": "MMAO-Cls: Metabolic Multi-Agent Optimization for Joint Feature Selection and Classifier Tuning",
+      "url": "http://arxiv.org/abs/2607.01539v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "64b742ecff2d2e2f",
+      "title": "WorldSample: Closed-loop Real-robot RL with World Modelling",
+      "url": "http://arxiv.org/abs/2607.02431v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "b6e81a5f9710180e",
+      "title": "DecompRL: Solving Harder Problems by Learning Modular Code Generation",
+      "url": "http://arxiv.org/abs/2607.02390v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "0027810b7593a7d7",
+      "title": "Safe and Adaptive Cloud Healing: Verifying LLM-Generated Recovery Plans with a Neural-Symbolic World Model",
+      "url": "http://arxiv.org/abs/2607.01595v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "0b916167105f38fe",
+      "title": "VOCA: Visual Odometry with Codec Awareness",
+      "url": "http://arxiv.org/abs/2607.00189v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "45eb52210d2de638",
+      "title": "WorldOdysseyBench: An Open-World Benchmark for Long-Horizon Stability of Interactive World Models",
+      "url": "http://arxiv.org/abs/2606.31672v2",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "6e11094783cdff3e",
+      "title": "Optimal Reconfiguration of Distributed Battery Networks Under Connectivity and Energy Constraints",
+      "url": "http://arxiv.org/abs/2607.01462v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
+      "key": "b200ec79ede03c39",
+      "title": "Agent4cs: A Multi-agent System for Code Summarization in Large Hierarchical Codebases",
+      "url": "http://arxiv.org/abs/2607.01425v1",
+      "sent_at": "2026-07-06T22:14:49.285261+00:00"
+    },
+    {
       "key": "a65d1c5e341df14d",
       "title": "Communication-Aware and Safety-Aware UAV Control via Predictive Latent Models",
       "url": "http://arxiv.org/abs/2607.00288v1",
