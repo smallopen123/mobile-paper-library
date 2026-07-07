@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "4f5c8ca945dcd364",
+      "title": "FLOAT Drone for Physical Interaction: Lateral Airflow Reduction, Wrench Modeling, and Adaptive Control",
+      "url": "http://arxiv.org/abs/2607.04260v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "0a1444db2dbd105a",
+      "title": "Last-Meter Precision Navigation for UAVs: A Diffusion-Refined Aerial Visual Servoing Approach",
+      "url": "http://arxiv.org/abs/2607.04352v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "9b24b8746687651e",
+      "title": "A Reliable Context-Aware and Temporal Planning Framework for Autonomous Driving",
+      "url": "http://arxiv.org/abs/2607.04689v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "ffd1597e728a1844",
+      "title": "FRFDet: Efficient UAV Small Object Detection with Symmetric Sampling and Scalable Fusion",
+      "url": "http://arxiv.org/abs/2607.04125v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "7f8ddf98e83815d0",
+      "title": "Towards Effcient Low Altitude Sensing: A Dual Heterogeneous Graph Learning Method for UAV Task Allocation",
+      "url": "http://arxiv.org/abs/2607.04255v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "d2935807d63a62f4",
+      "title": "Relational Multi-Agent Reinforcement Learning for Dynamic Pricing in High-Speed Railway Markets",
+      "url": "http://arxiv.org/abs/2607.05179v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "015ce41f80152f1e",
+      "title": "Integrated Altruistic and Fairness Preference Induces Advanced Mutual Cooperation in Sequential Social Dilemmas",
+      "url": "http://arxiv.org/abs/2607.04710v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "116e3c8307be54c2",
+      "title": "Agentic SABRE: An Uncertainty-Aware Neuro-Symbolic Multi-Agent Framework for Adaptive Ransomware Detection",
+      "url": "http://arxiv.org/abs/2607.04292v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "9d01f9a9efc32fbf",
+      "title": "Beyond Scene Priors: Fine-Grained Traffic Scene Reasoning with Benchmarking and Query-Guided Small-Object Focus",
+      "url": "http://arxiv.org/abs/2607.04149v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "0e0c8de19fd815bd",
+      "title": "Regime-Conditional Stabilisation of LLM-Augmented Cooperative Multi-Agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.04470v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "a308b15fef97483c",
+      "title": "Anytime Plug-and-Play Control with Contract-Based Distributed MPC",
+      "url": "http://arxiv.org/abs/2607.04215v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "9ab3dc290b032a3e",
+      "title": "PixelPilot: Scalable Vision-Language-Action Models for End-to-End Autonomous Driving",
+      "url": "http://arxiv.org/abs/2607.04637v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "582d45967e477e70",
+      "title": "CRISP: A Spatiotemporal Camera-Radar Backbone for Driving via Forecasting-Based World-Model Pretraining",
+      "url": "http://arxiv.org/abs/2607.04541v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "befdd3f8ff096ff7",
+      "title": "Multi-Robot Open Adaptive Teaming Across Unseen Environments, Partners, and Scales",
+      "url": "http://arxiv.org/abs/2607.04972v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "0e229f44521b8464",
+      "title": "Qantara: Bridge-Flow Training for Multi-Paradigm JEPA Control",
+      "url": "http://arxiv.org/abs/2607.04978v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "fbd65ef24a11d60e",
+      "title": "GaP: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks",
+      "url": "http://arxiv.org/abs/2607.05369v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "472ce8394ab0a483",
+      "title": "OptiAgent: End-to-End Optimization Modeling via Multi-Agent Iterative Refinement",
+      "url": "http://arxiv.org/abs/2607.05346v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "e0dc01618c7578b1",
+      "title": "An Exploration of Agentic Information Fusion for Test Maintenance Prediction",
+      "url": "http://arxiv.org/abs/2607.04786v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "6d5bdbad3419e3f2",
+      "title": "GPU-Accelerated Polygonal Signed Distance Functions for Real-Time Collision Avoidance",
+      "url": "http://arxiv.org/abs/2607.04310v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
+      "key": "b6377cd2649f3445",
+      "title": "KAM-WM: Kinematic Affordance Maps from Latent World Models for Robot Manipulation",
+      "url": "http://arxiv.org/abs/2607.04652v1",
+      "sent_at": "2026-07-07T22:12:14.103223+00:00"
+    },
+    {
       "key": "9a91eae1b3780284",
       "title": "Image-Domain Tilt Constrained Distributed Fusion for Maneuvering UAV Tracking with Multi-Camera Electro-Optical Observations",
       "url": "http://arxiv.org/abs/2607.01008v1",
