@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-09</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-09 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>IMR：用于多智能体轨迹预测的迭代模式世界加权回归</h2>
+              <p>IMR: Iterative Mode-World Weighted Regression for Multi-Agent Trajectory Prediction</p>
+              <p class="meta">Honglin Wang, Shiyao Pan, Yun-Fu Liu | arXiv cs.RO | 2026-07-06</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05705v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05705v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体运动预测对于自动驾驶车辆理解周围车辆的意图至关重要。然而，以往的基于预测和基于锚点的方法分别在模式多样性和预测精度方面存在局限性。这些局限性可能导致自动驾驶车辆的安全评估不足和行为偏差。为了解决这个问题，提出了一种模式世界加权回归损失，以弥合这些特征之间的差距。具体来说，该方法在缓解模式坍缩的同时，提高了世界排名和top-1置信度。此外，所提出的迭代解码器通过循环和分段生成轨迹来提高预测精度。实验结果表明，与其他方法相比，所提出的方法在Argoverse 2多智能体运动预测基准测试中排名第一。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent motion prediction is essential for automated vehicles to understand the intentions of surrounding vehicles. However, previous prediction-based and anchor-based methods have limitations in mode diversity and prediction accuracy, respectively. These limitations may cause inadequate safety assessments and behavioral deviations in automated vehicles. To address this issue, a mode-world weighted regression loss is proposed to bridge the gap between these features. Specifically, this approach mitigates mode collapse while simultaneously improving world ranking and top-1 confidence. Furthermore, the proposed iterative decoder improves prediction accuracy by recurrently and segmentally generating trajectories. Experimental results show the proposed method ranks first in the Argoverse 2 multi-agent motion forecasting benchmark against other methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先关注提出的“模式世界加权回归损失”和“迭代解码器”这两个核心创新点，理解它们如何分别解决模式坍缩和精度问题。然后查看实验部分，了解其在Argoverse 2基准上的具体性能表现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对多智能体轨迹预测，这是低空经济中无人机集群安全航行的核心技术。准确的轨迹预测对于避免无人机之间的碰撞、优化飞行路径以及评估潜在冲突至关重要。该工作提出的方法能提升预测的多样性和准确性，直接增强了低空飞行器的安全决策能力。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其核心的迭代解码器和模式世界加权回归损失，并在公开数据集（如Argoverse 2）上验证其性能。进一步地，可以将该方法应用于无人机集群的航迹预测场景，评估其在低空复杂环境下的预测效果和计算效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>使用竞争性多智能体强化学习拦截携带网的敏捷目标</h2>
+              <p>Intercepting an Agile Target with Net-Carrying Drones using Competitive Multi-Agent Reinforcement Learning</p>
+              <p class="meta">Timothée Gavin, Murat Bronz | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05939v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05939v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文提出了一种解决方案，用于通过一组携带捕捉网的敏捷无人机来拦截另一架敏捷无人机。我们将该问题建模为一个竞争性的多智能体强化学习（MARL）任务。为了解决非平稳性和智能体对当前对手策略过拟合导致的灾难性遗忘问题，我们使用带有优先虚拟自我对弈（PFSP）的多智能体近端策略优化（MAPPO）来训练追捕者和逃避者。我们在高保真模拟器中使用低级控制命令、集体推力和机体角速率（CTBR）来训练智能体，以实现追捕者和逃避者的敏捷飞行。我们将训练好的策略在捕获率、捕获时间和碰撞率方面与启发式基线进行比较，结果表明我们的解决方案优于它们。消融研究表明，PFSP能够产生更鲁棒的策略，可以适应不同的对手策略，并且低级控制命令对于在追捕-逃避任务中学习高性能策略至关重要。最后，对学习到的行为进行定性分析，突出了追捕者之间合作策略的出现。</p></section>
+              <section><h3>English Abstract</h3><p>This article presents a solution to intercept an agile drone by a team of agile drone carrying catching nets. We formulate the problem as a competitive Multi-Agent Reinforcement Learning (MARL) task. To address the problem of nonstationarity and catastrophic forgetting of agents overfitting to the current opponent strategy, we train the pursuers and the evader using Multi-Agent Proximal Policy Optimization (MAPPO) with Prioritized Fictitious Self Play (PFSP). We train the agents in a high-fidelity simulator using low-level control commands, collective thrust and body rates (CTBR), to achieve agile flights for both the pursuers and the evader. We compare the performance of the trained policies in terms of catch rate, time to catch and crash rates, against heuristic baselines and show that our solution outperforms them. Ablation studies show that PFSP lead to more robust policies that can adapt to different opponent strategies, and that a low-level control commands are crucial for learning performing strategies in the pursuit-evasion task. Finally, a qualitative analysis of the learned behaviours highlights the emergence of cooperative tactics among the pursuers.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注问题建模（竞争性MARL）和解决非平稳性/过拟合的核心方法（MAPPO+PFSP）。其次，注意其使用低级控制命令（CTBR）进行训练这一关键设计，并查看消融实验以理解各组件的重要性。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接涉及无人机之间的对抗与协同，是低空经济安全中“反无人机”和“无人机集群对抗”场景的典型应用。其提出的多智能体强化学习框架可用于训练无人机集群执行协同拦截、围捕等复杂任务，对提升低空安防能力具有直接指导意义。</p></section>
+              <section><h3>实践思路</h3><p>可以基于高保真模拟器（如AirSim或Gazebo）复现其MAPPO+PFSP的训练框架。实验重点可以放在不同数量追捕者、不同逃避者策略下的捕获成功率，并验证低级控制命令（CTBR）相比高级控制命令的优势。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>EcoVision：用于盐沼植被监测和优势度制图的AI驱动无人机成像</h2>
+              <p>EcoVision: AI-Powered Drone Imaging for Salt Marsh Vegetation Monitoring and Dominance Mapping</p>
+              <p class="meta">Innocent Onyenonachi, Peter J. Lawerance, Nadia Kanwal | arXiv cs.CV | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06105v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06105v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>通过一个模块化流水线处理从低空无人机调查中获取的高分辨率RGB图像，该流水线集成了基于Transformer的语义分割、连通分量植被提取、使用ConvNeXt架构的细粒度物种分类以及2x2米分辨率的基于网格的优势度评分。该框架针对两种生态上重要的盐生禾本科植物——大米草（Spartina maritima）和海洋碱茅（Puccinellia maritima），并使用经过整理和人工标注的无人机图像以及来自公开数据集的生物多样性图像进行训练。为了从图像中识别这些植物，我们的分割产生了可靠的物种掩膜（平均IoU = 0.56；像素级准确率 = 0.96），而对象级分类实现了非常好的区分度（F1 = 0.99）。优势度估计与基于样方实地调查的结果高度吻合，平均绝对差异低于8%，在现实的调查条件下保留了精细尺度的空间结构。开发的名为EcoVision的系统为可扩展、高分辨率的盐沼监测奠定了实践基础，展示了AI驱动的工作流如何将像素级预测转化为生态学上可解释的指标。</p></section>
+              <section><h3>English Abstract</h3><p>High-resolution RGB imagery acquired from low-altitude UAV surveys was processed through a modular pipeline incorporating transformer-based semantic segmentation, connected-component vegetation extraction, fine-grained species classification using a ConvNeXt architecture, and grid-based dominance scoring at 2x2m resolution. The framework targeted two ecologically significant halophytic grasses, Spartina maritima and Puccinellia maritima, and was trained using a curated and manually annotated UAV imagery, along with biodiversity imagery sourced from publicly accessible datasets. In order to identify these plants from the imagery, our segmentation yielded reliable species masks (mean IoU = 0.56; pixel-level accuracy = 0.96), while object-level classification achieved very good discrimination (F1 = 0.99). Dominance estimates closely matched quadrat-based field surveys, with mean absolute differences below 8%, preserving fine-scale spatial structure under realistic survey conditions. The developed system, named EcoVision, establishes a practical foundation for scalable, high-resolution salt marsh monitoring, demonstrating how AI-driven workflows can translate pixel-level predictions into ecologically interpretable metrics.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先了解其模块化流水线的四个主要步骤：分割、提取、分类和优势度评分。然后重点关注其性能指标，特别是分割和分类的准确率，以及优势度估计与实地调查的对比结果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究展示了无人机在低空经济中除交通和物流外的另一重要应用——环境监测。其AI驱动的图像处理流水线可推广至其他低空生态监测任务，如森林病虫害检测、农作物长势评估等，为低空经济的多元化应用提供了技术范例。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其基于Transformer的分割和ConvNeXt分类的流水线。实验重点在于评估该流水线在不同光照、天气和植被密度条件下的鲁棒性，并尝试将其迁移至其他植被类型或低空监测任务（如城市绿化评估）。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>RynnWorld-Teleop：用于数字遥操作的动作条件世界模型</h2>
+              <p>RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation</p>
+              <p class="meta">Haoyu Zhao, Xingyue Zhao, Hangyu Li, Biao Gong, Kehan Li, Siteng Huang, Xin Li, Deli Zhao, Zhongyu Li | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06558v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06558v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>扩展机器人学习需要海量、多样化的轨迹数据，但目前的数据收集受限于物理遥操作，每次演示都将操作员的时间绑定到特定的硬件和工作空间。我们引入了数字遥操作，这是一种通过用生成式世界模型替代真实机器人，将数据收集从物理约束中解耦出来的范式。在该框架中，操作员的手部姿态流驱动一个以机器人为中心的生成式世界模型，从单张参考图像合成高保真的第一人称视角视频。记录下的姿态流作为一种与具体形态无关的动作标签，可通过标准的重定向技术迁移到任何目标机器人上，从而产生独立于物理硬件的完整状态-动作轨迹，用于模仿学习。我们在RynnWorld-Teleop中实例化了这一范式，该系统集成了深度感知的骨骼条件控制、在视频扩散Transformer上的渐进式人-机器人训练以及流式自回归蒸馏。该流水线将生成过程压缩为单次推理，从而在单个H100 GPU上实现40+ FPS的实时交互式生成。仅使用RynnWorld-Teleop生成的数据训练的策略，在灵巧和多样化的双手任务上实现了有效的零样本Sim2Real迁移。此外，用我们的数字遥操作数据增强真实世界数据集，持续提高了任务成功率，这表明RynnWorld-Teleop可作为下一代机器人智能体的高保真、可扩展数据引擎。</p></section>
+              <section><h3>English Abstract</h3><p>Scaling robot learning requires massive, diverse trajectory data, yet collection is currently bottlenecked by physical teleoperation, where every demonstration binds operator time to specific hardware and workspaces. We introduce digital teleoperation, a paradigm that decouples data collection from physical constraints by replacing the real robot with a generative world model. In this framework, an operator&#x27;s hand-pose stream drives a robot-centric generative world model to synthesize high-fidelity egocentric videos from a single reference image. The recorded pose stream serves as an embodiment-agnostic action label transferable to any target robot via standard retargeting, yielding complete state-action trajectories for imitation learning independent of physical hardware. We instantiate this paradigm in RynnWorld-Teleop, a system that integrates depth-aware skeletal conditioning, progressive human-to-robot training on a video Diffusion Transformer, and streaming autoregressive distillation. This pipeline compresses the generative process into a single-pass inference, enabling 40+ FPS, real-time interactive generation on a single H100 GPU. Policies trained exclusively on RynnWorld-Teleop-generated data achieve effective zero-shot Sim2Real transfer across dexterous and diverse bimanual tasks. Moreover, augmenting real-world datasets with our digitally teleoperated data consistently improves success rates, demonstrating that RynnWorld-Teleop serves as a high-fidelity, scalable data engine for the next generation of robotic agents.</p></section>
+              <section><h3>中文阅读提示</h3><p>核心是理解“数字遥操作”这一新范式如何通过世界模型解耦数据收集与物理硬件。重点关注其技术实现：深度感知骨骼条件、视频扩散Transformer和流式自回归蒸馏，以及最终的零样本Sim2Real迁移效果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的数字遥操作范式，通过生成式世界模型合成训练数据，为低空经济中无人机智能体的训练提供了新思路。它可以用于生成大量多样化的无人机飞行轨迹数据，用于训练航迹预测模型或自主飞行策略，从而降低对昂贵且风险高的真实飞行数据采集的依赖。</p></section>
+              <section><h3>实践思路</h3><p>该研究为机器人学习提供了新的数据生成范式，对低空经济中无人机自主飞行策略的学习有潜在启发。可以探索将类似的世界模型应用于无人机飞行数据生成，用于训练无人机在复杂低空环境下的避障和导航策略，减少对真实飞行数据的依赖。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>合成雾条件下无人机检测与跟踪的任务驱动评估</h2>
+              <p>A Task-Driven Evaluation of UAV Detection and Tracking under Synthetic Fog</p>
+              <p class="meta">Amir Pouladi, Vesal Ahsani, Haijun Li, Homayoun Najjaran, Afzal Suleman | arXiv cs.CV | 2026-07-06</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05467v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05467v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>雾会严重降低小型无人机在天空主导的远距离图像中的可见度，从而降低下游检测和跟踪的可靠性。本文提出了一个任务驱动的评估框架，该框架将深度感知的合成雾生成、图像恢复、目标检测和跟踪整合到一个统一的流水线中。鉴于收集和标注有雾无人机场景的实际困难，我们使用单目深度估计和大气散射模型，从包含无人机目标的真实晴朗天气户外图像中生成合成雾。首先比较了来自经典、卷积神经网络（CNN）和Transformer系列的代表性恢复方法，然后将选定的恢复模型集成到下游感知流水线中。在仅使用清晰图像和使用包含雾的训练集两种训练模式下，使用多种检测器变体评估检测性能，并在清晰、有雾和恢复后的视频序列上评估基于检测的跟踪。除了图像级恢复指标外，该研究还评估了雾和恢复如何影响检测鲁棒性和跟踪性能。结果表明，雾主要通过增加漏检来显著降低检测和跟踪性能。包含雾的训练在提高鲁棒性方面提供了最一致的改进，而测试时的恢复仅在检测器仅使用清晰图像训练时最为有益。这些发现表明，恢复质量并不一定能转化为下游任务的成比例增益。</p></section>
+              <section><h3>English Abstract</h3><p>Fog severely degrades the visibility of small unmanned aerial vehicles (UAVs) in skydominant, long-range imagery, reducing the reliability of downstream detection and tracking. This paper presents a task-driven evaluation framework that links depth-aware synthetic fog generation, image restoration, object detection, and tracking within a unified pipeline. Given the practical difficulty of collecting and annotating foggy UAV scenes, synthetic fog is generated from real clear-weather outdoor images containing UAV targets using monocular depth estimation and the atmospheric scattering model. Representative restoration methods from classical, convolutional neural network (CNN)-based, and transformer-based families are first compared, after which the selected restoration model is integrated into the downstream perception pipeline. Detection is evaluated under both clean-only and fog-inclusive training regimes using multiple detector variants, while tracking-by-detection is assessed on clean, foggy, and restored video sequences. Beyond image-level restoration metrics, the study evaluates how fog and restoration affect detection robustness and tracking performance. The results show that fog substantially degrades both detection and tracking, primarily through increased missed detections. Fog-inclusive training provides the most consistent improvement in robustness, whereas test-time restoration is most beneficial when the detector has been trained only on clean imagery. These findings show that restoration quality does not necessarily translate into proportional gains in downstream perception and therefore should be evaluated jointly with detection and tracking performance.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注其任务驱动的评估框架设计，特别是如何生成合成雾以及如何将恢复模型与下游检测、跟踪任务结合。仔细阅读实验结果，理解“包含雾的训练”与“测试时恢复”两种策略在不同条件下的优劣。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中无人机在恶劣天气（雾天）下的安全运行问题。其提出的评估框架可用于量化雾对无人机检测和跟踪性能的影响，这对于开发鲁棒的低空感知系统、保障无人机全天候安全飞行至关重要。研究结论对如何设计更有效的抗干扰训练策略具有指导意义。</p></section>
+              <section><h3>实践思路</h3><p>该研究为评估低空经济中无人机在恶劣天气下的感知能力提供了方法论。可以复现其合成雾生成和评估流水线，用于测试不同无人机检测算法在雾天条件下的性能。实验重点可以放在评估不同去雾算法对下游航迹预测或避障任务的实际影响，而非仅关注图像恢复指标。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>教导型智能体：将附带学习重新设计回AI辅助软件开发</h2>
+              <p>Agents That Teach: Towards Designing Incidental Learning Back into AI-Assisted Software Development</p>
+              <p class="meta">Rohit Mehra, Samdyuti Suri, Prithviraj K Tagadinamani, Kapil Singi, Vikrant Kaulgud, Adam P. Burden | arXiv cs.SE | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06101v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06101v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>AI编码智能体正在迅速重塑软件的构建方式，开发者越来越多地将大量编码任务委托给自主智能体以提高生产力。虽然这些收益是真实的，但代价是附带学习的丧失。开发者历史上通过费力的解决问题来获取非正式知识，这长期塑造了软件工程专业知识的形成方式。然而，过度依赖智能体编码会导致未经练习的技能随时间悄然萎缩。当这种学习路径被短路时，开发者面临悄然积累“知识债务”的风险，这是开发者层面的技术债务类比，即智能体执行而开发者无法完全理解的变更随时间累积。本文认为附带学习不会自行重现，必须有意识地将它重新设计回开发者-智能体交互中，并提出了六项设计原则来指导此类系统。随后，我们提出了“SHIELD”，一个基于“教导型智能体”概念的多智能体系统，通过利用AI编码智能体自身的推理来在不中断开发者流程的情况下呈现上下文相关的、带外学习时刻，从而将这些原则付诸实践。通过这项工作，我们设想了一条通往学习感知型开发环境的道路，其中生产力和学习是互补而非竞争的。</p></section>
+              <section><h3>English Abstract</h3><p>AI coding agents are rapidly reshaping how software is built, with developers increasingly delegating substantial coding tasks to autonomous agents in pursuit of higher productivity. While these gains are real, they come at the cost of incidental learning. Developers historically acquired informal knowledge through effortful problem-solving, and this has long shaped how software engineering expertise develops. However, with over-reliance on agentic coding, unpracticed skills could atrophy silently over time. As this learning pathway is short-circuited, developers risk silently accruing Knowledge Debt, a developer-level analogue of Technical Debt, where changes the agent executes that the developer cannot fully understand accrue over time. In this paper, we argue that incidental learning will not re-emerge on its own and must be consciously designed back into developer-agent interactions, and propose six design principles to guide such systems. We then present &quot;SHIELD&quot;, a multi-agent system grounded in the notion of &quot;agents that teach&quot;, that operationalizes these principles by leveraging the AI coding agent&#x27;s own reasoning to surface contextual, out-of-band learning moments without disrupting developer flow. Through this work, we envision a path toward learning-aware development environments where productivity and learning are complementary, not competing.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，理解“知识债务”和“附带学习”的核心概念。然后重点看六项设计原则和SHIELD系统的实现部分，了解如何将学习融入开发流程。</p></section>
+              <section><h3>相关性说明</h3><p>本文提出的多智能体系统设计原则和“教导型智能体”概念，可应用于低空经济中无人机等智能体的安全操作培训，通过附带学习提升操作员对复杂航迹规划的理解。智能体间的协作与知识传递机制，对多无人机协同航迹预测与安全决策具有借鉴意义。</p></section>
+              <section><h3>实践思路</h3><p>可复现SHIELD系统的核心机制，在低空经济仿真环境中构建一个多智能体系统，让一个“教师”智能体在无人机执行任务时，通过分析其推理过程，向操作员或其它智能体提供上下文相关的安全提示。实验可对比有无附带学习机制下，操作员对异常航迹的识别与响应速度。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>超越排行榜：大语言模型智能体在工具使用、规划与推理中的失败模式综述</h2>
+              <p>Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents</p>
+              <p class="meta">Wael Albayaydh, Rui Zhao, Ivan Flechais | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05775v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05775v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>大语言模型（LLM）智能体越来越多地根据其使用工具、规划多步骤任务、与其他智能体协调以及在长时间跨度内运行的能力进行评估。已报告的基准测试收益常常掩盖了在其他不相关的评估工作中反复出现的失败模式。本文综合了27篇基准测试、分类法和审计论文（2023-2026年），涵盖19个不同的基准测试，形成了一个跨领域的智能体局限性分类法。据我们所知，这是首个将工具使用、规划、长时推理、多智能体协调、安全性和测量有效性方面的证据整合到一个统一的LLM智能体局限性分类法中的综合研究。我们识别出六个失败集群：（1）工具调用和参数级错误，（2）规划和约束满足失败，（3）上下文积累导致的长时性能退化，（4）多智能体协调失败，（5）对抗性或欠指定条件下的安全与安保失败，以及（6）测量有效性问题。该分类法是通过将独立报告的错误类别迭代分组为与智能体推理到行动流程的不同阶段相对应的主题而推导出来的。在文献中，我们发现失败会随任务长度非线性地复合，单个子任务的强性能并不能可靠地转化为端到端的成功，并且额外的脚手架并不能持续提高可靠性。同时，在单轮工具使用和短时网络导航方面已经取得了实质性进展。</p></section>
+              <section><h3>English Abstract</h3><p>Large language model (LLM) agents are increasingly evaluated on their ability to use tools, plan multi-step tasks, coordinate with other agents, and operate over extended horizons. Reported benchmark gains often obscure recurring failure modes documented across otherwise unrelated evaluation efforts. This paper synthesizes 27 benchmark, taxonomy, and audit papers (2023-2026), spanning 19 distinct benchmarks, into a cross-cutting taxonomy of agent limitations. To our knowledge, this is the first synthesis that integrates evidence across tool use, planning, long-horizon reasoning, multi-agent coordination, safety, and measurement validity into a single, unified taxonomy of LLM agent limitations. We identify six failure clusters: (1) tool invocation and parameter-level errors, (2) planning and constraint-satisfaction failures, (3) long-horizon degradation from context accumulation, (4) multi-agent coordination failures, (5) safety and security failures under adversarial or underspecified conditions, and (6) measurement validity problems. The taxonomy was derived iteratively by grouping independently reported error categories into themes corresponding to distinct stages of the agent reasoning-to-action pipeline. Across the literature, we find that failures compound nonlinearly with task length, that strong performance on individual sub-tasks does not reliably translate into end-to-end success, and that additional scaffolding does not consistently improve reliability. At the same time, substantial progress has been demonstrated in single-turn tool use, short-horizon web navigation, and narrowly scoped coding tasks.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和结论，了解六大失败集群的概览。然后重点看每个失败集群的详细描述和示例，特别是与多智能体协调和长时推理相关的部分，以理解当前LLM智能体的核心瓶颈。</p></section>
+              <section><h3>相关性说明</h3><p>本文系统梳理的LLM智能体失败模式，直接关系到低空经济中基于智能体的航迹预测与决策系统的可靠性。例如，规划失败、长时性能退化和多智能体协调失败，正是无人机编队飞行和冲突避免中的关键挑战。理解这些失败模式有助于设计更鲁棒的低空安全智能体系统。</p></section>
+              <section><h3>实践思路</h3><p>可在低空经济仿真平台（如AirSim或Gazebo）中，复现LLM智能体在无人机航迹规划任务中的典型失败模式，例如因上下文积累导致的长时规划偏差。实验可设计不同任务长度，测试智能体在简单和复杂航迹下的端到端成功率，并对比有无记忆增强机制的性能差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>通过声学实现具身人机交互：一种基于MARL的AcoustoBots空间数据物化方法</h2>
+              <p>Embodied Human-Robot Interaction via Acoustics: A MARL Approach with AcoustoBots for Spatial Data Physicalization</p>
+              <p class="meta">Shiqi Liu, Narsimlu Kemsaram, Prateek Mittal, Pengyuan Wei, Sriram Subramanian | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06563v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06563v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>传统的数据物化通常是静态的且与现实环境脱节，限制了其传达具身空间动态和吸引用户的能力。为解决这一局限，我们提出了AcoustoBots，一个移动声泳数据物化平台，其中TurtleBot3机器人携带朝上的8x8超声波相控阵。每个阵列悬浮一个粒子，其高度（1-10厘米）编码一个局部城市标量值，如人口密度、噪音或交通流量。基于多智能体深度确定性策略梯度（MADDPG）算法的多智能体强化学习（MARL）策略，采用集中训练分散执行的方式，选择碰撞感知的导航动作，同时一个高速的Gerchberg-Saxton-相控阵换能器（GS-PAT）声学控制器维持陷阱稳定性并在运动过程中更新阵列相位以达到指令高度。这创建了一个闭环的感知-显示-动作循环。我们在一个4米x3米的英国地图缩比模型上，使用基于PhaseSpace的定位系统进行可重复的多机器人试验，评估了单机器人城市间遍历和双机器人协作覆盖。结果显示，运动中的稳定悬浮和一致的、位置相关的高度渲染，单机器人和双机器人模式在每种模式10次试验中的任务成功率分别为90%和80%，且碰撞次数低。这些发现支持声泳悬浮作为一种简单、可一瞥即知的、机器人介导的通信线索，用于空间分析中的具身人机交互。</p></section>
+              <section><h3>English Abstract</h3><p>Traditional data physicalization is often static and disconnected from real environments, limiting its ability to convey embodied spatial dynamics and engage users. To address this limitation, we present AcoustoBots, a mobile acoustophoretic data-physicalization platform in which TurtleBot3 robots carry upward-facing 8 x 8 ultrasonic phased arrays. Each array levitates a particle whose height (1-10 cm) encodes a local urban scalar value, such as population density, noise, or traffic. A MARL (Multi-Agent Reinforcement Learning) policy based on the Multi-Agent Deep Deterministic Policy Gradient (MADDPG) algorithm, with centralized training and decentralized execution, selects collision-aware navigation actions, while a high-rate Gerchberg-Saxton-Phased Array of Transducers (GS-PAT) acoustic controller maintains trap stability and updates array phases to achieve the commanded height during motion. This creates a closed perception-display-action loop. We evaluate single-robot city-to-city traversal and dual-robot cooperative coverage on a 4 m x 3 m scaled UK map using PhaseSpace-based localization for repeatable multi-robot trials. Results show stable in-motion levitation and consistent, location-dependent height rendering, with task success rates of 90% and 80% for the single and dual-robot regimes, respectively, over 10 trials per regime, and low collision counts. These findings support acoustophoretic levitation as a simple, glanceable, robot-mediated communication cue for embodied human-robot interaction in spatial analytics.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解AcoustoBots平台的核心概念和目的。然后重点看方法部分，特别是MARL策略和声学控制器的设计，以及实验结果中的成功率和稳定性数据。</p></section>
+              <section><h3>相关性说明</h3><p>本文提出的多智能体强化学习（MARL）框架用于机器人协作导航与数据可视化，其集中训练分散执行的范式可直接应用于低空经济中多无人机协同航迹规划与态势感知。声学悬浮作为一种新颖的、非视觉的通信方式，为无人机与地面控制站或操作员之间的安全交互提供了新思路，尤其适用于低能见度环境。</p></section>
+              <section><h3>实践思路</h3><p>可复现其MARL核心算法（MADDPG），在无人机仿真环境中实现多机协作覆盖任务，例如多架无人机协同搜索特定区域并实时报告位置信息。实验可对比集中训练分散执行与独立训练策略在任务完成率、碰撞次数和通信开销上的差异，验证其在高动态低空环境下的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>基于多智能体深度强化学习的奶牛场多目标电池管理</h2>
+              <p>Multi-Agent Deep Reinforcement Learning for Multi Objective Battery Management in Dairy Farms</p>
+              <p class="meta">Marcos Eduardo Cruz Victorio, Karl Mason | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06489v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06489v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>爱尔兰的乳制品行业在整合可再生能源和减少碳排放方面具有巨大潜力。然而，分布式发电控制的研究人员主要关注住宅和商业应用。为了促进可再生能源在乳制品行业的有效整合，本文提出了一种基于差分进化和多智能体深度强化学习的多目标优化控制系统。所提出的控制分为两层：上层使用动态定价，下层基于多智能体强化学习进行电池管理。本文还在农村配电线路中模拟了所提出控制系统的电气响应。仿真结果表明，与基于规则的模型相比，所提出的控制框架可以将能源套利的利润提高高达18%，在不显著增加成本的情况下增加分布式发电的使用，并在电压变化方面符合爱尔兰电网规范。</p></section>
+              <section><h3>English Abstract</h3><p>The dairy industry in Ireland has a large potential for the integration of renewable energy and the reduction of carbon emissions. However, researchers of distributed generation control are mainly focused on residential and commercial applications. To contribute to the effective integration of renewable energy in the dairy sector, this paper presents a multi-objective optimisation control system based on differential evolution and multi agent Deep Reinforcement Learning. The proposed control is organised in two layers: the upper layer uses dynamic pricing, and the lower layer is based on multi-agent reinforcement learning for battery management. This paper also simulates the electrical response of the proposed control system in a rural distribution circuit. The simulation results show that the proposed control framework can improve profits from energy arbitrage up to 18% compared to using Rule-based models, increase the use of distributed generation without significantly increasing cost, and comply with the Irish grid code in terms of voltage variation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解问题的背景和两层控制架构。然后重点看下层多智能体强化学习的具体设计以及仿真结果中的利润提升和电网合规性数据。</p></section>
+              <section><h3>相关性说明</h3><p>本文提出的多智能体强化学习框架用于分布式能源管理，其多目标优化和动态定价机制，可类比应用于低空经济中无人机群的能源调度与航迹规划。例如，通过多智能体协调，在满足安全间隔和任务完成时间的前提下，优化多架电动无人机的电池使用和充电策略，实现能效与安全性的平衡。</p></section>
+              <section><h3>实践思路</h3><p>可复现其两层控制架构，在无人机仿真环境中构建一个多智能体电池管理系统。上层模拟动态电价或任务优先级，下层让每架无人机作为智能体，通过强化学习学习何时充电、何时执行任务。实验可对比基于规则的方法与强化学习方法在任务完成率、总能耗和电池寿命上的表现。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>面向反无人机系统的时延感知主动三角测量与不确定性驱动的多智能体强化学习</h2>
+              <p>Delay-Aware Active Triangulation with Uncertainty-Driven Multi-Agent Reinforcement Learning for Counter-UAS</p>
+              <p class="meta">Seungwook Lee, David Hyunchul Shim | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05957v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05957v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体主动视觉三角测量通过协调带有可控摄像头的移动观察者，能够实现对空中目标的精确定位。然而，现有方法假设瞬时状态反馈，忽略了来自检测、通信和决策传播的累积延迟。我们提出了一种面向反无人机应用中目标定位的时延感知、不确定性驱动的多智能体强化学习框架。我们的贡献包括：（1）一个带有信息年龄（AoI）增强观测的Dec-POMDP公式，实现了时延感知协调——AoI将三角测量有效性提高了10.6个百分点；（2）一项受控比较表明，感知一致性奖励优于特权干净状态奖励（RMSE 0.547米 vs. 0.633米，轨迹丢失减少27%）——两种策略通过相同的观测噪声训练，但优化目标不同，产生了稳定性-鲁棒性权衡；（3）多源解析协方差传播，融合了像素、位姿、云台和内参不确定性——仅考虑角度噪声会导致RMSE恶化2.8倍。在4096个并行环境中使用MAPPO进行的实验实现了0.547 ± 0.217米的RMSE和78.1%的三角测量有效性，而MLP策略的有效性接近零（0.7%），证实了循环记忆对于时延补偿至关重要。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent active visual triangulation enables precise 3D localization of aerial targets by coordinating mobile observers with controllable cameras. However, existing methods assume instantaneous state feedback, ignoring cumulative latency from detection, communication, and decision propagation. We present a delay-aware, uncertainty-driven multi-agent reinforcement learning framework for target localization in Counter-UAS applications. Our contributions are: (1) a Dec-POMDP formulation with Age-of-Information (AoI) augmented observations enabling delay-aware coordination -- AoI improves triangulation validity by 10.6 percentage points; (2) a controlled comparison showing that perception-consistent rewards outperform privileged clean-state rewards (0.547 m vs.0.633 m RMSE, 27% fewer track losses) -- both policies are trained through identical observation noise but differ in what they are optimized for, producing a stability-robustness tradeoff; and (3) multi-source analytical covariance propagation incorporating pixel, pose, gimbal, and intrinsics uncertainties -- restricting to angular noise alone causes 2.8-fold RMSE degradation. Experiments with MAPPO in 4096 parallel environments achieve 0.547 +- 0.217 m RMSE with 78.1% triangulation validity, while MLP policies achieve near-zero validity (0.7%), confirming recurrent memory as essential for delay compensation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解时延问题在反无人机定位中的重要性。然后重点看方法部分，特别是信息年龄（AoI）增强观测和不确定性传播的设计，以及实验结果中不同奖励函数和网络架构的性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>本文直接针对反无人机（Counter-UAS）应用，其核心的时延感知多智能体强化学习框架对低空经济安全至关重要。无人机航迹预测和冲突避免必须考虑通信和计算延迟，本文提出的信息年龄（AoI）和不确定性传播方法，可显著提升多无人机协同定位与跟踪的鲁棒性和实时性，是低空安全智能体系统的关键技术。</p></section>
+              <section><h3>实践思路</h3><p>可复现其Dec-POMDP框架和MAPPO算法，在无人机仿真环境中模拟存在通信延迟的多机协同目标跟踪任务。实验可设置不同延迟水平，对比有无信息年龄（AoI）增强观测的定位精度和轨迹丢失率，并验证循环记忆网络（如LSTM）对延迟补偿的实际效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>基于物理的联邦强化学习在智能电网分布式稳定控制中的应用</h2>
+              <p>Federated Physics-Grounded Reinforcement Learning for Distributed Stability Control in Smart Grids</p>
+              <p class="meta">Omar Al-Refai, Ibrahim Shahbaz, Adam Ali Husseinat, Eman Hammad | arXiv cs.LG | 2026-07-06</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05553v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05553v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>智能电网中的暂态稳定控制需要快速抑制发电机频率和转子角偏差，以防止级联故障。本文提出了FedPPO-PG，一种具有物理接地邻域的联邦多智能体近端策略优化框架，它将暂态稳定控制重新表述为一个合作多智能体强化学习问题，直接针对闭环稳定目标进行优化。每台发电机都托管一个独立的本地执行器，该执行器增加了其两个最强耦合电气邻居的频率偏差，这些邻居通过故障后的Kron简化电纳矩阵识别。一个引导策略初始化阶段从经典分散控制器启动所有执行器，而一个集中式评论家在集中式训练-分散式执行（CTDE）范式下指导优势估计。在IEEE 39节点基准系统的仿真中，跨越五个训练和三个未见故障场景，FedPPO-PG在所有24次试验中实现了100%的稳定，平均稳定时间减少了72.4%，控制功率比集中式基线降低了7-14倍。每个执行器在部署时独立运行，无需中央协调器，且每个执行器的推理延迟满足IEEE/IEC 60255-118-1-2018实时报告要求。</p></section>
+              <section><h3>English Abstract</h3><p>Transient stability control in smart grids requires rapid post-fault damping of generator frequency and rotor angle deviations to prevent cascading failures. This paper proposes FedPPO-PG, a Federated Multi-Agent Proximal Policy Optimization framework with Physics-Grounded neighborhoods, which reformulates transient stability control as a cooperative multi-agent reinforcement learning problem optimized directly against closed-loop stability objectives. Each generator hosts an independent local actor augmented with the frequency deviations of its two most strongly coupled electrical neighbors, identified from the post-fault Kron-reduced susceptance matrix. A guided policy initialization phase warm-starts all actors from the classical decentralized controller, while a centralized critic guides advantage estimation under the centralized training--decentralized execution (CTDE) paradigm. Evaluated on a simulation of the IEEE 39-bus benchmark system across five training and three unseen fault contingencies, FedPPO-PG achieves 100% stabilization in all 24 trials, reduces mean stability time by 72.4%, and cuts the control power by 7-14 times compared to the centralized baseline. Each actor executes independently with no central coordinator at deployment, and the per-actor inference latency satisfies the IEEE/IEC 60255-118-1-2018 real-time reporting requirements.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先理解联邦多智能体强化学习（FedPPO-PG）的核心思想，即如何通过物理邻域信息实现分布式控制。然后重点关注其在IEEE 39节点系统上的性能评估结果，特别是稳定时间和控制功率的改进。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的分布式多智能体协同控制框架可直接应用于低空经济中的无人机群协同航迹规划与避碰，确保在动态环境下的安全稳定运行。其物理引导的强化学习方法也为航迹预测提供了新的思路，即利用环境物理约束（如通信拓扑）来提升预测的鲁棒性。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其核心算法FedPPO-PG，在低空无人机群仿真环境中（如AirSim或Gazebo）进行实验，验证其在多机协同避障和任务分配中的效果。重点对比其与集中式控制方法在通信延迟和计算开销上的差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>利用逆变器资源黑箱建模的网络互依性感知电力系统动态轨迹预测</h2>
+              <p>Network Interdependency-Informed Power System Dynamic Trajectory Prediction Utilizing Black-Box Modeling of Inverter-Based Resources</p>
+              <p class="meta">Sungjoo Chung, Ying Zhang, Meng Yue, Hantao Cui | arXiv eess.SY | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05843v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05843v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>基于逆变器的资源（IBR）的黑箱建模对于存在专有电子控制架构的实时电网运行和控制已变得至关重要。现有的使用IBR黑箱模型的基于机器学习（ML）的在线动态轨迹预测方法，要么在同时使用多个代理时显著累积预测误差，要么忽略测量误差，限制了它们在实际电网中的部署。为了解决这些局限性，本文提出了一种新颖的网络互依性感知ML算法，用于IBR集成电力系统的在线动态轨迹预测。首先提出了一种基于模块化时空注意力网络（STAN）的预测器，用于每个IBR单元的黑箱建模。利用过去的测量值，所提出的STAN通过采用注意力机制关注轨迹预测最相关的特征，能够有效捕捉和预测IBR的时空动态。此外，提出了一种新颖的混合物理信息损失函数，该函数集成了解耦的线性化交流潮流公式。所提出的损失函数有效地确保了网络运行内预测的物理一致性，同时避免了迭代潮流求解的计算复杂性，从而实现了高效的梯度反向传播和整体预测精度的提升。在IEEE 14节点和WECC 179节点系统上的案例研究表明，所提出的方法在测量误差下实现了显著的精度提升和鲁棒性。</p></section>
+              <section><h3>English Abstract</h3><p>Black-box modeling of inverter-based resources (IBRs) has become essential for real-time grid operation and control in the presence of proprietary electronic control architectures. Existing machine learning (ML)-based online dynamic trajectory prediction approaches using IBR black-box models either significantly accumulate prediction errors when multiple surrogates are simultaneously used or ignore measurement errors, limiting their deployment in practical grids. To address these limitations, this paper proposes a novel network interdependency-informed ML algorithm for online dynamic trajectory prediction in IBR-integrated power systems. A modular spatiotemporal attention network (STAN)-based predictor for the black-box modeling of each IBR unit is first proposed. Utilizing past measurements, the proposed STAN can effectively capture and predict the spatiotemporal dynamics of IBRs by employing an attention mechanism to attend to the most pertinent features for trajectory prediction. Furthermore, a novel hybrid physics-informed loss function that integrates a decoupled linearized AC power flow formulation is proposed. The proposed loss function effectively ensures physical consistency of predictions within network operation while avoiding the computational complexity of iterative power flow solving, thereby enabling efficient gradient backpropagation and overall improved prediction accuracy. Case studies on the IEEE 14- and WECC 179-bus systems demonstrate that the proposed method achieves significant accuracy enhancement and robustness against measurement errors, outperforming recent ML-based trajectory prediction methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先关注其提出的模块化时空注意力网络（STAN）如何捕捉IBR的时空动态，然后理解混合物理信息损失函数如何保证预测的物理一致性。最后查看其在IEEE 14和WECC 179节点系统上的性能提升。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的网络互依性感知和时空注意力机制可直接迁移到低空经济中，用于预测无人机群在复杂空域中的航迹，特别是考虑通信干扰和气象影响的动态轨迹。其混合物理信息损失函数的思想可用于设计航迹预测模型，确保预测结果符合飞行物理约束（如最大转弯速率、加速度限制）。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其STAN预测器，并在无人机航迹预测数据集（如UAV Trajectory Dataset）上进行实验。重点测试其在存在测量噪声和通信延迟时的预测鲁棒性，并与传统LSTM或Transformer模型进行对比。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>用于电力系统在线暂态稳定轨迹预测的因果-结构动态图学习</h2>
+              <p>Causal--Structural Dynamic Graph Learning for Online Transient Stability Trajectory Prediction in Power Systems</p>
+              <p class="meta">Ibrahim Shahbaz, Omar Al-Refai, Isaac Lagoy, Ahmad Al-Khateeb, Sathvik Sankaranarayanan, Eman Hammad | arXiv eess.SY | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05729v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05729v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>电力系统由动态耦合的发电机构成，这促使使用图神经网络（GNN）进行在线暂态稳定预测。传统的GNN框架通常受限于固定的基于导纳的拓扑结构，无法捕捉状态相关的耦合，或者受限于忽略方向性影响的数据驱动方法。本文提出了因果动态网络表示（C-DNR），一种新颖的框架，它在时间建模之前融合了两种互补的发电机间相互作用表示：从测量中推断出的动态结构图和通过非线性因果发现获得的有向因果图。一个端到端学习的逐边融合机制自适应地为每个发电机对加权这些表示，得到的图通过门控循环单元（GRU）传播以预测故障后轨迹。在IEEE 39节点系统上的评估表明，与动态结构基线相比，C-DNR将自回归预测误差降低了73%。在评估的因果方法中，只有Peter-Clark瞬时条件独立性（PCMCI）实现了持续的改进，这归功于它能够从误导性的振荡相关性中分离出方向性依赖关系。学习到的融合权重进一步提供了与电气拓扑对齐的可解释诊断，为预测过程提供了透明的、成对的洞察。</p></section>
+              <section><h3>English Abstract</h3><p>Power systems consist of dynamically coupled generators, motivating the use of Graph Neural Networks (GNNs) for online transient stability prediction. Traditional GNN frameworks are often constrained by fixed admittance-based topologies that fail to capture state-dependent coupling, or by data-driven methods that neglect directional influences. This paper proposes Causal Dynamic Network Representation (C-DNR), a novel framework that fuses two complementary representations of inter-generator interactions prior to temporal modeling: a dynamic structural graph inferred from measurements and a directional causal graph obtained via nonlinear causal discovery. An end-to-end learned edge-wise fusion mechanism adaptively weights these representations for each generator pair, and the resulting graph is propagated through a Gated Recurrent Unit (GRU) to predict post-fault trajectories. Evaluated on the IEEE 39-bus system, C-DNR reduces autoregressive prediction error by 73% compared to a dynamic structural baseline. Among the evaluated causal methods, only Peter--Clark Momentary Conditional Independence (PCMCI) achieves consistent improvements, owing to its ability to isolate directional dependencies from misleading oscillatory correlations. The learned fusion weights further provide interpretable diagnostics aligned with the electrical topology, offering transparent, pairwise insight into the prediction process.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先理解C-DNR框架如何融合动态结构图和因果图，然后重点关注PCMCI方法在因果发现中的优势。最后查看其在IEEE 39节点系统上的预测误差降低效果和可解释性分析。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的因果-结构动态图学习方法可直接应用于低空经济中的多智能体航迹预测，通过识别无人机之间的因果影响关系（如通信延迟导致的航迹偏差）来提升预测精度。其可解释的融合权重机制有助于理解航迹预测中的关键影响因素，为安全决策提供依据。</p></section>
+              <section><h3>实践思路</h3><p>可以复现C-DNR框架，并在多无人机协同航迹预测场景中进行实验，使用仿真数据（如Swarm Simulator）生成轨迹。重点测试其在不同通信拓扑和干扰下的预测性能，并与传统GNN方法进行对比。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>用于动态多车辆路径规划的奖励密度启发式方法：性能与计算效率</h2>
+              <p>Reward-Density Heuristic for Dynamic Multi-Vehicle Routing: Performance and Computational Efficiency</p>
+              <p class="meta">Manish Kolachalam, Rani Malhotra | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06066v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06066v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>车辆路径问题（VRP）及其变体代表了现代物流和城市交通中最具实际意义的优化挑战之一。在本研究中，我们解决了一个动态的在线变体，它结合了VRP和定向问题（OP）的元素，其中一支车队必须在固定时间范围内最大化累积奖励，同时在新任务到达时持续重新规划。我们提出并评估了一种用于动态多车辆分配的奖励密度启发式方法，称为效率启发式方法。我们在两个应用领域评估了这种公式：自主无人机任务分配和城市出租车调度，跨越多个车队规模和任务规模。所提出的方法与四种经典构造启发式方法和三种元启发式算法（自适应大邻域搜索、遗传算法和模拟退火）进行了比较，所有方法都在相同条件下进行评估。在所有测试配置中，效率启发式方法匹配了最佳元启发式算法的解质量，同时所需的规划时间少了两到三个数量级，在奖励与计算的前沿上建立了对所有竞争方法的帕累托优势。这些发现为实时分配和调度系统提出了一个实用的设计原则：在动态、时间受限的路径规划环境中，精心设计的贪婪启发式方法可以以一小部分计算成本匹配复杂搜索过程的输出，使其更适合在线部署。</p></section>
+              <section><h3>English Abstract</h3><p>The Vehicle Routing Problem (VRP) and its variants represent some of the most practically consequential optimization challenges in modern logistics and urban mobility. In this study, we address a dynamic, online variant combining elements of the VRP and the Orienteering Problem (OP), in which a fleet of vehicles must maximise cumulative reward collected within a fixed time horizon while continuously replanning as new tasks arrive. We propose and evaluate a reward-density heuristic for dynamic multi-vehicle assignment, referred to as the Efficiency heuristic. We evaluate this formulation across two application domains: autonomous drone task allocation and urban taxi dispatch, across multiple fleet sizes and task scales. The proposed method is compared with four classical construction heuristics and three metaheuristic algorithms (Adaptive Large Neighbourhood Search, Genetic Algorithm, and Simulated Annealing), all evaluated under identical conditions. Across all tested configurations, the Efficiency heuristic matches the solution quality of the best metaheuristic algorithms while requiring two to three orders of magnitude less planning time, establishing Pareto dominance over all competing methods on the reward-versus-compute frontier. These findings suggest a practical design principle for real-time allocation and dispatch systems: in dynamic, time-constrained routing environments, carefully designed greedy heuristics can match the output of sophisticated search procedures at a fraction of the computational cost, making them preferable for online deployment.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解效率启发式方法的核心思想，即如何通过奖励密度进行动态任务分配。然后重点关注其与元启发式算法在解质量和计算时间上的对比结果，特别是其在实时部署中的优势。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的动态多车辆路径规划方法可直接应用于低空经济中的无人机物流配送和城市空中交通管理，通过奖励密度启发式实现高效的实时任务分配和航迹规划。其强调的计算效率对于低空经济中大规模无人机群的在线调度至关重要，可确保在有限计算资源下的安全运行。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其效率启发式方法，并在无人机物流配送仿真平台（如Google OR-Tools）中进行实验。重点测试其在不同任务密度和无人机数量下的实时分配性能，并与遗传算法或模拟退火进行对比。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>从投票到智能体协作：面向BioASQ 14b的答案类型感知LLM流水线</h2>
+              <p>From Voting to Agent Collaboration: Answer-Type-Aware LLM Pipelines for BioASQ 14b</p>
+              <p class="meta">Taeyun Roh, Eunha Lee, Wonjune Jang, Sohyun Chung, Junha Jung, Jaewoo Kang | arXiv cs.CL | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06452v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06452v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>生物医学问答不仅需要从科学文献中准确提取信息，还需要跨多个文档可靠地整合证据。本研究提出了一个针对BioASQ 14b任务B的特定问题类型的大语言模型（LLM）框架，旨在提高生物医学问答中答案的鲁棒性和证据基础。该框架并非对所有问题应用单一提示策略，而是根据是/否、事实和列表问题的不同推理和评估要求，选择不同的推理程序。对于是/否问题，使用片段洗牌和自反思来减少对证据顺序的敏感性并提高决策稳定性。对于事实问题，将完整片段输入与基于思维链的上下文学习相结合，以支持准确的生物医学实体识别。对于列表问题，采用多智能体架构，其中证据提取、候选生成、答案验证和最终聚合协同处理。在BioASQ 13b上的初步实验用于确定每种问题类型的有效推理策略，随后在官方BioASQ 14b任务B挑战中评估了所得框架。在官方评估中，我们的框架在多个批次中表现出竞争力，并在批次4的事实子任务中获得了第一名。这些结果证明了结合特定问题类型推理、集成预测和基于智能体的验证的有效性。</p></section>
+              <section><h3>English Abstract</h3><p>Biomedical question answering requires not only accurate extraction of information from scientific literature but also reliable integration of evidence across multiple documents. This study presents a question-type-specific large language model (LLM) framework for BioASQ 14b Task B, designed to improve answer robustness and evidence grounding in biomedical question answering. Rather than applying a single prompting strategy to all questions, the framework selects different inference procedures for yes/no, factoid, and list questions according to their distinct reasoning and evaluation requirements. For yes/no questions, snippet shuffling and self-reflection are used to reduce sensitivity to evidence ordering and improve decision stability. For factoid questions, full-snippet input is combined with chain-of-thought-based in-context learning to support accurate biomedical entity identification. For list questions, a multi-agent architecture is employed, in which evidence extraction, candidate generation, answer verification, and final aggregation are handled collaboratively. Preliminary experiments on BioASQ 13b were used to identify effective inference strategies for each question type, and the resulting framework was subsequently evaluated in the official BioASQ 14b Task B challenge. In the official evaluation, our framework showed competitive performance across multiple batches and achieved first place in the factoid subtask of Batch 4. These results demonstrate the effectiveness of combining question-type-specific inference, ensemble prediction, and agent-based verification for reliable biomedical question answering.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先理解其针对不同问题类型（是/否、事实、列表）设计的特定推理策略，然后重点关注其在BioASQ 14b挑战中的表现，特别是事实子任务的第一名成绩。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的答案类型感知和多智能体协作框架可应用于低空经济中的智能问答系统，例如无人机故障诊断或空域规则查询，通过区分问题类型提供更准确的答案。其多智能体架构可用于构建低空经济中的协同决策系统，例如多个智能体分别负责航迹预测、冲突检测和路径规划。</p></section>
+              <section><h3>实践思路</h3><p>可以复现其多智能体LLM流水线，并在低空经济问答数据集（如UAV Safety QA）上进行实验。重点测试其在不同问题类型（如航迹预测、安全规则）下的准确性和鲁棒性，并与单一LLM方法进行对比。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>在细节中寻找幽门螺杆菌：基于证据链接的多智能体病例发现系统在胃活检报告中的应用</h2>
+              <p>Finding H. pylori in the Fine Print: Evidence-Linked Multi-Agent Case Finding from Gastric Biopsy Reports</p>
+              <p class="meta">Yufan Wang, Anit Kumar Sahu, Yan Fei Ng, Daniel Kang, Shayan Vassef, Soorya Ram Shimgekar, Koustuv Saha, Piyum Zonooz, Navin Kumar, Chee Leong Cheng, Li Yan Khor | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06435v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06435v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>新加坡的数据显示，约31%的人口存在幽门螺杆菌感染证据。持续性幽门螺杆菌感染与慢性活动性胃炎和消化性溃疡病相关，根除该菌是预防胃癌的关键。然而，支持幽门螺杆菌阳性和幽门螺杆菌相关性胃炎的证据可能分布在异构的编码和自由文本报告字段中，并且需要对断言和否定进行上下文解释，这限制了关键词搜索，并使人工审查难以规模化。我们对Nimblemind多智能体系统（nMAS）进行了一项回顾性试点评估，该系统是一种基于字段名称、证据链接的提取工作流，使用了来自新加坡一家大型医疗系统的54份去标识化胃活检病理报告。评估了四个临床医生界定的二值字段：胃活检、活检状态、幽门螺杆菌阳性和幽门螺杆菌相关性胃炎。在216个特征-病例决策中，nMAS正确分类了213个，总体准确率为98.61%。一个单独实施的UMA风格MiniMax M2.5比较器产生了相似的总体和按字段分类指标。尽管预测性能相似，但nMAS保持了统一的报告级输出并附有支持性源句子；因此，其贡献在于工作流集成和可追溯性，而非预测优越性。在一个说明性的、未测量的场景下，审查1000份报告，人工审查每份5分钟，而基于证据链接的验证每份5秒。</p></section>
+              <section><h3>English Abstract</h3><p>Data from Singapore indicated that about 31% of the population had evidence of Helicobacter pylori infection. Persistent H. pylori infection is associated with chronic active gastritis and peptic ulcer disease, and its eradication is key to gastric cancer prevention. However, evidence supporting \textit{H. pylori} positivity and H. pylori-associated gastritis may be distributed across heterogeneous coded and free-text report fields and may require contextual interpretation of assertion and negation, limiting keyword search, and making manual review difficult to scale. We conducted a retrospective pilot evaluation of the Nimblemind Multi-Agent System (nMAS), a field-name-driven, evidence-linked extraction workflow, using 54 de-identified gastric biopsy pathology reports from a large healthcare system in Singapore. Four clinician-scoped binary fields were evaluated: gastric/stomach biopsy, biopsy status, H. pylori positivity, and H. pylori-associated gastritis. Across 216 feature-case decisions, nMAS correctly classified 213, corresponding to 98.61% overall accuracy. A separately implemented UMA-style MiniMax M2.5 comparator produced similar aggregate and per-field classification metrics. Although predictive performance was similar, nMAS maintained unified report-level outputs with supporting source sentences; the demonstrated contribution is therefore workflow integration and traceability rather than predictive superiority. Under an illustrative, unmeasured scenario, reviewing 1,000 reports at five minutes per manual review versus five seconds per evidence-linked verification would reduce review time from 83.3 to 1.4 staff-hours, corresponding to 81.9 staff-hours and about USD~6,100 in potential staff-time value. Larger multi-institutional studies should evaluate evidence-span correctness, clinician verification time, and generalizability.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先关注摘要中关于多智能体系统（nMAS）如何通过字段名称驱动和证据链接来提取信息，以及其准确率指标。然后，注意其与对比模型性能相似但强调工作流集成和可追溯性的结论。</p></section>
+              <section><h3>相关性说明</h3><p>该研究展示了多智能体系统在复杂信息提取和决策支持中的应用，这与低空经济中多无人机或智能体协同进行航迹预测和安全监控的场景高度相关。其证据链接和可追溯性设计，对于确保低空经济中智能体决策的透明度和可靠性具有重要参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可以尝试将nMAS的证据链接工作流框架应用于低空经济中的航迹预测任务，例如，设计一个多智能体系统，每个智能体负责从不同传感器数据源（如雷达、气象、通信）提取关键信息，并通过证据链接机制整合这些信息以生成更可靠的预测结果。实验可对比该框架与单一模型在预测准确性和可解释性上的差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>一个用于单智能体和多智能体人机好奇心生态系统的玩具框架</h2>
+              <p>A toy framework for single and multi-agent human-AI curiosity ecosystems</p>
+              <p class="meta">Ilya E. Monosov | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06214v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06214v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文提出了一个将好奇心视为生态系统的玩具框架。首先，它表明单个智能体的探究策略（智能体如何、何时以及为何提出问题）取决于智能体如何评估即时不确定性减少、成本、延迟回报以及保持问题开放的价值。该框架的一个关键概念是，这些决策相关项的权重会随着经验而改变。例如，一段廉价、快速回答问题的时期可能会在短时间内改变探究成本，并在更长的时间尺度上改变智能体倾向于回答哪类问题。其次，这些想法被扩展到在共享知识景观中探索的多个智能体，该框架追踪探究量、主题多样性、前沿导向探究、冗余和可重用知识。结果是一个用于研究好奇心生态学的概念性玩具框架，并为未来设计用于发现的多智能体AI系统提供了努力方向。它是目前正在《神经科学趋势》期刊审稿的一篇论文的配套文章。</p></section>
+              <section><h3>English Abstract</h3><p>This paper offers a toy framework for considering curiosity as an ecosystem. First, it suggests that a single agent&#x27;s inquiry policy (how, when, and why an agent asks a question) depends on how the agent values immediate uncertainty reduction, costs, delayed return, and the value of keeping the question open. A key concept in the framework is that the weights on these decision-related terms can change with experience. For example, a period of cheap, quickly answered questions may change the cost of inquiry on a short timescale and change which kinds of questions the agent is drawn to answer over a longer timescale. Second, these ideas are extended to many agents exploring a shared knowledge landscape, and there the framework tracks inquiry volume, topic diversity, frontier-directed inquiry, redundancy, and reusable knowledge. The result is a conceptual toy framework for studying curiosity ecology and for future efforts towards designing multi-agent AI systems for discovery. It serves as a companion piece for a paper currently under review in Trends in Neurosciences.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解框架中关于单个智能体探究策略的决策权重如何随经验变化，以及扩展到多智能体时追踪的指标（如探究量、主题多样性）。</p></section>
+              <section><h3>相关性说明</h3><p>该框架探讨了智能体如何主动探索和获取信息，这与低空经济中无人机或智能体在未知环境中进行航迹探索和预测的核心问题一致。理解好奇心驱动的探索机制，有助于设计更高效、更具适应性的航迹预测算法，以应对动态变化的低空环境。</p></section>
+              <section><h3>实践思路</h3><p>可以基于该框架设计一个模拟实验，让多个智能体（如无人机）在共享的低空空域中探索，并追踪其探究量、主题多样性和冗余度。通过调整智能体对即时回报和长期回报的权重，观察其对整体空域信息覆盖和航迹预测效率的影响，从而验证框架中的理论假设。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>用于协商协作的LLM智能体：部分可观测条件下联合决策研究</h2>
+              <p>LLM Agents for Deliberative Collaboration: A Study on Joint Decision Making Under Partial Observability</p>
+              <p class="meta">Chenxu Wang, Yongkun Yang, Boyuan Du, Shiwei Lin, Huaping Liu | arXiv cs.CL | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06157v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06157v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>协商在协作中起着至关重要的作用；当人类一起工作时，他们会自然地通过沟通来对齐信息并达成一致。在本文中，我们研究了在部分可观测的联合决策任务中的协商式大语言模型（LLM）智能体。我们将协商协作形式化为一个具有部分和不对称观测的协作联合决策问题，并引入了一个可扩展的基准测试，该基准测试在多个任务设置和领域中实例化此问题，其中智能体必须通过协商交换信息以达成具有共享奖励的联合决策。然后，我们实例化了一个用于协商智能体的参考框架和评估协议，并对一系列代表性LLM进行了系统评估。结果表明，复杂的协商协作任务仍然对最先进的语言模型构成挑战。即使借助外部数学工具，语言模型也可能在用于对齐信息的协商过程或用于做出决策的复杂推理过程中失败。另一方面，诊断分析表明，协商过程也可能为反思和纠错提供机会，有时能提高性能，优于集中式基线。总之，我们的工作为评估和改进协商协作中的LLM智能体奠定了基础，并提供了对当前基于LLM的多智能体系统的优势、局限性和特性的见解。</p></section>
+              <section><h3>English Abstract</h3><p>Deliberation plays a crucial role in collaboration; when humans work together, they naturally engage in communication to align information and reach an agreement. In this paper, we investigate deliberative large language model (LLM) agents under partially observable joint decision-making tasks. We formalize deliberative collaboration as a cooperative joint decision problem with partial and asymmetric observations, and introduce a scalable benchmark that instantiates this problem across multiple task settings and domains in which agents must exchange information through deliberation to reach a joint decision with a shared reward. We then instantiate a reference scaffold and evaluation protocol for deliberative agents and conduct a systematic evaluation of a range of representative LLMs. The results reveal that complex deliberative collaboration tasks continue to challenge state-of-the-art language models. Even with the aid of external mathematical tools, language models may fail in either the deliberation process for aligning information or the complex reasoning process for making the decision. On the other hand, diagnostic analysis reveals that the deliberation process may also provide opportunities for reflection and error correction, sometimes improving performance over centralized baselines. Altogether, our work establishes a foundation for evaluating and improving LLM agents in deliberative collaboration and provides insights into the strengths, limitations, and properties of current LLM-based multi-agent systems.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解论文将协商协作形式化为部分可观测的联合决策问题，然后关注其基准测试和评估结果，特别是LLM在复杂协商任务中面临的挑战和协商过程带来的纠错机会。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接探讨了多智能体在信息不对称（部分可观测）情况下通过协商进行联合决策，这与低空经济中多无人机/智能体在通信受限或感知范围有限条件下协同规划航迹、避免冲突的场景高度吻合。其发现关于协商过程有助于纠错，对设计鲁棒的低空交通管理系统具有启发意义。</p></section>
+              <section><h3>实践思路</h3><p>可以基于该论文的基准测试框架，设计一个低空经济场景下的模拟实验，例如，让多个LLM驱动的无人机智能体在部分可观测的空域中协商飞行路径以避免碰撞。实验可以对比不同LLM模型在协商效率、决策质量和冲突解决成功率上的表现，并分析协商过程如何帮助纠正初始的错误预测。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>从蓝图到现实：利用基于LLM的多智能体模拟建模与应用帕特南的社会资本理论</h2>
+              <p>From Blueprint to Reality: Modeling and Applying Putnam&#x27;s Social Capital Theory with LLM-based Multi-agent Simulations</p>
+              <p class="meta">Shiyi Ling, Zhi Zheng, Hui Zheng, Wenjun Xue, Feng Ye, Tong Xu | arXiv cs.CL | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06080v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06080v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>帕特南的社会资本理论是集体行动和社区繁荣的基础框架。然而，传统的实证方法在控制和可复制性方面面临实际限制。同时，基于LLM的社会模拟通常是行为驱动的，缺乏与理论对齐的环境来建模帕特南的核心命题。为弥补这些差距，我们引入了SocaSim，一个基于LLM的多智能体模拟框架，用于从理论蓝图到模拟现实地研究帕特南的社会资本理论。具体来说，我们构建了一个集成社交网络演化、信任动态和规范传播的环境，其中智能体参与重复的集体行动实验，然后应用这三个维度来分析智慧养老中的适应挑战。我们的模拟再现了帕特南的宏观模式，并在群体层面表现出强烈的人机对齐。与传统方法不同，SocaSim通过逐轮模拟和反事实干预追踪社交网络、信任和规范的微观因果路径，实现了过程级的可解释性。总之，这些能力建立了一个利用LLM智能体桥接社会科学和计算机科学的研究范式。</p></section>
+              <section><h3>English Abstract</h3><p>Putnam&#x27;s Social Capital Theory is a foundational framework for collective action and community prosperity. However, traditional empirical methods face practical limits on control and replication. Meanwhile, LLM-based social simulations are typically behavior-driven and lack theory-aligned environments for modeling Putnam&#x27;s core propositions. To address these gaps, we introduce SocaSim, an LLM-based multi-agent simulation framework to study Putnam&#x27;s Social Capital Theory from theoretical blueprint to simulated reality. Specifically, we build an environment integrating social network evolution, trust dynamics, and norm propagation, where agents engage in repeated collective-action experiments, and then apply the three dimensions to analyze adaptation challenges in smart elderly care. Our simulations reproduce Putnam&#x27;s macro-level patterns and exhibit strong human-agent alignment at the group level. Unlike traditional methods, SocaSim traces micro-level causal pathways of social network, trust, and norms via round-by-round simulations and counterfactual interventions, enabling process-level interpretability. Taken together, these capabilities establish a research paradigm that leverages LLM agents to bridge social science and computer science.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注SocaSim框架如何将社会资本理论（社交网络、信任、规范）转化为可模拟的环境，并注意其通过逐轮模拟实现微观因果路径追踪和过程级可解释性的特点。</p></section>
+              <section><h3>相关性说明</h3><p>该研究将社会资本理论应用于多智能体系统，为理解低空经济中无人机或智能体集群的协作行为提供了社会学视角。社交网络、信任和规范等概念可以类比为无人机之间的通信拓扑、对彼此航迹预测的信任度以及共同遵守的空域规则，这对于构建稳定、高效的低空智能体协作网络具有重要参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可以借鉴SocaSim框架，构建一个低空经济中的多无人机协作模拟环境。定义无人机之间的通信网络（社交网络）、对彼此意图预测的置信度（信任）以及飞行规则（规范），并观察这些因素如何影响整体任务完成效率和安全性。通过反事实干预（如改变信任更新规则），分析其对航迹预测准确性和冲突发生率的影响。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>前沿LLM智能体经济中的信息极限与吸引子动力学：一项预注册测试</h2>
+              <p>Information Limits and Attractor Dynamics in Economies of Frontier LLM Agents: A Pre-Registered Test</p>
+              <p class="meta">Cheng Qian | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06001v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06001v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>我们报告了一项预注册的两部分实验，涉及前沿语言模型智能体（Claude Opus 4.8）的小型经济体，测试了关于耦合多智能体系统的两个定量预测：一个是在市场耦合下财富增长的信息论容量区域，另一个是在激励和控制杠杆下群体失调的平均场残差标度律。所有预测、接受区间和决策规则在任何运行前都已冻结在公共git链中；每个报告的数字都机械地源自缓存的模型输出；整个实验花费了138.76美元的计量API费用，并且可以从缓存中以零成本重新运行。结果1（确认）：在相互耦合的经济体中，相对增长等于相对声称的信息——差距定律G_a - G_b = I_a - I_b在四种感知结构下成立，最坏情况为46毫纳特（预注册区间：50）；联盟价值在信道条件独立时恰好是子模的，而一个设计的XOR协同控制使其变为超模，超出0.62 &gt;= ln2/2纳特，智能体推理出联合比特；联合增长上限G_S &lt; 4.85，而冻结下限为5.31），群体对两个杠杆的响应是跨越主导边界的阶跃函数，而非平滑响应，并且边界附近的细胞是双稳态的，结果由种子选择。没有测试过的LLM群体在任何能力水平上实现了平滑平均场模型假设的噪声维持分散状态。我们发布了完整的协议、预注册链、调用缓存和分析代码。</p></section>
+              <section><h3>English Abstract</h3><p>We report a pre-registered, two-part experiment on small economies of frontier language-model agents (Claude Opus 4.8), testing two quantitative predictions about coupled multi-agent systems: an information-theoretic capacity region for wealth growth under market coupling, and a mean-field residual-scaling law for population misalignment under incentive and control levers. All predictions, acceptance bands, and decision rules were frozen in a public git chain before any run; every reported number re-derives mechanically from cached model outputs; the entire experiment cost $138.76 in metered API spend and is re-runnable at zero cost from the cache. Result 1 (confirmation): in parimutuel-coupled economies, relative growth equals relative claimed information -- the gap law G_a - G_b = I_a - I_b holds to a worst-case 46 millinats (pre-registered band: 50) across four perception structures; coalition value is submodular exactly where channels are conditionally independent, and a designed XOR synergy control flips it supermodular by 0.62 &gt;= ln2/2 nats, with agents reasoning out the joint bit; the joint growth ceiling G_S 0; maximum 4.85 against a frozen floor of 5.31), the population&#x27;s response to the two levers was a step function across the dominance boundary rather than a smooth response, and cells near the boundary were bistable with seed-selected outcomes. No tested LLM population at any capability level realizes the noise-maintained-dispersion regime the smooth mean-field model assumes. We release the full protocol, pre-registration chain, call cache, and analysis code.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注预注册实验的设计和两个核心预测（信息论容量区域和平均场残差标度律），以及结果中确认和未确认的部分，特别是关于群体响应是阶跃函数而非平滑函数的发现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究从信息论和复杂系统动力学角度分析了多智能体经济系统，其关于信息容量、增长极限和群体动力学的发现，对理解低空经济中大量无人机/智能体在有限通信和计算资源下的协同与竞争行为具有深刻启示。特别是关于群体响应非平滑性的发现，提示低空智能体系统可能存在相变行为，对系统稳定性和安全性设计至关重要。</p></section>
+              <section><h3>实践思路</h3><p>可以设计一个模拟实验，在低空经济场景中构建一个由多个LLM驱动的无人机智能体组成的“经济体”，每个智能体通过“交易”航迹信息或空域资源来最大化自身任务收益。实验可以验证信息论容量区域预测，并观察在不同激励和控制策略下，群体行为是否会出现类似论文中发现的阶跃函数式相变，从而为设计更稳定的低空交通管理机制提供依据。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>

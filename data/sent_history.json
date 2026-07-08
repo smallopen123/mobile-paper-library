@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "8f98eaf9316ec330",
+      "title": "IMR: Iterative Mode-World Weighted Regression for Multi-Agent Trajectory Prediction",
+      "url": "http://arxiv.org/abs/2607.05705v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "4a8d2669d972d19a",
+      "title": "Intercepting an Agile Target with Net-Carrying Drones using Competitive Multi-Agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.05939v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "f70ac5262bde1f6b",
+      "title": "EcoVision: AI-Powered Drone Imaging for Salt Marsh Vegetation Monitoring and Dominance Mapping",
+      "url": "http://arxiv.org/abs/2607.06105v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "f46a82145d48a8a0",
+      "title": "RynnWorld-Teleop: An Action-Conditioned World Model for Digital Teleoperation",
+      "url": "http://arxiv.org/abs/2607.06558v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "ea55178aad640306",
+      "title": "A Task-Driven Evaluation of UAV Detection and Tracking under Synthetic Fog",
+      "url": "http://arxiv.org/abs/2607.05467v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "578993605256cac3",
+      "title": "Agents That Teach: Towards Designing Incidental Learning Back into AI-Assisted Software Development",
+      "url": "http://arxiv.org/abs/2607.06101v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "e6122b88d409f87a",
+      "title": "Beyond the Leaderboard: A Synthesis of Tool-Use, Planning, and Reasoning Failures in Large Language Model Agents",
+      "url": "http://arxiv.org/abs/2607.05775v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "1c09d49ababb2679",
+      "title": "Embodied Human-Robot Interaction via Acoustics: A MARL Approach with AcoustoBots for Spatial Data Physicalization",
+      "url": "http://arxiv.org/abs/2607.06563v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "abbd88dd85d1a398",
+      "title": "Multi-Agent Deep Reinforcement Learning for Multi Objective Battery Management in Dairy Farms",
+      "url": "http://arxiv.org/abs/2607.06489v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "71c5b9aed0499099",
+      "title": "Delay-Aware Active Triangulation with Uncertainty-Driven Multi-Agent Reinforcement Learning for Counter-UAS",
+      "url": "http://arxiv.org/abs/2607.05957v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "129a40b92252ca74",
+      "title": "Federated Physics-Grounded Reinforcement Learning for Distributed Stability Control in Smart Grids",
+      "url": "http://arxiv.org/abs/2607.05553v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "5521ef7cb5c55686",
+      "title": "Network Interdependency-Informed Power System Dynamic Trajectory Prediction Utilizing Black-Box Modeling of Inverter-Based Resources",
+      "url": "http://arxiv.org/abs/2607.05843v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "ab3e38704375e22e",
+      "title": "Causal--Structural Dynamic Graph Learning for Online Transient Stability Trajectory Prediction in Power Systems",
+      "url": "http://arxiv.org/abs/2607.05729v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "94ba556ccb02b90c",
+      "title": "Reward-Density Heuristic for Dynamic Multi-Vehicle Routing: Performance and Computational Efficiency",
+      "url": "http://arxiv.org/abs/2607.06066v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "7150f02156c69eb0",
+      "title": "From Voting to Agent Collaboration: Answer-Type-Aware LLM Pipelines for BioASQ 14b",
+      "url": "http://arxiv.org/abs/2607.06452v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "4189f3846419b6d2",
+      "title": "Finding H. pylori in the Fine Print: Evidence-Linked Multi-Agent Case Finding from Gastric Biopsy Reports",
+      "url": "http://arxiv.org/abs/2607.06435v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "a11be96eca5f65f1",
+      "title": "A toy framework for single and multi-agent human-AI curiosity ecosystems",
+      "url": "http://arxiv.org/abs/2607.06214v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "9e1caacea0b90eea",
+      "title": "LLM Agents for Deliberative Collaboration: A Study on Joint Decision Making Under Partial Observability",
+      "url": "http://arxiv.org/abs/2607.06157v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "88e5a21e602e890d",
+      "title": "From Blueprint to Reality: Modeling and Applying Putnam's Social Capital Theory with LLM-based Multi-agent Simulations",
+      "url": "http://arxiv.org/abs/2607.06080v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
+      "key": "8e9d2422ede154bd",
+      "title": "Information Limits and Attractor Dynamics in Economies of Frontier LLM Agents: A Pre-Registered Test",
+      "url": "http://arxiv.org/abs/2607.06001v1",
+      "sent_at": "2026-07-08T22:06:32.927937+00:00"
+    },
+    {
       "key": "4f5c8ca945dcd364",
       "title": "FLOAT Drone for Physical Interaction: Lateral Airflow Reduction, Wrench Modeling, and Adaptive Control",
       "url": "http://arxiv.org/abs/2607.04260v1",
