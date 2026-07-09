@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-10</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-10 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>面向无人机与双臂操作的视觉-语言-动作（VLA）模型综述</h2>
+              <p>Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review</p>
+              <p class="meta">Inkyu Sa, Chanoh Park, Hea-Min Lee, Donghee Noh, Ho Seok Ahn | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06706v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06706v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉-语言-动作（VLA）模型将视觉感知、自然语言理解和动作生成统一在单个基础模型中，使机器人能够直接根据摄像头图像执行诸如“折叠毛巾”或“飞向红色建筑”等指令。由于VLA继承了互联网规模预训练的世界知识，它已成为基于学习的操作任务的主流框架，其中双臂协调是最具挑战性的测试平台：两个各有7个自由度的机械臂必须协同运动以完成折叠、组装和重新定向物体等任务。无人机机器人面临结构相似的挑战：无人机必须在严格的延迟和载荷约束下，根据视觉观测协调推力、姿态以及日益增加的夹爪指令。本综述涵盖了2017年至2026年间的183篇文献，并沿七个维度进行组织：VLA架构、训练方法、动作表示、双臂协调（2022-2026）、无人机导航与控制（2017-2026）、语言基础以及包括记忆和世界模型在内的交叉问题。我们表明，为双臂VLA开发的协调策略、训练方法和动作表示可迁移至无人机系统，并指出了两个领域的十四个研究方向。</p></section>
+              <section><h3>English Abstract</h3><p>Vision Language Action (VLA) models unify visual perception, natural-language understanding, and action generation within a single foundation model, allowing a robot to follow instructions such as fold the towel or fly to the red building directly from camera images. Because VLAs inherit world knowledge from internet-scale pre-training, they have become the dominant framework for learning-based manipulation, with bimanual coordination serving as the most demanding testbed: two arms with 7 degrees of freedom each must move in concert to fold, assemble, and reorient objects. Unmanned aerial robotics faces a structurally similar challenge: a drone must coordinate thrust, attitude, and increasingly gripper commands from visual observations under strict latency and payload constraints. This review covers 183 contributions spanning 2017-2026 and organized along seven dimensions: VLA architectures, training recipes, action representations, bimanual coordination (2022-2026), unmanned aerial vehicle (UAV) navigation and control (2017-2026), language grounding, and cross-cutting concerns including memory and world models. We show that the coordination strategies, training recipes, and action representations developed for bimanual VLAs transfer to unmanned aerial systems and identify fourteen research directions across both domains.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读引言和结论部分，了解VLA模型在无人机领域的整体迁移潜力。然后重点关注第七节（交叉问题）和第十四节（研究方向），以获取具体的技术细节和未来工作。</p></section>
+              <section><h3>相关性说明</h3><p>该综述直接探讨了VLA模型在无人机导航与控制中的应用，与低空经济中的无人机航迹规划和智能体决策高度相关。文中提出的协调策略和动作表示方法可迁移至低空经济中的多无人机协同安全飞行场景。</p></section>
+              <section><h3>实践思路</h3><p>可基于文中总结的VLA架构，在仿真环境（如AirSim或Gazebo）中复现一个简单的无人机指令跟随任务。具体地，选择一个开源的VLA模型（如RT-2），将其视觉-语言部分适配到无人机摄像头输入，并测试其在“飞向红色建筑”等指令下的航迹生成能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>CARLA-GS：面向自动驾驶极端场景合成的解耦表示、推理与物理仿真</h2>
+              <p>CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis</p>
+              <p class="meta">Kaicong Huang, Meng Ma, Ruimin Ke | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07601v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07601v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>自动驾驶的安全评估主要关注罕见且安全关键的交互，这促使了能够有意合成具有逼真观测的极端场景的仿真器。极端场景生成本质上是一个多源问题，涉及视觉表示、场景推理以及车辆轨迹生成与控制。先前的基于知识和模型的方法通常孤立地关注场景或轨迹组件，而基于扩散的方法尝试端到端生成，但仍难以确保时空一致性和物理真实性。为了将这些方面统一在单个框架内，我们提出了CARLA-GS，一个模块化的极端场景合成流水线，它解耦了视觉表示、语义推理和基于物理的执行，同时保持紧密的跨模块耦合。从真实驾驶数据开始，我们通过额外的几何一致性约束重建一个可编辑的高斯场景。然后，一个多智能体LLM执行场景级推理以识别风险交互并生成意图级航点轨迹，而底层运动控制则委托给CARLA，其中PID控制器确保运动学和动力学可行性。模拟的车辆状态最终被重新投影到高斯场景中以进行自我中心渲染。这种设计使得在统一流水线中实现高层语义推理、底层物理可执行运动以及逼真的极端场景生成成为可能。在Waymo开放数据集上的实验定量和定性地表明，我们的框架能够实现……</p></section>
+              <section><h3>English Abstract</h3><p>Safety evaluation for autonomous driving is dominated by rare, safety-critical interactions, motivating simulators that can deliberately synthesize corner cases with photorealistic observations. Corner-case generation is inherently a multi-source problem spanning visual representation, scene reasoning, and vehicle trajectory generation and control. Prior knowledge- and model-based approaches typically focus on scene or trajectory components in isolation, while diffusion-based methods attempt end-to-end generation but still struggle to ensure spatiotemporal consistency and physical realism. To unify these aspects within a single framework, we propose CARLA-GS, a modular corner-case synthesis pipeline that decouples visual representation, semantic reasoning, and physics-based execution while maintaining tight cross-module coupling. Starting from real driving data, we reconstruct an editable gaussian scene with additional geometry-consistent constraints. A multi-agent LLM then performs scene-level reasoning to identify risky interactions and generate intent-level waypoint trajectories, while the low-level motion control is delegated to CARLA, where a PID controller ensures kinematic and dynamic feasibility. The simulated vehicle states are finally re-projected into the gaussian scene for ego-centric rendering. This design enables high-level semantic reasoning, low-level physically executable motion, and photorealistic corner-case generation within a unified pipeline. Experiments on the Waymo Open Dataset show, both quantitatively and qualitatively, that our framework enables controllable corner-case generation and produces photorealistic, spatiotemporally consistent videos aligned with semantic intent and physically feasible motion.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读第3节（方法）和第4节（实验），理解CARLA-GS如何通过解耦设计实现逼真的极端场景合成。第1节引言提供了问题背景和动机。</p></section>
+              <section><h3>相关性说明</h3><p>该框架中的多智能体LLM场景推理和航点轨迹生成方法，可直接应用于低空经济中无人机在复杂环境下的安全航迹规划。其解耦的视觉表示与物理仿真思想，有助于在仿真中生成低空飞行中的极端安全场景（如突发障碍物），用于测试航迹预测模型的鲁棒性。</p></section>
+              <section><h3>实践思路</h3><p>可基于CARLA仿真器，复现其多智能体LLM推理模块，用于生成无人机在低空飞行中的风险交互场景。具体地，使用CARLA-GS的开源代码，将车辆替换为无人机模型，并测试其在城市峡谷等场景下的极端航迹生成能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>多智能体AI控制：分布式攻击削弱单实例监控器</h2>
+              <p>Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors</p>
+              <p class="meta">Oliver Makins, Orazio Angelini, Zohreh Shams, Mary Phuong | arXiv cs.LG | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07368v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07368v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>AI控制是一系列防止具有恶意目标的AI颠覆操作者意图的技术。AI控制通常研究单个智能体在单条轨迹中的行为，但实际部署中，多个智能体在共享基础设施上运行，且最严重的风险（如模型权重泄露、训练投毒）很可能需要多个智能体协同行动。我们启动了对多智能体AI控制的实证研究，形式化了多个智能体共同追求恶意目标的分布式攻击。我们开发了FakeLab：一个合成AI实验室代码库（9个服务，86个良性任务，4个攻击目标）。我们评估了针对分布式攻击的单智能体监控，变化了智能体数量、协调程度、模型能力和精确的监控配置。我们的核心发现是碎片化效应：随着更多智能体协调攻击，每个智能体的监控更不可能抓住任何攻击者。其次，这并非由良性与恶意代码的比例驱动——我们认为这很可能依赖于模型能力。第三，显式规划器放大了碎片化效应，将攻击完成率提高了七倍，并轻微加剧了执行者较差的监控心智理论。最后，一个弱的“可信”监控器会错过大多数攻击，而一个更强的监控器将未被发现的成功攻击减少了一个数量级以上，但仍不完美。我们乐意应安全研究人员的要求分享FakeLab及其控制设置。</p></section>
+              <section><h3>English Abstract</h3><p>AI control is a family of techniques to prevent an AI with malicious goals from subverting its operator&#x27;s intent. AI Control usually studies a single agent in one trajectory, but real deployments run many agents over shared infrastructure, and the most severe risks (model-weight exfiltration, training-run poisoning) plausibly need several agents acting in concert. We initiate the empirical study of multi-agent AI control, formalising distributed attacks in which several agents jointly aim for a malicious goal. We develop FakeLab: a synthetic AI-lab codebase (9 services, 86 benign tasks, 4 attack objectives). We evaluate single agent monitoring against distributed attacks, varying the number of agents, their coordination, model capabilities and precise monitoring configuration. Our central finding is the fragmentation effect: as more agents coordinate to attack, per-agent monitoring becomes less likely to catch any of the attackers. Secondly, this is not driven by the ratio of benign to malicious code -- we argue this is likely dependent on model capability. Third, an explicit planner amplifies the fragmentation effect, raises the rate of completing the attack up to sevenfold, and mildly sharpens executors&#x27; poor monitor-theory-of-mind. Finally: a weak &quot;trusted&quot; monitor misses most attacks, while a stronger one cuts undetected success by more than an order of magnitude but remains imperfect. We are happy to share FakeLab, our control setting, with safety researchers on request.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读第1节引言和第4节实验，理解碎片化效应的核心发现及其对多智能体安全的影响。第3节方法详细描述了FakeLab的设置和攻击形式化。</p></section>
+              <section><h3>相关性说明</h3><p>该研究揭示了多智能体系统中分布式攻击对监控的削弱效应，对低空经济中多无人机协同安全至关重要。当多个无人机（智能体）协同执行恶意任务（如干扰航迹或碰撞）时，传统的单机监控可能失效，这为设计更鲁棒的多无人机安全监控系统提供了警示。</p></section>
+              <section><h3>实践思路</h3><p>可基于FakeLab的设计思路，在无人机仿真环境中（如AirSim）构建一个多无人机协同攻击场景。具体地，模拟多个无人机协同偏离预定航迹以避开监控，测试现有航迹预测模型在分布式攻击下的检测率，并尝试设计基于群体行为的监控策略。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>迈向可靠的空地车辆协作：面向现场部署的集成规划与自主框架</h2>
+              <p>Towards Reliable Aerial Ground Vehicle Collaboration: An Integrated Planning and Autonomy Framework for Field Deployment</p>
+              <p class="meta">Md Safwan Mondal, Luca Russo, James D. Humann, James M. Dotterweich, Pranav Bhounsule | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07350v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07350v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>有限的飞行续航显著限制了无人机在长时间任务（如监视和检查）中的作业范围，这些任务需要访问多个空间分布的兴趣区域。这些任务需要高效的路径规划以确定访问顺序，这直接影响任务时间、能耗和整体可行性。将无人机与无人地面车辆配对以进行移动充电提供了一种有前景的解决方案，但引入了一个紧密耦合的协作路径规划问题，涉及无人机路径规划、无人地面车辆道路约束运动、能量管理以及不确定性下的会合调度。在这项工作中，我们提出了一个用于可靠现场部署的集成规划与自主框架。我们将该问题形式化为一个能量约束的协作路径规划任务，并使用基于深度强化学习的规划器求解，该规划器联合优化无人机访问序列和与无人地面车辆的会合位置，在最小化总任务时间方面优于基线启发式算法。为了弥合规划与执行之间的差距，我们引入了一个标准化的基于YAML的两层任务API，用于捕获环境状态并构建轻量级、同步的动作序列。该框架由一个完整的自主栈支持，使用PX4/MAVSDK进行无人机控制，使用ROS 2/Nav2进行无人地面车辆导航。此外，我们提出了一个轻量级的会合感知重规划器，该规划器在线运行以处理环境不确定性，将能量裕度违规从83.33%降低……</p></section>
+              <section><h3>English Abstract</h3><p>Limited flight endurance significantly restricts the operational range of unmanned aerial vehicles (UAVs) in long duration missions such as surveillance and inspection, where multiple spatially distributed Areas of Interest (AOIs) must be visited. These tasks require efficient routing determining the sequence of visits which directly impacts mission time, energy consumption, and overall feasibility. Pairing UAVs with unmanned ground vehicles (UGVs) for mobile recharging offers a promising solution, but introduces a tightly coupled cooperative routing problem involving UAV route planning, UGV road constrained movement, energy management, and rendezvous scheduling under uncertainty. In this work, we present an integrated planning and autonomy framework for reliable field deployment. We formulate the problem as an energy constrained cooperative routing task and solve it using a Deep Reinforcement Learning (DRL) based planner that jointly optimizes the UAV visitation sequence and rendezvous locations with the UGV, outperforming baseline heuristics in minimizing total mission time. To bridge the gap between planning and execution, we introduce a standardized two layer YAML based mission API that captures environment states and structures lightweight, synchronized action sequences. This framework is supported by a complete autonomy stack using PX4/MAVSDK for UAV control and ROS 2/Nav2 for UGV navigation. Furthermore, we propose a lightweight Rendezvous Aware Replanner (RARP) that operates online to handle environmental uncertainties, reducing energy margin violations from 83.33% to 20.00%. The full system is validated through outdoor field experiments, demonstrating robust cooperative navigation and adaptability in dynamic tasks, including a search and rescue scenario with vision language model (VLM) based hazard detection</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读第3节（方法）中的深度强化学习规划器和第4节（实验）中的性能对比。第1节引言提供了问题背景和动机。</p></section>
+              <section><h3>相关性说明</h3><p>该框架直接解决了低空经济中无人机续航受限的关键问题，通过空地协作实现移动充电，延长了无人机在监视和巡检等任务中的作业范围。其深度强化学习规划器可优化无人机航迹，确保安全高效的会合，对低空经济中的航迹预测和智能体协同具有直接参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可基于PX4和ROS 2复现该框架的无人机-无人地面车辆协作规划。具体地，在Gazebo仿真环境中搭建一个包含无人机和无人地面车辆的测试平台，使用深度强化学习算法训练航迹规划器，并测试其在不确定性下的会合成功率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>基于3D感知大语言模型的自我中心人体运动预测</h2>
+              <p>Ego-Human Motion Prediction with 3D-Aware LLM</p>
+              <p class="meta">Yujin Bae, Jaewoo Jeong, Hyeonseong Kim, Kuk-Jin Yoon | arXiv cs.CV | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07001v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07001v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>从自我中心视角预测人体运动对于AR/VR、人机协作和具身AI中的主动辅助至关重要。虽然近期工作引入语言作为语义先验以减少自我中心预测的不适定性，但它们很大程度上忽略了控制运动如何展开的3D空间和语义上下文，并将姿态和语言预测视为独立的推理流。我们提出了Ego3DLM，它建立在两个核心原则上：准确的运动预测需要对3D环境的显式空间和语义理解，并且姿态和语言必须在单次前向传播中整体预测，因为运动本质上与所执行动作的语义解释相关联。给定三点追踪、3D场景特征和自我中心视频，Ego3DLM在单次自回归前向传播中同时解码过去姿态、未来姿态、过去叙述和未来叙述，将预测的姿态和描述相互锚定以强制执行跨模态和时间一致性。我们采用三阶段训练方案：（1）空间-语义场景感知预训练；（2）对所有四个输出进行单次前向传播的整体指令微调；（3）基于GRPO的强化学习微调，使用模态内和模态间奖励直接优化姿态-语言保真度。在Nymeria基准上的实验表明，Ego3DLM在未来的运动预测、过去的运动追踪和运动描述方面达到了最先进的性能，表明3D场景锚定和整体跨模态预测能够产生物理上……</p></section>
+              <section><h3>English Abstract</h3><p>Anticipating human motion from an egocentric perspective is fundamental for proactive assistance in AR/VR, human-robot collaboration, and embodied AI. While recent works incorporate language as a semantic prior to reduce the ill-posed nature of egocentric forecasting, they largely neglect the 3D spatial and semantic context that governs how motion unfolds, and treat pose and language prediction as separate inference streams. We introduce Ego3DLM, built on two core principles: accurate motion forecasting requires explicit spatial and semantic understanding of the 3D environment, and pose and language must be predicted holistically in a single pass, since motion is inherently tied to the semantic interpretation of actions being performed. Given three-point tracking, 3D scene features, and egocentric video, Ego3DLM simultaneously decodes past pose, future pose, past narration, and future narration in a single autoregressive pass, grounding predicted poses and descriptions in one another to enforce cross-modal and temporal consistency. We adopt a three-stage training scheme: (1) spatial-semantic scene awareness pretraining; (2) holistic instruction tuning over all four outputs in a single pass; and (3) GRPO-based reinforcement finetuning with intra- and inter-modal rewards that directly optimize pose-language fidelity. Experiments on the Nymeria benchmark demonstrate that Ego3DLM achieves state-of-the-art performance across future motion prediction, past motion tracking, and motion description, showing that 3D scene grounding and holistic cross-modal prediction yield physically plausible and semantically coherent motion forecasts. The project page is available at https://jaewoo97.github.io/Ego3DLM/.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读第1节引言和第3节方法，理解Ego3DLM如何通过3D场景锚定和整体预测提升性能。第4节实验提供了与现有方法的定量对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究中的3D场景感知和跨模态预测方法，可应用于低空经济中无人机对地面行人或车辆的航迹预测。通过将3D空间信息与语言描述结合，无人机能更准确地预测动态障碍物的未来运动，从而提升低空飞行的安全性。</p></section>
+              <section><h3>实践思路</h3><p>可基于Ego3DLM的开源代码，将其3D场景感知模块适配到无人机视角。具体地，使用无人机拍摄的自我中心视频和3D场景点云，训练模型预测地面行人的未来轨迹，并在仿真环境中验证其对无人机避障的辅助效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>SpaCellAgent：一种用于轨迹分析的自我进化、基于大语言模型的多智能体框架</h2>
+              <p>SpaCellAgent: A Self-Evolving LLM-Based Multi-Agent Framework for Trajectory Analysis</p>
+              <p class="meta">Songhan Wang, Haoang Chi, He Li, Zhiheng Zhang, Jiayan Yuan, Cheems Wang, Hao Peng, Xinwang Liu, Wenjing Yang | arXiv cs.AI | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07467v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07467v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>空间和单细胞转录组学在解析细胞动力学方面具有变革性。作为重建细胞发育路径的基本范式，轨迹推断（TI）至关重要。然而，现有方法需要大量的人工干预和对异构工具的熟练运用，这给高效的TI分析带来了重大障碍。为弥补这一差距，我们提出了SpaCellAgent，一个自主的大语言模型（LLM）多智能体框架，可自动化端到端的时空分析和叙述生成。SpaCellAgent利用多智能体架构进行策略性工作流规划，一个动态工具编排引擎用于自适应算法选择，以及一个通过反馈迭代优化性能的自我进化模块。我们在六个异构数据集上评估了SpaCellAgent，这些数据集涵盖了复杂的时间发育轨迹、多样的测序平台和空间分辨的组织结构。SpaCellAgent始终展现出超过40%的分析效率提升，同时保持与专家水平相当的性能。通过将自然语言规范转化为优化的分析工作流并完全自动化流程，SpaCellAgent使先进的时空建模变得普及，并为计算生物学建立了一个可扩展的、智能体驱动的范式。代码和材料可在 https://github.com/LittleXH-shw/SpaCellAgent 获取。</p></section>
+              <section><h3>English Abstract</h3><p>Spatial and Single-cell transcriptomics are transformative in deciphering cellular dynamics. As the fundamental paradigm for reconstructing cell developmental paths, trajectory inference (TI) is critical. However, existing methods require extensive manual intervention and proficiency in heterogeneous tools, posing a significant barrier to efficient TI analysis. To bridge this gap, we propose SpaCellAgent, an autonomous large language model (LLM) multi-agent framework that automates end-to-end spatiotemporal analysis and narrative generation. SpaCellAgent utilizes a multi-agent architecture for strategic workflow planning, a dynamic tool-orchestration engine for adaptive algorithm selection, and a self-evolution module that iteratively refines performance through feedback. We evaluate SpaCellAgent on six heterogeneous datasets encompassing complex temporal developmental trajectories, diverse sequencing platforms, and spatially-resolved tissue architectures. SpaCellAgent consistently demonstrates over 40\% improvement in analytical efficiency while maintaining expert-aligned performance. By converting natural language specifications into optimized analytical workflows and fully automating the pipeline, SpaCellAgent democratizes advanced spatiotemporal modeling and establishes a scalable, agent-driven paradigm for computational biology. The code and materials are available at https://github.com/LittleXH-shw/SpaCellAgent.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解框架的动机和核心贡献。然后重点关注方法部分的多智能体架构、动态工具编排和自我进化模块的设计细节。</p></section>
+              <section><h3>相关性说明</h3><p>该框架提出的多智能体协作与自我进化机制，可直接应用于低空经济中多无人机/飞行器的协同航迹规划与异常检测。其自动化分析流程和动态工具选择思想，为构建低空安全智能体系统提供了可借鉴的范式。</p></section>
+              <section><h3>实践思路</h3><p>可复现其多智能体架构，将低空飞行器轨迹数据作为输入，替换其生物信息学工具为航迹预测与冲突检测算法。实验设计可聚焦于对比有无自我进化模块下的航迹预测准确率和分析效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>学习用于在输入约束下控制未知系统的全类信号时序逻辑任务的时空管</h2>
+              <p>Learning Spatiotemporal Tubes for Full Class of Signal Temporal Logic Tasks for Control of Unknown Systems under Input Constraints</p>
+              <p class="meta">Ahan Basu, Ratnangshu Das, Soumyodipta Nath, Siyuan Liu, Pushpak Jagtap | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07136v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07136v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文提出了一种基于时空管（STT）的控制框架，用于受输入约束的一般未知非线性欧拉-拉格朗日（EL）系统，目标是满足信号时序逻辑（STL）规范，其中系统轨迹被限制在STT内即可保证相应STL任务的满足。对于单智能体和多智能体场景，每个智能体对应的STT被建模为一个时变球体，其中心和半径使用物理信息神经网络（PINN）联合参数化。与智能体相关的STL规范的鲁棒性度量作为损失函数被纳入训练过程，使学习到的管能够编码任务级的时间要求。对于多智能体场景，我们引入了一个与全局任务相关的额外鲁棒性度量，该度量满足时能确保各管之间不会碰撞。为确保系统轨迹保持在学习的STT内，从而满足局部和全局STL规范，我们提出了一种明确考虑输入约束的控制策略。特别地，我们开发了一种闭环控制律，使轨迹保持在管内，同时通过根据系统输入约束对管的演化施加界限来调节管的运动。该方法已在多个案例研究中得到验证。</p></section>
+              <section><h3>English Abstract</h3><p>This paper presents a Spatiotemporal Tube (STT)-based control framework for general unknown nonlinear Euler-Lagrange (EL) systems subject to input constraints, with the objective of satisfying Signal Temporal Logic (STL) specifications, where confinement of the system trajectory within the STT guarantees the satisfaction of the corresponding STL task. For both single and multi-agent scenarios, the STT corresponding to each agent is modeled as a time-varying ball, whose center and radius are jointly parameterized using a physics-informed neural network (PINN). The robustness metric associated with the STL specification corresponding to the agents is incorporated into the training process as a loss function, enabling the learned tube to encode task-level temporal requirements. For a multi-agent scenario, we introduce an additional robustness metric corresponding to the global task, which, when satisfied, ensures the tubes do not collide with each other. To ensure that the system trajectory remains within the learned STT and thereby satisfies the local and global STL specifications, we propose a control strategy that explicitly accounts for input constraints. In particular, a closed-form control law is developed to keep the trajectory inside the tube while regulating the motion of the tube by enforcing bounds on its evolution depending on the input constraints of the system. The proposed approach has been validated over several case studies.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解STT和STL的基本概念，然后重点阅读方法部分关于PINN如何学习STT以及闭环控制律的设计。最后通过案例研究验证其有效性。</p></section>
+              <section><h3>相关性说明</h3><p>该框架为多智能体系统在输入约束下满足时序逻辑任务提供了理论基础，可直接应用于低空经济中多无人机编队的安全飞行控制与避碰。其利用PINN学习安全管道的思路，为航迹预测中的不确定性建模和约束满足提供了新方法。</p></section>
+              <section><h3>实践思路</h3><p>可复现其PINN训练过程，将无人机动力学模型作为未知系统，设计包含避碰和到达时间约束的STL任务。实验可对比有无STT约束下的无人机轨迹跟踪误差和任务完成率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>机构红队测试：部署规则（而非仅仅是模型）因果性地塑造多智能体AI安全</h2>
+              <p>Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety</p>
+              <p class="meta">Yujiao Chen | arXiv cs.AI | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07695v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07695v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>我们引入了机构红队测试，这是一种用于测试多智能体AI中部署规则的评估方法论：固定智能体、目标和任务状态，仅改变一条规则，并将集体行为的相应变化归因于该规则。我们在IABench-CA中实例化了该方法论，这是一个涵盖228个上下文、五种规范规则和七种模型群体（33,924场游戏）的结果分配基准，并配有规范性合作参考和自动标注的推理轨迹。出现了三个发现。（1）部署规则因果性地改变了集体安全性：仅改变结果规则，每个群体内的平均死亡率移动了22到58个百分点。（2）没有安全的默认设置，但针对危害是普遍存在的：最安全的规则、最不安全的规则，甚至事件影响的方向在不同群体间都不同，然而，在任何上下文中，对任何群体，回归性的身份针对性攻击从未决定性地成为最安全的，它在所有地方30-87%的游戏中消灭了资源最少的智能体，并且相对于合作参考，对所有七个群体都是选择不安全的。（3）身份显著性是其机制：对最易受剥削的群体（gpt-5.1）进行的一次性匿名消融实验表明，仅在规则文本中命名损失承担者，就在相同收益下将针对性消灭率从22%提升到81%；在重复博弈下，匿名化仅延迟了针对性，因为智能体从观察到的消灭中重新推断出隐藏规则。我们将该方法论打包为一个安全案例工作流，该工作流认证一个临时规则区域Φ(c,P)。</p></section>
+              <section><h3>English Abstract</h3><p>We introduce institutional red-teaming, an evaluation methodology for testing deployment rules in multi-agent AI: hold the agents, objectives, and task state fixed, vary only one rule, and attribute the resulting change in collective behavior to that rule. We instantiate the methodology in IABench-CA, a consequence-allocation benchmark spanning 228 contexts, five canonical rules, and seven model populations (33,924 games), with a normative cooperative reference and auto-labelled reasoning traces. Three findings emerge. (1) Deployment rules causally alter collective safety: changing only the consequence rule moves mean fatality by 22 to 58 percentage points within every population. (2) There is no safe default, but the targeting hazard is universal: the safest rule, the least-safe rule, and even the direction of the incidence effect vary across populations, yet regressive identity-targeting is never decisively safest in any context for any population, eliminates the least-resourced agent in 30-87% of games everywhere, and is selection-unsafe relative to the cooperative reference for all seven populations. (3) Identity salience is the mechanism: a one-shot anonymization ablation on the most exploitation-prone population (gpt-5.1) shows that merely naming the loss bearer in the rule text drives targeted elimination from 22% to 81% at identical payoffs; under repeated play, anonymization only delays the targeting, as agents re-infer the hidden rule from observed eliminations. We package the methodology as a safety-case workflow that certifies a provisional rule region $Φ(c,P)$ per deployment context and population, with explicit residual risks and monitoring obligations.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解机构红队测试的核心概念和实验设计（五条件对比）。然后重点关注三个主要发现，特别是部署规则对安全性的因果影响和身份显著性的作用机制。</p></section>
+              <section><h3>相关性说明</h3><p>该研究揭示了多智能体系统中部署规则对集体安全的决定性影响，对低空经济中无人机集群的规则设计（如责任分配、冲突消解）具有重要警示意义。其方法论可直接用于评估不同航迹优先级规则或通信协议对整体安全性的影响。</p></section>
+              <section><h3>实践思路</h3><p>可复现其对比实验设计，在无人机集群仿真中改变碰撞责任分配规则（如绝对避让、协商避让），观察不同规则下的碰撞率和任务完成度。实验重点在于量化规则变化对安全指标的因果效应。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>基于机载视觉语言模型的多智能体机器人控制</h2>
+              <p>Multi-Agent Robotic Control with Onboard Vision-Language Models</p>
+              <p class="meta">Kajetan Rachwał, Maciej Majek, Bartłomiej Boczek, Jakub Matejczyk, Dominik Matejkowski, Adam Dąbrowski, Tim Seyde, Alexander Amini, Maria Ganzha | arXiv cs.MA | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07403v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07403v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉语言模型（VLM）和视觉语言动作（VLA）模型在机器人控制中显示出前景。然而，它们在可解释性、泛化性和计算需求方面面临重大挑战。本文提出了一种多智能体系统（MAS）架构，通过在机载硬件上部署专用智能体来解决这些限制——消除了对外部计算的依赖。该系统在模拟的工业仓库中控制一个多用途自主移动机械手，完成五类任务：安全检查、仓库维护、仓库搜索、包裹质量验证和响应人类请求。全程使用紧凑型VLM（3-20B参数），并应用微调以提高包裹检查精度。一种新颖的“Megamind”编排智能体缓解了使用较小模型进行长时程规划时固有的上下文保持问题。该系统在使用AMD Ryzen(TM) AI迷你PC的硬件在环仿真中得到了验证。结果表明，完全机载的MAS架构是一种可行、经济高效的替代云依赖部署的方案，具有强大的实际应用迁移潜力。仿真环境已在Apache 2.0许可下作为开源发布。</p></section>
+              <section><h3>English Abstract</h3><p>Vision Language Models (VLMs) and Vision Language Action (VLA) models have shown promise in robotic control. Yet, they face significant challenges regarding explainability, generalization, and compute requirements. This paper presents a Multi-Agent System (MAS) architecture that addresses these limitations by deploying specialized agents on onboard hardware - eliminating dependence on external compute. The system controls a multi-purpose autonomous mobile manipulator in a simulated industrial warehouse, fulfilling five task categories: safety inspection, warehouse maintenance, warehouse search, package quality verification, and responding to human requests. Compact VLMs (3-20B parameters) are used throughout, with fine-tuning applied to improve package inspection accuracy. A novel &quot;Megamind&quot; orchestration agent mitigates context retention issues inherent to long-horizon planning with smaller models. The system was validated in a hardware-in-the-loop simulation using an AMD Ryzen(TM) AI mini PC. Results demonstrate that a fully onboard MAS architecture is a viable, cost-efficient alternative to cloud-dependent deployments, with strong potential for real-world transfer. The simulation environment has been released as open source under the Apache 2.0 licence.</p></section>
+              <section><h3>中文阅读提示</h3><p>先了解其多智能体架构设计，特别是“Megamind”编排智能体的作用。然后关注其机载部署的硬件要求和性能表现，最后查看开源仿真环境。</p></section>
+              <section><h3>相关性说明</h3><p>该工作展示了在资源受限的机载硬件上部署多智能体VLM进行复杂任务控制的可行性，为低空经济中无人机/飞行器的自主决策与安全巡检提供了低成本、低延迟的解决方案。其“Megamind”编排机制可借鉴用于多无人机任务分配与冲突管理。</p></section>
+              <section><h3>实践思路</h3><p>可复现其多智能体架构，将任务场景替换为低空巡检（如电力线、管道检查）。实验重点在于对比机载部署与云端部署在任务完成时间、通信延迟和安全性上的差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>多智能体LLM安全中的操作重构与批准框架委托</h2>
+              <p>Operational Reframing and Approval-Framed Delegation in Multi-Agent LLM Safety</p>
+              <p class="meta">Lifei Liu, Haoran Yu, Xiaochong Jiang, Su Wang, Pin Qian, Yihang Chen | arXiv cs.AI | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07097v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07097v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>对多智能体LLM系统的安全评估通常将直接提示与规划器-执行器流水线进行比较，并将差异报告为单一的“流水线效应”。我们认为这种聚合难以解释，因为它混淆了三种机制：有害意图可能被重构为看似合理的操作工作，规划器可能拒绝或转换请求，以及执行器可能在暗示事先批准的委托提示下行动。为分离这些因素，我们引入了一种五条件受控对比设计，在30个合成有害场景和一个来自四个智能体安全基准的探索性外部验证集上，使用LLM判断的合规性进行评估。我们的结果表明，聚合的流水线安全性并非稳定的架构属性。操作重构是最具可移植性的风险信号，它增加了GPT、Gemini和DeepSeek在两个场景集中的合规性，而Claude相对具有抵抗力。规划器行为主要通过拒绝来抵消这种风险；然而，当规划器产生可执行步骤时，执行器可能比在直接操作基线条件下更合规。批准框架委托对提示设计、模型配对和场景来源敏感，而一个怀疑的执行器提示会急剧降低合规性。原始直接模型排名也可能错误预测已部署的规划器-执行器行为。Gemini在主要场景集的原始直接提示下最安全，但在与Claude规划器配对时显示出最大的放大效应，合规性从8.9%上升到38.9%。GPTs接近零的聚合流水线效应反而...</p></section>
+              <section><h3>English Abstract</h3><p>Safety evaluations of multi-agent LLM systems often compare a direct prompt with a planner-executor pipeline and report the difference as a single &quot;pipeline effect.&quot; We argue that this aggregate is difficult to interpret because it conflates three mechanisms: harmful intent may be reframed as plausible operational work, the planner may refuse or transform the request, and the executor may act under delegation prompts implying prior approval. To separate these factors, we introduce a five-condition controlled contrast design, evaluated on 30 synthetic harmful scenarios and an exploratory external validation set from four agent-safety benchmarks using LLM-judged compliance. Our results show that aggregate pipeline safety is not a stable architectural property. Operational reframing is the most portable risk signal, increasing compliance for GPT, Gemini, and DeepSeek across both scenario sets, while Claude is comparatively resistant. Planner behavior can offset this risk mainly through refusal; however, when the planner produces executable steps, the executor may become more compliant than under the direct operational baseline. Approval-framed delegation is sensitive to prompt design, model pairing, and scenario source, and a skeptical executor prompt sharply reduces compliance. Raw-direct model rankings can also mispredict deployed planner-executor behavior. Gemini is safest under raw direct prompts in the primary set yet shows the largest amplification with a Claude planner, rising from 8.9 percent to 38.9 percent compliance. GPTs near-zero aggregate pipeline effect instead hides a reframing increase canceled by planner refusal. These findings suggest that multi-agent safety evaluations should report reframing, planner behavior, delegation framing, and model pairing separately before attributing failures to architecture itself.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解其五条件对比设计的逻辑，区分操作重构、规划器拒绝和批准框架委托三种机制。然后重点关注不同模型（GPT、Gemini、Claude）在这些机制下的表现差异。</p></section>
+              <section><h3>相关性说明</h3><p>该研究揭示了多智能体LLM系统中安全风险的复杂来源，对低空经济中基于LLM的无人机指挥控制系统的安全设计至关重要。其发现表明，仅评估单一模型或流水线整体安全性是不够的，必须解耦分析规划与执行环节的交互风险。</p></section>
+              <section><h3>实践思路</h3><p>可复现其五条件对比实验，在无人机任务规划场景中，设计包含“攻击目标”等有害指令的提示，测试不同规划器-执行器组合下的指令合规率。实验重点在于量化操作重构和批准框架对安全性的具体影响。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>CILC：面向多智能体协同SLAM的密码学安全智能体间闭环候选检测</h2>
+              <p>CILC: Cryptographically-secure Inter-agent Loop Closure Candidate Detection for Multi-Agent Collaborative SLAM</p>
+              <p class="meta">Andrew Fishberg, Yixuan Jia, Jonathan P. How | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06700v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06700v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体同时定位与地图构建（SLAM）和协同SLAM（CSLAM）要求机器人持续交换全局描述符（GD）以检测智能体间闭环（ILC）。虽然加密无线电可保护此通信免受外部窃听，但无法防范受损的群体成员。我们通过展示一个被破坏的智能体如何从其公开的GD广播中重建诚实智能体的图像和轨迹的近似值，证明了这一威胁是切实存在的。为解决此问题，我们提出了CILC（密码学安全的智能体间闭环候选检测），这是一个首创的系统，利用安全多方计算（SMPC）在不以明文交换GD的情况下检测ILC候选。我们并非保护整个CSLAM流程，而是仅将SMPC应用于ILC候选检测（即GD相似性比较），这是一个对隐私敏感但计算量轻的步骤，从而实现了有利的隐私与开销权衡。我们在仿真和硬件实验中验证了CILC在跨模态GD（视觉和激光雷达）下仍能保持实时性和通信可行性，同时减轻了信息泄露给受损群体智能体的风险。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent Simultaneous Localization and Mapping (SLAM) and collaborative SLAM (CSLAM) require robots to continuously exchange global descriptors (GDs) to detect inter-agent loop closures (ILCs). While encrypted radios protect this traffic from external eavesdroppers, they offer no protection against a compromised swarm member. We show this threat is concrete by demonstrating how a corrupted agent can reconstruct approximations of an honest agent&#x27;s imagery and trajectory from its public GD broadcasts. To address this, we propose CILC (Cryptographically-secure Inter-agent Loop Closure candidate detection), a first-of-its-kind system leveraging Secure Multi-Party Computation (SMPC) to detect ILC candidates without exchanging GDs in the clear. Rather than securing the entire CSLAM pipeline, we apply SMPC only to ILC candidate detection (i.e., GD similarity comparison), a privacy-sensitive yet computationally lightweight step, yielding an advantageous privacy-to-overhead trade-off. We validate in both simulation and hardware experiments that CILC remains real-time and communication-feasible across multimodal GDs (visual and LiDAR), while mitigating information leakage to a compromised swarm agent.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解多智能体SLAM中全局描述符交换的隐私风险，然后重点阅读CILC如何利用安全多方计算在保护隐私的同时实现闭环检测。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接关系到低空经济中多无人机协同作业的安全性，特别是防止内部被攻破的无人机泄露敏感信息。其提出的隐私保护闭环检测方法，对于保障无人机集群在航迹规划与协同定位中的通信安全至关重要。</p></section>
+              <section><h3>实践思路</h3><p>可在Gazebo或AirSim中搭建多无人机协同SLAM仿真环境，复现CILC的隐私保护闭环检测流程。实验重点在于对比明文交换与SMPC保护下的通信开销和定位精度，验证其在低空场景下的实时性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>Gimitest：一个用于测试强化学习策略的综合工具</h2>
+              <p>Gimitest: A Comprehensive Tool for Testing Reinforcement Learning Policies</p>
+              <p class="meta">Dennis Gross, Quentin Mazouni, Helge Spieker, Arnaud Gotlieb | arXiv cs.LG | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07029v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07029v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>强化学习（RL）策略可能不安全且易受攻击。确保其可靠性通常是一个痛点，因为现有的自动化测试方法仅针对选定的环境、测试场景和RL算法。为解决此问题，我们提出了一个用于在不同条件下测试单智能体和多智能体RL策略的综合框架。我们对该框架的实现，即Gimitest，是一个开源工具，支持多种gym框架并允许修改其集成组件。本文描述了该框架，并详细介绍了Gimitest的功能和架构。它展示了在诸如官方Farama Gymnasium和PettingZoo等环境中测试多个RL策略的有效性。</p></section>
+              <section><h3>English Abstract</h3><p>Reinforcement learning (RL) policies can be unsafe and vulnerable to attacks. Ensuring their reliability is often a pain point as existing automated testing methods target only selected environments, testing scenarios, and RL algorithms. To address this, we propose a comprehensive framework for testing single- and multi-agent RL policies under varying conditions. Our implementation of this framework, Gimitest, is an open-source tool that supports various gym frameworks and allows for modifications of their integrated components. This article describes the framework and details Gimitest&#x27;s functionality and architecture. It showcases its effectiveness in testing multiple RL policies in environments such as the official Farama Gymnasium and PettingZoo.</p></section>
+              <section><h3>中文阅读提示</h3><p>先了解Gimitest框架的整体架构和它支持的gym环境类型，然后关注其如何实现自动化测试以及测试结果的分析方法。</p></section>
+              <section><h3>相关性说明</h3><p>该工具可用于测试低空经济中无人机自主导航、避障等任务的强化学习策略的安全性。通过自动化测试，可以评估航迹预测模型和智能体决策策略在异常或攻击下的鲁棒性，确保低空飞行的安全。</p></section>
+              <section><h3>实践思路</h3><p>下载Gimitest开源工具，选择一个无人机控制或路径规划的RL环境（如Gymnasium中的相关环境），配置测试参数（如扰动、传感器噪声），运行测试并分析策略的失败模式。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>HumAIN：具有人类感知的隐式社交机器人导航</h2>
+              <p>HumAIN: Human-Aware Implicit Social Robot Navigation</p>
+              <p class="meta">Daeun Song, Nhat Le, Jeffrey Chen, Mohammad Nazeri, Amirreza Payandeh, Rohan Chandra, Reuth Mirsky, Ross Mead, Ling Xiao, Xuesu Xiao | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07357v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07357v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>有效的社交机器人导航需要对人类行为敏感，这种行为通常通过微妙的骨骼线索（如步态和朝向）来体现。我们提出了人类感知的隐式社交机器人导航（HumAIN），这是一个新颖的框架，通过知识蒸馏将隐式社交线索直接融合到规划循环中。我们首先采用一个基于Transformer的教师模型，该模型融合丰富的多模态输入，包括历史图像、骨骼关键点、机器人状态和机器人的目标，以学习用于机器人未来轨迹规划的鲁棒、具有人类感知的表示。为了实现实时部署，我们随后将这些知识蒸馏到一个轻量级的学生模型中。通过优化轨迹重建和与教师模型的潜在特征对齐，学生模型学会从最少的输入中推断复杂的社交动态。我们的方法通过高效的蒸馏架构弥合了预测与规划之间的差距，使机器人能够以自适应、鲁棒和符合社交规范的方式推理人类行为。我们通过大量实验验证了HumAIN，与最先进的基线相比，它在所有指标上平均将轨迹预测指标提升了29.8%。这些结果凸显了使用隐式、全身线索在资源受限平台上实现类人导航感知的优势。</p></section>
+              <section><h3>English Abstract</h3><p>Effective social robot navigation requires sensitivity to human behavior, often revealed through subtle skeletal cues like gait and orientation. We present Human-Aware Implicit Social Robot Navigation (HumAIN), a novel framework that fuses implicit social cues directly into the planning loop via knowledge distillation. We first employ a transformer-based teacher model that fuses rich multi-modal inputs, including historic images, skeletal keypoints, robot state, and a robot&#x27;s target goal, to learn robust, human-aware representations for the robot&#x27;s future trajectory planning. To enable real-time deployment, we then distill this knowledge into a lightweight student model. By optimizing for both trajectory reconstruction and latent feature alignment with the teacher, the student learns to infer complex social dynamics from minimal inputs. Bridging the prediction-planning gap with an efficient distilled architecture, our method enables robots to reason about human behavior in a manner that is adaptive, robust, and socially compliant. We validate HumAIN through extensive experiments, where it improves trajectory prediction metrics by an average of 29.8% across all metrics compared to state-of-the-art baselines. These results highlight the benefit of using implicit, whole-body cues to achieve human-like navigation awareness on resource-constrained platforms.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解教师-学生蒸馏框架如何将多模态社交线索（如骨骼关键点）转化为轻量级的导航策略，并关注其在轨迹预测精度上的提升。</p></section>
+              <section><h3>相关性说明</h3><p>该研究对于低空经济中无人机在复杂城市环境（如人群上空）的航迹预测与安全导航具有重要参考价值。通过感知行人的隐式行为线索（如身体朝向），无人机可以更安全、更符合社会规范地规划飞行路径，避免冲突。</p></section>
+              <section><h3>实践思路</h3><p>在仿真环境（如CARLA或AirSim）中，添加行人模型并提取其骨骼关键点，复现HumAIN的教师-学生蒸馏训练流程。实验重点在于对比有无隐式线索输入时，无人机在人群上空导航的轨迹平滑度和碰撞率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>位置不确定性下无人机搭载可重构智能表面的设计与部署指南</h2>
+              <p>Design and Deployment Guidelines for UAV-Mounted RIS Under Position Uncertainty</p>
+              <p class="meta">Kevin Weinberger, David Müller, Martin Mönnigmann, Aydin Sezgin | arXiv eess.SP | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07298v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07298v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机搭载的可重构智能表面（RIS）是6G网络的一个有前途的使能技术，为覆盖增强、集成感知与通信（ISAC）以及定位提供了对无线传播的动态控制。通过利用无人机的机动性，RIS可以维持有利的视距链路，改善动态环境中的信道质量。然而，无人机定位的不确定性会引入信道失真，从而降低RIS的相位对齐和相干合并性能。本文为无人机搭载的RIS信道开发了一个基于GUM的不确定性传播框架，通过几何Tx-RIS-Rx模型将无人机位置不确定性映射到复杂的级联信道中。我们推导了一个闭式随机传播模型，捕捉非线性相位不确定性效应，并量化了它们对信道相干性的影响。结果表明，相位不确定性会导致指数级的相干性损失，主导性能退化。为了表征这种转变，我们引入了一个性能驱动的相干性阈值（PCT），该阈值定义了非相干合并导致预定性能损失的边界。基于解析标度律和蒙特卡洛模拟的结果证实了PCT在准确捕捉相干性转变方面的紧致性。然后利用这个经过验证的阈值来推导最优的无人机搭载RIS部署位置，结果揭示，现实的定位条件显著偏离了传统的RIS直觉，后者通常倾向于将RIS放置在靠近发射机或接收机的位置。</p></section>
+              <section><h3>English Abstract</h3><p>UAV-mounted reconfigurable intelligent surfaces (RIS) are a promising enabler for 6G networks, offering dynamic control of wireless propagation for coverage enhancement, integrated sensing and communication (ISAC), and localization. By exploiting UAV mobility, RIS can maintain favorable line-of-sight links, improving channel quality in dynamic environments. However, UAV positioning uncertainties introduce channel distortions that degrade RIS phase alignment and coherent combining. This work develops a GUM-based uncertainty propagation framework for UAV-mounted RIS channels, mapping UAV position uncertainty through the geometric Tx-RIS-Rx model into the complex cascaded channel. We derive a closed-form stochastic propagation model capturing nonlinear phase uncertainty effects and quantify their impact on channel coherence. The results show that phase uncertainty induces exponential coherence loss, dominating performance degradation. To characterize this transition, we introduce a performance-driven coherence threshold (PCT) that defines the boundary where incoherent combining results in a predetermined performance loss. Results based on analytical scaling laws and Monte Carlo simulations confirm the tightness of the PCT in accurately capturing the coherence transition. This validated threshold is then leveraged to derive optimal UAV-mounted RIS placement, revealing that realistic positioning conditions significantly deviate from the conventional RIS intuition, which typically favors placement close to either the transmitter or receiver.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解无人机位置不确定性如何影响RIS的相位对齐，然后重点阅读性能驱动相干性阈值（PCT）的推导及其如何指导最优部署位置。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接关系到低空经济中无人机通信与感知的可靠性。对于需要高精度航迹预测和协同作业的无人机集群，理解并补偿位置不确定性对RIS性能的影响，是保障低空通信安全和感知精度的关键。</p></section>
+              <section><h3>实践思路</h3><p>在MATLAB或Python中实现基于GUM的不确定性传播模型，模拟不同无人机定位精度下RIS的相位误差和信道相干性损失。根据PCT阈值，设计仿真实验来验证无人机最优部署位置（如相对于基站和用户的位置）的结论。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>RoboSnap：用于通用机器人学习与评估的单次实景到仿真场景生成</h2>
+              <p>RoboSnap: One-Shot Real-to-Sim Scene Generation for Generalizable Robot Learning and Evaluation</p>
+              <p class="meta">Shujie Zhang, Jingkun Yi, Weipeng Zhong, Zirui Zhou, Yangkun Zhu, Hanqing Wang, Xudong Xu, Weinan Zhang, Chunhua Shen | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06699v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06699v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>将真实世界场景恢复为交互式仿真环境，可以实现通用机器人学习和可复现的策略评估。然而，构建既物理稳定又视觉逼真的场景仍然缓慢且昂贵。在这项工作中，我们提出了RoboSnap，一个将单张RGB图像转换为可仿真场景的实景到仿真框架。其关键思想是一种分层设计，将物理关键交互区域与周围视觉上下文分离：碰撞感知的前景资产经过精炼以实现稳定的机器人交互，而3D高斯泼溅视觉层则在新视角下保持逼真的背景外观。在DROID场景和真实机器人任务上的实验表明，RoboSnap在恢复的场景中实现了可靠的轨迹回放，支持用于策略训练的特定任务合成数据生成，并为策略评估产生了有意义的仿真-真实相关性。为了进一步支持实景到仿真研究，我们引入了DROID-Sim，一个从DROID中564个真实世界场景构建的实景到仿真配套数据集。大量实验表明，实景到仿真方法的价值不仅在于高保真视觉重建，更在于将真实环境转变为用于机器人学习和评估的可复用基础设施。</p></section>
+              <section><h3>English Abstract</h3><p>Recovering real-world scenes as interactive simulation environments can enable generalizable robot learning and reproducible policy evaluation. However, constructing scenes that are both physically stable and visually faithful remains slow and expensive. In this work, we present RoboSnap, a real-to-sim framework that turns a single RGB image into a simulation-ready scene. The key idea is a layered design that separates the physics-critical interaction area from the surrounding visual context: collision-aware foreground assets are refined for stable robot interaction, while a 3D Gaussian splatting visual layer preserves faithful background appearance under novel views. Experiments on DROID scenes and real-robot tasks show that RoboSnap achieves reliable trajectory replay in the recovered scenes, supports task-specific synthetic data generation for policy training, and yields meaningful sim-real correlation for policy evaluation. To further support real-to-sim research, we introduce DROID-Sim, a real-to-sim companion dataset constructed from 564 real-world scenes in DROID. Extensive experiments suggest that the value of real-to-sim methods lies not only in high-fidelity visual reconstruction, but in turning real environments into reusable infrastructure for robot learning and evaluation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解RoboSnap的分层设计（物理交互层与视觉背景层）如何从单张图片生成仿真场景，然后关注其在轨迹回放和策略评估中的效果。</p></section>
+              <section><h3>相关性说明</h3><p>该技术可用于快速构建低空经济中无人机飞行场景的数字孪生，例如从一张无人机航拍图生成可交互的仿真环境。这对于在仿真中测试和评估无人机的航迹预测、避障策略以及多智能体协同算法具有重要意义，能大幅降低实飞测试成本。</p></section>
+              <section><h3>实践思路</h3><p>使用RoboSnap框架，输入一张无人机视角的RGB图像（如城市或郊区场景），生成对应的仿真环境。然后，在该环境中部署一个无人机导航策略，复现轨迹回放和策略评估实验，对比仿真与真实环境中的性能差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>四足机器人的行为基础：ABot-C0技术报告</h2>
+              <p>Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report</p>
+              <p class="meta">Xufeng Zhao, Fuzhi Yang, Jianhui Chen, Li Gao, Zhang Meng, Jie Gao, Yao Zheng, Wenyu Liu, Menglin Yang, Minqi Gu, Yaru Zhao, Honglin Han, Shihui Su, Zixiao Tang, Liu Liu, Mu Xu, Yang Cai, Wenbin Tang | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07370v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07370v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在具身智能系统中，运动控制器是语义推理与物理执行之间的关键桥梁。通过大规模人体运动捕捉数据和运动跟踪范式，类人控制已取得快速进展。然而，生成具有可扩展性和物理可行性的四足机器人运动语料库面临更根本的障碍：动物运动数据稀缺，且跨形态重定位仍然脆弱。我们提出了ABot-C0，一个面向四足机器人的通用运动控制系统，它建立了三个互补的行为基础：一个可扩展的多源运动数据流水线、跨运动跟踪、移动和场景交互的鲁棒策略学习，以及一个用于可靠现实世界操作的统一部署栈。从根本上说，我们通过条件视频生成合成、带标注的运动捕捉、遥操作和人工设计构建了一个数据金字塔，生成了16,074个物理可行的运动片段，作为各种运动学习需求的数据基础。然后，我们训练了一个流匹配通用策略，首次展示了四足运动跟踪的缩放定律：其性能随着训练规模的扩大而持续提升，并具备零样本跟踪未见运动的能力。接着，我们通过采用一个三阶段特权到感知框架，结合时间激光雷达记忆和地形预测监督，进一步推进了鲁棒的全地形穿越移动。总的来说，这些组件形成了一个运动通才，协调多策略执行、平滑行为转换。</p></section>
+              <section><h3>English Abstract</h3><p>In embodied intelligence systems, the motion controller serves as the critical bridge between semantic reasoning and physical execution. Humanoid control has progressed rapidly through large-scale human motion-capture data and motion-tracking paradigm. However, producing quadruped robots motion corpora with scalability and physical feasibility faces more fundamental obstacles: animal motion data is scarce, and cross-embodiment retargeting remains fragile. We present ABot-C0, a generalist motion-control system for quadruped robots that establishes three complementary behavior foundations: a scalable multi-source motion-data pipeline, robust policy learning across motion tracking, locomotion, and scene interaction, and a unified deployment stack for reliable real-world operation. Fundamentally, we construct a data pyramid through conditional video-generation synthesis, annotated motion capture, teleoperation and human design, producing 16,074 physically feasible motion clips as the data foundation for various motion learning demands. We then train a Flow-Matching generalist policy that demonstrates for the first time quadruped motion tracking scaling law that its performance improves consistently as training scales up, with zero-shot capability to track unseen motions. Then, we push a step further for robust all-terrain traversal locomotion by adopting a three-stage privileged-to-perceptive framework with temporal LiDAR memory and terrain-predictive supervision. Collectively, these components form a motion generalist that coordinates multi-policy execution, smooth behavior transitions, energy-efficient control, and safety mechanisms for real-world deployment. Extensive experiments on urban-terrain autonomous navigation and companion-style multimodal interaction demonstrate that quadruped robots move beyond single-function demos toward product-level behavioral intelligence.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注其构建多源运动数据流水线的方法，以及流匹配策略如何实现运动跟踪的缩放定律。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的鲁棒全地形穿越移动框架，可直接应用于低空经济中无人机或无人车的航迹规划与避障。其运动跟踪缩放定律和零样本泛化能力，为智能体在未知环境中的自适应航迹预测提供了新思路。</p></section>
+              <section><h3>实践思路</h3><p>可复现其数据金字塔构建方法，利用条件视频生成合成低空飞行器的运动数据。尝试将其三阶段特权到感知框架应用于四旋翼无人机的航迹跟踪控制实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>在信任其判决前先验证梦境：世界模型模拟器的可采性</h2>
+              <p>Validate the Dream Before You Trust Its Verdict: Admissibility for World-Model Simulators</p>
+              <p class="meta">Christian Oefinger, Finn Rasmus Schäfer, Korbinian Moller, Mattia Piccinini, Johannes Betz | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07196v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07196v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在机器人学中，世界模型（WM）越来越多地被用于评估行动策略，方法是在想象世界中模拟行动的后果，并返回成功或安全判决。然而，判决的可信度取决于产生它的世界模型，而世界模型本身需要被认证。在视频生成世界模型中，诸如弗雷歇视频距离（FVD）等保真度指标奖励视觉真实感，但忽略了世界是否对策略的动作做出正确响应，包括那些在训练中未见过的动作。经典的基于模拟的验证假设一个可信的模拟器来评估不可信的策略，而生成式世界模型本身是未经验证的学习产物。因此，我们认为，任何用作测试预言机的世界模型必须首先获得认证，其判决才能作为证据。基于安全关键模拟中的可信度实践，包括验证、确认与认证（VV&amp;A）、预期功能安全（SOTIF）和基于场景的测试标准，我们定义了一个可采性阶梯（L0-L4），世界模型必须攀登该阶梯后，其闭环判决才能被接受为保证证据。我们的框架与具体形态无关，并在自动驾驶（AD）中实例化，其中传统模拟的保证方法最为成熟。应用于两个驾驶世界模型时，较低的阶梯揭示了一个反转：在视觉生成质量（L0）上排名较高的模型，在动作跟随（L1-L2）上排名较低，因此视觉保真度并不能预测闭环判决所依赖的动作鲁棒性。</p></section>
+              <section><h3>English Abstract</h3><p>Across robotics, World Models (WMs) are increasingly used to evaluate action policies by simulating the consequences of actions in an imagined world, and returning a success or safety verdict. Yet a verdict is only as trustworthy as the WM that produced it, and the WM itself needs to be certified. In video-generation WMs, fidelity metrics such as Fréchet Video Distance (FVD) reward visual realism, but ignore whether the world responds correctly to the policy&#x27;s actions, including those unseen in training. Classical simulation-based validation assumes a trusted simulator evaluating an untrusted policy, whereas generative WMs are themselves unverified learned artifacts. Hence, we argue that any WM used as a test oracle must first be accredited before its verdicts can serve as evidence. Building on credibility practices from safety-critical simulation, including Verification, Validation &amp; Accreditation (VV&amp;A), Safety of the Intended Functionality (SOTIF), and scenario-based testing standards, we define an admissibility ladder (L0-L4) that a WM must climb before its closed-loop verdicts are accepted as assurance evidence. Our framework is embodiment-agnostic, and is instantiated in autonomous driving (AD), where assurance methods for traditional simulation are most mature. Applied to two driving WMs, the lower rungs reveal a reversal: the model that ranks higher on visual generation quality (L0) ranks lower on action-following (L1-L2), so visual fidelity does not predict the action-robustness a closed-loop verdict depends on.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解其提出的世界模型可采性阶梯（L0-L4）的定义，以及为何视觉保真度不能保证动作鲁棒性。</p></section>
+              <section><h3>相关性说明</h3><p>该框架为低空经济中用于航迹预测和智能体安全评估的仿真模型提供了认证标准。确保用于测试无人机避障策略的世界模型是可信的，对低空安全至关重要。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将可采性阶梯应用于一个用于无人机航迹预测的生成式世界模型，评估其在L0（视觉质量）和L1-L2（动作跟随）上的表现。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>智能体利用可供性：从基本到复杂的表征模式</h2>
+              <p>Agent-Exploitation Affordances: From Basic to Complex Representation Patterns</p>
+              <p class="meta">Bastien Dussard, Aurélie Clodic, Guillaume Sarthou | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07475v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07475v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在机器人学中，人工智能体表征其行动可能性范围（即可供性）的能力，对于理解它如何作用于环境至关重要。虽然功能性可供性（指工具和物体的使用）已在知识表征中得到广泛研究，但社会背景和其他智能体存在的影响在该领域仍未得到探索。因此，在社会机器人学领域，多智能体环境使智能体能够参与新的、可能与其个体能力互补的行动，从而引出了智能体利用的视角。本工作聚焦于社会可供性领域内的合作可供性概念。合作可供性指的是智能体相互交互以扩展其行动可能性范围的情境。基于这一定义，本文提出了这一概念的可处理的本体论表征，旨在使其可被人工智能体使用。在这些基本模式的基础上，我们通过组合它们来描述各种不同的场景，展示了这些表征的有效性。</p></section>
+              <section><h3>English Abstract</h3><p>In robotics, the capability of an artificial agent to represent the range of its action possibilities, i.e. affordances, is crucial to understand how it can act on its environment. While functional affordances, which refer to the use of tools and objects, have been broadly studied in knowledge representation, the implications of a social context and the presence of other agents have remained unexplored in this field. Consequently, in the field of social robotics, a multi-agent context enables the agents to engage in new actions that are potentially complementary to their individual capabilities, leading to the perspective of agentexploitation. This work focuses on the concept of cooperative affordance within the realm of social affordances. Cooperative affordances refer to situations where agents interact with each other to extend their action possibilities range. From this definition, this paper proposes a tractable ontological representation of this concept with the aim of making it usable by an artificial agent. Expanding on those elementary patterns, we illustrate the effectiveness of these representations by combining them to depict a diverse range of scenarios.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解合作可供性的定义及其本体论表征，以及如何通过组合基本模式来描述复杂场景。</p></section>
+              <section><h3>相关性说明</h3><p>该研究为低空经济中多无人机（智能体）的协同作业提供了理论基础。通过表征智能体间的合作可供性，可以设计更高效的协同航迹规划和任务分配策略。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将合作可供性本体论应用于多无人机协同搜索任务，建模无人机之间如何通过交互扩展各自的感知和行动范围。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>用于鲁棒多机器人操作的闭环多智能体框架</h2>
+              <p>A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation</p>
+              <p class="meta">Yi-Xiang He, Lan Wei, Haoming Cen, Jian-Jian Jiang, Zhuohao Li, Guanxing Lu, Yihan Yang, Dandan Zhang, Wei-Shi Zheng | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06990v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06990v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多机器人系统为长周期任务提供了并行性和冗余性，而大型语言模型（LLM）则提供了将这些目标分解为可执行计划的推理能力。然而，如何有效地将这种高层推理落地到物理多机器人执行中仍然是一个开放的挑战。现有的基于LLM的方法主要分为两类：单机器人方法实现了鲁棒的接触式操作，但缺乏跨多个工作空间任务所需的协调机制。当前的多机器人框架侧重于高层规划，通常将操作视为一个理想化的原语，未能考虑现实世界执行的不确定性。为了解决这个问题，我们提出了一个基于分层闭环智能体LLM的框架，以确保鲁棒的多机器人操作。我们的系统由三个专门的智能体组成：规划智能体将指令分解为分配的子任务，每个机器人的操作智能体通过自适应工具使用执行动作，验证智能体通过监控物理结果并反馈语义修正来闭合循环。大量的真实世界实验表明，我们的框架实现了卓越的成功率，确保了从单个到跨工作空间操作的鲁棒适应性，并为多样化的操作任务提供了一种可泛化的方法。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-robot systems provide the parallelism and redundancy necessary for long-horizon tasks, while Large Language Models (LLMs) offer the reasoning capabilities to decompose these objectives into actionable plans. However, effectively grounding this high-level reasoning in physical multi-robot execution remains an open challenge. Existing LLM-based approaches fall mainly into two categories: Single-robot methods achieve robust contact-rich manipulation but lack the coordination mechanisms required for tasks spanning multiple workspaces. Current multi-robot frameworks focus on high-level planning, often treating manipulation as an idealized primitive that fails to account for real-world execution uncertainties. To address this, we propose a hierarchical closed-loop agentic LLM-based framework to ensure robust multi-robot manipulation. Our system consists of three specialized agents: the Planning Agent decomposes instructions into allocated sub-tasks, the Manipulation Agent for each robot executes actions via adaptive tool use, and the Verification Agent closes the loop by monitoring physical outcomes and feeding back semantic corrections. Extensive real-world experiments demonstrate that our framework achieves superior success rates, ensures robust adaptability ranging from single to cross workspace manipulation, and offers a generalizable approach for diverse manipulation tasks.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注其三个专门智能体（规划、操作、验证）的分层闭环架构，以及如何利用LLM实现鲁棒的多机器人协调。</p></section>
+              <section><h3>相关性说明</h3><p>该框架的分层闭环架构可直接应用于低空经济中的多无人机协同操作任务，如协同搬运或编队飞行。其验证智能体通过监控物理结果并反馈修正，为低空安全提供了实时保障。</p></section>
+              <section><h3>实践思路</h3><p>可复现其闭环多智能体框架，将规划、操作和验证智能体应用于一个多无人机协同航迹规划与避障实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>矩阵加权网络的子空间一致性</h2>
+              <p>Subspace Consensus of Matrix-Weighted Networks</p>
+              <p class="meta">Yuhao Chen, Lulu Pan, Xiaohui Gong, Peng Wang, Haibin Shao | arXiv eess.SY | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06970v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06970v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本文研究了矩阵加权多智能体网络的子空间一致性问题，其中每个智能体拥有一个在$\mathbb{R}^{d}$中的向量值状态，相邻智能体之间的交互由矩阵值边权重表征。除了智能体状态的所有维度达到全状态一致性外，许多实际应用要求智能体仅在某些维度上达成一致，同时在其余维度上保持期望的相对配置。为了解决这一差距，我们引入了子空间一致性的概念。如果智能体状态差异在子空间$\mathbb{V}\subseteq\mathbb{R}^{d}$上的投影渐近收敛到零，则称矩阵加权网络在子空间$\mathbb{V}$上实现了子空间一致性。当$\mathbb{V}=\mathbb{R}^{d}$时，该定义将传统一致性作为一个特例。从代数角度，我们通过分析边权重零空间之间的相互作用，推导了子空间一致性的充要条件。从拓扑角度，我们提出了由$\mathbb{V}$-连通性和$\mathbb{V}$-生成树的存在性表征的充分条件，以及基于图割的必要条件。此外，我们专门为树形网络提供了精细化的充要条件。这项工作揭示了矩阵加权网络固有的一种基本能力，并为分析指定子空间上的协议行为建立了一个系统框架。</p></section>
+              <section><h3>English Abstract</h3><p>This paper investigates the subspace consensus problem of matrix-weighted multi-agent networks, where each agent possesses a vector-valued state in $\mathbb{R}^{d}$ and interactions between neighboring agents are characterized by matrix-valued edge weights. Besides all dimensions of the agent states achieve full-state consensus, many practical applications appeal that agents are required to agree only on certain dimensions while maintaining desired relative configurations in the remaining ones. To address this gap, we introduce the concept of subspace consensus. A matrix-weighted network is said to achieve subspace consensus on a subspace $\mathbb{V}\subseteq\mathbb{R}^{d}$ if the projection of the agents&#x27; state differences onto $\mathbb{V}$ asymptotically converges to zero. This definition renders the traditional consensus as a special case when $\mathbb{V}=\mathbb{R}^{d}$. From an algebraic perspective, we derive necessary and sufficient conditions for subspace consensus by analyzing the interplay between the null spaces of edge weights. From a topological perspective, we present sufficient conditions characterized by $\mathbb{V}$-connectivity and the existence of a $\mathbb{V}$-spanning tree, as well as necessary conditions based on graph cuts. Furthermore, we provide refined necessary and sufficient conditions specifically for tree networks. This work uncovers a fundamental capability inherent to matrix-weighted networks and establishes a systematic framework for analyzing agreement behaviors on prescribed subspaces.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解子空间一致性的定义，以及从代数和拓扑角度给出的充要条件。</p></section>
+              <section><h3>相关性说明</h3><p>该理论为低空经济中无人机编队控制提供了新的数学框架。通过子空间一致性，可以设计协议使无人机在航向或高度等关键维度上达成一致，同时在水平位置保持特定编队，提升编队飞行的安全性和灵活性。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将子空间一致性理论应用于一个由四旋翼无人机组成的编队控制仿真，设计矩阵权重使无人机在垂直高度上达成一致，而在水平面上保持特定队形。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>

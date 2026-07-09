@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "e7209774867e3454",
+      "title": "Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review",
+      "url": "http://arxiv.org/abs/2607.06706v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "7ca0337fcde47099",
+      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
+      "url": "http://arxiv.org/abs/2607.07601v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "7d9f8fbbd9f3e9ec",
+      "title": "Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors",
+      "url": "http://arxiv.org/abs/2607.07368v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "6e0ccc59e219c78e",
+      "title": "Towards Reliable Aerial Ground Vehicle Collaboration: An Integrated Planning and Autonomy Framework for Field Deployment",
+      "url": "http://arxiv.org/abs/2607.07350v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "6c5a8370313066f7",
+      "title": "Ego-Human Motion Prediction with 3D-Aware LLM",
+      "url": "http://arxiv.org/abs/2607.07001v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "a4e7ea961f2ec2e6",
+      "title": "SpaCellAgent: A Self-Evolving LLM-Based Multi-Agent Framework for Trajectory Analysis",
+      "url": "http://arxiv.org/abs/2607.07467v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "90021112c0b0a40e",
+      "title": "Learning Spatiotemporal Tubes for Full Class of Signal Temporal Logic Tasks for Control of Unknown Systems under Input Constraints",
+      "url": "http://arxiv.org/abs/2607.07136v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "94f05f4db210e614",
+      "title": "Institutional Red-Teaming: Deployment Rules, Not Just Models, Causally Shape Multi-Agent AI Safety",
+      "url": "http://arxiv.org/abs/2607.07695v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "3aed13993a0b0180",
+      "title": "Multi-Agent Robotic Control with Onboard Vision-Language Models",
+      "url": "http://arxiv.org/abs/2607.07403v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "b385876560ace518",
+      "title": "Operational Reframing and Approval-Framed Delegation in Multi-Agent LLM Safety",
+      "url": "http://arxiv.org/abs/2607.07097v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "37c4545ecb465b1d",
+      "title": "CILC: Cryptographically-secure Inter-agent Loop Closure Candidate Detection for Multi-Agent Collaborative SLAM",
+      "url": "http://arxiv.org/abs/2607.06700v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "850f5701472ad7de",
+      "title": "Gimitest: A Comprehensive Tool for Testing Reinforcement Learning Policies",
+      "url": "http://arxiv.org/abs/2607.07029v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "1b6bb4fe76767414",
+      "title": "HumAIN: Human-Aware Implicit Social Robot Navigation",
+      "url": "http://arxiv.org/abs/2607.07357v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "512774db1a3b57f8",
+      "title": "Design and Deployment Guidelines for UAV-Mounted RIS Under Position Uncertainty",
+      "url": "http://arxiv.org/abs/2607.07298v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "737b0a3a2a425a7e",
+      "title": "RoboSnap: One-Shot Real-to-Sim Scene Generation for Generalizable Robot Learning and Evaluation",
+      "url": "http://arxiv.org/abs/2607.06699v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "c8cbf4ef594481e7",
+      "title": "Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report",
+      "url": "http://arxiv.org/abs/2607.07370v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "a3c12fa5153434f6",
+      "title": "Validate the Dream Before You Trust Its Verdict: Admissibility for World-Model Simulators",
+      "url": "http://arxiv.org/abs/2607.07196v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "ef2abb7989e84e49",
+      "title": "Agent-Exploitation Affordances: From Basic to Complex Representation Patterns",
+      "url": "http://arxiv.org/abs/2607.07475v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "0185504f949daf8c",
+      "title": "A Closed-Loop Multi-Agent Framework for Robust Multi-Robot Manipulation",
+      "url": "http://arxiv.org/abs/2607.06990v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
+      "key": "0a23a5e021bfcb6e",
+      "title": "Subspace Consensus of Matrix-Weighted Networks",
+      "url": "http://arxiv.org/abs/2607.06970v1",
+      "sent_at": "2026-07-09T22:29:00.618549+00:00"
+    },
+    {
       "key": "8f98eaf9316ec330",
       "title": "IMR: Iterative Mode-World Weighted Regression for Multi-Agent Trajectory Prediction",
       "url": "http://arxiv.org/abs/2607.05705v1",
