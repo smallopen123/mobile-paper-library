@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "c47b86f3ffb28893",
+      "title": "UAV-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
+      "url": "http://arxiv.org/abs/2607.08075v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "d6ca6a4002c9fc41",
+      "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
+      "url": "http://arxiv.org/abs/2607.08288v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "c2c5a114a79c6bb5",
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+      "url": "http://arxiv.org/abs/2607.08745v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "6e243286a67605b0",
+      "title": "Swapping Faces, Saving Features: A Dual-Purpose Pipeline for Pedestrian Privacy in ITS",
+      "url": "http://arxiv.org/abs/2607.08402v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "2e5ec04427d68f5f",
+      "title": "INTENT: An LSTM Framework for Vehicle Intention Prediction in Intersection Scenarios with Comprehensive Ablation Analysis",
+      "url": "http://arxiv.org/abs/2607.08316v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "0ffb3782f7fa9e12",
+      "title": "FSD-VLN: Fast-Slow Dual-System Modeling for Aerial Long-Horizon Vision-Language Navigation",
+      "url": "http://arxiv.org/abs/2607.08359v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "17c6fa91af711aec",
+      "title": "UniRef-UAV: A Multimodal Benchmark for Universal Referring in UAV Imagery",
+      "url": "http://arxiv.org/abs/2607.08267v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "8c3d9d406dba1027",
+      "title": "WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search",
+      "url": "http://arxiv.org/abs/2607.08662v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "6ee84a814ae6b502",
+      "title": "Who Broke the System? Failure Localization in LLM-Based Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2607.07989v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "59a95b574238d816",
+      "title": "STEMbot: A Compliant Robot for Under-Canopy Plant Navigation",
+      "url": "http://arxiv.org/abs/2607.07873v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "1cb512b632fef584",
+      "title": "Multi-Agent Firewall Architecture for Privacy Protection of Sensitive Data in Interactions with Language Models",
+      "url": "http://arxiv.org/abs/2607.08282v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "b69b837dca86c70b",
+      "title": "HumanForge: A Human-Centric Deepfake Video Benchmark with Multi-Agent Forgery Rationales",
+      "url": "http://arxiv.org/abs/2607.08705v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "edfee610346b9c9c",
+      "title": "WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving",
+      "url": "http://arxiv.org/abs/2607.08375v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "b6eec1134be5d446",
+      "title": "Open-ended Multi-agent Autocurricula via Visual Inspection of Policies with Multi-modal LLMs",
+      "url": "http://arxiv.org/abs/2607.08193v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "1ce6dbfa4fb81b54",
+      "title": "3D Reconstruction of deciduous Trees using low-cost UAV- and Crane-based Photogrammetry for Monitoring Shoot Elongation across entire Canopies",
+      "url": "http://arxiv.org/abs/2607.07905v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "6561c2a24e0bb969",
+      "title": "Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study",
+      "url": "http://arxiv.org/abs/2607.08652v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "21d08828b04c9c5b",
+      "title": "Game Theory Driven Multi-Agent Framework Mitigates Language Model Hallucination",
+      "url": "http://arxiv.org/abs/2607.08403v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "ab6ea46fd949c308",
+      "title": "Expressivity and Statistical Trade-offs in Diffusion Policy Learning",
+      "url": "http://arxiv.org/abs/2607.07967v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "6bec3a3287f12c93",
+      "title": "Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report",
+      "url": "http://arxiv.org/abs/2607.07370v2",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
+      "key": "5cea58bd1671fb76",
+      "title": "Agentic AI and Retrieval-Augmented Models in Straight-Through Underwriting",
+      "url": "http://arxiv.org/abs/2607.07858v1",
+      "sent_at": "2026-07-10T22:03:40.896786+00:00"
+    },
+    {
       "key": "e7209774867e3454",
       "title": "Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review",
       "url": "http://arxiv.org/abs/2607.06706v1",

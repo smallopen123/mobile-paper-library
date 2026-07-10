@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-11</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-11 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>UAV-OVVIS：无人机也需要开放词汇视频实例分割</h2>
+              <p>UAV-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation</p>
+              <p class="meta">Mingyu Dou, Shi Qiu, Ming Hu, Yifan Chen, Zhe Sun | arXiv cs.CV | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08075v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08075v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机视频广泛应用于交通监控、城市管理和紧急救援。然而，现有的无人机视频感知主要依赖于预定义类别下的框级定位和轨迹关联，难以同时支持开放场景中的灵活查询和细粒度实例级动态理解。为此，我们引入了一个新任务——无人机开放词汇视频实例分割（UAV-OVVIS），该任务根据开放词汇查询发现无人机视频中的目标，并输出具有全局一致身份的实例级分割轨迹。考虑到无人机场景中实例级标注的稀缺性，我们提出了AeroTrack，一个无需训练的统一框架。AeroTrack以周期性开放词汇检测、短片段掩码传播和跨片段身份统一为核心，重用现有的视觉基础模型来实现UAV-OVVIS。基于此框架，我们实例化了五种AeroTrack变体，并构建了AeroVIS，一个包含9个无人机目标类别和8,279条轨迹的UAV-OVVIS评估基准。实验表明，AeroTrack在无人机场景中显著优于现有的通用视频实例分割方法，并展现出强大的开放词汇鲁棒性和泛化能力。为支持未来研究，我们发布了AeroTrack和AeroVIS，作为UAV-OVVIS的统一框架和基准。</p></section>
+              <section><h3>English Abstract</h3><p>Unmanned Aerial Vehicle (UAV) videos are widely used in traffic monitoring, urban management, and emergency rescue. However, existing UAV video perception mainly relies on box-level localization and trajectory association under predefined categories, making it difficult to simultaneously support flexible queries and fine-grained instance-level dynamic understanding in open scenarios. To this end, we introduce a new task, UAV Open-Vocabulary Video Instance Segmentation (UAV-OVVIS), which discovers targets in UAV videos according to open-vocabulary queries and outputs instance-level segmentation trajectories with globally consistent identities. Considering the scarcity of instance-level annotations in UAV scenarios, we propose AeroTrack, a training-free unified framework. AeroTrack centers on periodic open-vocabulary detection, short-segment mask propagation, and cross-segment identity unification, reusing existing visual foundation models to enable UAV-OVVIS. Based on this framework, we instantiate five AeroTrack variants and construct AeroVIS, an evaluation benchmark for UAV-OVVIS containing 9 UAV object categories and 8,279 trajectories. Experiments show that AeroTrack substantially outperforms existing general video instance segmentation methods in UAV scenarios and demonstrates strong open-vocabulary robustness and generalization. To support future research, we release AeroTrack and AeroVIS as a unified framework and benchmark for UAV-OVVIS.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读引言和任务定义部分，理解UAV-OVVIS任务与传统方法的区别；然后重点看AeroTrack框架的三大核心模块及其实现细节。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对无人机视频中的目标感知与跟踪，是低空经济安全监控（如交通、救援）的核心技术。其开放词汇能力可适应未知目标类型，提升航迹预测与智能体在复杂环境中的鲁棒性。</p></section>
+              <section><h3>实践思路</h3><p>可基于AeroTrack框架，在自有无人机视频数据集上复现开放词汇实例分割实验。建议先使用AeroVIS基准评估性能，再针对特定低空场景（如无人机避障）调整检测与传播模块。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>从遗留文档到OSCAL：基于MCP的智能体管道，用于关键基础设施中威胁驱动的持续合规</h2>
+              <p>From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure</p>
+              <p class="meta">Lea Roxanne Muth, Marian Margraf | arXiv cs.CR | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08288v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08288v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在关键基础设施中，操作技术环境通常无法被主动扫描，但风险评估和合规管理仍需要主动的系统反馈。本文提出了一种非侵入式的、基于MCP的多智能体管道，该管道将自然语言系统描述转换为来源可验证的知识图谱和符合NIST OSCAL格式的审计就绪工件，用于持续自动化合规管理。该架构将基于LLM的推理与针对权威威胁情报源的确定性知识检索解耦，降低了虚构漏洞和幻觉攻击路径的风险。在一个基于证据的水务设施合成场景中，该管道实现了0.90的CVE召回率和完美的D3FEND召回率。它生成了一个符合模式的OSCAL系统安全计划和一个OSCAL安全评估报告。然而，核心见解并非是通过MCP的接地完全消除了管道中的错误（例如幻觉），而是将错误转移到了从自然语言描述中提取资产的第一阶段。在此阶段，单个错误提取的实体可能导致后续阶段产生真实但不相关的CVE，这会消耗时间和资源。然而，它使剩余风险变得可见、可验证，并适合进行高效的人工审查，因为基础设施（例如版本号、操作系统等）通常是已知的。</p></section>
+              <section><h3>English Abstract</h3><p>In critical infrastructure, operational technology environments often cannot be actively scanned, and yet active system feedback is needed for risk assessment and compliance. This paper presents a non-invasive, MCP-grounded multi-agent pipeline that converts natural-language system descriptions into source-verified knowledge graph and audit-ready artifacts in the NIST OSCAL format for continuous automated compliance management. The architecture decouples LLM-based reasoning from deterministic knowledge retrieval against authoritative threat-intelligence sources, reducing the risk of fabricated vulnerabilities and hallucinated attack paths. In an evidence-based synthetic scenario of a water utility, the pipeline achieves 0.90 CVE recall and perfect D3FEND recall. It generates a schema-valid OSCAL System Security Plan and an OSCAL Security Assessment Report. Nevertheless, the core insight is not that grounding via MCP eliminates errors (e.g., hallucinations) entirely from the pipeline, but that it shifts errors into the first phase of asset extraction from the natural language description. Here, a single incorrectly extracted entity can lead to genuine but irrelevant CVEs in subsequent stages of the pipeline, which consumes time and resources. However, it makes the remaining risk visible, verifiable, and suitable for a time-efficient manual review, since the infrastructure (e.g., version numbers, OS, etc.) is typically known.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解MCP多智能体管道如何解决关键基础设施的合规问题；然后重点看第3节的架构设计，特别是LLM与知识检索的解耦机制。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的自动化合规管道可用于低空经济中无人机系统（UAS）的安全管理，通过将自然语言描述转化为可审计的合规工件，提升低空交通管理的安全性和可信度。其威胁驱动的方法也可辅助航迹预测系统的风险评估。</p></section>
+              <section><h3>实践思路</h3><p>可尝试在低空无人机管理系统中部署类似管道：将无人机操作手册或系统描述输入，生成OSCAL格式的安全计划。建议先在水务或交通模拟场景中复现，再针对无人机通信协议进行定制化资产提取。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>AUTOPILOT VQA：面向行车记录仪事件理解的视觉语言模型基准测试</h2>
+              <p>AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding</p>
+              <p class="meta">Siddharth Damodharan, Radhika Gupta, Ali Alshami, Ryan Rabinowitz, Jugal Kalita | arXiv cs.AI | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08745v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08745v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>近期视觉语言模型、大语言模型和多模态大语言模型的进展改进了自动驾驶任务，如场景理解、决策制定、轨迹预测和视觉问答。然而，评估这些模型是否能可靠地推理安全关键事件仍然具有挑战性。为填补这一空白，我们提出了AUTOPILOT-VQA，一个面向行车记录仪视频理解的、以事件为中心的视觉问答基准。该数据集通过围绕真实世界驾驶事件和近事件设计的结构化问题来评估不同系统。该基准涵盖了多样化的安全相关类别，包括天气和光照条件、交通环境、道路布局、路面状态、标志、涉及实体、事故是否发生、撞击位置以及可避免性相关推理。通过要求模型回答关于上下文场景属性和事件级事故细节的接地问题，AUTOPILOT-VQA超越了目标识别，迈向时间接地、安全感知的推理。该数据集作为AUTOPILOT CVPR 2026竞赛的一部分发布，为评估自动驾驶系统在不同场景下的可靠性提供了标准化基准。我们的基准支持开发更可解释、更鲁棒和更具安全意识的视觉语言系统，用于真实世界的自动驾驶。</p></section>
+              <section><h3>English Abstract</h3><p>Recent advances in Vision-Language Models, Large Language Models, and Multimodal Large Language Models have improved autonomous driving tasks such as scene understanding, decision making, trajectory prediction, and visual question answering. However, evaluating whether these models can reliably reason about safety-critical incidents remains challenging. To address this gap, we present AUTOPILOT-VQA, an incident-centric visual question answering benchmark for dashcam video understanding. The dataset evaluates different systems through structured questions designed around real-world driving incidents and near-incidents. The benchmark covers diverse safety-relevant categories, including weather and lighting conditions, traffic environment, road layout, road surface state, signage, involved entities, accident occurrence, impact location, and avoidability-related reasoning. By requiring models to answer grounded questions about both contextual scene properties and event-level incident details, AUTOPILOT-VQA moves beyond object recognition toward temporally grounded, safety-aware reasoning. The dataset is released as part of the AUTOPILOT CVPR 2026 competition and provides a standardized benchmark for assessing the reliability of autonomous driving systems in different scenarios. Our benchmark support developments for more interpretable, robust, and safety-conscious vision-language systems for real-world autonomous driving.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读第1节引言和第3节数据集构建，理解基准的评估目标和问题设计；然后重点看第4节实验结果，了解当前模型在安全推理上的不足。</p></section>
+              <section><h3>相关性说明</h3><p>该基准直接评估视觉语言模型在驾驶场景中的安全推理能力，与低空经济中无人机航迹预测和智能体决策的安全验证高度相关。其事件中心的问题设计可迁移至无人机事故分析，提升低空飞行安全。</p></section>
+              <section><h3>实践思路</h3><p>可基于AUTOPILOT-VQA数据集，测试现有视觉语言模型在无人机视角下的安全推理能力。建议先复现基准中的基线结果，再针对低空场景（如无人机碰撞避免）设计类似的问题集进行扩展评估。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>换脸保特征：面向智能交通系统中行人隐私的双用途管道</h2>
+              <p>Swapping Faces, Saving Features: A Dual-Purpose Pipeline for Pedestrian Privacy in ITS</p>
+              <p class="meta">Roba H. Farouk, Catherine M. Elias | arXiv cs.CV | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08402v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08402v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>训练人工智能模型以让自动驾驶汽车（智能交通系统的一个应用）做出实时决策，需要大规模且多样化的数据集。行人意图和轨迹预测是自动驾驶汽车中使用的关键模型，需要包含多样化行人图像的数据集。对这些数据集的不受限制访问会带来严重的安全风险，如身份盗窃和行人追踪。挑战在于在保持训练模型所需图像属性的同时应用隐私保护程序。现有的隐私方法可能保护了行人的隐私，但降低了图像的可用性，从而阻碍了模型的有效性。本工作的重点是实施一个五阶段管道，通过换脸来保护行人隐私，同时保持关键的面部属性完整。该管道应针对满足Egy-DRiVeS数据集的隐私需求进行定制。此外，评估了Roop和Ghost-v2换脸模型。事实证明，Roop在多个方面优于Ghost-v2，具体将在文中讨论。因此，Roop是管道中使用的换脸模型，以在通过身份隐藏实现行人隐私和通过面部属性保留实现数据可用性之间取得平衡。</p></section>
+              <section><h3>English Abstract</h3><p>Large-scale and diverse datasets are needed to train AI models to take real-time decisions for autonomous vehicles (AVs), an intelligent transportation system (ITS) application. Pedestrian intention and trajectory prediction are critical models used in AVs, requiring datasets involving diverse pedestrian images. Unrestricted access to these datasets imposes serious security risks, like identity theft and pedestrian tracking. The challenge is to apply privacy preservation procedures while maintaining the image attributes needed to train the models. Existing privacy methods may preserve the pedestrian&#x27;s privacy, but degrade the image usability, which hinders the models&#x27; effectiveness. This work&#x27;s focus is to implement a five-stage pipeline to protect pedestrians&#x27; privacy through face swapping while keeping the essential facial attributes intact. It should be tailored to satisfy the privacy needs of the Egy-DRiVeS dataset. Moreover, Roop and Ghost-v2 face-swapping models are evaluated. Provenly, Roop outperforms Ghost-v2 in various aspects, as will be discussed. Consequently, Roop is the face-swapping model to be used in the pipeline to strike the balance between pedestrian privacy via identity concealment and data usability via facial attribute preservation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解隐私保护与数据可用性的权衡；然后重点看第3节的五阶段管道设计，以及第4节中Roop与Ghost-v2的对比实验。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 trajectory prediction。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>可基于该管道，在行人轨迹预测数据集上复现隐私保护实验。建议先使用Egy-DRiVeS数据集测试Roop模型的效果，再评估隐私处理后对轨迹预测模型性能的影响，以验证隐私与可用性的平衡。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>INTENT：基于LSTM的交叉口场景车辆意图预测框架及全面消融分析</h2>
+              <p>INTENT: An LSTM Framework for Vehicle Intention Prediction in Intersection Scenarios with Comprehensive Ablation Analysis</p>
+              <p class="meta">Logine M. Zaki, Catherine M. Elias | arXiv cs.AI | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08316v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08316v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>车辆意图预测是自动驾驶汽车在所有驾驶场景中敏捷性和安全性的关键方面；如果要真正增强自动驾驶汽车，我们需要让它们采用人类对驾驶员意图的解释，特别是在需要大量人类交互以及复杂驾驶行为的情况下，例如在交叉路口、环岛和紧急情况（如突然停车）中，车辆意图预测有助于在实时时间内采取正确的规避行动，每一秒的行动都会产生影响，并可以防止灾难发生。在最坏的情况下，它有助于将损害降至最低，并将安全放在首位。意图预测也可用于增强轨迹预测（意图条件轨迹预测）。在本研究中，提出了INTENT框架，使用LSTM模型在事件发生前2秒预测车辆在交叉路口的意图，以预测交叉路口的车辆是直行、左转还是右转。在InD数据集上对各种模型实验和消融研究进行了彻底测试，达到了99.71%的准确率。</p></section>
+              <section><h3>English Abstract</h3><p>Vehicle intention prediction is a pivotal aspect in the agility and safety of autonomous vehicles in all driving scenarios; if genuine enhancement of autonomous vehicles are required, we need to make them adopt human interpretation of driver&#x27;s intention especially in cases that require a lot of human interaction as well as complex driving behaviors like the ones at intersections, roundabouts and emergency cases such as sudden stops where vehicle intention prediction helps in taking the correct evasive action within a real time period where every second of action makes an impact and can prevent a catastrophe from taking place. In the worst case, it helps minimize the damage and make safety a priority. Intention prediction can also be used to enhance trajectory prediction (intention conditioned trajectory prediction). In this study, The INTENT framework is proposed using LSTM model to predict the vehicle&#x27;s intention at intersections 2 seconds ahead of the event occurrence to predict whether the cars in intersections are going straight, turning left, or turning right. Various model experiments and ablation study are thoroughly tested on InD dataset achieving 99.71% accuracy.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解意图预测对自动驾驶安全的重要性；然后重点看第3节的LSTM模型架构和第4节的消融实验结果，特别是不同输入特征的影响。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 trajectory prediction。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>可基于INTENT框架，在InD数据集上复现车辆意图预测实验。建议先复现99.71%准确率的基线结果，再尝试将意图预测作为条件输入到轨迹预测模型中，验证其对低空无人机航迹预测的改进效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>FSD-VLN：面向空中长时域视觉语言导航的快慢双系统建模</h2>
+              <p>FSD-VLN: Fast-Slow Dual-System Modeling for Aerial Long-Horizon Vision-Language Navigation</p>
+              <p class="meta">Xueke Zhu, Qingyan Meng, Liutao Yu, Wei Zhang, Zhengyu Ma, Huihui Zhou, Yonghong Tian | arXiv cs.RO | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08359v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08359v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉语言导航（VLN）通过将语言指令映射到实时视觉输入，使无人机能够在未知环境中自主导航。与依赖GPS或预编程的导航相比，VLN支持直观的人机交互和更强的环境适应性，需要高层语义推理与低延迟飞行控制的紧密集成。现有方法存在全局多模态理解与序列动作生成之间的结构错位，导致长时域空中导航出现轨迹抖动和严重的决策延迟。为解决此问题，我们提出FSD-VLN，一种将语义推理与低延迟飞行命令生成解耦的快慢双系统架构。该框架包含两个异步分支：一个从预训练视觉语言模型中提取稳定语义先验的慢流，以及一个建模跨时间动作分布以产生一致飞行输出的扩散Transformer（DiT）快流。我们进一步引入一种时间感知自适应优化器来稳定长序列训练并减少梯度振荡。大规模低空仿真实验表明，FSD-VLN在未见场景上的导航成功率比最先进方法高出2倍，同时将单动作推理延迟和总任务运行时间削减超过50%。我们的工作验证了解耦语义-控制建模的优势，并为长时域空中VLN提供了一种实用范式。</p></section>
+              <section><h3>English Abstract</h3><p>Vision-Language Navigation (VLN) enables UAV autonomous navigation in unknown environments by mapping language instructions to real-time visual inputs. Compared with GPS-dependent or pre-programmed navigation, VLN supports intuitive human-machine interaction and stronger environmental adaptability, requiring tight integration of high-level semantic reasoning and low-latency flight control.Existing methods suffer from structural misalignment between global multimodal understanding and sequential action generation, causing jittery trajectories and severe decision latency for long-horizon aerial navigation. To solve this issue, we propose FSD-VLN, a fast-slow dual-system architecture disentangling semantic reasoning and low-latency flight command generation.The framework has two asynchronous branches: a slow stream extracting stable semantic priors from pre-trained vision-language models, and a Diffusion Transformer (DiT) fast stream modeling cross-temporal action distributions to produce consistent flight outputs. We further introduce a time-aware adaptive optimizer to stabilize long-sequence training and reduce gradient oscillation.Large-scale low-altitude simulation experiments show FSD-VLN achieves up to 2X higher navigation success rates on unseen scenes than SOTA methods, while cutting single-action inference delay and total task runtime by over 50%. Our work validates the benefit of decoupled semantic-control modeling and provides a practical paradigm for long-horizon aerial VLN.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注快慢双系统如何解耦语义推理与动作生成，再查看仿真实验中的成功率与延迟指标。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对无人机（低空经济核心载体）的自主导航问题，其快慢双系统架构可提升航迹预测的实时性与稳定性。对低空经济安全而言，减少决策延迟和轨迹抖动有助于避免碰撞等事故。</p></section>
+              <section><h3>实践思路</h3><p>可在低空仿真环境（如AirSim或Gazebo）中复现FSD-VLN的快慢流设计，对比其与单流基线在导航成功率和延迟上的差异。建议使用公开的VLN数据集（如R2R）进行迁移实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>UniRef-UAV：面向无人机图像通用指代的多模态基准</h2>
+              <p>UniRef-UAV: A Multimodal Benchmark for Universal Referring in UAV Imagery</p>
+              <p class="meta">Haibin Tian, Huichao Xie, Xuelin Qian, Ruitao Lu, Junwei Han, Dingwen Zhang | arXiv cs.CV | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08267v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08267v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>无人机在执行任务时越来越依赖视觉定位能力，以根据复杂空中场景中的多样化指令定位目标。然而，现有的指代表达理解基准和方法主要围绕纯文本查询和单目标输出构建，这限制了它们在涉及参考图像、多模态指令、缺失目标和多个有效目标实例的实际无人机场景中的适用性。为弥补这一空白，我们引入“通用指代”，一种同时扩展查询模态和输出基数的广义无人机指代任务。我们构建了UniRef-UAV，一个支持纯文本、纯图像和文本+图像查询的多模态基准，其目标基数取决于模态：纯文本和文本+图像查询允许无目标、单目标和多目标定位，而纯图像查询则专注于存在感知的单实例定位。它还提供了用于视觉查询泛化的域内和域外评估协议。我们进一步提出UAV-URNet，一种检测风格的基线，将异构查询映射到共享查询空间，并通过集合预测预测可变大小的目标集。大量实验表明，UAV-URNet提供了一个稳定且可复现的基线，与大型通用多模态大语言模型相比，具有更一致的无目标判别能力和更轻量、可复现的实现。额外的域分析、查询表示分析和消融研究表明，多模态查询能够提升性能。</p></section>
+              <section><h3>English Abstract</h3><p>Unmanned aerial vehicles (UAVs) increasingly rely on visual grounding capabilities to localize task-relevant targets from diverse instructions in complex aerial scenes. Existing referring expression comprehension (REC) benchmarks and methods, however, are largely built around text-only queries and single-object outputs, which limits their applicability to practical UAV scenarios involving reference images, multimodal instructions, absent targets, and multiple valid target instances. To address this gap, we introduce \emph{Universal Referring}, a generalized UAV referring task that jointly expands the query modality and the output cardinality. We construct \emph{UniRef-UAV}, a multimodal benchmark that supports text-only, image-only, and text+image queries with modality-dependent target cardinality, where text-only and text+image queries admit no-target, single-target, and multi-target grounding while image-only queries focus on existence-aware single-instance grounding. It also provides in-domain and cross-domain evaluation protocols for visual-query generalization. We further present \emph{UAV-URNet}, a detection-style baseline that maps heterogeneous queries into a shared query space and predicts variable-size target sets through set prediction. Extensive experiments show that UAV-URNet provides a stable and reproducible baseline with more consistent no-target discrimination and a more lightweight, reproducible implementation than large general-purpose MLLMs. Additional domain analysis, query-representation analysis, and ablation studies demonstrate that multimodal queries help reduce visual-query ambiguity and promote a more unified query--target alignment space. The annotations, visual query crops/images, train/validation/test splits, evaluation scripts, and baseline code will be made publicly available to facilitate reproducible research.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解“通用指代”任务的定义（多模态查询+可变目标基数），再关注UAV-URNet的集合预测机制与实验对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提升了无人机在复杂场景中的目标识别能力，直接支持低空经济中的精准作业（如巡检、搜救）。航迹预测可结合视觉定位结果优化路径规划，而智能体系统需依赖此类多模态理解来执行安全决策。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机视觉数据集（如UAV123）上复现UAV-URNet的集合预测基线，测试其对多目标与无目标场景的定位效果。建议对比其与MLLM在推理速度和模型大小上的差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>WebSwarm：面向深度与广度网络搜索的递归多智能体编排</h2>
+              <p>WebSwarm: Recursive Multi-Agent Orchestration for Deep-and-Wide Web Search</p>
+              <p class="meta">Xiaoshuai Song, Liancheng Zhang, Kangzhi Zhao, Yutao Zhu, Zhongyuan Wang, Guanting Dong, Jinghan Yang, Han Li, Kun Gai, Ji-Rong Wen, Zhicheng Dou | arXiv cs.CL | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08662v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08662v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>基于大语言模型的网络搜索智能体正在将信息检索从简单的事实问答转变为复杂的深度与广度搜索及研究型任务。单个ReAct风格的智能体受限于一条长轨迹和有限的上下文，难以同时处理深度和覆盖范围。现有的多智能体系统通过并行执行和聚合提高了搜索覆盖范围，但在递归深度、协作适应性和基于证据的扩展方面仍存在明显局限。我们提出WebSwarm，一种渐进式递归委派框架，在推理过程中联合构建任务分解、递归扩展和智能体协作。WebSwarm动态实例化智能体搜索节点，每个节点将局部目标与搜索模式耦合，该模式指定节点应如何组织搜索和协作。每个节点可以自行解决其目标或进一步委派子节点；解决后，它将证据和结果向上返回，使父节点能够进一步扩展、修订或聚合搜索过程。为引导此过程，WebSwarm首先探测任务相关信息在网页上的组织方式，以支撑后续节点扩展，并在同质兄弟节点间复用过程级经验。在BrowseComp-Plus、WideSearch、DeepWideSearch和GISA上的实验表明，WebSwarm在深度、广度以及交织的深度与广度任务上始终优于单智能体和多智能体基线。进一步的消融分析、任务难度和网络工具效率分析验证了其有效性。</p></section>
+              <section><h3>English Abstract</h3><p>Large language model (LLM)-based web search agents are transforming information seeking from simple factoid question answering into complex, deep-and-wide search and research-oriented tasks. A single ReAct-style agent is constrained by one long trajectory and limited context, making it difficult to handle depth and coverage simultaneously. Existing multi-agent systems improve search coverage through parallel execution and aggregation, but still exhibit clear limitations in recursive depth, collaboration adaptability, and evidence-grounded expansion. We propose WebSwarm, a progressive recursive delegation framework that jointly constructs task decomposition, recursive expansion, and agent collaboration during inference. WebSwarm dynamically instantiates agentic search nodes, each coupling a local objective with a search mode that specifies how the node should organize search and collaboration. Each node can either solve its objective itself or further delegate child nodes; after solving, it returns evidence and results upward, enabling parent nodes to further expand, revise, or aggregate the search process. To guide this process, WebSwarm first probes how task-relevant information is organized on the web to ground subsequent node expansion, and reuses process-level experience across homogeneous sibling nodes. Experiments on BrowseComp-Plus, WideSearch, DeepWideSearch, and GISA show that WebSwarm consistently outperforms single-agent and multi-agent baselines on deep, wide, and interleaved deep-and-wide tasks. Further analyses of ablation, task difficulty, web tool efficiency, and model generalization explain WebSwarm&#x27;s effectiveness and provide insights for multi-agent search systems.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解递归委派框架如何通过节点分解与协作实现深度搜索，再关注实验中的任务类型（深度、广度、交织）与性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究的多智能体协作与递归推理机制可应用于低空经济中的复杂任务规划（如多无人机协同搜索）。航迹预测可借鉴其递归分解思想处理长时域路径规划，智能体系统的故障诊断（如第9篇）也可受益于其过程级经验复用。</p></section>
+              <section><h3>实践思路</h3><p>可在多智能体仿真平台（如MetaGPT或CrewAI）中复现WebSwarm的递归委派逻辑，测试其在复杂信息检索任务中的深度与广度覆盖能力。建议对比其与ReAct单智能体在任务完成率上的差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>谁破坏了系统？基于大语言模型的多智能体系统中的故障定位</h2>
+              <p>Who Broke the System? Failure Localization in LLM-Based Multi-Agent Systems</p>
+              <p class="meta">Yufei Xia, Anjun Gao, Yueyang Quan, Zhuqing Liu, Minghong Fang | arXiv cs.CR | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07989v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07989v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>基于大语言模型的多智能体系统通过协调推理和行动实现复杂问题求解，但其分布式结构也引入了诊断系统级故障的新挑战。当执行失败时，由于长时域交互和紧密耦合的智能体行为，很难确定哪个智能体负责以及轨迹在哪个点首次变得不可逆转地错误。本文研究基于大语言模型的多智能体系统中的故障定位问题，并提出AgentLocate，一个将故障归因于特定智能体和最早决定性步骤的框架。AgentLocate结合了基于大语言模型的判断机制与独立评估者的多视角验证，其评估结果通过置信度感知策略进行聚合。生成的反馈进一步用于通过轻量级微调来调整判断器，从而提高归因质量。我们在两个互补基准上评估AgentLocate，涵盖不同任务、智能体配置和轨迹长度。实验结果表明，AgentLocate在识别责任智能体和故障步骤方面始终优于现有故障定位方法，同时在令牌使用和运行时间方面保持高效。</p></section>
+              <section><h3>English Abstract</h3><p>Large language model (LLM) based multi-agent systems enable complex problem solving through coordinated reasoning and action, but their distributed structure also introduces new challenges in diagnosing system-level failures. When an execution fails, identifying which agent is responsible and at what point the trajectory first becomes irreversibly misdirected is difficult due to long-horizon interactions and tightly coupled agent behaviors. In this paper, we study the problem of failure localization in LLM-based multi-agent systems and present AgentLocate, a framework that attributes failures to both a specific agent and the earliest decisive step. AgentLocate combines an LLM-based judging mechanism with multi-perspective verification by independent evaluators, whose assessments are aggregated using a confidence-aware strategy. The resulting feedback is further used to adapt the judge through lightweight fine-tuning, improving attribution quality. We evaluate AgentLocate on two complementary benchmarks covering diverse tasks, agent configurations, and trajectory lengths. Experimental results show that AgentLocate consistently outperforms existing failure localization methods in identifying both responsible agents and failure steps, while remaining efficient in terms of token usage and running time.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注故障定位问题的定义（责任智能体+最早错误步骤），再理解AgentLocate的多视角验证与置信度聚合机制。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接提升多智能体系统的可靠性，对低空经济中无人机编队或智能体集群的安全运行至关重要。航迹预测中的异常检测可借鉴其故障步骤定位方法，智能体系统的鲁棒性设计需考虑此类诊断机制。</p></section>
+              <section><h3>实践思路</h3><p>可在多智能体仿真环境（如SMAC或Overcooked）中复现AgentLocate的故障定位流程，测试其对不同任务和轨迹长度的归因准确性。建议对比其与基于规则或简单投票方法的定位效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>STEMbot：用于冠层下植物导航的柔性机器人</h2>
+              <p>STEMbot: A Compliant Robot for Under-Canopy Plant Navigation</p>
+              <p class="meta">Zachary Charlick, Nilay Roy Choudhury, Haoyu Ma, Xiaonan Huang, Dmitry Berenson | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07873v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07873v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>有机农业的可扩展性部分受到害虫监测相关劳动力成本的限制。虽然无人机和漫游车非常适合从上方或植物旁边进行农业监测，但许多害虫生活在叶子背面或植物茎上，只有在造成显著损害后才能被发现。为实现早期害虫检测，我们提出STEMbot，一种专为在植物冠层下自主导航而设计的微型攀爬机器人系统。与缺乏机载感知或仅限于无分支垂直树干的现有攀爬平台不同，STEMbot集成了全几何PIN-SLAM管道与语义八叉树，在攀爬植物时实现稳健的定位与建图。为规划STEMbot的运动，我们提出一种流形约束的A*规划器以及射线追踪目标指定，以实现分支感知遍历和遮挡目标的检查。我们通过硬件实验验证了系统，展示了在7-33mm茎干上的可靠遍历以及在四种不同植物标本上的自主导航。定量评估表明，我们的系统实现了高保真几何重建，相对于离线摄影测量基线，平均倒角距离小于1厘米，证实STEMbot保持了自主导航所需的全局一致里程计。</p></section>
+              <section><h3>English Abstract</h3><p>The scalability of organic agriculture is partially limited by the labor costs associated with monitoring for pests. While drones and rovers are well-suited for agricultural monitoring from above or next to plants, many pests live on the underside of leaves or on plant stems, making them detectable only after they have caused significant damage. To enable early pest detection we present STEMbot, a miniature climbing robot system designed for autonomous navigation under plant canopies. Unlike existing climbing platforms that lack on-board perception or are restricted to unbranched vertical trunks, STEMbot integrates a fully geometric PIN-SLAM pipeline with a semantic OcTree to achieve robust localization and mapping while climbing the plant. To plan STEMbot&#x27;s motion we propose a manifold-constrained A* planner along with ray-tracing goal specification to enable branch-aware traversal and the inspection of occluded targets. We validate our system through hardware experiments, demonstrating reliable traversal of stems ranging from 7-33mm and autonomous navigation across four distinct plant specimens. Quantitative evaluations show that our system achieves high-fidelity geometric reconstructions with an average Chamfer distance of less than 1cm relative to an offline photogrammetry baseline, confirming that STEMbot maintains the globally consistent odometry needed for autonomous navigation.</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注STEMbot的攀爬与导航机制（PIN-SLAM+流形约束A*），再查看硬件实验中的茎干直径范围与重建精度。</p></section>
+              <section><h3>相关性说明</h3><p>该研究展示了低空经济中微型机器人在农业场景的潜力，其SLAM与路径规划技术可迁移至无人机在复杂环境（如森林冠层）中的航迹预测。智能体系统需结合此类感知与运动控制以实现安全自主作业。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境（如PyBullet或MuJoCo）中复现STEMbot的流形约束A*规划器，测试其在分支结构中的路径规划效率。建议使用公开的植物点云数据集验证SLAM重建精度。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>多智能体防火墙架构：在与语言模型交互中保护敏感数据的隐私</h2>
+              <p>Multi-Agent Firewall Architecture for Privacy Protection of Sensitive Data in Interactions with Language Models</p>
+              <p class="meta">Hugo García Cuesta, Pablo Mateo Torrejón, Alfonso Sánchez-Macián | arXiv cs.CR | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08282v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08282v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>虽然大型语言模型（LLM）已成为重要的生产力工具，但将其集成到工作流程中若缺乏充分的安全保障，会带来重大风险。本文提出了一种开源、注重隐私、面向用户的防火墙，旨在保护基于网络和程序化的LLM交互。该架构结合了浏览器扩展和代理，实现对HTTP(S)和WebSocket通信的全面流量拦截。其核心是一个灵活的多智能体管道，通过结合确定性检测器与LLM驱动的语义分析的混合方法、专有代码泄露预防以及为未来安全增强（如提示注入规避）设计的可扩展组件，实现数据泄露预防。该框架的分层架构支持在异构环境中部署，使组织能够平衡计算成本、检测深度和延迟。评估结果表明，在最优配置下，其F1分数最高可达94.93%。</p></section>
+              <section><h3>English Abstract</h3><p>While Large Language Models (LLMs) have become essential productivity tools, their integration into workflows without adequate safeguards creates significant risks. This paper proposes an open-source, privacy-focused, user-facing firewall designed to secure both web-based and programmatic LLM interactions. The architecture combines a browser extension and a proxy for total traffic interception across both HTTP(S) and WebSocket communications. At its core, a flexible multi-agent pipeline delivers data leakage prevention through a hybrid approach combining deterministic detectors with LLM-driven semantic analysis, proprietary code leakage prevention, and extensible components designed for future security enhancements such as prompt injection evasion. The framework&#x27;s layered architecture enables deployment across heterogeneous environments, allowing organizations to balance computational cost, detection depth and latency. Evaluation results demonstrate it achieves F1 scores of up to 94.93% on optimal configurations.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和结论部分，了解防火墙的整体架构和核心功能。然后重点关注多智能体管道的设计细节和混合检测方法。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的多智能体防火墙架构可直接应用于低空经济中无人机与地面控制中心或云端LLM交互时的敏感数据保护，防止航迹、任务指令等关键信息泄露。其混合检测方法（确定性+语义分析）可用于检测针对航迹预测模型的恶意输入或数据篡改。</p></section>
+              <section><h3>实践思路</h3><p>可复现其浏览器扩展和代理架构，搭建一个针对无人机通信链路的原型防火墙。使用公开的无人机航迹数据集模拟敏感数据交互，测试其数据泄露预防效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>HumanForge：一个以人为中心的深度伪造视频基准数据集及多智能体伪造理由生成</h2>
+              <p>HumanForge: A Human-Centric Deepfake Video Benchmark with Multi-Agent Forgery Rationales</p>
+              <p class="meta">Wenbo Xu, Zhimin Chen, Xiaojie Liang, Hengrui Liu, Wei Lu | arXiv cs.CV | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08705v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08705v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视频扩散模型和时间编辑工具的快速发展使得生成高度逼真的以人为中心的视频成为可能，给数字内容取证带来了前所未有的挑战。现有基准主要关注换脸或全局文本到视频合成，忽略了人-物或人-人交互以及多模态对齐等关键维度。为解决这些局限，我们引入了HumanForge，一个统一的、大规模的、多范式的以人为中心的视频伪造数据集。为了在无需大量人工标注或产生幻觉的单一提示的情况下构建和标注该数据集，我们提出了Gen2Anno，一个基于LangGraph的模块化主动多智能体管道。Gen2Anno协调六个专门智能体——从源分析到基于MoE的参考分析和闭环取证验证——生成超过18K个高保真视频片段，并产生结构化的、对比性的全标注，包含二元决策、细粒度伪影类别和时空定位。使用最先进的传统检测器和大型多模态模型（LMM）进行的广泛基准测试表明，在HumanForge上进行零样本泛化和细粒度推理面临重大挑战。代码和数据集将公开发布。</p></section>
+              <section><h3>English Abstract</h3><p>Rapid advancements in video diffusion models and temporal editing tools have enabled the generation of highly realistic human-centric videos, posing unprecedented challenges to digital content forensics. Existing benchmarks primarily focus on either face-swapping or global text-to-video synthesis, overlooking the crucial dimensions of human-object or human-human interactions and multi-modal alignment. To address these limitations, we introduce HumanForge, a unified, large-scale, and multi-paradigm human-centric video forgery dataset. To construct and annotate this dataset without labor-intensive manual labeling or hallucinated monolithic prompts, we propose Gen2Anno, a modular active multi-agent pipeline built on LangGraph. Gen2Anno coordinates six specialized agents-ranging from source profiling to MoE-based reference analysis and closed-loop forensic verification-to generate over 18K high-fidelity video segments and produce structured, contrastive omni-annotations containing binary decisions, fine-grained artifact categories, and spatio-temporal localization. Extensive benchmarks using state-of-the-art traditional detectors and Large Multimodal Models (LMMs) demonstrate the significant challenges of zero-shot generalization and fine-grained reasoning on HumanForge. Code and dataset will be publicly released.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解HumanForge数据集解决的问题和Gen2Anno管道的基本流程。然后重点看实验部分，了解现有检测器在该数据集上的表现。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的多智能体伪造检测管道（Gen2Anno）可启发低空经济中针对无人机航拍视频或地面监控视频的深度伪造检测方法。其细粒度伪影分类和时空定位能力可用于识别航迹预测模型输入数据中的伪造或篡改部分。</p></section>
+              <section><h3>实践思路</h3><p>可复现Gen2Anno管道中的部分智能体（如源分析和参考分析），构建一个针对无人机航拍视频的伪造检测原型。使用公开的无人机视频数据集进行测试，评估其对航迹相关伪造的检测能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>WCog-VLA：用于端到端自动驾驶的双层世界认知视觉-语言-动作模型</h2>
+              <p>WCog-VLA: A Dual-Level World-Cognitive Vision-Language-Action Model for End-to-End Autonomous Driving</p>
+              <p class="meta">Xuerun Yan, Zhexi Lian, Nuoheng Zhang, Shiyu Fang, Haoran Wang, Chen Lv, Jia Hu, Binyang Song | arXiv cs.CV | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08375v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08375v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉-语言-动作（VLA）模型推动了端到端自动驾驶的发展。然而，现有方法要么缺乏全面的世界认知，要么存在碎片化的世界预见，这本质上将这些模型限制在反应式驾驶中。为解决这一局限，我们提出了WCog-VLA，一种新颖的双层世界认知VLA框架，成功地将语义世界预测与生成式世界演化桥接起来，以实现主动式自动驾驶。在语义层面，WCog-VLA通过整合3D空间感知和注入智能体令牌来捕捉世界动态，同时实现博弈论思维链（Game-CoT）推理，从而统一了世界认知与推理。在生成层面，我们引入了对齐解耦扩散Transformer（ADDT）作为强大的生成式世界模型，合成物理上合理的联合多智能体轨迹。通过场景表示对齐，ADDT减少了所需的去噪步骤数，从而显著加速推理。为促进策略推理，我们进一步构建了一个包含85k个Game-CoT标注的大规模数据集。在NAVSIM基准上的大量实验表明，WCog-VLA达到了92.9的最先进（SOTA）PDMS分数。</p></section>
+              <section><h3>English Abstract</h3><p>Vision-Language-Action (VLA) models have advanced end-to-end autonomous driving. However, existing methods either lack comprehensive world cognition or suffer from fragmented world foresight, inherently confining these models to reactive driving. To address this limitation, we propose WCog-VLA, a novel dual-level World-Cognitive VLA framework that successfully bridges semantic world forecasting with generative world evolution to achieve proactive autonomous driving. At the semantic level, WCog-VLA unifies world cognition and reasoning by incorporating 3D spatial perception and injecting agent tokens to capture the world dynamics, while concurrently enabling Game-theoretic Chain-of-Thought (Game-CoT) reasoning. At the generative level, we introduce the Aligned Decoupled Diffusion Transformer (ADDT) as a powerful generative world model that synthesizes physically-plausible joint multi-agent trajectories. Through scene representation alignment, ADDT reduces the number of denoising steps required and thus significantly accelerates inference. To facilitate strategic reasoning, we further construct a large-scale dataset featuring 85k Game-CoT annotations. Extensive experiments on the NAVSIM benchmark demonstrate that WCog-VLA achieves a State-Of-The-Art (SOTA) PDMS score of 92.9.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，理解WCog-VLA如何解决反应式驾驶问题。然后重点阅读方法部分，特别是语义层和生成层的设计细节。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的双层世界认知框架可直接应用于低空经济中无人机的自主航迹规划与预测。其Game-CoT推理能力可用于多无人机协同场景下的博弈式航迹决策，而ADDT生成式世界模型可用于预测周围飞行器的未来轨迹。</p></section>
+              <section><h3>实践思路</h3><p>可复现其Game-CoT推理模块，构建一个针对多无人机协同航迹规划的决策原型。使用公开的无人机航迹数据集（如UAV123）进行训练和测试，评估其在冲突避免和路径优化方面的效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>通过多模态大语言模型对策略进行视觉检查实现开放式多智能体自动课程学习</h2>
+              <p>Open-ended Multi-agent Autocurricula via Visual Inspection of Policies with Multi-modal LLMs</p>
+              <p class="meta">Lorenzo Pantè, Andrea Fanti, Roberto Capobianco | arXiv cs.LG | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08193v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08193v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>强化学习（RL）中的开放式课程旨在通过识别促进学习日益复杂技能的任务来训练具有通用能力的智能体。设计此类课程时的一个主要挑战是评估相对于智能体当前学习进度的任务难度。虽然先前的工作探索了使用标量任务分数或智能体行为的文本摘要，但本文研究了一种不同的方法：通过录制的回合视频直接检查策略行为。我们引入了该方法的一个简单而有效的实例，利用视频语言模型（VLM）来处理这些视频并提供课程建议，我们称之为策略视觉检查（VIP）。由于视频自然可以包含任意数量的可控智能体，我们在星际争霸多智能体挑战（SMAC）上对VIP进行了实证研究。我们表明，即使使用轻量级且可公开访问的VLM（VideoLLaMa2-7B），VIP也能利用策略视频生成比纯文本消融和依赖标量任务分数的方法更有效的课程。</p></section>
+              <section><h3>English Abstract</h3><p>Open-ended curricula in Reinforcement Learning (RL) aim to train generally-capable agents by identifying tasks that facilitate learning increasingly complex skills. A major challenge when designing such curricula is assessing task difficulty relative to the agent&#x27;s current learning progress. While previous work has explored using scalar task scores or textual summaries of the agent&#x27;s behavior, here we study a different approach: directly inspecting policy behavior via recorded episode videos. We introduce a simple yet effective instantiation of this approach which leverages a Video Language Model (VLM) to both process these videos and provide curriculum recommendations, which we call Visual Inspection of Policies (VIP). Since videos can naturally contain any number of controllable agents, we empirically study VIP on the StarCraft Multi-Agent Challenge (SMAC). We show that even with a lightweight and openly accessible VLM (VideoLLaMa2-7B), VIP can use policy videos to generate more effective curricula than both its text-only ablation and methods that rely on scalar task scores.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解VIP方法的核心思想。然后重点阅读方法部分和实验部分，特别是与基线方法的对比结果。</p></section>
+              <section><h3>相关性说明</h3><p>该论文提出的VIP方法可用于低空经济中多无人机系统的自动课程学习，通过分析无人机飞行策略的视频来动态调整训练任务的难度。其基于VLM的视觉检查能力可用于评估无人机在复杂空域中的航迹规划策略。</p></section>
+              <section><h3>实践思路</h3><p>可复现VIP方法，构建一个针对多无人机协同任务的自动课程学习原型。使用无人机仿真环境（如AirSim）生成飞行策略视频，训练VLM提供课程建议，评估其对航迹预测模型训练效率的提升。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>使用低成本无人机和基于起重机的摄影测量法对落叶乔木进行3D重建，以监测整个树冠的枝条伸长</h2>
+              <p>3D Reconstruction of deciduous Trees using low-cost UAV- and Crane-based Photogrammetry for Monitoring Shoot Elongation across entire Canopies</p>
+              <p class="meta">Stephan Nebiker, Micha Tschanz, Nando Amport, Frederik Baumgarten | arXiv cs.CV | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07905v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07905v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>树木生长决定了从大气中封存并在木质生物量中暂时储存的二氧化碳量。同时，树木生长受到与气候变化相关的温度升高、更频繁的干旱期、晚霜和其他极端事件的影响。虽然使用树木径向生长测量仪进行径向（次生）树木生长的连续测量已很成熟，但对枝条伸长（初生生长）的监测在很大程度上被忽视了，因为缺乏合适的测量技术。因此，气候变化对初生树木生长的影响仍未被充分理解。本工作旨在以3D方式重建本地落叶乔木，作为测量和监测整个树冠枝条伸长的基础。我们探索了在真实条件下使用低成本无人机摄影测量法和多摄像机CraneCam系统。数据在两个研究区域收集了整整一个生长季。我们介绍了传感器评估、摄影测量数据采集和处理策略。特别关注了所生成的摄影测量3D点云在精度、分辨率和完整性方面的分析。结果表明，使用重量小于250克的消费级无人机，整棵树的3D点精度达到5-6毫米，3D重建完整性在92%到98%之间，具体取决于无人机类型。本文介绍了一种新颖的3D打印地面实况分支，用于评估重建细部结构（如细树枝）的能力。最后，我们讨论了操作挑战和初步经验。</p></section>
+              <section><h3>English Abstract</h3><p>Tree growth determines how much CO2 is sequestered from the atmosphere and temporarily stored in woody biomass. At the same time tree growth is affected by increasing temperatures, more frequent drought periods, late frosts and other extreme events associated with climate change. While continuous measurements of radial (secondary) tree growth using dendrometers are well established, monitoring of shoot elongation (primary growth) has largely been neglected because suitable measurement techniques are lacking. As a result, the effects of climate change on primary tree growth remain insufficiently understood. This work aims at reconstructing native deciduous trees in 3D as a basis for measuring and monitoring shoot elongation over entire tree canopies. Here we explored the use of low-cost UAV photogrammetry and of a multi-camera CraneCam system under real-world conditions. Data were collected in two study areas over an entire growing season. We present sensor evaluations, photogrammetric data acquisition and processing strategies. A special focus is placed on the analysis of the resulting photogrammetric 3D point clouds in terms of accuracy, resolution and completeness. Results demonstrate 3D point accuracies of 5-6 mm for entire trees using consumer-grade UAVs weighing less than 250 g and a 3D reconstruction completeness between 92% and 98% depending on the UAV type. The paper introduces a novel 3Dprinted ground-truth branch to evaluate the capability to reconstructing fine-detail structures such as thin tree shoots. Finally, we discuss operational challenges and initial experiments towards a skeletonization of entire trees based on photogrammetric point clouds.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解研究背景和目标。然后重点阅读方法部分和实验结果，特别是点云精度和完整性的分析。</p></section>
+              <section><h3>相关性说明</h3><p>该论文展示了低成本无人机在精细3D重建中的应用，其高精度点云（5-6毫米）可用于低空经济中无人机对基础设施（如电线杆、塔架）的精细检测。其多摄像机CraneCam系统可启发多无人机协同的3D重建方案，用于航迹规划中的环境建模。</p></section>
+              <section><h3>实践思路</h3><p>可复现其无人机摄影测量流程，使用消费级无人机对小型目标（如无人机起降平台）进行3D重建。使用其3D打印地面实况分支评估重建精度，验证其在低空经济场景中的适用性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study</h2>
+              <p>Formal Mechanisms for Market Stability in Self-Interested Agent Societies: A Marketplace Simulation Study</p>
+              <p class="meta">Eugene Ng Yi Sheng, Bingquan Shen | arXiv cs.AI | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08652v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08652v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Self-interested agents, left unconstrained, tend toward defection in repeated social dilemmas, causing cooperative gains from trade to collapse. This paper investigates what formal mechanisms, layered on top of unrestricted communication, are sufficient for a society of such agents to maintain market stability, and how resilient those mechanisms are to adversarial attack. We instantiate the research question as a multi-agent marketplace simulation where 18 LLM agents (DeepSeek-V3) with complementary production specialties must trade within a constrained social network to obtain utility. We conduct two experimental phases: (1) a mechanism comparison across eight conditions under progressive troll injection over 200 rounds, identifying Mediation as the top-performing mechanism; and (2) adversarial red-teaming of Mediation using iteratively prompt-optimised LLM-driven trolls, finding that the best attack (v6) reduces honest-agent utility by 13.3% but cannot collapse the market. Mediation enables recovery even under sustained adversarial pressure. We define adversarial robustness as a mechanism&#x27;s ability to sustain positive honest-agent utility under optimised attack, and find that Mediation is robust: it can be bent but not broken.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>Game Theory Driven Multi-Agent Framework Mitigates Language Model Hallucination</h2>
+              <p>Game Theory Driven Multi-Agent Framework Mitigates Language Model Hallucination</p>
+              <p class="meta">Runzhe Liu, Biquan Bie, Zihao Wang, Yuchao Ma, Yexin Liu, Xinghai Li, Harry Yang, Wenbo Yang, Jinzhe Cao, Shengyang Tao | arXiv cs.AI | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08403v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08403v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>The application of lightweight Large Language Models in rule-based scientific domains remains severely limited by their tendency to mimic linguistic patterns rather than reproduce axiomatic reasoning, causing frequent hallucinations. Here, we show that G-Frame, an adaptive multi-agent framework integrating Bayesian and team game principles, establishes an automated closed-loop for high-quality data synthesis and model training. By forcing the internalization of domain constraints through structured reasoning, we synthesized a specialized corpus of 363,045 chains-of-thought and 199,589 question-answer pairs. The resulting 7B model OmniChem achieves performance parity with GPT 4o mini on custom benchmarks and ChemBench while exhibiting a 79.46% reduction in hallucinations relative to its base architecture. We further demonstrate the advanced capabilities of OmniChem in molecular design and synthesis planning. This work establishes a scalable paradigm utilizing adaptive multi-agents to overcome inherent reasoning deficiencies, offering a feasible pathway for accelerating knowledge discovery in specialized scientific fields.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>Expressivity and Statistical Trade-offs in Diffusion Policy Learning</h2>
+              <p>Expressivity and Statistical Trade-offs in Diffusion Policy Learning</p>
+              <p class="meta">Viet Vu, Renyuan Xu, Jiacheng Zhang, Yufei Zhang | arXiv stat.ML | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07967v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07967v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Diffusion-based policies have recently emerged as powerful policy parameterizations for reinforcement learning, representing state-conditioned action distributions as terminal laws of diffusion processes with parameterized drifts. This terminal-law representation has shown substantial expressive flexibility in practice, enabling diffusion policies to model complex, multimodal, and highly non-Gaussian action distributions; however, it remains unclear what mathematically drives this expressivity and how to fully exploit it when the policy is learned from finite data. In this paper, we identify the drift Lipschitz budget $K$ as a central quantity governing the expressivity and statistical behavior of diffusion policies. We quantify expressivity through approximation: diffusion policies with $K$-Lipschitz drifts can concentrate near optimal deterministic policies and achieve value approximation error of order $1/K$; moreover, we prove a matching lower bound under nondegenerate diffusion noise. This increased expressivity comes with a statistical cost. When the drift is parameterized by neural networks, increasing $K$ improves approximation but increases statistical complexity. Balancing these two terms yields a finite-sample performance gap of order $\tilde{O}(n^{-2/(m+6)})$ for generic neural-network drifts, and a sharper rate $\tilde{O}(n^{-2/(m+4)})$ for one-sided dissipative drift classes, where $n$ is the sample size and $m$ is the dimension of the state space. Numerical experiments provide empirical evidence for the sample-dependent trade-off in $K$, supporting both theoretical regimes. Our framework also suggests a practical implementation principle: choose the diffusion budget $K$ according to the available sample size, and then select a neural-network architecture with the corresponding fixed Lipschitz coefficient.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 diffusion policy, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report</h2>
+              <p>Behavior Foundations for Quadruped Robots: ABot-C0 Technical Report</p>
+              <p class="meta">Xufeng Zhao, Fuzhi Yang, Jianhui Chen, Li Gao, Zhang Meng, Jie Gao, Yao Zheng, Congyang Zhao, Tianxiong Lv, Menglin Yang, Minqi Gu, Yaru Zhao, Wenyu Liu, Honglin Han, Shihui Su, Zixiao Tang, Liu Liu, Mu Xu, Yang Cai, Wenbin Tang | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07370v2" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07370v2" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>The motion controller is one of the most fundamental modules in embodied intelligence systems. Driven by large-scale human motion-capture data and the motion-tracking paradigm, humanoid control has achieved remarkable progress in recent years. However, migrating this recipe to the quadrupedal setting is far less straightforward: animal motion data is scarcer and harder to capture at scale than human data, and cross-embodiment retargeting remains fragile. We present ABot-C0, a generalist motion-control system for quadruped robots that establishes three complementary behavior foundations: a scalable multi-source motion-data pipeline, robust policy learning across motion tracking, locomotion, and scene interaction, and a unified deployment stack for reliable real-world operation. Fundamentally, we construct a data pyramid through conditional video-generation synthesis, annotated motion capture, teleoperation, and human design, producing 16,074 physically feasible motion clips as the data foundation for diverse motion-learning demands. With large-scale motion data, a Flow-Matching generalist policy demonstrates, for the first time, a scaling law for quadruped motion tracking: performance improves consistently as training scales up, with zero-shot capability to track unseen motions. We then go a step further toward robust all-terrain locomotion by adopting a three-stage privileged-to-perceptive framework with temporal LiDAR memory and terrain-predictive supervision. Collectively, these components form a motion generalist that coordinates multi-policy execution, smooth behavior transitions, energy-efficient control, and safety mechanisms for real-world deployment. Extensive experiments on urban-terrain autonomous navigation and companion-style multimodal interaction demonstrate that quadruped robots can move beyond functional demos toward product-level behavioral intelligence.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 autonomous navigation。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>Agentic AI and Retrieval-Augmented Models in Straight-Through Underwriting</h2>
+              <p>Agentic AI and Retrieval-Augmented Models in Straight-Through Underwriting</p>
+              <p class="meta">Robert Richardson, Josh Meyers, Brian Hartman, David Sandberg | arXiv cs.AI | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07858v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07858v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Artificial intelligence (AI) is beginning to reshape actuarial practice, particularly in domains that require reasoning over unstructured documents, heterogeneous data sources, and regulated decision workflows. Actuaries now face a design space that ranges from traditional rule-based automation to large language models (LLMs), retrieval-augmented generation (RAG), and multi-agent ``agentic&#x27;&#x27; systems that plan, retrieve, call tools, and reflect. This paper examines how these emerging architectures can support actuarial priorities such as transparency, auditability, and human-in-the-loop governance, with a focus on straight-through decision processes. To make these ideas concrete, we develop and analyze an agentic AI framework for straight-through underwriting of small commercial Business Owner Policies (BOPs). We construct a synthetic but realistic experimental environment and compare three underwriting pipelines: (i) a single-LLM baseline, (ii) a naive RAG system, and (iii) a multi-agent ``Agentic RAG&#x27;&#x27; pipeline that combines targeted retrieval, third-party data checks, and explicit multi-step rule evaluation. The agentic system performs best overall, with the largest gains in multi-step and missing-information scenarios, where structured retrieval and reflection help the model avoid unsupported straight-through decisions.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>
