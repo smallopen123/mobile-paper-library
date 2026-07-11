@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-12</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-12 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>SASGeo：面向GNSS拒止无人机的稳定性感知语义地图定位——框架与合成概念验证</h2>
+              <p>SASGeo: Stability-Aware Semantic Map Localization for GNSS-Denied UAVs -- A Framework and Synthetic Proof of Concept</p>
+              <p class="meta">Natalia Trukhina, Vadim Vashkelis | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07737v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07737v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>GNSS拒止无人机需要偶尔的绝对位置修正来限制视觉惯性里程计的漂移。跨视角图像检索可以提供这种修正，但原始外观对季节、光照、视角、地图年龄和传感器模态敏感。我们提出了SASGeo，一个语义地图定位框架，通过持久性结构（如道路、建筑物、水道、铁路、交叉口和田野边界）来表示环境。该方法结合了语义栅格对齐、关系图证据、特征稳定性和地理独特性、明确的正面/矛盾/未知观测，以及对模糊修正的完整性感知拒绝。与仅提出架构不同，本文指定了具体的权重和决策模型，并报告了一个可复现的合成概念验证。在220次随机检索试验中，考虑了旋转、尺度变化、部分裁剪、遮挡、模拟地图变化和硬语义干扰，全局语义描述符达到了58.6%的Recall@1，而空间语义匹配变体达到了94.5-95.5%。Wilson 95%置信区间将全局描述符与空间变体分开，但空间变体之间重叠，因此实验支持语义几何，而非每个提议模块的明确益处。初步实验并未验证真实飞行导航；而是证明了结构化语义几何可以在受控的跨视角扰动下区分位置，并识别出更困难的混淆、地图老化以及拒绝问题。</p></section>
+              <section><h3>English Abstract</h3><p>GNSS-denied unmanned aerial vehicles require occasional absolute position fixes to bound the drift of visual-inertial odometry. Cross-view image retrieval can provide such fixes, but raw appearance is sensitive to season, illumination, viewpoint, map age, and sensor modality. We propose \sas, a semantic map-localization framework that represents the environment through persistent structures such as roads, buildings, waterways, railways, intersections, and field boundaries. The method combines semantic raster alignment, relational graph evidence, feature stability and geographic distinctiveness, explicit positive/contradictory/unknown observations, and integrity-aware rejection of ambiguous fixes. Unlike a broad architecture-only proposal, this paper specifies concrete weighting and decision models and reports a reproducible synthetic proof of concept. In 220 randomized retrieval trials with rotation, scale changes, partial crops, occlusion, simulated map changes, and hard semantic decoys, a global semantic descriptor achieved 58.6\% Recall@1, while spatial semantic matching variants achieved 94.5-95.5%. Wilson 95\% intervals separate the global descriptor from the spatial variants but overlap among the spatial variants, so the experiment supports semantic geometry rather than a definitive benefit from each proposed module. The preliminary experiment does not validate real-flight navigation; rather, it demonstrates that structured semantic geometry can discriminate locations under controlled cross-view perturbations and identifies the harder aliasing, map-aging, and rejection tests required next.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注其提出的语义地图定位框架如何结合多种线索（如语义栅格对齐、关系图证据）来提升定位鲁棒性。注意区分全局描述符与空间语义匹配变体的性能差异，理解实验设计如何支持语义几何的有效性。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对GNSS拒止环境下的无人机定位问题，是低空经济安全的关键技术之一。其提出的稳定性感知语义地图定位方法，通过利用持久性地理结构，可增强无人机在复杂低空环境中的自主导航与航迹保持能力，对提升低空飞行安全具有重要参考价值。</p></section>
+              <section><h3>实践思路</h3><p>可复现其合成概念验证实验，使用公开的语义地图数据集（如Cityscapes或Mapillary Vistas）构建语义栅格，并实现其提出的全局与空间语义匹配算法。进一步，可在小型无人机平台上，结合视觉惯性里程计，测试该方法在模拟GNSS拒止场景下的定位漂移抑制效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>利用基于逆变器资源的黑箱建模进行网络相互依赖性感知的电力系统动态轨迹预测</h2>
+              <p>Network Interdependency-Informed Power System Dynamic Trajectory Prediction Utilizing Black-Box Modeling of Inverter-Based Resources</p>
+              <p class="meta">Sungjoo Chung, Ying Zhang, Meng Yue, Hantao Cui | arXiv eess.SY | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.05843v2" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.05843v2" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>基于逆变器资源（IBR）的黑箱建模对于在专有电子控制架构存在下的实时电网运行和控制变得至关重要。现有的基于机器学习（ML）的在线动态轨迹预测方法，在使用IBR黑箱模型时，要么在同时使用多个代理时显著累积预测误差，要么忽略测量误差，限制了它们在实际电网中的部署。为了解决这些局限性，本文提出了一种新颖的基于网络相互依赖性的ML算法，用于IBR集成电力系统的在线动态轨迹预测。首先提出了一种基于模块化时空注意力网络（STAN）的预测器，用于每个IBR单元的黑箱建模。利用过去的测量值，所提出的STAN通过采用注意力机制关注轨迹预测最相关的特征，能够有效捕获和预测IBR的时空动态。此外，提出了一种新颖的混合物理信息损失函数，该函数集成了解耦的线性化交流潮流公式。所提出的损失函数有效地确保了网络运行中预测的物理一致性，同时避免了迭代潮流求解的计算复杂性，从而实现了高效的梯度反向传播和整体预测精度的提升。在IEEE 14节点和WECC 179节点系统上的案例研究表明，所提出的方法在测量误差下实现了显著的精度提升和鲁棒性，性能优于现有方法。</p></section>
+              <section><h3>English Abstract</h3><p>Black-box modeling of inverter-based resources (IBRs) has become essential for real-time grid operation and control in the presence of proprietary electronic control architectures. Existing machine learning (ML)-based online dynamic trajectory prediction approaches using IBR black-box models either significantly accumulate prediction errors when multiple surrogates are simultaneously used or ignore measurement errors, limiting their deployment in practical grids. To address these limitations, this paper proposes a novel network interdependency-informed ML algorithm for online dynamic trajectory prediction in IBR-integrated power systems. A modular spatiotemporal attention network (STAN)-based predictor for the black-box modeling of each IBR unit is first proposed. Utilizing past measurements, the proposed STAN can effectively capture and predict the spatiotemporal dynamics of IBRs by employing an attention mechanism to attend to the most pertinent features for trajectory prediction. Furthermore, a novel hybrid physics-informed loss function that integrates a decoupled linearized AC power flow formulation is proposed. The proposed loss function effectively ensures physical consistency of predictions within network operation while avoiding the computational complexity of iterative power flow solving, thereby enabling efficient gradient backpropagation and overall improved prediction accuracy. Case studies on the IEEE 14- and WECC 179-bus systems demonstrate that the proposed method achieves significant accuracy enhancement and robustness against measurement errors, outperforming recent ML-based trajectory prediction methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解其提出的模块化时空注意力网络（STAN）如何捕捉IBR的时空动态，以及混合物理信息损失函数如何利用解耦线性化交流潮流保证预测的物理一致性。关注其在IEEE 14和WECC 179节点系统上的实验结果，特别是与现有方法的精度对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的网络相互依赖性感知的动态轨迹预测方法，可类比应用于低空经济中无人机集群或飞行器的航迹预测。通过考虑飞行器间的相互影响（类似电力网络中的相互依赖性）和物理约束（如飞行力学），可以提升航迹预测的准确性和鲁棒性，对保障低空交通的安全与效率有重要启示。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将该方法中的时空注意力网络和物理信息损失函数迁移到无人机航迹预测任务中。具体地，使用无人机飞行日志数据（如位置、速度、姿态）作为输入，构建考虑飞行器间避碰约束的物理信息损失函数，并在多无人机仿真环境（如AirSim或Gazebo）中验证预测效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>张量网络理论的多智能体自动形式化</h2>
+              <p>Multi-agent Autoformalization of Tensor Network Theory</p>
+              <p class="meta">Sirui Lu, Erickson Tjoa, J. Ignacio Cirac | arXiv quant-ph | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07857v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07857v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>我们构建了一个由专门的大型语言模型智能体组成的团队，并提出了一种用于理论物理研究级形式化的智能体驱动工作流程，并以矩阵乘积态基本定理的自动形式化作为演示。这些智能体通过结构化的数学蓝图和定期的人工审查进行协调，自主地编排并执行了完整的形式化过程。对于某些陈述，智能体能够探索出标准文献中未包含的新证明路径。在此过程中，智能体生成了大量以前在Mathlib（Lean的数学库）中不存在的张量网络和量子信息库。作为一个物理应用，该形式化还扩展到了一维对称保护拓扑相。我们发现，大规模自动形式化的主要瓶颈在于强制执行数学意图，并对整个过程及涉及的各种细微之处进行了详细研究。我们将代码库作为库TNLean发布，并附有一份关于形式化工作的多章节蓝图。</p></section>
+              <section><h3>English Abstract</h3><p>We build a team of specialized large language-model agents and present an agent-driven workflow for research-level formalization in theoretical physics, with the autoformalization of the fundamental theorem of matrix-product states as a demonstration. The agents, coordinated through a structured mathematical blueprint and periodic human review, orchestrated and executed the full formalization autonomously. For some statements, the agents were able to explore new proof routes that are not part of the standard literature. Along the way the agents produced extensive tensor-network and quantum-information libraries not previously available in Mathlib, Lean&#x27;s mathematical library. As a physical application, the formalization also extends towards symmetry-protected topological phases in one dimension. We find that the main bottleneck in large-scale autoformalization is enforcing mathematical intent and we provide a detailed study of the full process and various subtleties involved. We release the codebase as the library \href{https://github.com/LionSR/TNLean}{TNLean}, together with a \nChapters{}-chapter \href{https://lionsr.github.io/TNLean/blueprint/}{blueprint} of the formalization effort.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注其提出的多智能体工作流程如何协作完成复杂的数学形式化任务，特别是智能体如何探索新的证明路径。注意其讨论的自动形式化瓶颈（强制执行数学意图），这对于理解当前AI在科学推理中的局限性至关重要。</p></section>
+              <section><h3>相关性说明</h3><p>该研究展示了多智能体系统在复杂科学推理中的应用潜力，可启发低空经济中智能体（如无人机、交通管理系统）的协同决策与推理。其自动形式化方法可用于验证航迹规划算法或安全协议的正确性，提升低空经济系统的安全性和可靠性。</p></section>
+              <section><h3>实践思路</h3><p>可借鉴其多智能体协作框架，设计用于低空交通管理场景的智能体系统。例如，构建一组智能体分别负责航迹规划、冲突检测、通信协调等任务，并通过结构化蓝图（如标准操作流程）进行协同，在仿真环境中验证其解决复杂交通冲突的能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>从触发到情绪：基于CPM的评估多智能体用于基于角色对话中的动态情绪演化</h2>
+              <p>From Triggers to Emotions: A CPM-Grounded Appraisal Multi-Agent for Dynamic Emotional Evolution in Persona-Based Dialogue</p>
+              <p class="meta">Jingyao Cai, Shuaijun Liu, Abdul Rehman, Yutong Guo, Qin Tian, Thomas Dolby, Sue Green, Chantel Cox, Xiaosong Yang | arXiv cs.MA | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07824v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07824v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>大型语言模型（LLM）极大地推进了基于角色的对话智能体在医疗、教育、咨询、客户服务和互动叙事等领域的情绪敏感角色模拟。然而，两条相关的研究路线留下了一个关键空白。基于角色的对话系统通常将情绪编码为静态特质或表面级的风格线索，而情感对话研究主要关注对用户的共情回应生成，而非建模智能体角色自身的情绪演变状态。因此，角色内由触发驱动的情绪演化仍未得到充分探索。为了解决这一局限性，我们从组件过程模型（CPM）中汲取灵感，这是一种将情绪视为由外部事件评估塑造的动态过程的心理学理论。我们提出了CPM-MultiAgent，一个基于CPM的情绪演化多智能体框架，用于支持基于角色对话中的情绪变化。CPM-MultiAgent不是将角色的情绪视为固定属性，而是将其表示为一种潜在状态，该状态由对话触发因素持续重塑。通过情感触发提取、基于CPM的协作评估和情绪状态更新，该框架能够在多轮交互中实现更情绪一致的角色模拟。与基线比较、消融研究、人工评估和案例分析的实验表明，CPM-MultiAgent在情绪敏感的角色模拟场景中有效地建模了动态情绪演化。</p></section>
+              <section><h3>English Abstract</h3><p>Large Language Models (LLMs) have substantially advanced persona-based dialogue agents for emotion-sensitive role simulation in healthcare, education, counseling, customer service, and interactive storytelling. However, two related lines of work leave a key gap. Persona-based dialogue systems often encode emotions as static traits or surface-level stylistic cues, and affective dialogue research has largely focused on empathetic response generation toward users rather than modeling the agent persona&#x27;s own evolving emotional state. As a result, trigger-driven emotional evolution within a character remains underexplored. To address this limitation, we draw inspiration from the Component Process Model (CPM), a psychological theory that views emotion as a dynamic process shaped by the appraisal of external events. We propose CPM-MultiAgent, a CPM-grounded emotion evolution multi-agent framework for supporting emotional changes in persona-based dialogue. Instead of treating a character&#x27;s emotion as a fixed attribute, CPM-MultiAgent represents it as a latent state that is continuously reshaped by dialogue triggers. Through affective trigger extraction, CPM-based collaborative appraisal, and emotion state updating, the framework enables more emotionally consistent role simulation in multi-turn interactions.Experiments with baseline comparisons, ablation studies, human evaluation, and case analyses demonstrate that CPM-MultiAgent effectively models dynamic emotional evolution in emotionally sensitive role-simulation settings.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解其如何将心理学中的组件过程模型（CPM）应用于多智能体框架，以实现角色情绪的动态演化。关注其提出的情感触发提取、协作评估和状态更新三个核心模块如何协同工作。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的动态情绪演化模型可应用于低空经济中的人机交互场景，例如无人机操作员的情绪状态监测与自适应交互。通过模拟操作员在压力或紧急情况下的情绪变化，智能体可以调整其沟通策略或提供辅助，从而提升人机协作的安全性和效率。</p></section>
+              <section><h3>实践思路</h3><p>可尝试将该框架应用于无人机地面控制站的智能助手开发。收集操作员在模拟任务中的语音或文本数据，训练模型识别其情绪触发因素，并实现一个能够根据操作员情绪状态动态调整提示或警告方式的对话智能体，在仿真环境中评估其对操作员决策质量的影响。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>Flow-ERD：基于智能体类型感知流匹配与熵正则化蒸馏的多样化交通仿真</h2>
+              <p>Flow-ERD: Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation</p>
+              <p class="meta">Seulbin Hwang, Kiyoung Om, Daejung Kim, Jinhan Lee | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06957v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06957v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>真实且多样化的交通仿真对于自动驾驶开发至关重要。然而，当前的主流基准主要奖励真实性，近期的方法也相应进行了优化，导致多样性未被充分探索。我们引入了Flow-ERD，一个同时追求真实性和多样性的多智能体仿真器。其主干网络是智能体类型感知流匹配（AFM），它将流匹配的多模态表达能力与特定类型的运动执行相结合。它在保持与每种智能体类型一致的运动的同时，保留了细粒度的多样性。第二阶段是熵正则化蒸馏（ERD），它使用熵正则化的反向KL散度目标对闭环 rollout 分布进行微调。这减轻了协变量偏移，同时明确防止了向高密度模式的坍缩。我们使用无日志多样性指标以及标准真实性评分来评估Flow-ERD。Flow-ERD在WOSAC测试基准中排名第一，并在可复现基线中主导了真实性与多样性的帕累托前沿。我们的项目页面可在此处获取。</p></section>
+              <section><h3>English Abstract</h3><p>Realistic and diverse traffic simulation is essential to autonomous driving development. Yet prevailing benchmarks predominantly reward realism, and recent methods have optimized accordingly, leaving diversity underexplored. We introduce \textbf{Flow-ERD}, a multi-agent simulator that pursues realism and diversity jointly. Its backbone, \textbf{Agent-Type Aware Flow Matching} (AFM), couples flow matching&#x27;s multi-modal expressiveness with type-specific kinematic execution. It preserves fine-grained diversity while keeping motions consistent with each agent type. A second stage, \textbf{Entropy-Regularized Distillation} (ERD), fine-tunes the closed-loop rollout distribution with an entropy-regularized reverse-KL objective. This mitigates covariate shift while explicitly preventing collapse onto high-density modes. We evaluate Flow-ERD with a log-free diversity metric alongside standard realism scores. Flow-ERD ranks first on the WOSAC test benchmark and dominates the realism--diversity Pareto front among reproducible baselines. Our project page is available \href{https://seulbinhwang.github.io/flow-erd-project-page/}{here}.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注其提出的智能体类型感知流匹配（AFM）如何平衡多样性与类型一致性，以及熵正则化蒸馏（ERD）如何防止模式坍缩。注意其使用的无日志多样性指标，这是评估多样性的关键创新。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的多智能体交通仿真方法可直接应用于低空经济中的无人机交通仿真。通过考虑不同类型无人机（如物流无人机、巡检无人机）的运动特性，并生成多样化的飞行轨迹，可以更真实地模拟低空交通场景，用于测试和验证航迹预测与冲突解决算法，提升低空运行安全。</p></section>
+              <section><h3>实践思路</h3><p>可复现其提出的Flow-ERD框架，并使用公开的无人机轨迹数据集（如UAV123或自建数据集）进行训练。具体地，定义不同类型的无人机智能体（如旋翼机、固定翼），并实现AFM和ERD模块，在仿真环境中生成多样化的飞行场景，评估其对航迹预测模型训练效果的提升。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>视频到反应：映射野外视频到观众反应分布</h2>
+              <p>Video2Reaction: Mapping Video to Audience Reaction Distribution in the Wild</p>
+              <p class="meta">Trang Nguyen, Sidong Zhang, Shiv Shankar, Gauri Jagatap, Deepak Chandran, Andrea Fanelli, Madalina Fiterau | arXiv cs.CV | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06875v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06875v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>理解和预测观众对视频内容的反应对于改进内容创作、推荐系统和媒体分析至关重要。为了支持观众反应预测及其他内容参与应用，我们引入了Video2Reaction，这是一个多模态数据集，将短视频片段映射到野外观众通过社交媒体表达的诱发情绪分布。Video2Reaction涵盖超过10,000个视频，可作为可靠的基准和训练资源。为了在反应随时间变化时实现经济高效的连续标注，我们开发了一个仅使用开源LLM的两阶段多智能体流水线，在盲人人工验证下达到86%的正确率。我们建立了野外视频到反应分布预测的第一个基准，并表明预训练基础视频模型在零样本设置中失败，而微调则将其转变为最先进的预测器，能够仅从视频中建模完整的反应分布和主导反应。然而，该任务仍具挑战性：即使最强的方法在主导反应预测中也仅达到77%的Top-3 F1分数（LLaVA-Next），突显了建模集体观众反应方面的显著差距。数据集和代码可在项目页面获取。</p></section>
+              <section><h3>English Abstract</h3><p>Understanding and forecasting audience reactions to video content are crucial for improving content creation, recommendation systems, and media analysis. To enable audience reaction prediction and other content engagement applications, we introduce $\textbf{Video2Reaction}$, a multimodal dataset that maps short movie segments to a distribution of $\textit{induced emotions}$ of viewers in the wild, as expressed through social media. $\textbf{Video2Reaction}$ spans more than 10,000 videos and serves as a reliable benchmark as well as a training resource for audience reaction prediction. To enable cost-effective continuous annotations as reactions may change over time, we develop a two-stage multi-agent pipeline using only open-source LLMs, achieving 86% correctness under blind human verification despite the inherently noisy and subjective nature of the task. We establish the first benchmark for video-to-reaction-distribution prediction in the wild and show that pretrained foundation video models fail in zero-shot settings, while finetuning transforms them into state-of-the-art predictors capable of modeling both full reaction distributions and dominant responses from video alone. However, the task remains challenging: even the strongest methods achieve only 77% Top-3 F1 in dominant reaction prediction (LLaVA-Next), highlighting a substantial gap in modeling collective audience reaction. \modification{Dataset and code are available at our project page: https://information-fusion-lab-umass.github.io/video2reaction-bench.github.io</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解任务定义和数据集规模；然后重点看方法部分的两阶段多智能体流水线和基准实验结果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的多智能体流水线方法可用于低空经济中无人机集群的协同感知与行为预测；其视频到反应分布预测框架可类比于航迹预测中的群体行为建模；数据集构建和标注策略为低空安全中的异常事件检测提供了参考。</p></section>
+              <section><h3>实践思路</h3><p>可复现其两阶段多智能体标注流水线，应用于低空无人机航迹数据的情感或意图标注；尝试微调视频基础模型（如LLaVA）用于无人机航迹预测任务；构建类似的多模态数据集用于低空安全事件反应预测。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>使用差异感知特征进行部署风险评估：Prime Video案例研究</h2>
+              <p>Deployment Risk Assessment Using Diff-Aware Features: A Case Study at Prime Video</p>
+              <p class="meta">Mayur Kurup, Hyunjae Suh, Swathi Vaidyanathan, Pranesh Vyas, Srinidhi Madabhushi, Yegor Silyutin | arXiv cs.SE | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06766v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06766v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>在Amazon Prime Video，我们面临管理代码部署的关键运营挑战，即在直播活动和快速功能发布期间避免服务中断。当前的变更控制方法使用全面部署冻结，阻止所有变更而不考虑风险，导致大量开发人员负担。虽然先前研究探索了风险变更预测器，但这些依赖于开发者特定的元数据或大量历史数据，引发隐私问题并限制了在新项目上的适用性。我们引入了一个以差异感知特征为中心的框架，这些特征直接源自代码修改。我们的关键贡献是系统性地识别哪些定量指标（代码级和变更级指标）和定性指标（编码风格违规、变更类型分类）对于风险预测是必要的。我们使用LLM作为多语言特征提取器，展示了其在代码分析方面的有效性，超越了生成任务，并消除了对特定语言工具的需求。我们在两个数据集上评估了框架：Prime Video的生产环境和公共ApacheJIT数据集。我们最佳模型在检测风险代码变更方面，在两个数据集上平均召回率为0.83，F1分数为0.81。值得注意的是，消融分析显示，变更级数量指标（如添加/删除的行数）是噪声预测器，而结构代码复杂性提供了更强的风险信号。这些结果表明，精心设计的特征选择能够实现有效的变更风险评估。</p></section>
+              <section><h3>English Abstract</h3><p>At Amazon Prime Video, we face the critical operational challenge of managing code deployments during live events and rapid feature releases without causing service outages. Current change control approaches use blanket deployment freezes that block all changes regardless of risk, creating significant developer toil. While prior research has explored risky change predictors, these rely on developer-specific metadata or extensive historical data, raising privacy concerns and limiting applicability to new projects. We introduce a framework centered on diff-aware features, characteristics derived directly from code modifications. Our key contribution is the systematic identification of which quantitative metrics (code-level and change-level metrics) and qualitative indicators (coding style violations, change type classification) are necessary for risk prediction. We employ LLMs as multi-language feature extractors, demonstrating their effectiveness for code analysis beyond generation tasks and eliminating the need for language-specific tooling. We evaluated our framework on two datasets: Prime Video&#x27;s production environment and the public ApacheJIT dataset. Our best-performing model achieves an average recall of 0.83 and F1 score of 0.81 across both datasets for detecting risky code changes. Notably, ablation analysis reveals that change-level volume metrics (e.g., lines added/deleted) are noisy predictors, while structural code complexity provides a substantially stronger risk signal. These results demonstrate that thoughtful feature curation enables effective change risk assessment across different programming languages and organizational contexts while avoiding privacy concerns.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言了解问题背景，然后重点看方法部分的差异感知特征定义和LLM特征提取器设计，最后关注实验结果和消融分析。</p></section>
+              <section><h3>相关性说明</h3><p>该框架的风险评估方法可应用于低空经济中无人机软件系统的部署安全，防止因代码变更导致的飞行控制故障；其差异感知特征思想可用于航迹预测模型的输入特征选择，识别关键风险因素；LLM作为特征提取器的思路可迁移到智能体系统的异常检测中。</p></section>
+              <section><h3>实践思路</h3><p>可复现其差异感知特征提取流水线，应用于无人机飞控系统的代码变更风险评估；尝试使用LLM提取代码特征，构建低空安全相关的风险预测模型；在开源无人机软件项目上验证其框架的有效性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>当智能体叛变：基于激活的多智能体系统中恶意行为检测</h2>
+              <p>When Agents Go Rogue: Activation-Based Detection of Malicious Behaviors in Multi-Agent Systems</p>
+              <p class="meta">Haowen Xu, Xue Tan, Lei Ma, Zhihao Zhang, Chao Wang, Qingze Wang, Ping Chen, Jun Dai, Xiaoyan Sun | arXiv cs.CR | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06807v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06807v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>虽然基于LLM的多智能体系统（MAS）在复杂任务上实现了有效协作，但由于智能体和交互层面的漏洞，面临严峻的安全挑战。现有大多数MAS安全防御建立在两个核心假设上：语义明确的恶意攻击和基于图的MAS拓扑及智能体级交互的显式建模。实际上，现实世界的攻击正变得语义上更隐蔽，而MAS执行通常是异步的，缺乏基于图的传播模型所需的时间对齐。为解决这些限制，我们提出了AcMAS，一个基于激活的恶意行为检测框架。通过分析本地智能体激活空间中的内部推理状态，AcMAS能够以同步鲁棒的方式检测甚至隐蔽攻击，无需依赖显式交互图。此外，我们的激活分析提供了关键信号，指导AcMAS恢复受损智能体的功能，而不是像现有方法那样进行破坏性的智能体隔离。全面评估表明，AcMAS在同步设置中（0.94 vs. 0.72）和异步设置中（0.93 vs. 0.38）分别比基于图的基线在F1分数上高出0.22和0.55，并且在不同开源LLM骨干、攻击强度和MAS规模上具有泛化能力。</p></section>
+              <section><h3>English Abstract</h3><p>While enabling effective collaboration on complex tasks, LLM-based Multi-Agent Systems (MAS) face critical security challenges due to vulnerabilities at the agent and interaction levels. Most existing MAS security defenses are built upon two core assumptions: semantically-explicit malicious attacks and explicit graph-based modeling of the MAS topology and agent-level interactions. In practice, real-world attacks are becoming more semantically stealthy, while MAS execution is typically asynchronous without the temporal alignment assumed by graph-based propagation models. To address these limitations, we propose AcMAS, an activation-based framework for malicious-behavior detection in MAS. By analyzing internal reasoning states in the activation space of local agents, AcMAS detects even stealthy attacks in a synchronization-robust fashion, without relying on explicit interaction graphs. Moreover, our activation analysis provides critical signals to guide AcMAS in restoring the functionality of compromised agents, rather than the disruptive agent isolation commonly used by the state-of-the-art methods. Comprehensive evaluation demonstrates that AcMAS significantly outperforms graph-based baselines against stealthy attacks, by +0.22 F1 in synchronous settings (0.94 vs. 0.72) and by +0.55 F1 in asynchronous settings (0.93 vs. 0.38), with generalization across diverse open-source LLM backbones, attack intensity, and MAS scale.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言了解问题背景和现有方法局限，然后重点看AcMAS的激活空间分析方法，最后关注实验结果中的同步/异步对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对多智能体系统的安全问题，可应用于低空经济中无人机集群的恶意行为检测与防御；其激活空间分析方法可用于航迹预测中的异常检测，识别被劫持或故障的无人机；恢复受损智能体的功能思路为低空安全中的容错控制提供了新方向。</p></section>
+              <section><h3>实践思路</h3><p>可复现AcMAS的激活空间分析方法，应用于低空无人机集群中恶意智能体的检测；尝试在模拟的无人机MAS环境中验证其检测和恢复能力；研究其激活分析信号用于航迹预测中的异常行为识别。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>世界模型的定义与路线图</h2>
+              <p>A Definition and Roadmap for World Models</p>
+              <p class="meta">Xinyuan Chen, Haoyu Guo, Shi Guo, Bingqi Jiang, Chunhua Shen, Xing Shen, Tianfan Xue, Yufei Xue, Mulin Yu, Weinan Zhang, Bin Zhao, Bowen Zhou, Ming Zhou | arXiv cs.AI | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06401v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06401v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>世界模型——学习环境结构和动态的内部模拟器——已成为AI领域最活跃讨论的概念之一。从基于模型的强化学习和视频生成到具身机器人，最终到物理AI，AI子领域的研究人员正在构建他们称之为“世界模型”的系统，但对于世界模型的基本定义、应预测什么以及如何构建，尚无共识。这篇视角文章提供了世界模型的科学定义、关键技术方面的讨论，以及开发有效世界模型的分阶段路线图。</p></section>
+              <section><h3>English Abstract</h3><p>World models -- internal simulators that learn the structure and dynamics of an environment -- have become one of the most actively debated concepts in AI. From model-based reinforcement learning and video generation to embodied robotics and ultimately, physical AI, researchers across AI subfields are building systems that they call &quot;world models&quot;, yet there is no consensus on what a world model fundamentally is, what it should predict, or how it should be built. This perspective article provides a scientific definition of world models, discussions of their key technical aspects, and a staged roadmap for developing effective world models.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言了解问题背景，然后重点看世界模型的定义部分和路线图，最后关注关键技术方面的讨论。</p></section>
+              <section><h3>相关性说明</h3><p>世界模型的概念直接关联到低空经济中的航迹预测和环境模拟，可用于无人机飞行路径规划与风险评估；其分阶段路线图为构建低空安全智能体系统提供了方法论指导；世界模型对动态环境的建模能力可提升低空经济中多智能体协同的安全性。</p></section>
+              <section><h3>实践思路</h3><p>可基于其定义和路线图，设计适用于低空经济场景的世界模型，用于无人机航迹预测和环境模拟；尝试在模拟环境中实现其分阶段路线图，验证世界模型在航迹预测中的有效性；研究世界模型与智能体系统的结合，用于低空安全决策。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>DexVerse：多任务、多形态灵巧操作模块化基准</h2>
+              <p>DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation</p>
+              <p class="meta">Yunchao Yao, Zhuxiu Xu, Tianqi Zhang, Zixian Liu, Sikai Li, Zhenyu Wei, Feng Chen, Dihong Huang, Kechang Wan, Chenyang Ma, Shuqi Zhao, Shenghua Gao, Masayoshi Tomizuka, Yi Ma, Mingyu Ding | arXiv cs.RO | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08751v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08751v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>构建通用灵巧操作策略需要超越孤立任务的基准，以系统评估策略在不同交互模式、感知条件和机器人形态下的表现。然而，现有基准在任务和数据多样性、形态覆盖或可控视觉变化方面仍然有限，阻碍了跨任务和跨形态泛化的研究。我们提出了DexVerse，一个大规模模块化的灵巧操作基准。DexVerse包含100个任务，涵盖广泛的操作技能，包括物体抓取和重定位、铰接物体交互、功能性工具使用、双臂协调、非抓取控制、接触丰富行为、多目标执行和长时程多阶段任务完成。它支持3个机器人臂和6个灵巧手，并可扩展到新任务、资产和形态。为评估视觉运动泛化，DexVerse提供了纹理、背景、光照和相机视角的可配置视觉变化。我们还提供了基于VR的遥操作界面和3,180个演示，包含同步的本体感觉、RGB、深度、点云和状态观测。我们对代表性方法（包括Diffusion Policy、DP3、OpenVLA和π0.5）在19个任务上进行了基准测试。结果揭示了任务泛化和视觉运动鲁棒性方面的重大挑战，确立了DexVerse作为通用灵巧操作的有前景测试平台。项目页面：https://ycyao216.github.io/DexVerse.site</p></section>
+              <section><h3>English Abstract</h3><p>Building general-purpose dexterous manipulation policies requires benchmarks that go beyond isolated tasks to systematically evaluate policies across diverse interaction modes, sensory conditions, and robot embodiments. However, existing benchmarks remain limited in task and data diversity, embodiment coverage, or controllable visual variation, hindering studies of cross-task and cross-embodiment generalization. We present DexVerse, a large-scale and modular benchmark for dexterous manipulation. DexVerse includes 100 tasks spanning a broad range of manipulation skills, including object grasping and relocation, articulated-object interaction, functional tool use, bimanual coordination, non-prehensile control, contact-rich behaviors, multi-goal execution, and long-horizon multi-stage task completion. It supports 3 robot arms and 6 dexterous hands, and is extensible to new tasks, assets, and embodiments. To evaluate visuomotor generalization, DexVerse provides configurable visual variations in textures, background, lighting, and camera viewpoints. We further provide a VR-based teleoperation interface and 3,180 demonstrations with synchronized proprioceptive, RGB, depth, point-cloud, and state observations. We benchmark representative methods, including Diffusion Policy, DP3, OpenVLA, and $π_{0.5}$, across 19 tasks. Results reveal substantial challenges in task generalization and visuomotor robustness, establishing DexVerse as a promising testbed for general-purpose dexterous manipulation. Project page: https://ycyao216.github.io/DexVerse.site</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言了解基准规模和任务范围，然后重点看任务分类和形态支持部分，最后关注基准测试结果和挑战分析。</p></section>
+              <section><h3>相关性说明</h3><p>该基准的灵巧操作任务可类比于低空经济中无人机的精细操控任务，如货物抓取和投放；其多形态支持为不同无人机型号的航迹预测提供了参考；视觉运动泛化研究有助于提升低空安全中无人机在复杂环境下的适应能力。</p></section>
+              <section><h3>实践思路</h3><p>可借鉴其模块化设计思路，构建低空经济中无人机灵巧操作任务的基准；尝试在模拟环境中复现其部分任务，验证无人机在抓取和工具使用中的航迹预测能力；研究其视觉运动泛化方法，用于低空安全中的环境适应。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>面向语言基础世界模型的写保护离散瓶颈：结构局限性与充分修复</h2>
+              <p>Write-Protected Discrete Bottlenecks for Language-Grounded World Models: A Structural Limitation and Sufficient Fix</p>
+              <p class="meta">Jiayi Fang | arXiv cs.LG | 2026-07-09</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.08312v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.08312v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>语言应如何与世界模型的离散符号系统交互？主流范式——将LLM/VLM特征端到端注入机器人世界模型（如RT-2、Octo、PaLM-E）——隐含地假设语言梯度可以直接塑造物理符号表示。我们探究这一假设是否安全，发现其并不安全，并刻画了防止失败的最小架构约束。任何进入基于Gumbel-softmax的离散符号瓶颈的语言梯度都会导致结构性权衡：原始估计器在4/5的种子中崩溃为2.2/64个符号，而五种抗崩溃策略虽能维持多样性，但无法学习语义标签（所有Counter[label]为零参数、零梯度），其中共现计数取代了基于梯度的绑定；（3）通过DP-Means流式聚类处理符号冲突，实现自动子簇分裂。所有三层共同实现了97.2%的接地准确率，而无第三层时仅为22.2%。在涵盖74次独立运行的两个实验中，我们在所有32个种子中展示了零符号崩溃，黑板架构在三种编码器架构（CNN、V-JEPA 300M、CLIP ViT-L）、两种环境和三种纹理条件下实现了79-100%的语义绑定。该修复训练参数少于2M，且无需LLM微调。</p></section>
+              <section><h3>English Abstract</h3><p>How should language interface with a world model&#x27;s discrete symbol system? The dominant paradigm -- end-to-end injection of LLM/VLM features into robot world models (RT-2, Octo, PaLM-E) -- implicitly assumes that language gradients can directly shape physical symbol representations. We ask whether this assumption is safe, find that it is not, and characterize the minimal architectural constraint that prevents the failure. Any language gradient entering a Gumbel-softmax-based discrete symbol bottleneck forces a structural trade-off: the vanilla estimator collapses to 2.2/64 symbols (4/5 seeds), while five anti-collapse strategies maintain diversity but fail to learn semantic labels (all Counter[label]], zero parameters, zero gradients) where co-occurrence counting replaces gradient-based binding; (3) handle symbol collisions via DP-Means streaming clustering for automatic sub-cluster splitting. All three layers together achieve 97.2% grounding accuracy vs. 22.2% without Layer 3. Across two experiments spanning 74 independent runs, we demonstrate zero symbol collapse in all 32 seeds, with the blackboard achieving 79-100% semantic binding across three encoder architectures (CNN, V-JEPA 300M, CLIP ViT-L), two environments, and three texture conditions. The fix trains fewer than 2M parameters and requires no LLM fine-tuning.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先关注摘要中关于语言梯度导致符号崩溃的发现，然后重点阅读三层修复机制的具体实现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的写保护离散瓶颈机制可增强低空经济中智能体（如无人机）世界模型的符号稳定性，避免语言指令导致内部表示崩溃，从而提升航迹预测的可靠性。其抗崩溃策略和语义绑定方法可直接应用于低空场景下的多模态感知与决策系统。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机仿真环境中复现该三层修复机制，使用Gumbel-softmax瓶颈处理语言指令与传感器数据的融合，评估符号崩溃率与语义接地准确率。建议对比有无写保护机制下的航迹预测精度，并测试不同编码器（如CNN、ViT）的鲁棒性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>Operator-on-F：价值等价性的补充——潜在世界模型的规划时诊断</h2>
+              <p>Operator-on-F complements value-equivalence: a planning-time diagnostic for latent world models</p>
+              <p class="meta">Donna Vakalis | arXiv cs.LG | 2026-07-05</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.04464v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.04464v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>基于模型的强化学习中的世界模型评估通常询问学习模型是否能很好地预测奖励和价值，这可能会遗漏模型潜在轨迹中与规划相关的错误。我们引入了一种互补诊断方法——operator-on-F，它在可观测子集F上比较模型的k步潜在前推与环境的前推，并使用模型自身的预测器。在猎豹奔跑任务上对TD-MPC2进行规模扫描时，每个模型大小的奖励预测误差都保持在[0.028, 0.091]范围内——仅约3倍变化，因此未归一化的奖励拟合检查分辨率有限，难以区分它们；（未归一化的）贝尔曼残差和奖励误差本身与回报的关系较弱（斯皮尔曼相关系数分别为-0.10和-0.30）。而operator误差在同一规模范围内从0.28跨越到2.62。在317M规模时，operator误差为2.62——比0.28-0.36的聚类高出一个数量级——规划回报降至0.9，而奖励预测误差（0.091）是五个值中最高的，但仍保持在与其他扫描值相同的[0.028, 0.091]小范围内。operator误差与回报损失之间的秩相关系数为-0.90（锚定自助法95%置信区间[-0.90, -0.70]，n=5个规模；移除任意单个规模后仍为-0.80或更强）。该operator还在TD-MPC2与纯自监督学习潜在世界模型的跨架构比较中返回了信息丰富、可区分架构的估计值。该operator诊断是对价值等价性的补充，而非替代。</p></section>
+              <section><h3>English Abstract</h3><p>World-model evaluation for model-based reinforcement learning typically asks whether the learned model predicts reward and value well, which can leave planning-relevant errors in the model&#x27;s latent rollouts unmeasured. We introduce a complementary diagnostic, operator-on-F, that compares a model&#x27;s k-step latent pushforward to the environment&#x27;s on an observable subset F, using the model&#x27;s own predictor. On a TD-MPC2 size sweep over cheetah-run, reward-prediction error stays within [0.028, 0.091] for every model size - only about 3x variation - so an unnormalized reward-fit check has narrow resolution to distinguish them; the (unnormalized) Bellman residual and reward error themselves have weak relationships with return (Spearman -0.10 and -0.30). Operator error spans 0.28 to 2.62 over the same sizes. At 317M the operator error is 2.62 - an order of magnitude above the 0.28-0.36 cluster - and the planning return collapses to 0.9, while reward-prediction error (0.091) is the highest of the five but stays within the same small [0.028, 0.091] range as the rest of the sweep. The rank correlation between operator error and return loss is -0.90 (anchor-bootstrap 95% CI [-0.90, -0.70] at n=5 sizes; leave-one-out removal of any single size leaves it at -0.80 or stronger). The operator also returns informative, architecture-discriminating estimates in a cross-architecture comparison between TD-MPC2 and a pure-SSL latent world model. The operator diagnostic complements value-equivalence rather than replacing it.</p></section>
+              <section><h3>中文阅读提示</h3><p>注意operator误差与奖励预测误差在区分模型质量上的巨大差异，并关注其与规划回报损失的高相关性。</p></section>
+              <section><h3>相关性说明</h3><p>该诊断方法可直接用于评估低空经济中航迹预测模型的潜在表示质量，通过operator误差识别规划相关错误，弥补传统奖励预测评估的不足。对于智能体（如无人机）的路径规划，该方法能更敏感地检测模型退化，提升安全决策的可靠性。</p></section>
+              <section><h3>实践思路</h3><p>可在航迹预测任务中复现operator-on-F诊断，对比不同模型大小（如小型与大型网络）下的operator误差与规划回报损失。建议在仿真环境中使用TD-MPC2或类似架构，记录operator误差与航迹预测精度的关系，并验证其作为模型选择指标的实用性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>GIRAF：迈向与可活动物体的可泛化人体交互</h2>
+              <p>GIRAF: Towards Generalizable Human Interactions with Articulated Objects</p>
+              <p class="meta">Xiaohan Zhang, Sebastian Starke, Alexander Winkler, Federica Bogo, Samir Aroudj, Yuting Ye | arXiv cs.CV | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07880v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07880v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>合成逼真的全身人体与可活动物体的交互是具身AI和图形学的基本挑战，在机器人训练和虚拟代理中具有应用前景。现有模型仍存在局限：一些专注于静态物体的简单活动，另一些则局限于仅手部操作。这留下了生成协调全身运动的问题，该运动需要以可泛化的方式接近、操作和移动可活动物体。关键难点在于联合推理运动、精细接触和物体活动性。模型必须捕捉跨物体几何形状传递的微妙手-物体对应关系，同时产生从导航到操作的无缝过渡。同时，大规模配对运动-场景数据的稀缺使得跨不同物体位置和形状的泛化变得困难。我们引入了一个文本条件扩散模型，通过三个核心思想应对这些挑战：一个以物体为中心的表示，统一了手-物体接触与物体表面；一个混合域训练策略，平衡了运动与交互；一个基于接触的增强方案，增加了训练多样性。通过实验，我们的方法展示了在未见物体配置上的强泛化能力，超越了当前最先进的方法。</p></section>
+              <section><h3>English Abstract</h3><p>Synthesizing realistic full-body human interactions with articulated objects is a fundamental challenge for embodied AI and graphics, with applications in robotics training and virtual agents. Existing models remain limited: some focus on simple activities with static objects, while others restrict attention to hand-only manipulation. This leaves open the problem of generating coordinated full-body motion that approaches, manipulates, and moves articulated objects in a realistic and generalizable way. The key difficulty lies in reasoning jointly about locomotion, fine-grained contact, and object articulation. Models must capture subtle hand-object correspondences that transfer across object geometries, while also producing seamless transitions from navigation to manipulation. At the same time, the scarcity of large-scale paired motion-scene data makes it difficult to generalize across diverse object positions and shapes. We introduce a text-conditioned diffusion model that addresses these challenges through three core ideas: an object-centric representation that unifies hand-object contact with object surfaces, a mixed-domain training strategy that balances locomotion and interaction, and a contact-based augmentation scheme that expands training diversity. Through experiments, our method demonstrated strong generalization to unseen object configurations, surpassing current state-of-the-art methods.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注三个核心思想（物体中心表示、混合域训练、接触增强）如何解决全身交互的泛化问题。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的物体中心表示和接触增强方法可应用于低空经济中无人机与可活动物体（如货物、机械臂）的交互任务，提升航迹预测中操作阶段的精度。其泛化能力有助于智能体在未知场景中安全执行抓取或搬运操作，减少碰撞风险。</p></section>
+              <section><h3>实践思路</h3><p>可在机器人仿真环境中复现GIRAF的文本条件扩散模型，测试无人机与可活动物体（如门、抽屉）的交互。建议使用物体中心表示记录接触点，并评估在未见物体配置下的全身运动生成质量，对比与仅手部操作方法的性能差异。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>基于演示的组合运动生成：以物体为中心的神经场</h2>
+              <p>Compositional Motion Generation from Demonstration with Object-Centric Neural Fields</p>
+              <p class="meta">Ahmet Ercan Tekden, Yasemin Bekiroglu | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07129v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07129v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>组合性通过将复杂行为组织为简单元素的组合，实现了可扩展且数据高效的机器人学习。利用这一原理，我们提出了一个生成式学习-从-演示框架，通过共享的物体级表示连接感知和运动，实现机器人行为的组合建模。我们使用以物体为中心的神经表示渲染场景，该表示将规范神经场与潜在条件变形相结合，以平滑、一致且可解释的方式捕捉位置和几何变化。对于运动生成，时间混合专家（MoE）采用门控机制，随时间组合物体条件的运动基元，生成完整轨迹。这种时空组合性保持了运动基元的数据效率，同时将运动锚定在视觉结构中，实现了跨不同场景配置的系统性泛化。在仿真中，使用所提出的模型成功完成了长时域操作任务，该模型所需的训练数据远少于其他基于图像的基线方法。真实世界实验进一步证明了该方法对噪声的鲁棒性、通过基于语言的分割模型在类别级别泛化的能力，以及直接在3D场景表示上运行的能力。</p></section>
+              <section><h3>English Abstract</h3><p>Compositionality, by organizing complex behavior as combinations of simpler elements, enables robot learning that is scalable and data efficient. Leveraging this principle, we propose a generative learning-from-demonstration framework that enables compositional modeling of robotic behavior by connecting perception and motion through shared object-level representations. We render scenes from object-centric neural representations that integrate canonical neural fields with latent-conditioned deformations, capturing positional and geometric variations in a smooth, consistent, and interpretable way. For motion generation, a temporal mixture-of-experts (MoE) employs a gating mechanism to combine object-conditioned movement primitives over time, producing complete trajectories. This spatial-temporal compositionality maintains the data efficiency of movement primitives while grounding motion in visual structure, enabling systematic generalization across diverse scene configurations. In simulation, long-horizon manipulation tasks are successfully completed using the proposed model, which requires significantly less training data than other image-based baselines. Real-world experiments further demonstrate the method&#x27;s robustness to noise, its ability to generalize at the category level through language-based segmentation models, and its capacity to operate directly on 3D scene representations.</p></section>
+              <section><h3>中文阅读提示</h3><p>注意组合性如何通过物体中心神经场和时间混合专家实现数据高效和泛化，并关注真实世界实验的鲁棒性结果。</p></section>
+              <section><h3>相关性说明</h3><p>该框架的组合性原理可应用于低空经济中无人机的航迹预测，通过分解复杂任务（如避障、目标跟踪）为运动基元，提升数据效率。其物体中心表示和语言分割能力有助于智能体在动态环境中泛化到新物体类别，增强安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机仿真中复现该组合运动生成框架，使用物体中心神经场表示场景，并训练时间混合专家生成航迹。建议对比与基于图像的方法在训练数据量和泛化性能上的差异，并测试在真实场景中处理噪声和类别级泛化的能力。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>无限世界与多功能交互</h2>
+              <p>Infinite Worlds with Versatile Interactions</p>
+              <p class="meta">Zelin Gao, Qiuyu Wang, Jiapeng Zhu, Jingye Chen, Zichen Liu, Qingyan Bai, Jiahao Wang, Yufeng Yuan, Hanlin Wang, Yichong Lu, Ka Leong Cheng, Haojie Zhang, Jian Gao, Tianrui Feng, Yuzheng Liu, Yao Yao, Yinghao Xu, Xing Zhu, Yujun Shen, Hao Ouyang | arXiv cs.CV | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07534v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07534v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>我们提出了LingBot-World 2.0（也称为LingBot-World-Infinity），这是LingBot-World的高级迭代版本，具有四项不同的升级。（1）我们的模型实现了无界交互范围，同时保持一致的输出质量，这得益于精心设计的因果预训练范式。（2）通过从基础模型中蒸馏出实时变体，我们的系统保证了快速响应时间，足以驱动60 fps的720p视频流。（3）与前一版本相比，此更新引入了高度多样化的交互元素，包括更广泛的动作（例如，攻击、射箭、施法和射击）以及更丰富的文本驱动事件。（4）我们率先在世界建模领域集成了代理框架，其中飞行员代理负责规划和执行角色行为，而导演代理负责随着场景进展合成新的环境元素。此外，为了促进共享体验，我们开发了一个接口，允许多个玩家同时沉浸在这个生动的世界模拟器中。我们将主要的14B模型与轻量级的1.3B模型配对，支持在单个GPU上轻松部署。</p></section>
+              <section><h3>English Abstract</h3><p>We present LingBot-World 2.0 (also known as LingBot-World-Infinity), an advanced iteration of LingBot-World featuring four distinct upgrades. (1) Our model achieves an unbounded interaction horizon while maintaining consistent output quality, benefiting from a carefully crafted causal pretraining paradigm. (2) Through distilling a real-time variant from the base model, our system guarantees rapid response time, sufficient to drive 720p video streams at 60 fps. (3) Compared to the previous version, this update introduces highly diverse interactive elements, comprising a broader spectrum of actions (e.g., attacking, archery, spell-casting, and shooting) alongside a richer variety of text-driven events. (4) We pioneer the integration of an agentic harness within the domain of world modeling, wherein a pilot agent is tasked with planning and executing character behaviors, while a director agent is responsible for synthesizing novel environmental elements as the scene progresses. Additionally, to facilitate a shared experience, we develop an interface that permits multiple players to simultaneously immerse themselves in this vivid world simulator. We pair our primary 14B model with a lightweight 1.3B counterpart, which supports effortless deployment on a single GPU.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注四项升级（无界交互、实时响应、多样交互、代理框架）如何提升世界模拟器的能力，并注意14B与1.3B模型的配对部署。</p></section>
+              <section><h3>相关性说明</h3><p>该世界模拟器的代理框架（飞行员与导演代理）可直接映射到低空经济中智能体的规划与执行任务，如无人机在复杂场景中的航迹预测与动态环境适应。其多样交互元素和实时响应能力有助于训练安全、鲁棒的航迹预测模型，并支持多智能体协同仿真。</p></section>
+              <section><h3>实践思路</h3><p>可在低空经济仿真环境中部署LingBot-World 2.0的轻量级1.3B模型，测试无人机在多样化交互（如避障、目标追踪）下的航迹预测性能。建议使用代理框架模拟飞行员代理规划路径，导演代理生成动态障碍，评估实时响应时间和预测精度。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>解锁哈密顿视频动力学模型中的时间泛化能力</h2>
+              <p>Unlocking Temporal Generalization in Hamiltonian Video Dynamics Models</p>
+              <p class="meta">Eli Laird, Corey Clark | arXiv cs.LG | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07763v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07763v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>世界模型通常被训练来预测具有固定步长的离散时间物理动力学，这阻止了在可变时间分辨率下的预测。这对于分层规划、仿真到现实的迁移，以及必须在多个时间尺度上查询相同动力学的科学或游戏引擎应用至关重要。哈密顿生成网络（HGN）提供了一条有原则的前进道路，将预测建立在原则上独立于观测帧率的连续时间能量函数上。然而，在实践中，它们的时间泛化在非保守设置中会失效。我们表明，在外部受迫、耗散的环境中，HGN在超出训练范围的步长上的推演会因不同的失效模式而失败，包括由不受约束的动作-力映射驱动的潜在幅度增长，以及由欠解析积分器引起的全局截断误差累积。我们为每种机制确定了有针对性的修复方法，并展示了在远超出训练分布的时间分辨率下的稳定动力学预测。在详细分析中，我们推荐了几种策略，以实现连续时间视频生成中的时间泛化。</p></section>
+              <section><h3>English Abstract</h3><p>World models are typically trained to predict discrete-time physical dynamics with a fixed step size baked into the model weights, preventing prediction at variable temporal resolutions. This matters for hierarchical planning, sim-to-real transfer, and scientific or game-engine applications that must query the same dynamics at multiple timescales. Hamiltonian Generative Networks (HGN) offer a principled path forward, grounding predictions in a continuous-time energy function that is, in principle, independent of the observation frame rate. In practice, however, their temporal generalization breaks down in non-conservative settings. We show that in externally forced, dissipative environments, HGN rollouts at step sizes beyond the training regime fail due to distinct failure modes, including latent magnitude growth driven by an unconstrained action-force map, and global truncation error accumulation from an under-resolved integrator. We identify a targeted fix for each mechanism and demonstrate stable dynamics prediction at temporal resolutions well outside the training distribution. In a detailed analysis, we recommend several strategies for enabling temporal generalization in continuous-time video generation.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解HGN模型在非保守系统中失效的两种核心机制（潜在幅度增长和截断误差），然后重点关注作者提出的针对性修复策略及其效果。</p></section>
+              <section><h3>相关性说明</h3><p>该研究涉及连续时间动力学模型的时间泛化能力，这对于低空经济中无人机等飞行器在复杂环境下的长时间航迹预测至关重要。其提出的修复策略可提升模型在非保守力（如空气阻力）影响下的预测稳定性，直接关联航迹预测的准确性。</p></section>
+              <section><h3>实践思路</h3><p>可复现其针对非保守系统的修复方法，在无人机动力学数据集上测试不同时间步长下的预测误差。实验可对比修复前后的模型在耗散环境（如含风场模型）中的推演稳定性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>GeoProp：将机器人状态在视觉中锚定以实现通用操作</h2>
+              <p>GeoProp: Grounding Robot State in Vision for Generalist Manipulation</p>
+              <p class="meta">Guoyang Zhao, Quanhao Qian, Gongjie Zhang, Wenhao Li, Jiuniu Wang, Xiaowei Lu, Deli Zhao, Ran Xu | arXiv cs.RO | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.07101v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.07101v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本体感觉是机器人操作的基础，然而标准的融合方法通常将其视为一个孤立的向量，缺乏与视觉标记的显式对齐。没有3D运动学和2D特征图之间的直接对应关系，操作策略难以在场景中锚定机器人的状态，其性能常常甚至不如纯视觉基线。为了解决这个问题，我们引入了GeoProp，一个轻量级、即插即用的适配器，通过显式的几何锚定和空间特征采样将本体感觉与视觉对齐。GeoProp将机器人状态投影到图像平面上，以采样局部视觉特征，构建一个锚定的状态标记。然后，它通过FiLM调制将状态导出的空间先验注入到相应的视觉特征中。为了捕捉运动意图，GeoProp进一步在根据近期运动学预测的短时域坐标处采样特征，提供前瞻性的视觉上下文。在67个任务中，GeoProp在63个模拟任务上将扩散策略提升了8.7%，在RoboTwin子集上将pi_0提升了4.0%，并在现实世界中在这两个策略系列上平均提升了10.6%，同时仅增加了2-3%的参数数量。这些结果表明，GeoProp是一种简单但影响深远的归纳偏置，适用于通用具身策略。</p></section>
+              <section><h3>English Abstract</h3><p>Proprioception is fundamental to robotic manipulation, yet standard fusion methods often treat it as an isolated vector lacking explicit alignment with visual tokens. Without a direct correspondence between 3D kinematics and 2D feature maps, manipulation policies struggle to ground the robot&#x27;s state within the scene, frequently underperforming even vision-only baselines. To address this, we introduce GeoProp, a lightweight, plug-and-play adapter that aligns proprioception with vision through explicit geometric grounding and spatial feature sampling. GeoProp projects the robot state onto the image plane to sample localized visual features, constructing a grounded state token. It then injects state-derived spatial priors into the corresponding visual features via FiLM modulation. To capture motion intent, GeoProp further samples features at a short-horizon predicted coordinate derived from recent kinematics, providing look-ahead visual context. Across 67 tasks, GeoProp improves Diffusion Policy by 8.7% on 63 simulation tasks and pi_0 by 4.0% on the RoboTwin subset, and yields a 10.6% average gain across both policy families in the real world, while adding only 2-3% to the parameter count. These results demonstrate that GeoProp is a simple yet high-impact inductive bias for generalist embodied policies. Project page: https://alibaba-damo-academy.github.io/GeoProp/.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注GeoProp如何通过几何投影和特征采样将本体感觉与视觉对齐，以及其在模拟和真实世界任务中的性能提升幅度。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的视觉-本体感觉对齐方法可应用于低空经济中的无人机自主操作，如精确抓取或避障。通过将无人机状态（位置、姿态）与视觉特征锚定，可提升其在复杂环境中的感知与决策能力，增强飞行安全。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机仿真环境（如AirSim）中复现GeoProp，将其集成到无人机操作策略中，测试其在目标抓取或精准降落任务中的性能。实验需对比有无GeoProp时的成功率和操作精度。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>在紧凑世界模型中锚定空间关系：指令泄露与无目标动力学修复</h2>
+              <p>Grounding Spatial Relations in a Compact World Model: Instruction Leakage and a Goal-Free Dynamics Fix</p>
+              <p class="meta">Yufeng Wang, Lu Wei, Haibin Ling | arXiv cs.AI | 2026-07-08</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06925v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06925v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>以语言目标为条件的紧凑世界模型有望使用一组稀疏的显式“参考锚点”来锚定诸如“把红色方块放在蓝色方块左边”这样的关系。我们询问这些参考何时真正锚定了一个关系，并发现了一个陷阱：一个以目标为条件的预测器达到了惊人的0.90关系读出准确率，然而这是“指令转录”，而非感知。移除目标后，其准确率骤降至随机水平（0.90→0.27，三个随机种子），而一个反事实指令使得预测的锚点有94.5%的时间跟随“错误”的指令（真实场景仅2.3%；N=256）。在三种设置和一项任务内消融实验中测试后，我们的核心主张描述了这种混淆：“当被评分的量可以从指令中转录出来（当指令命名了答案），并且本质上独立于非指令输入的预测能力时，就会发生指令泄露。”我们的桌面实验和外部BabyAI基准存在泄露，而一个指令命名“指代对象”的Language-Table前向动力学世界模型则没有泄露，直到指令被增强以命名方向；并且降低动作质量从未增加泄露，这与预测器竞争的预测相反。诊断结果给出了修复方法：将目标排除在动力学之外（它属于规划器的成本），并监督“读取”路径，从而恢复真正的、独立于指令的锚定能力（准确率0.88，有无目标时相同）。该检测协议和补救措施适用于任何以目标为条件的 world 模型。</p></section>
+              <section><h3>English Abstract</h3><p>Compact world models that condition on a language goal promise to ground relations such as ``put the red block left of the blue block&#x27;&#x27; using a sparse set of explicit \emph{reference anchors}. We ask when such references actually ground a relation, and identify a trap: a goal-conditioned predictor reaches a striking $0.90$ relation-readout accuracy, yet this is \emph{instruction transcription}, not perception. Withholding the goal collapses it to chance ($0.90\!\to\!0.27$, three seeds) and a counterfactual instruction makes the predicted anchors follow the \emph{false} instruction $94.5\%$ of the time (true scene $2.3\%$; $N{=}256$). Tested across three settings and a within-task ablation, our central claim characterizes the confound: \textbf{instruction leakage occurs when the scored quantity is transcribable from the instruction (when the instruction names the answer) and is essentially independent of how predictive the non-instruction inputs are.} Our tabletop and the external BabyAI benchmark leak, whereas a Language-Table forward-dynamics world model whose instruction names \emph{referents} does not, until the instruction is augmented to name the direction; and degrading the action never increases leakage, the opposite of what predictor-competition predicts. The diagnosis prescribes the fix: keep the goal out of the dynamics (it belongs to the planner&#x27;s cost) and supervise the \emph{read} path, recovering genuine, instruction-independent grounding ($0.88$, identical with and without the goal). The detection protocol and remedy apply to any goal-conditioned world model whose instruction names the scored quantity.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解“指令泄露”的概念及其诊断方法（通过移除或替换指令观察模型行为），然后重点学习作者提出的“无目标动力学修复”策略。</p></section>
+              <section><h3>相关性说明</h3><p>该研究揭示了语言条件世界模型中的“指令泄露”问题，对于低空经济中基于自然语言指令的无人机控制与航迹规划具有警示意义。其修复方法可确保智能体真正理解空间关系而非简单转录指令，提升任务执行的鲁棒性和安全性。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机仿真环境中构建一个基于语言指令的导航任务，复现其“指令泄露”检测协议。实验需设计包含/不包含目标条件的动力学模型，对比其在空间关系理解任务上的表现。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>SPEAR：用于逼真具身人工智能研究的模拟器</h2>
+              <p>SPEAR: A Simulator for Photorealistic Embodied AI Research</p>
+              <p class="meta">Mike Roberts, Renhan Wang, Rushikesh Zawar, Rachith Dey-Prakash, Quentin Leboutet, Stephan R. Richter, Matthias Müller, German Ros, Rui Tang, Stefan Leutenegger, Yannick Hold-Geoffroy, Kalyan Sunkavalli, Vladlen Koltun | arXiv cs.CV | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06701v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06701v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>交互式模拟器已成为训练具身智能体和生成合成视觉数据的强大工具，但现有的逼真模拟器在通用性、可编程性和渲染速度方面存在局限。我们通过引入SPEAR来解决这些限制：一个用于逼真具身人工智能研究的模拟器。其核心是，SPEAR是一个Python库，可以通过模块化插件架构连接并编程控制任何虚幻引擎（UE）应用程序。SPEAR向Python暴露了超过14000个独特的UE函数，与现有的基于UE的模拟器相比，可编程功能提升了一个数量级。此外，单个SPEAR实例可以以每秒73帧的速度将1920x1080的逼真图像直接渲染到用户的NumPy数组中——比现有的UE插件快一个数量级——同时还提供了任何现有基于UE的模拟器都无法提供的真实图像模态（例如，非漫反射本征图像分解、材质ID和基于物理的着色参数）。最后，SPEAR引入了一种富有表现力的高级编程模型，使用户能够指定复杂的工作图，其中包含工作项之间的任意数据依赖关系，并在单个UE帧内确定性地执行这些图。我们通过一系列多样化的示例应用展示了SPEAR的实用性：在多个野外UE项目中控制具有不同动作空间的多个具身智能体（例如，人类、汽车和机器人）；渲染逼真的城市规模环境；</p></section>
+              <section><h3>English Abstract</h3><p>Interactive simulators have become powerful tools for training embodied agents and generating synthetic visual data, but existing photorealistic simulators suffer from limited generality, programmability, and rendering speed. We address these limitations by introducing SPEAR: A Simulator for Photorealistic Embodied AI Research. At its core, SPEAR is a Python library that can connect to, and programmatically control, any Unreal Engine (UE) application via a modular plugin architecture. SPEAR exposes over 14K unique UE functions to Python, representing an order-of-magnitude increase in programmable functionality over existing UE-based simulators. Additionally, a single SPEAR instance can render 1920x1080 photorealistic beauty images directly into a user&#x27;s NumPy array at 73 frames per second - an order of magnitude faster than existing UE plugins - while also providing ground truth image modalities that are not available in any existing UE-based simulator (e.g., a non-diffuse intrinsic image decomposition, material IDs, and physically based shading parameters). Finally, SPEAR introduces an expressive high-level programming model that enables users to specify complex graphs of UE work with arbitrary data dependencies among work items, and to execute these graphs deterministically within a single UE frame. We demonstrate the utility of SPEAR through a diverse collection of example applications: controlling multiple embodied agents with distinct action spaces (e.g., humans, cars, and robots) across several in-the-wild UE projects; rendering photorealistic city-scale environments; manipulating UE&#x27;s procedural content generation systems; rendering synchronized multi-view images of detailed human faces; coordinating an interactive co-simulation with the MuJoCo physics simulator; and editing scenes with natural language via an AI coding assistant.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点关注SPEAR相比现有模拟器的三大优势：更高的可编程性（暴露更多UE函数）、更快的渲染速度以及提供新的真实图像模态。</p></section>
+              <section><h3>相关性说明</h3><p>SPEAR作为一个高性能、高可编程性的逼真模拟器，可为低空经济中的无人机仿真提供更真实的视觉环境和物理交互。其支持多智能体控制和城市规模渲染的特性，适用于无人机集群协同、城市低空航迹规划等场景的算法开发与测试。</p></section>
+              <section><h3>实践思路</h3><p>可基于SPEAR构建无人机在复杂城市环境中的仿真场景，测试航迹预测或避障算法。实验需利用其快速渲染能力生成大量合成数据，并利用其多智能体控制接口模拟无人机集群飞行。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>OrchardBench：一个基于物理的、GPU并行的苹果园仿真基准，用于农业机器人</h2>
+              <p>OrchardBench: A Physically-Grounded, GPU-Parallel Apple-Orchard Simulation Benchmark for Agricultural Robotics</p>
+              <p class="meta">Humphrey Munn | arXiv cs.RO | 2026-07-07</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.06337v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.06337v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>机器人树上水果采摘是农业自动化的一个标志性问题，但进展受到现场实验成本和不可重复性的瓶颈制约：果园一年中只有几周可用，每棵树都不同，控制错误可能永久性地损坏作物或植物。图形学和农学中使用的树木模型在几何上很精细，但在物理上是惰性的，而机器人学习中使用的GPU并行模拟器则不包含合理的树木。我们提出了OrchardBench，一个在Newton引擎上基于物理的、GPU并行的苹果园树木仿真。每棵树由随机L系统生长，并实例化为一个完全铰接的物体：树枝是柔顺的扭簧阻尼器，其刚度遵循欧拉-伯努利梁理论，它们在木材断裂模量处断裂并作为自由铰链落下，苹果是独立的物体，通过茎系绳连接，在文献支持的拉力下脱离，并在被拉拽时加载树枝。一个移动的、密度可控的树叶层像真实树叶一样遮挡树冠。每个物理参数都与已发表的来源相关联。每个环境中的域随机化使得每个批处理的世界都是一棵独特的树，一个带有腕部深度相机的移动机械手通过几何水果感知和自主采摘基线形成闭环。对求解器和模型的精心设计使得OrchardBench能够在笔记本电脑GPU上以交互速率运行许多并行环境。我们定义了任务和一套度量标准，涵盖采摘完整性、吞吐量和植物损伤（带有每个树冠区域的损伤评估）。</p></section>
+              <section><h3>English Abstract</h3><p>Robotic tree-fruit harvesting is a flagship problem for agricultural automation, but progress is bottlenecked by the cost and irreproducibility of field experiments: an orchard is available only weeks a year, every tree is different, and a control error can permanently damage the crop or the plant. The tree models used in graphics and agronomy are geometrically detailed but physically inert, while the GPU-parallel simulators used in robot learning contain no plausible trees. We present OrchardBench, a physically-grounded, GPU-parallel simulation of apple-orchard trees on the Newton engine. Each tree is grown by a stochastic L-system and instantiated as a fully articulated body: branches are compliant torsional spring-dampers whose stiffness follows Euler-Bernoulli beam theory, they break at a wood modulus of rupture and fall as free hinges, and apples are independent bodies on stem tethers that detach at literature-grounded pull forces and load the branch when pulled. A moving, density-controllable foliage layer occludes the canopy as real leaves do. Every physical parameter is tied to a published source. Per-environment domain randomization makes each batched world a distinct tree, and a mobile manipulator with a wrist depth camera closes the loop with geometric fruit perception and an autonomous harvesting baseline. Careful engineering of the solver and the model lets OrchardBench run many parallel environments at interactive rates on a laptop GPU. We define the tasks and a metric suite spanning harvest completeness, throughput, and plant damage (with a per-canopy-zone breakdown), and report baseline results across foliage, fruit load, terrain, canopy zone, and parallelism. The analytic baseline succeeds on about 40% of the fruit it detects and harvests only about an eighth of the reachable fruit on a tree, leaving clear headroom for novel autonomy approaches.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先理解OrchardBench的核心创新：将物理属性（如树枝柔度、苹果拉力）与GPU并行仿真结合，然后关注其提供的任务定义和评估指标。</p></section>
+              <section><h3>相关性说明</h3><p>该研究为农业机器人提供了高保真、可复现的仿真环境，其物理建模方法（如树枝断裂、果实脱离）可借鉴到低空经济中无人机与复杂环境（如树木、电线）的交互仿真。其GPU并行化设计也适用于大规模无人机集群的碰撞与动力学仿真。</p></section>
+              <section><h3>实践思路</h3><p>可复现其基于物理的树木模型，并将其集成到无人机仿真环境中，用于测试无人机在果园等复杂环境中的避障或精准作业算法。实验需对比有无物理模型时的仿真真实性和算法性能差异。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>

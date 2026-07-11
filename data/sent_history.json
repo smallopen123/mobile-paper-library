@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "74f067bcb8bb6e6a",
+      "title": "SASGeo: Stability-Aware Semantic Map Localization for GNSS-Denied UAVs -- A Framework and Synthetic Proof of Concept",
+      "url": "http://arxiv.org/abs/2607.07737v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "9d99ef0a9b4ed5e9",
+      "title": "Network Interdependency-Informed Power System Dynamic Trajectory Prediction Utilizing Black-Box Modeling of Inverter-Based Resources",
+      "url": "http://arxiv.org/abs/2607.05843v2",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "7885868c73985010",
+      "title": "Multi-agent Autoformalization of Tensor Network Theory",
+      "url": "http://arxiv.org/abs/2607.07857v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "0530b5914fce443d",
+      "title": "From Triggers to Emotions: A CPM-Grounded Appraisal Multi-Agent for Dynamic Emotional Evolution in Persona-Based Dialogue",
+      "url": "http://arxiv.org/abs/2607.07824v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "b6efc72431827a97",
+      "title": "Flow-ERD: Agent-type Aware Flow Matching with Entropy-Regularized Distillation for Diverse Traffic Simulation",
+      "url": "http://arxiv.org/abs/2607.06957v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "4a6f02fdc2d071fc",
+      "title": "Video2Reaction: Mapping Video to Audience Reaction Distribution in the Wild",
+      "url": "http://arxiv.org/abs/2607.06875v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "a80270fb492c8019",
+      "title": "Deployment Risk Assessment Using Diff-Aware Features: A Case Study at Prime Video",
+      "url": "http://arxiv.org/abs/2607.06766v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "78ce20f1fb92b4bd",
+      "title": "When Agents Go Rogue: Activation-Based Detection of Malicious Behaviors in Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2607.06807v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "614751141dfa3226",
+      "title": "A Definition and Roadmap for World Models",
+      "url": "http://arxiv.org/abs/2607.06401v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "cb5804ded0300228",
+      "title": "DexVerse: A Modular Benchmark for Multi-Task, Multi-Embodiment Dexterous Manipulation",
+      "url": "http://arxiv.org/abs/2607.08751v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "86d2e97c9b9419dc",
+      "title": "Write-Protected Discrete Bottlenecks for Language-Grounded World Models: A Structural Limitation and Sufficient Fix",
+      "url": "http://arxiv.org/abs/2607.08312v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "4c1a9701987c763a",
+      "title": "Operator-on-F complements value-equivalence: a planning-time diagnostic for latent world models",
+      "url": "http://arxiv.org/abs/2607.04464v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "5de7768a30249fc8",
+      "title": "GIRAF: Towards Generalizable Human Interactions with Articulated Objects",
+      "url": "http://arxiv.org/abs/2607.07880v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "fb5a2234827a6d5f",
+      "title": "Compositional Motion Generation from Demonstration with Object-Centric Neural Fields",
+      "url": "http://arxiv.org/abs/2607.07129v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "ab9635aface7724b",
+      "title": "Infinite Worlds with Versatile Interactions",
+      "url": "http://arxiv.org/abs/2607.07534v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "09cd40deda7c961b",
+      "title": "Unlocking Temporal Generalization in Hamiltonian Video Dynamics Models",
+      "url": "http://arxiv.org/abs/2607.07763v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "0093b8a3df6aa1d3",
+      "title": "GeoProp: Grounding Robot State in Vision for Generalist Manipulation",
+      "url": "http://arxiv.org/abs/2607.07101v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "caf50317596cb175",
+      "title": "Grounding Spatial Relations in a Compact World Model: Instruction Leakage and a Goal-Free Dynamics Fix",
+      "url": "http://arxiv.org/abs/2607.06925v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "690222730b7864e0",
+      "title": "SPEAR: A Simulator for Photorealistic Embodied AI Research",
+      "url": "http://arxiv.org/abs/2607.06701v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
+      "key": "efe2d3165d5a2a55",
+      "title": "OrchardBench: A Physically-Grounded, GPU-Parallel Apple-Orchard Simulation Benchmark for Agricultural Robotics",
+      "url": "http://arxiv.org/abs/2607.06337v1",
+      "sent_at": "2026-07-11T21:50:35.432691+00:00"
+    },
+    {
       "key": "c47b86f3ffb28893",
       "title": "UAV-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
       "url": "http://arxiv.org/abs/2607.08075v1",
