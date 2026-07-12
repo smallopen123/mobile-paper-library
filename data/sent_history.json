@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "c47b86f3ffb28893",
+      "title": "UAV-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
+      "url": "http://arxiv.org/abs/2607.08075v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "d6ca6a4002c9fc41",
+      "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
+      "url": "http://arxiv.org/abs/2607.08288v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "c2c5a114a79c6bb5",
+      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
+      "url": "http://arxiv.org/abs/2607.08745v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "e7209774867e3454",
+      "title": "Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review",
+      "url": "http://arxiv.org/abs/2607.06706v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "7ca0337fcde47099",
+      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
+      "url": "http://arxiv.org/abs/2607.07601v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "7d9f8fbbd9f3e9ec",
+      "title": "Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors",
+      "url": "http://arxiv.org/abs/2607.07368v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "6e0ccc59e219c78e",
+      "title": "Towards Reliable Aerial Ground Vehicle Collaboration: An Integrated Planning and Autonomy Framework for Field Deployment",
+      "url": "http://arxiv.org/abs/2607.07350v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "8f98eaf9316ec330",
+      "title": "IMR: Iterative Mode-World Weighted Regression for Multi-Agent Trajectory Prediction",
+      "url": "http://arxiv.org/abs/2607.05705v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "4a8d2669d972d19a",
+      "title": "Intercepting an Agile Target with Net-Carrying Drones using Competitive Multi-Agent Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.05939v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "4f5c8ca945dcd364",
+      "title": "FLOAT Drone for Physical Interaction: Lateral Airflow Reduction, Wrench Modeling, and Adaptive Control",
+      "url": "http://arxiv.org/abs/2607.04260v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "0a1444db2dbd105a",
+      "title": "Last-Meter Precision Navigation for UAVs: A Diffusion-Refined Aerial Visual Servoing Approach",
+      "url": "http://arxiv.org/abs/2607.04352v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "a65d1c5e341df14d",
+      "title": "Communication-Aware and Safety-Aware UAV Control via Predictive Latent Models",
+      "url": "http://arxiv.org/abs/2607.00288v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "abbf4bdb0c196035",
+      "title": "Distributed Containment of a Compromised Agent through Repulsive Cages",
+      "url": "http://arxiv.org/abs/2607.01230v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "3818827b992f0b5a",
+      "title": "Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation",
+      "url": "http://arxiv.org/abs/2607.01794v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "b805451c7cbba9d8",
+      "title": "Diffusion-based 4D Trajectory Prediction and Distributed Control for UAV Swarms",
+      "url": "http://arxiv.org/abs/2606.31197v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "695091b6113c9bb2",
+      "title": "hia-gat: A Heterogeneous Interaction-Aware Graph Attention Network For Frame-Level Traffic Conflict Risk Prediction On Freeways",
+      "url": "http://arxiv.org/abs/2606.27577v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "4dccd7d3a64ccf99",
+      "title": "Mind the Noise: Sensitivity of Transformer-based Interaction-Aware Trajectory Prediction Models to Noisy Data",
+      "url": "http://arxiv.org/abs/2606.21344v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "10daed72f1691044",
+      "title": "JPPD: Joint Prediction_Planning Diffusion with Differentiable Safety Guidance for Dynamic Obstacle Avoidance in Intelligent Transportation Systems",
+      "url": "http://arxiv.org/abs/2606.20686v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "369e08a520fdef8e",
+      "title": "Towards Long-Horizon Vessel Trajectory and Destination Forecasting with Reasoning Large Language Models",
+      "url": "http://arxiv.org/abs/2606.08633v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
+      "key": "cffb6591d722eb10",
+      "title": "iVISION-2DCD: A Long-Term Change Detection Dataset for Large-Scale Outdoor Construction Monitoring",
+      "url": "http://arxiv.org/abs/2607.03553v1",
+      "sent_at": "2026-07-12T21:51:03.539186+00:00"
+    },
+    {
       "key": "74f067bcb8bb6e6a",
       "title": "SASGeo: Stability-Aware Semantic Map Localization for GNSS-Denied UAVs -- A Framework and Synthetic Proof of Concept",
       "url": "http://arxiv.org/abs/2607.07737v1",
@@ -121,24 +241,6 @@
       "sent_at": "2026-07-11T21:50:35.432691+00:00"
     },
     {
-      "key": "c47b86f3ffb28893",
-      "title": "UAV-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
-      "url": "http://arxiv.org/abs/2607.08075v1",
-      "sent_at": "2026-07-10T22:03:40.896786+00:00"
-    },
-    {
-      "key": "d6ca6a4002c9fc41",
-      "title": "From Legacy Documentation to OSCAL: An MCP-Based Agent Pipeline for Threat-Informed Continuous Compliance in Critical Infrastructure",
-      "url": "http://arxiv.org/abs/2607.08288v1",
-      "sent_at": "2026-07-10T22:03:40.896786+00:00"
-    },
-    {
-      "key": "c2c5a114a79c6bb5",
-      "title": "AUTOPILOT VQA: Benchmarking Vision-Language Models for Incident-Centric Dashcam Understanding",
-      "url": "http://arxiv.org/abs/2607.08745v1",
-      "sent_at": "2026-07-10T22:03:40.896786+00:00"
-    },
-    {
       "key": "6e243286a67605b0",
       "title": "Swapping Faces, Saving Features: A Dual-Purpose Pipeline for Pedestrian Privacy in ITS",
       "url": "http://arxiv.org/abs/2607.08402v1",
@@ -241,30 +343,6 @@
       "sent_at": "2026-07-10T22:03:40.896786+00:00"
     },
     {
-      "key": "e7209774867e3454",
-      "title": "Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review",
-      "url": "http://arxiv.org/abs/2607.06706v1",
-      "sent_at": "2026-07-09T22:29:00.618549+00:00"
-    },
-    {
-      "key": "7ca0337fcde47099",
-      "title": "CARLA-GS: Decoupling Representation, Reasoning, and Physics Simulation for Autonomous Driving Corner-Case Synthesis",
-      "url": "http://arxiv.org/abs/2607.07601v1",
-      "sent_at": "2026-07-09T22:29:00.618549+00:00"
-    },
-    {
-      "key": "7d9f8fbbd9f3e9ec",
-      "title": "Multi-Agent AI Control: Distributed Attacks Hamper Per-Instance Monitors",
-      "url": "http://arxiv.org/abs/2607.07368v1",
-      "sent_at": "2026-07-09T22:29:00.618549+00:00"
-    },
-    {
-      "key": "6e0ccc59e219c78e",
-      "title": "Towards Reliable Aerial Ground Vehicle Collaboration: An Integrated Planning and Autonomy Framework for Field Deployment",
-      "url": "http://arxiv.org/abs/2607.07350v1",
-      "sent_at": "2026-07-09T22:29:00.618549+00:00"
-    },
-    {
       "key": "6c5a8370313066f7",
       "title": "Ego-Human Motion Prediction with 3D-Aware LLM",
       "url": "http://arxiv.org/abs/2607.07001v1",
@@ -359,18 +437,6 @@
       "title": "Subspace Consensus of Matrix-Weighted Networks",
       "url": "http://arxiv.org/abs/2607.06970v1",
       "sent_at": "2026-07-09T22:29:00.618549+00:00"
-    },
-    {
-      "key": "8f98eaf9316ec330",
-      "title": "IMR: Iterative Mode-World Weighted Regression for Multi-Agent Trajectory Prediction",
-      "url": "http://arxiv.org/abs/2607.05705v1",
-      "sent_at": "2026-07-08T22:06:32.927937+00:00"
-    },
-    {
-      "key": "4a8d2669d972d19a",
-      "title": "Intercepting an Agile Target with Net-Carrying Drones using Competitive Multi-Agent Reinforcement Learning",
-      "url": "http://arxiv.org/abs/2607.05939v1",
-      "sent_at": "2026-07-08T22:06:32.927937+00:00"
     },
     {
       "key": "f70ac5262bde1f6b",
@@ -479,18 +545,6 @@
       "title": "Information Limits and Attractor Dynamics in Economies of Frontier LLM Agents: A Pre-Registered Test",
       "url": "http://arxiv.org/abs/2607.06001v1",
       "sent_at": "2026-07-08T22:06:32.927937+00:00"
-    },
-    {
-      "key": "4f5c8ca945dcd364",
-      "title": "FLOAT Drone for Physical Interaction: Lateral Airflow Reduction, Wrench Modeling, and Adaptive Control",
-      "url": "http://arxiv.org/abs/2607.04260v1",
-      "sent_at": "2026-07-07T22:12:14.103223+00:00"
-    },
-    {
-      "key": "0a1444db2dbd105a",
-      "title": "Last-Meter Precision Navigation for UAVs: A Diffusion-Refined Aerial Visual Servoing Approach",
-      "url": "http://arxiv.org/abs/2607.04352v1",
-      "sent_at": "2026-07-07T22:12:14.103223+00:00"
     },
     {
       "key": "9b24b8746687651e",
@@ -721,18 +775,6 @@
       "sent_at": "2026-07-06T22:14:49.285261+00:00"
     },
     {
-      "key": "a65d1c5e341df14d",
-      "title": "Communication-Aware and Safety-Aware UAV Control via Predictive Latent Models",
-      "url": "http://arxiv.org/abs/2607.00288v1",
-      "sent_at": "2026-07-05T22:02:39.553976+00:00"
-    },
-    {
-      "key": "abbf4bdb0c196035",
-      "title": "Distributed Containment of a Compromised Agent through Repulsive Cages",
-      "url": "http://arxiv.org/abs/2607.01230v1",
-      "sent_at": "2026-07-05T22:02:39.553976+00:00"
-    },
-    {
       "key": "2d67ce6018864fc1",
       "title": "Neuro-Symbolic Safety Guidance for Vision-Language-Action Models via Constrained Flow Matching",
       "url": "http://arxiv.org/abs/2607.01378v1",
@@ -839,12 +881,6 @@
       "title": "Learning When to Listen: Gated Affect Fusion for Human Motion Prediction",
       "url": "http://arxiv.org/abs/2607.00296v1",
       "sent_at": "2026-07-05T22:02:39.553976+00:00"
-    },
-    {
-      "key": "3818827b992f0b5a",
-      "title": "Lightweight Safe Reinforcement Learning for End-to-End UAV Navigation",
-      "url": "http://arxiv.org/abs/2607.01794v1",
-      "sent_at": "2026-07-04T21:59:46.712151+00:00"
     },
     {
       "key": "192cf23929d401aa",
@@ -959,12 +995,6 @@
       "title": "Learning to Evolve Scenes: Reasoning about Human Activities with Scene Graphs",
       "url": "http://arxiv.org/abs/2607.02425v1",
       "sent_at": "2026-07-04T21:59:46.712151+00:00"
-    },
-    {
-      "key": "b805451c7cbba9d8",
-      "title": "Diffusion-based 4D Trajectory Prediction and Distributed Control for UAV Swarms",
-      "url": "http://arxiv.org/abs/2606.31197v1",
-      "sent_at": "2026-07-01T22:18:45.708237+00:00"
     },
     {
       "key": "4ca6154eb36fe895",
@@ -1201,12 +1231,6 @@
       "sent_at": "2026-06-30T22:16:40.120944+00:00"
     },
     {
-      "key": "695091b6113c9bb2",
-      "title": "hia-gat: A Heterogeneous Interaction-Aware Graph Attention Network For Frame-Level Traffic Conflict Risk Prediction On Freeways",
-      "url": "http://arxiv.org/abs/2606.27577v1",
-      "sent_at": "2026-06-29T22:09:34.068252+00:00"
-    },
-    {
       "key": "94c5d0dd2f391be1",
       "title": "SpatialUAV: Benchmarking Spatial Intelligence for Low-Altitude UAV Perception, Collaboration, and Motion",
       "url": "http://arxiv.org/abs/2606.27876v1",
@@ -1405,12 +1429,6 @@
       "sent_at": "2026-06-28T22:03:28.756165+00:00"
     },
     {
-      "key": "4dccd7d3a64ccf99",
-      "title": "Mind the Noise: Sensitivity of Transformer-based Interaction-Aware Trajectory Prediction Models to Noisy Data",
-      "url": "http://arxiv.org/abs/2606.21344v1",
-      "sent_at": "2026-06-28T22:03:28.756165+00:00"
-    },
-    {
       "key": "4fd92a1e4e9a3a14",
       "title": "Formal Verification of Learned Multi-Agent Communication Policies via Decision Tree Distillation",
       "url": "http://arxiv.org/abs/2606.19632v1",
@@ -1420,18 +1438,6 @@
       "key": "4496b61c25adb245",
       "title": "RSC: Decentralized Rigid Formation Flocking for Large-Scale Swarms via Hybrid Predictive Control and Online Reconfiguration",
       "url": "http://arxiv.org/abs/2606.04248v1",
-      "sent_at": "2026-06-28T22:03:28.756165+00:00"
-    },
-    {
-      "key": "10daed72f1691044",
-      "title": "JPPD: Joint Prediction_Planning Diffusion with Differentiable Safety Guidance for Dynamic Obstacle Avoidance in Intelligent Transportation Systems",
-      "url": "http://arxiv.org/abs/2606.20686v1",
-      "sent_at": "2026-06-28T22:03:28.756165+00:00"
-    },
-    {
-      "key": "369e08a520fdef8e",
-      "title": "Towards Long-Horizon Vessel Trajectory and Destination Forecasting with Reasoning Large Language Models",
-      "url": "http://arxiv.org/abs/2606.08633v1",
       "sent_at": "2026-06-28T22:03:28.756165+00:00"
     },
     {
