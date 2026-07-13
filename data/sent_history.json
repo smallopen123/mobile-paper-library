@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "dbe29c3745b49086",
+      "title": "Dec-MARVEL: Decentralized Multi-Agent Exploration without Communication under Budget Constraints",
+      "url": "http://arxiv.org/abs/2607.09060v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "143e54514806dbed",
+      "title": "Toward Active Object Detection for UAVs in the Wild: A Large-Scale Dataset, Benchmark and Method",
+      "url": "http://arxiv.org/abs/2607.09078v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "ecc1d22ddca61ff2",
+      "title": "KV-PRM: Efficient Process Reward Modeling via KV-Cache Transfer for Multi-Agent Test-Time Scaling",
+      "url": "http://arxiv.org/abs/2607.09153v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "79ddb9196c174637",
+      "title": "L-MAD: A Systematic Evaluation of Multi-Agent Debate Structures in Legal Reasoning",
+      "url": "http://arxiv.org/abs/2607.09099v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "885c377c559aa66e",
+      "title": "Action-Factored Multi-Agent Reinforcement Learning for Scalable Quantum Device Tuning",
+      "url": "http://arxiv.org/abs/2607.09422v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "14754296869e4494",
+      "title": "Robot Trajectron V3: A Probabilistic Shared Control Framework for SE(3) Manipulation",
+      "url": "http://arxiv.org/abs/2607.09315v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "f8a6ea78b3798dcf",
+      "title": "STEAM: Stable Self-Training with Elastic Matching and Adaptive Purification",
+      "url": "http://arxiv.org/abs/2607.09057v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "9ca3217551bc20b5",
+      "title": "VEXAIoT: Autonomous IoT Vulnerability EXploitation using AI Agents",
+      "url": "http://arxiv.org/abs/2607.09653v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "d159bd1641fc7501",
+      "title": "CoDiMAD: Diffusion-Based Privileged Distillation for Communication-Free Multi-Robot Coordination",
+      "url": "http://arxiv.org/abs/2607.09587v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "f1c38b93c41ea92a",
+      "title": "Fictional Worldbuilding: Multi-Agent LLM Collaboration with Hierarchical Context Compression and Iterative Review",
+      "url": "http://arxiv.org/abs/2607.09403v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "e7f8578deb56c956",
+      "title": "ARCANA: A Reflective Multi-Agent Program Synthesis Framework for ARC-AGI-2 Reasoning",
+      "url": "http://arxiv.org/abs/2607.09059v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "f212b883b93f2899",
+      "title": "MultiView-Bench: A Diagnostic Benchmark for World-Centric Multi-View Integration in VLMs",
+      "url": "http://arxiv.org/abs/2607.08970v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "4ba4ee2277a4a952",
+      "title": "PanoWorld: Real-World Panoramic Generation",
+      "url": "http://arxiv.org/abs/2607.09661v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "536490a4cdb1c723",
+      "title": "Vascular Geometry Characterization for AI-Based Endovascular Navigation",
+      "url": "http://arxiv.org/abs/2607.09130v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "514a203083c250cf",
+      "title": "Eluna: An Agentic LLM System for Automating Warehouse Operations with Reasoning and Task Execution",
+      "url": "http://arxiv.org/abs/2607.08960v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "63834a701cba3980",
+      "title": "Deployment Risk Assessment Using Diff-Aware Features: A Case Study at Prime Video",
+      "url": "http://arxiv.org/abs/2607.06766v2",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "a45a3dd7f2488d3a",
+      "title": "Seeing is Free, Speaking is Not: Uncovering the True Energy Bottleneck in Edge VLM Inference",
+      "url": "http://arxiv.org/abs/2607.09520v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "addc0b581cbaa62f",
+      "title": "Causally Debiased Latent Action Model for Embodied Action Conditioned World Models",
+      "url": "http://arxiv.org/abs/2607.09185v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "60701a61931e4569",
+      "title": "GATS: Graph-Augmented Tree Search with Layered World Models for Efficient Agent Planning",
+      "url": "http://arxiv.org/abs/2607.08894v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
+      "key": "0fe70f2de331db3e",
+      "title": "RynnWorld-4D: 4D Embodied World Models for Robotic Manipulation",
+      "url": "http://arxiv.org/abs/2607.06559v1",
+      "sent_at": "2026-07-13T21:57:39.911700+00:00"
+    },
+    {
       "key": "c47b86f3ffb28893",
       "title": "UAV-OVVIS: Unmanned Aerial Vehicles Also Need Open-Vocabulary Video Instance Segmentation",
       "url": "http://arxiv.org/abs/2607.08075v1",
