@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "bd3ca6bc3e776ddc",
+      "title": "Coordinated Incremental Trajectory Tracking of a Tailsitter Drone",
+      "url": "http://arxiv.org/abs/2607.11651v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "b1957ff5d9f2eac7",
+      "title": "Rigidity-Based Multi-UAV Trajectory Optimization for Rapid Cooperative Emergency Target Localization",
+      "url": "http://arxiv.org/abs/2607.10933v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "eb68fb8e0d4927dd",
+      "title": "Self-supervised training for high-resolution close-range multispectral remote sensing imagery",
+      "url": "http://arxiv.org/abs/2607.11366v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "69a7bfbbab813710",
+      "title": "Benchmarking UAV-based Vehicle Re-Identification under Simulated Weather Conditions",
+      "url": "http://arxiv.org/abs/2607.10583v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "a00c6500ef18e34e",
+      "title": "End-to-End Real-Time Drone-Based Person Detection Framework Using Deep Learning",
+      "url": "http://arxiv.org/abs/2607.10605v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "b434b0ae9d56c3db",
+      "title": "From Sketch Prior to Trajectories: A Mission-Oriented Coordinated Navigation Framework for Indoor UAV Swarm",
+      "url": "http://arxiv.org/abs/2607.11386v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "815a9abf468085ff",
+      "title": "World Models as Adversaries: Multi-Agent Self-Play Fine-Tuning for Robust Motion Planning",
+      "url": "http://arxiv.org/abs/2607.10630v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "e190ee8f52dbe00f",
+      "title": "MIRA: A Modular Open-Source Micro-UAV for Indoor Research",
+      "url": "http://arxiv.org/abs/2607.11785v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "4aa7bd210c3213ce",
+      "title": "A Model for Mediating Multi-Modal Human Intent into Safe Maneuvers for UAVs",
+      "url": "http://arxiv.org/abs/2607.11654v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "43d09ecb879b0101",
+      "title": "AdvNav: Behavior-Guided Black-Box Adversarial Attacks on Vision-Language Navigation",
+      "url": "http://arxiv.org/abs/2607.11063v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "582f3d071f7516ed",
+      "title": "When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems",
+      "url": "http://arxiv.org/abs/2607.11751v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "9c5857af48760744",
+      "title": "Heterogeneous Agent Cohorts for Safe Open-Ended Exploration with Runtime Constraint Memory",
+      "url": "http://arxiv.org/abs/2607.11226v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "c80a9a84ae40ffd2",
+      "title": "NextFund: A Unified Performance Tracking Platform for Agentic Portfolio Management",
+      "url": "http://arxiv.org/abs/2607.11141v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "0ba343d5a6ae97cb",
+      "title": "Capture, Shield, or Neutralize: Engagement-Aware Pursuit-Evasion",
+      "url": "http://arxiv.org/abs/2607.10986v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "38370fc9216b5385",
+      "title": "SCALECUA: Scaling Computer Use Agents with Verifiable Task Synthesis and Efficient Online RL",
+      "url": "http://arxiv.org/abs/2607.11185v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "b73fd322ed04a5ec",
+      "title": "Machines that Predict Trajectories from Templates",
+      "url": "http://arxiv.org/abs/2607.11551v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "6829f0a9054cc8ee",
+      "title": "Parse, Search, and Confirmation: Training-Free Aerial Vision-and-Dialog Navigation with Chain-of-Thought Reasoning and Structured Spatial Memory",
+      "url": "http://arxiv.org/abs/2607.11529v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "cdab83b98dffe71c",
+      "title": "ASUMOT: Motion-Consistency-Based Asynchronous UAV Detection and Tracking with Event Cameras",
+      "url": "http://arxiv.org/abs/2607.11303v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "ba9a1603238e0c33",
+      "title": "ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space",
+      "url": "http://arxiv.org/abs/2607.11673v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
+      "key": "e46567e1bac79c28",
+      "title": "OmniX: Any-view and Any-time 4D Reconstruction via Feed-forward Trajectory Fields",
+      "url": "http://arxiv.org/abs/2607.10840v1",
+      "sent_at": "2026-07-14T21:58:22.384169+00:00"
+    },
+    {
       "key": "dbe29c3745b49086",
       "title": "Dec-MARVEL: Decentralized Multi-Agent Exploration without Communication under Budget Constraints",
       "url": "http://arxiv.org/abs/2607.09060v1",
