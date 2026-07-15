@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>低空经济前沿论文库 - 2026-07-16</title>
+  <style>
+    :root{color-scheme:light;--bg:#f4f6f8;--ink:#172033;--muted:#667085;--line:#d8dee9;--brand:#0f766e;--paper:#fff}
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.72}
+    header{background:#0b3b39;color:#fff;padding:26px 18px 22px}
+    header .wrap,main{max-width:920px;margin:0 auto}
+    h1{font-size:27px;line-height:1.22;margin:0 0 8px}
+    .sub{margin:0;color:#d6f2ee}
+    main{padding:18px 14px 64px}
+    .toc{position:sticky;top:0;z-index:2;display:flex;gap:8px;overflow:auto;padding:10px 0;background:var(--bg)}
+    .toc a{flex:0 0 auto;text-decoration:none;color:#0f766e;background:#fff;border:1px solid var(--line);border-radius:999px;padding:6px 10px;font-weight:700}
+    .paper{position:relative;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:18px;margin:14px 0;box-shadow:0 8px 24px rgba(16,24,40,.05)}
+    .paper-num{position:absolute;right:16px;top:14px;color:#94a3b8;font-weight:800}
+    h2{font-size:20px;line-height:1.35;margin:0 38px 8px 0}
+    h3{font-size:16px;margin:18px 0 6px;color:#0b3b39}
+    p{margin:0 0 8px}
+    .meta{color:var(--muted);font-size:14px}
+    .links{display:flex;gap:10px;flex-wrap:wrap;margin:12px 0 4px}
+    .links a{text-decoration:none;color:#fff;background:var(--brand);border-radius:8px;padding:8px 11px;font-weight:700}
+    .notice{background:#ecfdf5;border:1px solid #99f6e4;border-radius:12px;padding:14px;margin:12px 0;color:#064e3b}
+    .back{display:inline-block;margin:14px 0 0;color:#d6f2ee}
+    @media (max-width:520px){h1{font-size:23px}h2{font-size:18px}.paper{padding:16px 14px}}
+  </style>
+</head>
+<body>
+  <header><div class="wrap">
+    <h1>低空经济前沿论文库</h1>
+    <p class="sub">2026-07-16 | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <a class="back" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a>
+  </div></header>
+  <main>
+    <div class="notice">当前页面优先展示 DeepSeek 生成的中文标题、中文摘要和中文阅读提示；若模型不可用，则自动回退到规则版英文摘要页面。</div>
+    <nav class="toc" aria-label="论文目录"><a href="#paper-1">01</a>
+<a href="#paper-2">02</a>
+<a href="#paper-3">03</a>
+<a href="#paper-4">04</a>
+<a href="#paper-5">05</a>
+<a href="#paper-6">06</a>
+<a href="#paper-7">07</a>
+<a href="#paper-8">08</a>
+<a href="#paper-9">09</a>
+<a href="#paper-10">10</a>
+<a href="#paper-11">11</a>
+<a href="#paper-12">12</a>
+<a href="#paper-13">13</a>
+<a href="#paper-14">14</a>
+<a href="#paper-15">15</a>
+<a href="#paper-16">16</a>
+<a href="#paper-17">17</a>
+<a href="#paper-18">18</a>
+<a href="#paper-19">19</a>
+<a href="#paper-20">20</a></nav>
+    
+            <article class="paper" id="paper-1">
+              <div class="paper-num">01</div>
+              <h2>通过自动化端到端优化与部署深度神经网络提升自主纳米无人机性能</h2>
+              <p>Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs</p>
+              <p class="meta">Vlad Niculescu, Lorenzo Lamberti, Francesco Conti, Luca Benini, Daniele Palossi | arXiv eess.IV | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12593v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12593v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>节能型超低功耗并行处理器的演进和卷积神经网络的普及正推动自主驾驶纳米级无人机的兴起。这些亚10厘米的机器人平台被视为下一代普适智能传感器和不显眼的机器人助手。然而，纳米无人机上有限的计算/内存资源带来了最小化和优化基于视觉的CNN的挑战——目前这需要容易出错、劳动密集的迭代开发流程。本研究探索了方法和软件工具，以简化和自动化在Crazyflie 2.1纳米无人机的任务计算机——一个超低功耗多核片上系统上部署基于视觉的CNN导航。我们专注于部署PULP-Dronet（一种用于纳米无人机自主导航的最先进CNN），从初始训练到最终闭环评估。与原始手工制作的CNN相比，我们的结果显示内存占用减少2倍，推理时间加速1.6倍，同时保证相同的预测精度并显著改善现场行为，实现了：i) 避障峰值制动速度1.65米/秒，并改善了基线的速度/制动空间比；ii) 在熟悉环境中自由飞行速度达1.96米/秒（基线为0.5米/秒）；iii) 在包含90度转弯的路径上执行车道跟随——所有这些仅消耗无人机功率预算的不到1.6%。</p></section>
+              <section><h3>English Abstract</h3><p>The evolution of energy-efficient ultra-low-power (ULP) parallel processors and the diffusion of convolutional neural networks (CNNs) are fueling the advent of autonomous driving nano-sized unmanned aerial vehicles (UAVs). These sub-10 cm robotic platforms are envisioned as next-generation ubiquitous smart-sensors and unobtrusive robotic-helpers. However, the limited computational/memory resources available aboard nano-UAVs introduce the challenge of minimizing and optimizing vision-based CNNs -- which to date require error-prone, labor-intensive iterative development flows. This work explores methodologies and software tools to streamline and automate all the deployment of vision-based CNN navigation on a ULP multicore system-on-chip acting as a mission computer on a Crazyflie 2.1 nano-UAV. We focus on the deployment of PULP-Dronet, a state-of-the-art CNN for autonomous navigation of nano-UAVs, from the initial training to the final closed-loop evaluation. Compared to the original hand-crafted CNN, our results show a 2x reduction of memory footprint and a speedup of 1.6x in inference time while guaranteeing the same prediction accuracy and significantly improving the behavior in the field, achieving: i) obstacle avoidance with a peak braking-speed of 1.65 m/s and improving the speed/braking-space ratio of the baseline, ii) free flight in a familiar environment up to 1.96 m/s (0.5 m/s for the baseline), and iii) lane following on a path featuring a 90 deg turn -- all while using for computation less than 1.6% of the drone&#x27;s power budget. To foster new applications and future research, we open-source all the software design in a ready-to-run project compatible with the Crazyflie 2.1</p></section>
+              <section><h3>中文阅读提示</h3><p>先关注摘要中的性能提升数据（如内存减少2倍、推理加速1.6倍），再了解其自动化部署流程对实际应用的意义。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接涉及低空经济中的无人机自主导航安全，通过优化CNN实现高效避障和路径跟踪，提升飞行安全性。其自动化部署方法可应用于航迹预测模型的轻量化，减少计算延迟。智能体方面，展示了如何在资源受限的纳米无人机上实现端到端自主决策。</p></section>
+              <section><h3>实践思路</h3><p>可在Crazyflie 2.1平台上复现PULP-Dronet的部署流程，测试其避障和车道跟随性能。建议对比原始CNN与优化后的模型在内存、推理时间和飞行速度上的差异，验证自动化优化工具的效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-2">
+              <div class="paper-num">02</div>
+              <h2>边缘感知的热红外无人机群跟踪</h2>
+              <p>Edge-Aware Thermal Infrared UAV Swarm Tracking</p>
+              <p class="meta">Yu-Hsi Chen | arXiv cs.CV | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12544v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12544v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>热红外成像对于视觉退化环境中的无人机群操作至关重要。然而，由于外观线索有限、频繁遮挡和快速机动，跟踪微小无人机仍然具有挑战性。尽管反无人机挑战等基准推动了显著进展，现有方法主要优先考虑准确性，而忽视了实时边缘部署的计算约束。标准卡尔曼滤波器提供了边缘设备所需的效率，但其恒定速度假设在高度动态的无人机运动和热传感器抖动下常常失效。更复杂的非线性估计器可以提高鲁棒性，但通常引入额外计算成本。为弥补这一差距，我们提出了一种以自适应运动学卡尔曼滤波器为核心的边缘感知在线跟踪流水线，该滤波器在保持实时效率的同时，用状态依赖的运动学建模增强了线性卡尔曼滤波器。结合瞬态误报抑制和运动学驱动的预测滑行，所提出的流水线在具有挑战性的热红外条件下改善了轨迹连续性。在Beyond Strong Baseline基准上的实验通过联合评估跟踪性能和计算效率，为边缘感知无人机跟踪提供了起点，为未来实时部署提供了见解。</p></section>
+              <section><h3>English Abstract</h3><p>Thermal infrared (TIR) imaging is essential for UAV swarm operations in visually degraded environments. However, tracking tiny UAVs remains challenging due to limited appearance cues, frequent occlusions, and rapid maneuvers. Despite significant progress driven by benchmarks such as the Anti-UAV challenge, existing methods primarily prioritize accuracy while overlooking the computational constraints of real-time edge deployment. The standard Kalman Filter (KF) offers the efficiency required for edge devices, yet its constant-velocity assumption often breaks down under highly dynamic UAV motion and thermal sensor jitter. More sophisticated nonlinear estimators can improve robustness but often introduce additional computational costs. To address this gap, we propose an edge-aware online tracking pipeline centered on the Adaptive Kinematic Kalman Filter (AKKF), which augments the linear KF with state-dependent kinematic modeling while preserving real-time efficiency. Combined with transient false-positive suppression and kinematics-driven predictive coasting, the presented pipeline improves trajectory continuity under challenging TIR conditions. Experiments on the Beyond Strong Baseline (BSB) benchmark provide a starting point for edge-aware UAV tracking by jointly evaluating tracking performance and computational efficiency, offering insights toward future real-time deployment.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点理解AKKF如何改进标准卡尔曼滤波器以应对动态运动，并关注其在计算效率与跟踪精度之间的平衡。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对低空经济中无人机群在恶劣环境下的安全跟踪问题，通过边缘感知方法减少计算延迟，提升实时性。航迹预测方面，AKKF通过状态依赖运动学建模提高了轨迹连续性。智能体层面，展示了如何在边缘设备上实现鲁棒的群体协同跟踪。</p></section>
+              <section><h3>实践思路</h3><p>可在热红外数据集（如BSB基准）上复现AKKF流水线，对比其与标准卡尔曼滤波器在跟踪精度和计算开销上的差异。建议在嵌入式设备（如Jetson Nano）上测试实时性能，验证边缘部署可行性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-3">
+              <div class="paper-num">03</div>
+              <h2>打破既视感：通过视觉语言推理独立审计视觉地点识别</h2>
+              <p>Breaking Déjà Vu: Independent Auditing of Visual Place Recognition through Vision-Language Reasoning</p>
+              <p class="meta">Sania Waheed, Michael Milford, Sarvapali D. Ramchurn, Shoaib Ehsan | arXiv cs.CV | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12818v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12818v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>视觉地点识别是机器人应用中精确定位和长期自主导航的关键使能技术，例如用于同步定位与地图构建的闭环检测。然而，实际部署依赖于选择平衡精确率和召回率的图像匹配阈值。这些阈值通常使用标注验证数据调整并在部署时固定，在环境变化且无真实标签时变得不可靠。这在安全关键机器人中尤其成问题，因为接受错误闭环可能破坏估计轨迹和地图。本研究引入视觉地点识别审计，一种独立的检索后验证框架，利用视觉语言模型通过联合推理查询和候选图像来评估检索匹配。与传统验证方法不同，我们的方法执行实例级验证，无需架构特定置信度、数据集依赖阈值或部署环境的先验知识。我们在六个基准数据集上使用五种最先进的VPR方法和四种VLM进行评估。结果表明，与最先进方法相比，基于VLM的审计平均将召回率@1提升13.6%，同时将误接受率降至12%，精确率保持在95%以上，覆盖率保持在75%以上。</p></section>
+              <section><h3>English Abstract</h3><p>Visual place recognition (VPR) is a key enabler of accurate localization and long-term autonomous navigation in robotics applications, such as loop closure detection for simultaneous localisation and mapping (SLAM). However, real-world VPR deployment relies on selecting an image matching threshold that balances precision and recall. These thresholds are typically tuned using labeled validation data and fixed during deployment, making them unreliable under environmental changes where ground truth is unavailable. This is particularly problematic in safety-critical robotics, where accepting a false loop closure can corrupt the estimated trajectory and map. In this work, we introduce Visual Place Recognition Auditing, an independent post-retrieval verification framework that leverages Vision-Language Models (VLMs) to assess retrieved matches by reasoning jointly over query and candidate images. Unlike conventional verification methods, our approach performs instance-level verification without requiring architecture-specific confidence measures, dataset-dependent thresholds, or prior knowledge of the deployment environment. We evaluate our method on six benchmark datasets using five state-of-the-art VPR methods and four VLMs. Results show that VLM-based auditing improves recall@1 by 13.6% on average as compared to state-of-the-art methods while reducing false acceptance rates to 12%, maintaining precision above 95% and coverage above 75%.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解VPR审计的核心问题（阈值不可靠），再关注VLM如何通过联合推理提升匹配验证的鲁棒性。</p></section>
+              <section><h3>相关性说明</h3><p>该研究对低空经济安全至关重要，因为无人机依赖VPR进行定位，错误闭环可能导致碰撞或偏离航线。航迹预测方面，可靠的VPR可增强长期导航中的位置估计。智能体层面，展示了如何利用VLM作为独立审计模块提升自主系统的决策可靠性。</p></section>
+              <section><h3>实践思路</h3><p>可在公开VPR数据集（如Oxford RobotCar）上复现VLM审计方法，对比其与基线方法在召回率和误接受率上的表现。建议测试不同VLM（如CLIP）对审计性能的影响，并评估在嵌入式平台上的推理延迟。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-4">
+              <div class="paper-num">04</div>
+              <h2>固定翼无人机对移动目标的自主跟踪与末端制导</h2>
+              <p>Autonomous Tracking and Terminal Guidance of Moving Targets for Fixed-Wing UAVs</p>
+              <p class="meta">Wei-Hao Liou, Teng-Hu Cheng | arXiv cs.RO | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12801v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12801v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>本研究为配备云台相机的固定翼无人机引入了一个统一控制框架，旨在执行从初始目标检测到精确末端交战的端到端任务。所提系统采用三阶段策略：基于视觉的目标捕获阶段、基于NMPC的跟踪阶段和末端制导阶段。在跟踪中，框架使用无迹卡尔曼滤波器融合基于YOLO的视觉检测与惯性测量，实现在未知动力学下的鲁棒目标状态估计。为确保可靠视觉接触，我们引入了一种约束感知的非线性模型预测控制策略，结合控制障碍函数明确防止无人机自遮挡——这是固定翼跟踪中的常见限制。在满足末端交战条件后，系统无缝过渡到基于四元数的偏置比例导航制导律，强制执行精确撞击角约束。高保真仿真表明，该框架在严格遵守车辆动态限制和相机视场约束的同时，实现了稳定、鲁棒的跟踪和精确的末端拦截。</p></section>
+              <section><h3>English Abstract</h3><p>This study introduces a unified control framework for fixed-wing unmanned aerial vehicles (UAVs) fitted with a pan-tilt (PT) camera, intended to perform an end-to-end mission spanning from initial target detection to accurate terminal engagement. The proposed system employs a three-phase strategy: a vision-based target acquisition phase, an NMPC-based tracking phase, and a terminal guidance phase. During tracking, the framework uses an Unscented Kalman Filter (UKF) to fuse YOLO-based visual detections with inertial measurements, enabling robust target state estimation under unknown dynamics. To ensure reliable visual contact, we introduce a constraint-aware Nonlinear Model Predictive Control (NMPC) strategy that incorporates Control Barrier Functions (CBFs) to explicitly prevent UAV self-occlusion -- a common limitation in fixed-wing tracking. Upon satisfying terminal engagement conditions, the system seamlessly transitions control to a quaternion-based Biased Proportional Navigation Guidance (BPNG) law, enforcing precise impact angle constraints. High-fidelity simulations demonstrate that the framework achieves stable, robust tracking and accurate terminal interception while strictly respecting the vehicle&#x27;s dynamic limits and camera field-of-view constraints.</p></section>
+              <section><h3>中文阅读提示</h3><p>关注三阶段策略的衔接（捕获-跟踪-制导），特别是NMPC如何通过CBF解决自遮挡问题。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接服务于低空经济中固定翼无人机对移动目标的跟踪与拦截安全，通过约束感知控制避免碰撞。航迹预测方面，UKF融合视觉和惯性数据提升了目标状态估计精度。智能体层面，展示了从感知到决策的端到端自主控制框架。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境（如Gazebo）中复现该框架，测试不同目标运动模式下的跟踪和制导性能。建议对比有无CBF约束时的自遮挡发生率，并验证BPNG制导律的撞击角精度。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-5">
+              <div class="paper-num">05</div>
+              <h2>强化学习中策略-环境协同设计的环境参数梯度定理</h2>
+              <p>Environment Parameter Gradient Theorem for Policy-Environment Co-Design in Reinforcement Learning</p>
+              <p class="meta">Amber Srivastava | arXiv eess.SY | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12590v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12590v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>强化学习传统上关注在固定环境中学习控制策略。然而，在许多工程系统中，环境本身是可改变的：物理或操作参数可以调整以塑造智能体经历的转移动力学和成本。这激发了联合优化策略和环境设计参数的需求。为此，我们建立了环境参数梯度定理——价值函数对环境参数梯度的正式表达式。关键理论工具是一个广义动作价值函数Q_{π,ξ}(s,a,ζ)，包含环境参数的两个副本：ζ控制当前状态-动作对的成本和转移动力学，而ξ控制未来轨迹。这种解耦产生了可处理的闭式梯度表达式，对定理推导至关重要。基于此结果，我们开发了一种无模型算法，同时学习最优策略和环境参数。我们在无人机网络设计问题上展示了框架的有效性，其中最优无人机放置（环境参数）和通信路径（由策略控制）被联合学习以最小化网络中的总通信成本。</p></section>
+              <section><h3>English Abstract</h3><p>Reinforcement learning (RL) is traditionally concerned with learning a control policy for a fixed environment. In many engineering systems, however, the environment itself is alterable: physical or operational parameters can be tuned to shape the transition dynamics and costs experienced by the agent. This motivates jointly optimizing both the policy and the environment design parameters. To this end, we establish an Environment Parameter Gradient Theorem -- a formal expression for the gradient of the value function with respect to environment parameters. The key theoretical device is a generalized action-value function $Q_{π,ξ}(s,a,ζ)$, which comprises two copies of the environment parameters: $ζ$ governs the cost and transition dynamics at the current state--action pair, while $ξ$ governs the future rollouts. This decoupling yields a tractable closed-form gradient expression and is essential to the theorem&#x27;s derivation. Building on this result, we develop a model-free algorithm that simultaneously learns the optimal policy and the environment parameters. We demonstrate the efficacy of our framework on a UAV network design problem, where the optimal UAV placement (environment parameters) and communication routes (governed by the policy) are learned jointly to minimize the total communication cost in the network.</p></section>
+              <section><h3>中文阅读提示</h3><p>先理解环境参数梯度定理的核心思想（解耦当前与未来环境参数），再关注其在无人机网络设计中的应用。</p></section>
+              <section><h3>相关性说明</h3><p>该研究对低空经济中无人机网络优化具有直接意义，通过联合优化无人机部署（环境）和通信策略提升系统效率。航迹预测方面，环境参数调整可影响飞行路径的动力学模型。智能体层面，展示了如何通过强化学习实现策略与环境的协同设计，增强自主系统的适应性。</p></section>
+              <section><h3>实践思路</h3><p>可在无人机网络仿真中复现该算法，对比联合优化与单独优化策略/环境参数在通信成本上的差异。建议测试不同环境参数（如无人机数量、位置）对收敛速度和最终性能的影响。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-6">
+              <div class="paper-num">06</div>
+              <h2>DenseReward：通过失败合成实现密集奖励学习以用于机器人操作</h2>
+              <p>DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation</p>
+              <p class="meta">Yu Fang, Wanxi Dong, Jiaqi Liu, Yue Yang, Mingxiao Huo, Yao Mu, Huaxiu Yao, Li Erran Li, Daniel Szafir, Mingyu Ding | arXiv cs.RO | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.13033v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.13033v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>强化学习在改进机器人策略方面潜力巨大，超越了模仿学习的限制。然而，其实际应用仍受限于缺乏可靠的视觉语言奖励模型来提供密集且信息丰富的反馈。两个关键挑战依然存在：大规模获取多样化的失败数据，以及获取超越稀疏轨迹级成功标签的细粒度奖励信号。收集失败轨迹通常需要大量人力，而通过重新标记成功演示构建的伪失败无法捕捉机器人执行过程中出现的多样化物理失败模式。同时，现有的奖励模型通常预测稀疏的二元或轨迹级奖励，这为高效的策略优化提供的指导有限。我们引入了DenseReward，一种密集的机器人奖励模型，它解决了这两个挑战。为了训练DenseReward，我们开发了一个自动化的失败数据生成流水线，该流水线在模拟中无需人工标注即可合成物理上逼真的失败轨迹，涵盖了诸如碰撞、抓取失败、物体掉落和恢复行为等多样化的失败模式。DenseReward根据视觉观察和语言指令预测密集的帧级奖励分数，从而能够在整个回合中对任务进展进行细粒度估计。实验表明，DenseReward在模拟和真实世界的操作任务中，在密集奖励预测方面均优于通用视觉语言模型和现有的机器人奖励模型。我们进一步证明，DenseReward提供了有效的奖励信号，用于策略优化。</p></section>
+              <section><h3>English Abstract</h3><p>Reinforcement learning holds great promise for improving robot policies beyond the limits of imitation learning. However, its practical adoption remains bottlenecked by the lack of reliable vision-language reward models that provide dense and informative feedback. Two key challenges remain: acquiring diverse failure data at scale and obtaining fine-grained reward signals beyond sparse trajectory-level success labels. Collecting failure trajectories typically requires laborious human effort, while pseudo-failures constructed by relabeling successful demonstrations fail to capture the diverse physical failure modes that arise during robot execution. Meanwhile, existing reward models often predict sparse binary or trajectory-level rewards, which provide limited guidance for efficient policy optimization. We introduce DenseReward, a dense robotic reward model that addresses both challenges. To train DenseReward, we develop an automated failure data generation pipeline that synthesizes physically realistic failure trajectories in simulation without human labeling, covering diverse failure modes such as collisions, missed grasps, object drops, and recovery behaviors. DenseReward predicts dense frame-level reward scores from visual observations and language instructions, enabling fine-grained estimation of task progress throughout an episode. Experiments show that DenseReward outperforms general-purpose VLMs and existing robotic reward models in dense reward prediction across both simulated and real-world manipulation. We further demonstrate that DenseReward provides effective reward guidance for downstream model predictive control and reinforcement learning. We release the dataset, trained reward models, and evaluation suite to support the development of failure-aware dense reward modeling for robot learning.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解DenseReward模型解决的两个核心挑战（失败数据获取和细粒度奖励）。然后重点看方法部分，理解其自动失败数据生成流水线和帧级奖励预测机制。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的密集奖励学习框架可应用于低空经济中无人机等智能体的复杂操作任务，通过合成失败数据提升策略鲁棒性，直接关联智能体安全执行。其帧级奖励预测能力有助于实现更精细的航迹规划与避障，提升低空飞行安全。</p></section>
+              <section><h3>实践思路</h3><p>可在仿真环境（如AirSim或Gazebo）中复现其自动失败数据生成流水线，针对无人机抓取或避障任务生成碰撞、坠落等失败样本。然后训练一个类似的密集奖励模型，并评估其对无人机操作策略优化的效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-7">
+              <div class="paper-num">07</div>
+              <h2>Bulkhead：容器逃逸漏洞的自动化语义检测与修复</h2>
+              <p>Bulkhead: Automated Semantic Detection and Remediation of Container Escape Vulnerabilities</p>
+              <p class="meta">Qiyuan Fan, Zhi Li, Junjie Li, XiaoFeng Wang, Bin Yuan, Deqing Zou | arXiv cs.CR | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12723v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12723v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>容器生态系统中的文件系统隔离常因跨边界路径解析错误而削弱，导致路径遍历漏洞。这些漏洞源于不安全的宿主机-容器交互，并且随着云系统将共享资源（如GPU和智能体工作空间）挂载到容器中以支持AI工作负载，此类漏洞变得越来越普遍。现有的防御措施仍不充分。内核级保护具有侵入性，可能破坏系统调用的稳定性，因此尚未被Linux主线接受。检测方法依赖于静态规则匹配或手动代码审计。静态规则可以标记与路径相关的函数，但无法捕获判断是否存在宿主机-容器交互所需的语义，导致大量误报。手动审查需要领域专业知识，成本高、效率低且难以扩展。为应对这一威胁，我们提出了Bulkhead，一个将大语言模型与形式化方法相结合的自动化框架，用于语义漏洞发现与修复。Bulkhead使用多智能体系统，通过从已知案例中泛化的多维知识模式来识别和修复路径遍历漏洞。它首先应用高风险功能模式来定位容器化代码中跨边界交互的入口点，然后使用调用链模式在合适的深度恢复相应的执行路径。检测流水线根据应用场景和威胁模型分析这些调用链，识别诸如缺失安全检查等漏洞。</p></section>
+              <section><h3>English Abstract</h3><p>Filesystem isolation in container ecosystems is often weakened by cross-boundary path misresolution, causing path traversal (PaTra) vulnerabilities. These vulnerabilities stem from insecure host-container interactions and have become increasingly pervasive as cloud systems mount shared resources, such as GPUs and agent workspaces, into containers to support AI workloads. Existing defenses remain inadequate. Kernel-level protections are intrusive, can destabilize system calls, and have therefore not been accepted into the Linux mainline. Detection methods rely on static rule matching or manual code auditing. Static rules can flag path-related functions but fail to capture the semantics needed to determine whether a host-container interaction exists, causing many false positives. Manual review requires domain expertise, making it costly, inefficient, and difficult to scale. To address this threat, we present Bulkhead, an automated framework that integrates large language models (LLMs) with formal methods for semantic vulnerability discovery and remediation. Bulkhead uses a multi-agent system to identify and repair PaTra vulnerabilities through multi-dimensional knowledge patterns generalized from known cases. It first applies high-risk functional patterns to locate entry points for cross-boundary interactions in containerized code, then uses call-chain patterns to recover the corresponding execution paths at suitable depth. The Detection pipeline analyzes these call chains against the application scenarios and threat model, identifying vulnerabilities such as missing security checks and TOCTOU flaws in cross-boundary interactions, and generating proof-of-concept (PoC) exploits for validation. These PoCs then guide patch generation. To ensure remediation correctness, the Patch pipeline performs assertion-driven verification using predefined model-checking templates.</p></section>
+              <section><h3>中文阅读提示</h3><p>首先阅读摘要和引言，了解容器逃逸漏洞的严重性和现有方法的不足。然后重点阅读Bulkhead框架的设计部分，特别是其多智能体系统和知识模式的应用。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的自动化漏洞检测与修复框架可直接应用于低空经济中的无人机地面控制系统或机载容器化服务，保障智能体通信与数据安全。其多智能体架构与语义分析能力，有助于发现和修复航迹预测等关键模块中的潜在安全漏洞。</p></section>
+              <section><h3>实践思路</h3><p>可基于开源容器环境（如Docker）复现Bulkhead框架，针对无人机控制软件中常见的路径处理函数进行测试。尝试构建针对特定低空经济场景（如无人机与地面站交互）的漏洞知识库，并评估其检测与修复效率。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-8">
+              <div class="paper-num">08</div>
+              <h2>如何实现递归自我改进的智能体与个人奇点：一种目标、范围、工具和基准驱动的多智能体架构</h2>
+              <p>How to Realize Recursively Self-Improving Agents and Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture</p>
+              <p class="meta">Chengshuai Yang | arXiv cs.CV | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12254v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12254v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>大语言模型智能体在规划、使用工具、维持记忆和执行长期任务方面能力日益增强。这些进展引出了两个相互关联的问题：智能体如何改进其学习和行动机制，以及这种改进如何提升用户持久的（而非仅软件自身的）能力？本文提出了一种受治理的多智能体架构，用于实现递归自我改进的智能体，并引入了“个人奇点”这一概念，作为有界的人机协同发展目标：帮助用户在选定领域内接近一个不断扩展的、由用户定义的能力边界。每个智能体由一个目标契约、有界范围、经过验证的工具注册表、工具级测试、端到端基准、所有者控制的自主策略、路由策略、记忆和改进策略来定义。超出范围的任务将转移给另一个负责任的智能体或新创建的专业智能体。面向用户的自动索引选择交互式、混合式、自主式或计划式操作，而不会覆盖外部权限。该架构结合了一个快速的规划器-执行器-验证器循环、一个较慢的基于证据的改进循环、一个外部治理平面、去中心化的智能体谱系、一个由所有者指导的智能体工厂，以及一个协调工作、计算成像、过程学习和个人学习智能体的个人奇点操作系统。我们形式化了范围、路由、改进接受、有界目标演化、工具优先执行和人类能力转移，并提供了安全不变性、基准设计和实施路线图。</p></section>
+              <section><h3>English Abstract</h3><p>Large language model (LLM) agents can increasingly plan, use tools, maintain memory, and execute long-horizon tasks. These advances motivate two linked questions: how can an agent improve the mechanisms by which it learns and acts, and how can that improvement increase the durable capabilities of its user rather than only the software itself? This paper proposes a governed multi-agent architecture for recursively self-improving agents and introduces personal singularity as a bounded human-AI co-development objective: helping a user approach an expanding, user-defined capability frontier across selected domains. Each agent is defined by a goal contract, bounded scope, validated tool registry, tool-level tests, end-to-end benchmarks, an owner-controlled autonomy policy, a routing policy, memory, and an improvement policy. Out-of-scope tasks are transferred to another accountable agent or to a newly created niche agent. A user-facing Auto-Index selects interactive, hybrid, autonomous, or scheduled operation without overriding external permissions. The architecture combines a fast planner-executor-verifier loop, a slower evidence-gated improvement loop, an external governance plane, decentralized agent lineages, an owner-directed agent foundry, and a Personal Singularity OS coordinating working, computational-imaging, process-learning, and personal-learning agents. We formalize scope, routing, improvement acceptance, bounded goal evolution, tool-first execution, and human capability transfer, and provide safety invariants, benchmark design, and an implementation roadmap. This is a position and systems-design paper, not evidence that unrestricted recursive self-improvement or personal singularity has already been achieved.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，理解“递归自我改进”和“个人奇点”的核心概念。然后重点看架构部分，特别是目标契约、范围界定和改进循环等关键组件。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的递归自我改进多智能体架构为低空经济中无人机集群的自主协同与持续优化提供了理论框架。其目标契约和范围界定机制可确保航迹预测等任务的安全边界，而改进循环则能持续提升智能体在复杂环境下的决策能力。</p></section>
+              <section><h3>实践思路</h3><p>可基于该架构设计一个用于无人机编队航迹规划的递归自我改进智能体原型。首先定义其目标契约（如最小化能耗与碰撞风险）和范围，然后在仿真环境中实现其规划-执行-验证循环，并评估其自我改进策略对航迹预测准确性的提升效果。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-9">
+              <div class="paper-num">09</div>
+              <h2>从简单奖励中揭示复杂的集体行为</h2>
+              <p>Unveiling Complex Collective Behaviors from Simple Rewards</p>
+              <p class="meta">Yize Mi, Jianan Li, Liang Li, Shiyu Zhao | arXiv cs.RO | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12861v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12861v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体强化学习在机器人集群方面潜力巨大，但神经策略的黑箱特性使得策略分析复杂化，限制了多机器人应用。此外，复杂的集群行为可以惊人地从简单的奖励中涌现，而无需明确的聚合激励。揭示这种涌现背后的机制至关重要，但简单奖励与集体行为之间的脱节加剧了可解释性挑战。本文旨在揭示这一过程中的隐藏机制。我们提出了一个两阶段的EEC解释框架。这包括一个名为智能体响应图的新型分析工具，它揭示了智能体在空间上的决策模式，并识别出聚合和避让区域。智能体响应图揭示，机器人隐式地学习了环境的几何场，并利用这些结构作为协调运动的期望目标。我们在两个不同的任务中验证了这一发现：一个合作性的多机器人形状组装任务和一个竞争性的捕食者-猎物追逃任务。1）在合作任务中，智能体响应图将未被占据的目标内部识别为机器人导航的期望目的地。随着中心区域被占据，该目标区域自动向边界移动，展示了机器人自主探索未占据区域的能力。2）在竞争任务中，智能体响应图令人惊讶地将捕食者维诺图的边界识别为猎物智能体的汇聚目的地。这两个任务共同展示了该框架的能力。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent Reinforcement Learning (MARL) holds great potential for robot swarms, but the black-box nature of neural policies complicates strategic analysis, limiting multi-robot applications. Furthermore, complex swarm behaviors can surprisingly emerge from simple rewards without explicit aggregation incentives. Unveiling the mechanisms behind this emergence is critical, but the disconnection between simple rewards and collective behaviors exacerbates interpretability challenges. This paper aims to reveal the hidden mechanisms in this process. We propose a two-stage EEC (\LinkIII) explanatory framework. This includes a novel analytical tool called the Agent Response Map (ARM), which reveals agents&#x27; decision-making patterns across space and identifies regions of aggregation and avoidance. ARM reveals that the robots implicitly learn the geometric fields of the environment and utilize these structures as desired targets for coordinated movement. We validate this finding across two distinct tasks: a cooperative multi-robot shape assembly and a competitive predator-prey pursuit-evasion. 1) In the cooperative task, ARM identifies the unoccupied target interior as the desired destination for robot navigation. As the center becomes occupied, this target region automatically shifts toward the boundary, demonstrating the robots&#x27; capacity to autonomously explore unoccupied areas. 2) In the competitive task, ARM surprisingly identifies the boundary of the predators&#x27; Voronoi diagram as the convergence destination for prey agents. Together, these two tasks demonstrate the capability of ARM to discover the hidden geometric structures underlying MARL policies in robot swarms.</p></section>
+              <section><h3>中文阅读提示</h3><p>该研究提出的可解释性框架可直接应用于低空经济中无人机集群的航迹预测与协同行为分析。通过智能体响应图，可以揭示无人机在简单奖励下如何涌现出避撞、编队等复杂集体行为，从而提升集群飞行的安全性和可预测性。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 multi-agent, reinforcement learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>可在多无人机仿真平台（如AirSim或Crazyflie）中复现其合作或竞争任务，训练多智能体强化学习策略。然后应用其智能体响应图工具，分析无人机在航迹预测任务中的决策模式，验证其是否隐式学习了环境几何结构。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-10">
+              <div class="paper-num">10</div>
+              <h2>用于湍流减阻的闭环壁面控制器的无梯度学习</h2>
+              <p>Gradient-free learning of a closed-loop wall controller for turbulent drag reduction</p>
+              <p class="meta">Giorgio Maria Cavallazzi, Miguel Pérez Cuadrado, Alfredo Pinelli | arXiv physics.flu-dyn | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12626v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12626v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>通过多智能体强化学习学习的闭环壁面控制可以降低湍流通道中的皮肤摩擦阻力，但这些基于梯度的策略是在小型周期性盒子上训练的，当迁移到更大域时性能会下降。我们最近表明，此类策略也容易产生饱和的“bang-bang”驱动，这些驱动会坍缩成驻留的流向波，其尺度由计算盒子而非近壁循环决定，并提出了避免这些退化的架构修复方案。在此，我们采用进化策略直接在一个大湍流通道（雷诺数约180）上优化一个递归闭环控制器，使用能量感知准则评估整个流动情节的策略性能，并并行处理候选策略。据我们所知，这是进化策略首次应用于湍流控制。进化策略控制器将皮肤摩擦降低了约26%，超过了在最小盒子上训练的基于梯度的多智能体控制器（GRU-MARL，17%），并略微超过了经典的对立控制（22%）。摩擦的壁面法向分解、雷诺应力剖面和各向异性不变量表明，进化策略和对立控制流通过缓冲层时遵循不同的轨迹，通过不同的近壁湍流重组实现了相当的减阻效果。特别是，进化策略驱动主要与流向速度波动相关，而非与壁面法向速度波动相关。</p></section>
+              <section><h3>English Abstract</h3><p>Closed-loop wall control learnt by multi-agent reinforcement learning can lower skin-friction drag in turbulent channels, but these gradient-based policies are trained on small periodic boxes and exhibit reduced performance when carried over to a larger domain. We recently showed that such policies are also prone to saturated bang-bang actuations that collapse into standing streamwise waves whose scale is set by the computational box rather than by the near-wall cycle, and proposed architectural fixes that avoid these degeneracies. Here, we employ Evolution Strategy (ES) to optimise a recurrent closed-loop controller directly on a large turbulent channel at $\mathit{Re}_τ\simeq180$, evaluating policy performance over full flow episodes using an energy-aware criterion and processing candidate policies in parallel. To our knowledge, this is the first application of an evolution strategy to the control of a turbulent flow. The ES controller reduces the skin friction by about $26\%$, exceeding the gradient-based multi-agent controller of Cavallazzi et al. (2026), GRU-MARL, trained on a minimal box ($17\%$), and marginally exceeding classic opposition control (OC, $22\%$). A wall-normal decomposition of the friction, Reynolds-stress profiles and anisotropy invariants show that the ES and opposition-controlled flows follow separate trajectories through the buffer layer, reaching comparable drag reduction by different reorganisations of the near-wall turbulence. In particular, the ES actuation correlates predominantly with the streamwise velocity fluctuations rather than with the wall-normal velocity that classical OC targets.</p></section>
+              <section><h3>中文阅读提示</h3><p>先阅读摘要和引言，了解进化策略在湍流控制中的创新应用。然后重点看结果部分，比较进化策略控制器与多智能体强化学习及对立控制的减阻效果和湍流结构差异。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的无梯度进化策略优化方法可应用于低空经济中无人机在复杂湍流环境下的航迹预测与姿态控制。其闭环控制器的学习方式有助于提升无人机在阵风等扰动下的飞行稳定性与安全性，且无需梯度信息，适用于黑箱或高维控制问题。</p></section>
+              <section><h3>实践思路</h3><p>可在计算流体力学仿真中复现其进化策略控制器，针对无人机翼型或旋翼的湍流减阻问题进行优化。尝试将控制器迁移到更复杂的低空飞行场景（如城市峡谷风场），并评估其对航迹预测精度和能耗的影响。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-11">
+              <div class="paper-num">11</div>
+              <h2>Toward Trustworthy Autonomous Science: A Two-Year Community Roadmap</h2>
+              <p>Toward Trustworthy Autonomous Science: A Two-Year Community Roadmap</p>
+              <p class="meta">Rafael Ferreira da Silva, Milad Abolhasani, Peter Beaucage, Laura Biven, Michael Bussmann, Kyle Chard, Ryan Coffee, Stephen DeWitt, Sagar Dolas, Carrie Eckert, David Elbert, Ian Foster, Tirthankar Ghosal, Anna Giannakou, Tom Gibbs, Leslie Hamilton, Glenn Lockwood, Theresa Mayer, Ben Mintz, Raffi Nazikian, Sal Nimer, Amanda Randles, Woong Shin, Sreenivas Rangan Sukumar, Frédéric Suter, Mitra Taheri, Michela Taufer, Draguna Vrabie | arXiv cs.DC | 2026-07-13</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12113v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12113v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>One year ago, the AISLE roadmap argued that autonomous laboratories operated as isolated islands and proposed a grassroots network organized around five critical dimensions. The field has since moved faster than anticipated. Multi-agent systems have produced experimentally validated hypotheses, self-driving laboratories have grown more interoperable and orchestrated, reasoning-trained and domain foundation models have raised the capability ceiling, and the Genesis Mission has placed autonomous experimentation at the center of U.S. federal science strategy, with industry emerging as a primary actor. Progress has met a sobering counter-current, including a corrected flagship discovery result, benchmarks showing that agents which rival experts on closed-ended questions still complete only a fraction of open-ended research, and fabricated citations surfacing at leading venues. We read this as the defining tension of the field. Producing a candidate discovery is no longer the hard part, but verifying it is, and this asymmetry now limits autonomous science more than raw model capability. We update the roadmap around seven dimensions, revisiting the original five and elevating two former cross-cutting concerns, trust, verification, and reproducibility, and safety, security, and governance, to first-class status. We assess the original milestones (M1 through M14) as achieved, partially achieved, reframed, or open, add four new milestones (M15 through M18), and scope the path forward to a two-year horizon. The first year concentrates on interfaces, protocol adoption, and the scaffolding of verification, and the second targets federation, zero-trust coordination, and governance. Throughout, we position the grassroots network as the interoperability fabric that lets national programs, international initiatives, and commercial platforms connect rather than re-silo.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 multi-agent。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-12">
+              <div class="paper-num">12</div>
+              <h2>MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality</h2>
+              <p>MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality</p>
+              <p class="meta">Ahaan Kotian, Shivani Subramanyan, Suresh Sundaram | arXiv cs.RO | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12965v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12965v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Reliable autonomous navigation in unstructured off-road environments remains a critical unsolved challenge due to extreme terrain diversity, drastic illumination variations and acute sensor degradation. Recent developments have approached the problem as a traversability costmap estimation or visual navigation task. However, many exhibit heavy reliance on RGB modality, leading to poor performance in varied illumination such as glares, shadows or low ambient light. Achieving robust generalization in such conditions requires integrating modalities that provide supplementary scene information. Such multi-modal methods suffer from a rigid dependency on the presence of near-perfect sensor inputs, leaving them unable to robustly handle sensor degradation or individual modality failure. To address these limitations, we introduce MAMMOTH (MAsking Multi-Modal inputs for Off-road Traversability Heuristic-informed navigation), a unified end-to-end navigation policy for robust off-road visual-goal-conditioned navigation and undirected exploration. Specifically, MAMMOTH efficiently fuses multi-modal observations (RGB, Thermal, 3D Pointcloud and Ego Velocity) and is trained with a modality dropout scheme, enabling it to generalize to missing modalities at inference time. Furthermore, we employ a diffusion policy to learn the joint conditional probability distribution of physically-grounded trajectories and a intrinsic traversability heuristic. MAMMOTH utilizes this heuristic to prefer safer, smoother trajectories. We validate MAMMOTH through extensive real-world robot experiments in distinct off-road environments, including night-time operation. Our results demonstrate superior performance, with significant improvements in collision avoidance, terrain-aware planning and generalization to missing modalities. The code and dataset used for this work will be made publicly available.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 autonomous navigation, collision avoidance, diffusion policy。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-13">
+              <div class="paper-num">13</div>
+              <h2>Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence</h2>
+              <p>Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence</p>
+              <p class="meta">Zhishan Zou, Guoyan Sun, Zhiwei Wei, Jiancheng Pan, Yujie Li, Mugen Peng, Wenjia Xu | arXiv cs.CV | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12477v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12477v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Autonomous UAV systems increasingly rely on multimodal large language models (MLLMs) to operate in complex real-world environments. Such embodied scenarios require not only understanding the surrounding space but also maintaining a coherent representation of the agent itself. However, existing UAV-oriented approaches and benchmarks remain largely environment-centric, primarily focusing on spatial understanding tasks, with the agent&#x27;s self-awareness remaining implicit. To address this gap, we introduce SIS-Bench, a benchmark for evaluating embodied spatial intelligence in UAV scenarios under a unified self-in-space formulation. SIS-Bench organizes evaluation along two complementary dimensions, space and self, and a three-level hierarchy of perception, memory, and reasoning. It contains 4,856 question--answer pairs across 13 tasks derived from 1,646 real-world UAV videos through a task-conditioned construction pipeline with expert verification. Extensive evaluations reveal that current MLLMs exhibit fundamental limitations in modeling dynamic and agent-centered processes. In particular, we observe a clear imbalance between spatial cognition and self-awareness, as well as a progressive performance degradation across cognitive levels. Motivated by these findings, we further explore a motion-aware representation that incorporates self-related dynamics through optical flow and visual feature fusion. Experimental results show that modeling agent motion consistently improves perception and memory performance, not only in spatial cognition but also in self-awareness, and generalizes to downstream UAV decision-making tasks. Our results highlight the importance of self-awareness for advancing embodied spatial intelligence, and provide both a new benchmark and empirical evidence for motion-aware self-in-space modeling.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 uav。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-14">
+              <div class="paper-num">14</div>
+              <h2>UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies</h2>
+              <p>UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies</p>
+              <p class="meta">Lirui Zhao, Modi Shi, Li Chen, Qi Liu, Ping Luo, Hongyang Li | arXiv cs.RO | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12892v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12892v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>Modern robot learning systems increasingly rely on dense progress or value signals to evaluate intermediate states, guide policy learning, and detect task completion, making the quality of these signals critical. Since such dense labels are rarely available at scale, normalized time within a demonstration is often used as a scalable substitute: later frames are treated as higher progress. However, this time-derived label is only a noisy proxy for physical task progress. In contact-rich manipulation, a robot may make progress and then lose it through slips, failed grasps, or partial undoing, while the time-derived label continues to increase monotonically. We introduce Unsupervised Robotic Value Correction (UR-VC), an offline, training-free method for correcting time-derived progress labels. UR-VC exploits a simple regularity in demonstration data: similar states often recur across different episodes, but at different timestamps. Instead of trusting the timestamp from a single trajectory, UR-VC retrieves similar states from other episodes and aggregates their time-derived labels to obtain a corrected progress estimate. UR-VC requires no manual progress labels, reward annotations, or additional value model. We evaluate UR-VC on real bimanual cloth flatten-and-fold data, a long-horizon deformable-object manipulation task with visible intermediate progress. The corrected labels capture local regressions and non-uniform progress that normalized time cannot represent, while preserving the overall task trend. We further use the corrected signal to construct advantage labels for VLA training, following recent advantage-conditioned policy learning. UR-VC shows a positive trend in real-robot task success under matched data, model, and training settings.</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 robot learning。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-15">
+              <div class="paper-num">15</div>
+              <h2>FlowWAM: Optical Flow as a Unified Action Representation for World Action Models</h2>
+              <p>FlowWAM: Optical Flow as a Unified Action Representation for World Action Models</p>
+              <p class="meta">Yixiang Chen, Peiyan Li, Yuan Xu, Qisen Ma, Jiabing Yang, Kai Wang, Jianhua Yang, Dong An, He Guan, Gaoteng Liu, Jianlou Si, Jun Huang, Jing Liu, Nianfeng Liu, Yan Huang, Liang Wang | arXiv cs.RO | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.13017v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.13017v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>当前未生成中文摘要翻译。</p></section>
+              <section><h3>English Abstract</h3><p>World Action Models (WAMs) are able to leverage pretrained video generators for both world modeling and action prediction. However, directly leveraging such video generators for control raises a new challenge: how to represent actions in a suitable form that aligns with pretrained video generators while carrying enough motion cues for accurate control. Existing numerical actions fail to satisfy the former, and prior visual action representations overlook the temporal motion structure across frames. We address this issue with FlowWAM, a dual-stream diffusion framework that adopts optical flow as a unified, video-native action representation. Flow videos share the same format as RGB videos and encode rich per-pixel displacement. By jointly modeling them within a shared pretrained video generator, FlowWAM can naturally implement two modes of WAMs. In policy mode, FlowWAM generates flow for action prediction, while in world-model mode, it uses target flow sequences to guide future video generation. Moreover, since flow can be easily extracted from raw videos without action labels, FlowWAM can leverage large-scale action-unlabeled video datasets for pretraining. We empirically find that our flow-based action representation delivers gains across both modes. On RoboTwin manipulation, FlowWAM raises the success rate to 92.94% on the Clean setting and 92.14% on Random, outperforming both VLA and WAM baselines. On WorldArena world modeling, it achieves the best overall EWMScore (63.71) with an 18.4% relative improvement in trajectory accuracy. More results can be found on our project website: https://flow-wam.github.io .</p></section>
+              <section><h3>中文阅读提示</h3><p>免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。</p></section>
+              <section><h3>相关性说明</h3><p>规则相关性：命中关键词 world model。可优先检查论文的问题定义、数据来源、模型输入输出、评价指标，以及是否能迁移到低空安全评估、航迹预测或多智能体协同场景。</p></section>
+              <section><h3>实践思路</h3><p>实践建议：先阅读摘要和实验设置，记录任务、数据集、模型结构、损失函数和评价指标；再判断是否能替换为无人机轨迹、低空空域风险或多智能体交互数据，并设计一个最小复现实验。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-16">
+              <div class="paper-num">16</div>
+              <h2>超越机械臂：为自由漂浮航天器规划无推进剂姿态机动</h2>
+              <p>More than a Manipulator: Planning Propellant-Free Attitude Maneuvers for Free-Floating Spacecraft</p>
+              <p class="meta">Harsh G. Bhundiya, Avi Soval, Keenan Albee | arXiv cs.RO | 2026-07-13</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12130v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12130v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>航天器姿态控制传统上通过动量交换装置或消耗推进剂的推进器实现。与此同时，越来越多的任务需要机器人机械臂，这些机械臂通常被视为需要抑制的干扰源，而非用于航天器重新定向的执行器。本研究通过制定一个包含关键关节和碰撞避免约束的轨迹优化问题，探讨了利用机械臂运动进行无推进剂姿态控制。使用内点求解器求解所得的非线性规划，针对一系列具有不同运动学复杂性和质量特性的航天器-机械臂系统，演示了复杂的转向和消旋轨迹。通过动量和力矩包络线，将可达到的控制能力与反作用轮阵列直接比较，证明了机械臂作为冗余甚至主要姿态控制系统的潜力。这项工作为使用机械臂作为多用途姿态控制执行器提供了一个框架，在抓取具有高相对质量分数的有效载荷时，尤其适用于在轨组装和制造领域。</p></section>
+              <section><h3>English Abstract</h3><p>Spacecraft attitude control is traditionally achieved using momentum exchange devices or propellant-consuming thrusters. Meanwhile, a growing number of missions require robotic manipulators, which are typically treated as disturbance sources to be rejected rather than as actuators for spacecraft reorientation. This work investigates the use of manipulator motions for propellant-free attitude control by formulating a trajectory optimization problem with critical joint and collision avoidance constraints. Using an interior point solver for the resulting nonlinear program, complex slew and detumble trajectories are demonstrated for a range of spacecraft-manipulator systems with varying kinematic complexity and mass properties. The achievable control authority is compared directly with that of reaction wheel arrays via momentum and torque envelopes, demonstrating the potential for manipulators to serve as redundant or even primary attitude control systems. This work provides a framework for using manipulators as multipurpose attitude control actuators, with particularly promising applications in in-space assembly and manufacturing when grasping payloads with high relative mass fractions.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读第3-4节，了解如何将机械臂运动建模为姿态控制优化问题，以及第5节中与反作用轮的性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>该研究提出的无推进剂姿态控制方法可应用于低空经济中的无人机或飞行器，减少燃料消耗并延长任务寿命。机械臂作为执行器的思路与智能体系统中利用多自由度工具进行协同控制有相似性。航迹规划中的避障和约束优化技术可直接迁移至低空飞行器的安全航迹规划。</p></section>
+              <section><h3>实践思路</h3><p>可基于开源航天器动力学仿真环境（如NASA的42或通用机器人仿真器）复现该轨迹优化框架，测试不同机械臂构型下的姿态控制能力。实验可设计为：在仿真中对比使用机械臂与反作用轮进行相同姿态机动时的能耗和精度。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-17">
+              <div class="paper-num">17</div>
+              <h2>ABot-3DWorld 0：探索任意3D空间的通用世界模型</h2>
+              <p>ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space</p>
+              <p class="meta">Mingchao Sun, Luyang Tang, Yu Liu, Xu Yan, Zhan Li, Yunwei Zhang, Fei Yu, Zengye Ge, Yumin Liu, Jiacheng Zhang, Yongchang Zhang, Jiawei Zhang, Zhicheng Liu, Zhongxu Sun, Tianjian Ouyang, Wenzheng Chen, Shixing Yang, Nianfei Fan, Guodong Sun, Huan Li, Zheng Zhou, Yongze Li, Yingliang Peng, Mengmeng Du, Yuan Liu, Haozhe Shi, Chunnuo Gong, Chengzhen Yu, Chunxue Jia, Yang Liu, Shiying Zeng, Junnan Lai, Hang Zhang, Ning Guo, Baoquan Chen, Mu Xu, Hongyu Pan | arXiv cs.CV | 2026-07-13</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.11673v2" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.11673v2" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>我们提出了ABot-3DWorld 0，一个通用的多模态3D世界模型，可将文本、图像和视频输入转化为高保真、可探索的3D世界。我们框架的核心是一个统一的“空间生成基元”（SGP），它是一个由高质量全景图和空间点云组成的紧凑元组，能够高效描述任何3D空间。多模态输入首先被提升到该基元中；然后，一个3D一致的全景视频生成器沿规划轨迹探索该基元；最后，我们的全景视频重建引擎将生成的视频转换为干净、逼真的3D高斯泼溅（3DGS）世界。该流程涵盖两种模式：丰富输入（多视图集、随意视频）通过几何严谨的恢复被提升到SGP中，以镜像观察到的场景；而单张图像或句子则被生成式地补全为一个创意世界。结果是一个低门槛的通用3D内容创建引擎，它还能将生成的世界锚定到地理兴趣点，实现面向消费者的地图原生空间探索。实验表明，ABot-3DWorld 0在开源方法中达到了最先进水平，并在丰富的多模态输入下展现出比Marble更强的场景保真度。</p></section>
+              <section><h3>English Abstract</h3><p>We present ABot-3DWorld 0, a universal multimodal 3D world model that turns text, image, and video inputs into high-fidelity, explorable 3D worlds. At the heart of our framework is a unified Spatial Generative Primitive (SGP), a compact tuple of a high-quality panorama and a spatial point cloud that delivers an efficient description of any 3D space. Multimodal inputs are first lifted into this primitive; a 3D-consistent panoramic video generator then explores the primitive along a planned trajectory; finally, our panoramic video reconstruction engine converts the generated video into a clean, photorealistic 3D Gaussian Splatting (3DGS) world. This pipeline covers two regimes: rich inputs (multi-view sets, casual video) are lifted into the SGP through a geometry-rigorous recovery that mirrors the observed scene, while a single image or sentence is completed generatively into a creative world. The result is one low-barrier engine for general 3D content creation that further anchors generated worlds to geographic points of interest, enabling map-native spatial exploration at consumer scale. Experiments show that ABot-3DWorld 0 sets the state of the art among open-source methods and demonstrates stronger scene fidelity than Marble under rich multimodal inputs.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先阅读第2节了解SGP核心设计，再关注第4节的实验对比，特别是与Marble的保真度比较。</p></section>
+              <section><h3>相关性说明</h3><p>该模型可将低空飞行器（如无人机）采集的航拍图像或视频快速转化为可探索的3D场景，用于低空环境建模与安全评估。其轨迹规划与场景生成能力可辅助低空航迹预测中的环境感知。智能体系统可利用该模型进行虚拟环境中的自主导航与避障训练。</p></section>
+              <section><h3>实践思路</h3><p>可复现其多模态输入到3DGS的完整流程，使用公开数据集（如Matterport3D或自定义无人机航拍数据）测试场景重建质量。实验重点可放在：对比不同输入模态（单图vs视频）对重建精度的影响，以及评估生成场景用于无人机路径规划仿真的可行性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-18">
+              <div class="paper-num">18</div>
+              <h2>用于自主、免微调临床体征检测的多智能体系统：开发与验证研究</h2>
+              <p>A Multi-Agent System for Autonomous, Fine-Tuning-Free Clinical Symptom Detection: Development and Validation Study</p>
+              <p class="meta">Cameron Cagan, Pedram Fard, Jiazi Tian, Jingya Cheng, Shawn N. Murphy, Hossein Estiri | arXiv cs.AI | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12886v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12886v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>临床记录包含许多促使患者就医的体征和症状，但这些信息很少进入结构化字段。现有的提取方法要么依赖对上下文不敏感的规则（产生假阳性），要么依赖需要大量微调的有监督模型。我们提出了Pythia，一个多智能体系统，它能够自主编写和优化用于临床概念的提取提示，无需手动提示工程或微调。Pythia运行在本地托管的开放权重模型上，将临床记录保留在本地基础设施中，并使用开发集的灵敏度和特异度来选择提示。我们将Pythia与一个精选词表进行了比较，涉及来自400份临床记录（代表387名患者）的72种体征和症状。开发集（n=300）和验证集（n=100）为每个概念独立划分。Pythia实现了平均灵敏度0.76和特异度0.95，而词表分别为0.82和0.76，并且在62个可直接比较的概念中，有20个概念在两项指标上均达到或超过词表。对于词表将每份记录都标记为阳性的14个概念，Pythia通过要求一个现在时态、归属于患者的发现（而非任何文本提及的术语）恢复了平均0.97的特异度。特异度从开发集到验证集的迁移在不同患病率下退化最小，而灵敏度迁移在患病率低于5%时减弱，在低于2%的患病率下达到平均0.25的差距。一个在相同开发集上针对每个概念进行微调的BERT分类器实现了平均灵敏度0.23，并崩溃至……</p></section>
+              <section><h3>English Abstract</h3><p>Clinical notes contain many of the signs and symptoms that bring patients to care, yet this information rarely reaches structured fields. Existing extraction approaches either rely on context-insensitive rules that generate false positives or on supervised models that require substantial fine-tuning. We present Pythia, a multi-agent system that autonomously writes and optimizes extraction prompts for clinical concepts without manual prompt engineering or fine-tuning. Running on a locally hosted open-weights model, Pythia keeps clinical notes on local infrastructure and selects prompts using development-set sensitivity and specificity. We compared Pythia with a curated lexicon across 72 signs and symptoms from 400 clinical notes representing 387 patients. Development (n=300) and validation (n=100) sets were partitioned independently for each concept. Pythia achieved mean sensitivity of 0.76 and specificity of 0.95, compared with 0.82 and 0.76 for the lexicon, and matched or exceeded the lexicon on both metrics for 20 of 62 directly comparable concepts. For 14 concepts where the lexicon labeled every note positive, Pythia recovered mean specificity of 0.97 by requiring a present-tense, patient-attributed finding rather than any textual mention of a term. Specificity transferred from development to validation with minimal degradation across prevalences, whereas sensitivity transfer weakened below 5% prevalence, reaching a mean gap of 0.25 below 2% prevalence. A BERT classifier fine-tuned per concept on the same development set achieved mean sensitivity of 0.23 and collapsed to zero sensitivity for concepts below roughly 5% prevalence. These findings suggest that autonomous, fine-tuning-free prompt optimization can produce symptom extraction prompts that generalize effectively from development to validation while remaining deployable on local infrastructure.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读方法部分（第2节）了解多智能体协作机制，以及结果部分（第3节）中与词表和BERT的性能对比。</p></section>
+              <section><h3>相关性说明</h3><p>该多智能体系统展示了无需微调即可从非结构化文本中提取关键信息的能力，可应用于低空安全事件报告或飞行日志的自动分析。其自主优化提示的思路可启发低空航迹预测中多源数据融合的智能体设计。智能体间的协作与提示优化机制可直接迁移至低空交通管理中的分布式决策系统。</p></section>
+              <section><h3>实践思路</h3><p>可复现其核心流程：使用本地LLM（如Llama或Mistral）构建多智能体系统，在公开的临床数据集（如MIMIC-III）上测试症状提取性能。实验可设计为：对比不同提示策略（固定vs自主优化）对提取准确率的影响，并评估系统在不同患病率下的鲁棒性。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-19">
+              <div class="paper-num">19</div>
+              <h2>稳定性赢得时间：加密多智能体控制中的密钥更新博弈</h2>
+              <p>Stability Buys Time: A Re-Keying Game for Encrypted Multi-Agent Control</p>
+              <p class="meta">Sai Sandeep Damera, John S. Baras | arXiv cs.CR | 2026-07-14</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12742v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12742v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>加密控制允许云在完全同态加密的状态下协调一组智能体，从而保护它们的位置和命令的隐私。用于实值控制的近似方案CKKS返回的解密结果带有加密噪声，这是一种密钥恢复泄露；循环必须解密才能执行动作，因此泄露是不可避免的。然而，近似FHE的安全性研究是静态的，加密控制假设云是诚实但好奇的，而持续威胁博弈从未深入到密码系统内部。我们将循环在高级持续威胁下的安全性建模为一个两阶段博弈：被动侦察和主动操纵，两者由一个仅能感知操纵的测量残差检测器分隔。被动阶段简化为已知的洪泛权衡；主动防御是密钥更新（而非自举），因为只有密钥更新能重置累积的泄露。主动阶段是一个检测-规避时机博弈：公开的操纵会被发现，因此理性对手保持隐蔽，在其Stackelberg均衡下，防御者以最懒惰的节奏进行密钥更新以阻止对手，该节奏由图拓扑的控制理论脆弱性决定。边缘稳定图必须比连接良好的图更频繁地更新密钥。FHE精度、控制精度和密钥更新节奏之间的三方张力决定了该博弈的存在区间，位于一个“可安全性下限”和一个“静态足够上限”之间。高效安全点就是那个窗口，其中密钥更新是精度效率的代价。更广泛地说，反馈回路中近似密码系统的安全性是一个动态问题。</p></section>
+              <section><h3>English Abstract</h3><p>Encrypted control lets a cloud coordinate a fleet of agents on fully homomorphically encrypted state, keeping their positions and commands private. The approximate scheme for real-valued control, CKKS, returns decryptions that carry the encryption noise, a key-recovery leak; the loop must decrypt to actuate, so the leak is unavoidable. Yet the security of approximate FHE is studied statically, encrypted control assumes an honest-but-curious cloud, and persistent-threat games never reach inside the cryptosystem. We model the loop&#x27;s security under an advanced persistent threat as a two-phase game, passive reconnaissance then active manipulation, separated by a measured residual detector that sees only the manipulation. The passive phase reduces to the known flooding tradeoff; the active defense is re-keying, not bootstrapping, since only re-keying resets accumulated leakage. The active phase is a detection-evasion timing game: overt manipulation is caught, so the rational adversary stays stealthy, and at its Stackelberg equilibrium the defender re-keys on the laziest cadence that denies it, set by the control-theoretic fragility of the graph topology. The marginally-stable graph must re-key far more often than the well-connected one. A three-way tension among FHE precision, control accuracy, and re-key cadence sets where this game lives, between a securability floor and a static-suffices ceiling. The efficient secure point is that window, where re-keying is the price of precision efficiency. More broadly, security for an approximate cryptosystem in a feedback loop is a dynamic game whose defender&#x27;s move is the scheme&#x27;s own refresh, applying beyond control to any system that must repeatedly decrypt to act.</p></section>
+              <section><h3>中文阅读提示</h3><p>建议先理解第2节的博弈模型框架，再重点阅读第3节中关于图拓扑与密钥更新频率关系的分析。</p></section>
+              <section><h3>相关性说明</h3><p>该研究直接针对多智能体系统的安全控制问题，与低空经济中无人机集群的加密通信与安全协调高度相关。其提出的密钥更新策略可应用于低空航迹预测中的隐私保护数据共享。博弈论框架为设计抗攻击的智能体协同控制协议提供了理论基础。</p></section>
+              <section><h3>实践思路</h3><p>可复现其两阶段博弈仿真：使用多智能体控制仿真平台（如ROS2+Gazebo）实现加密状态下的集群协调，并测试不同图拓扑（如星型vs全连接）对密钥更新频率的影响。实验可设计为：对比固定密钥更新与自适应策略下的系统安全性和控制性能。</p></section>
+            </article>
+            
+            <article class="paper" id="paper-20">
+              <div class="paper-num">20</div>
+              <h2>RCWT：从LLM调用中的协调内容测量任务预算位移</h2>
+              <p>RCWT: Measuring Task-Budget Displacement from Coordination Content in LLM Calls</p>
+              <p class="meta">Brenda Lelis, Rodrigo Cabral-Carvalho | arXiv cs.CL | 2026-07-13</p>
+              <div class="links">
+                <a href="http://arxiv.org/abs/2607.12216v1" target="_blank" rel="noopener">Original Page</a>
+                <a href="http://arxiv.org/pdf/2607.12216v1" target="_blank" rel="noopener">PDF</a>
+              </div>
+              <section><h3>中文摘要翻译</h3><p>多智能体和记忆增强的LLM系统通常将协调内容（共享状态、先前讨论、工具输出、摘要和角色指令）放置在用于当前任务的同一个有限提示中。这造成了一个实际的分配问题：在固定上下文预算下组装调用时，每个用于协调的令牌都无法用于任务指令或证据。我们引入了“圆桌上下文窗口测试”（RCWT），这是一个用于测量这种任务预算位移效应的受控协议。RCWT在控制总预算、位置顺序、任务族和评分的同时，变化协调内容。在W=4096的主要上下文相关召回任务中，三个商业模型在中等开销下保持接近基线，然后一旦剩余参考证据降至几百个令牌，性能急剧下降。窗口缩放摘要与特定任务的剩余预算解释一致，而非固定的百分比阈值，但我们将其视为描述性证据而非普遍规律。为了测试当任务证据保持不变时固定预算悬崖是否仍然存在，我们添加了一个完整任务消融：保持完整的任务/参考块存在，同时通过扩展总提示长度来增加协调令牌。在该设置中，所有测试的调用在GPT-4.1-mini、Claude Haiku 4.5和Gemini 2.5 Flash上，直到95%的协调比例，都能正确返回每个评分字段。该消融缩小了结论范围：主要的RCWT悬崖最好被解读为任务预算位移，而非协调量本身导致语义崩溃的证据。</p></section>
+              <section><h3>English Abstract</h3><p>Multi-agent and memory-augmented LLM systems often place coordination content, shared state, prior discussion, tool outputs, summaries, and role instructions, inside the same finite prompt used for the current task. This creates a practical allocation problem: every token spent on coordination is unavailable to task instructions or evidence when a call is assembled under a fixed context budget. We introduce the Roundtable Context Window Test (RCWT), a controlled protocol for measuring this task-budget displacement effect. RCWT varies coordination content while controlling total budget, position order, task family, and scoring. In the main context-dependent recall task at $W=4096$, three commercial models remain near baseline through moderate overhead and then degrade sharply once residual reference evidence falls to a few hundred tokens. Window-scaling summaries are consistent with a task-specific residual-budget interpretation rather than a fixed percentage threshold, but we treat this as descriptive evidence rather than a universal law. To test whether the fixed-budget cliff persists when task evidence remains intact, we add an intact-task ablation: the full task/reference block is kept present while coordination tokens increase by expanding total prompt length. In that setting, all tested calls return every scored field correctly across GPT-4.1-mini, Claude Haiku 4.5, and Gemini 2.5 Flash up to a 95\% coordination ratio. This ablation narrows the claim: the main RCWT cliff is best read as task-budget displacement, not as proof that coordination volume alone causes semantic interference in the original open-ended task. RCWT is therefore a measurement primitive for context-allocation budgeting, not a complete theory of multi-agent benefit or session-level coordination.</p></section>
+              <section><h3>中文阅读提示</h3><p>重点阅读第3节的实验设计（RCWT协议）和第4节的结果分析，特别是完整任务消融实验的发现。</p></section>
+              <section><h3>相关性说明</h3><p>该研究揭示了多智能体系统中上下文窗口分配的关键问题，直接适用于低空经济中多无人机协同决策时的LLM调用优化。其任务预算位移概念可指导低空航迹预测中如何高效分配提示空间给环境证据与协调信息。智能体系统设计者可借鉴其消融实验方法，优化自身系统的上下文使用效率。</p></section>
+              <section><h3>实践思路</h3><p>可复现其RCWT协议：使用开源LLM（如Llama或Mistral）构建多智能体对话系统，在固定上下文窗口下测试不同协调内容比例对任务完成质量的影响。实验可设计为：在无人机协同路径规划任务中，对比不同协调信息占比下的规划成功率与推理延迟。</p></section>
+            </article>
+            
+  </main>
+</body>
+</html>

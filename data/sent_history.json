@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "11273ef73d6ed1a4",
+      "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
+      "url": "http://arxiv.org/abs/2607.12593v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "ab39c348ab2f1720",
+      "title": "Edge-Aware Thermal Infrared UAV Swarm Tracking",
+      "url": "http://arxiv.org/abs/2607.12544v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "d1ce37e6fea09108",
+      "title": "Breaking Déjà Vu: Independent Auditing of Visual Place Recognition through Vision-Language Reasoning",
+      "url": "http://arxiv.org/abs/2607.12818v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "871ae2c2c04ba919",
+      "title": "Autonomous Tracking and Terminal Guidance of Moving Targets for Fixed-Wing UAVs",
+      "url": "http://arxiv.org/abs/2607.12801v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "32cdd8282b5566fa",
+      "title": "Environment Parameter Gradient Theorem for Policy-Environment Co-Design in Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.12590v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "77a1f6bffb527f03",
+      "title": "DenseReward: Dense Reward Learning via Failure Synthesis for Robotic Manipulation",
+      "url": "http://arxiv.org/abs/2607.13033v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "359eaa09944ae758",
+      "title": "Bulkhead: Automated Semantic Detection and Remediation of Container Escape Vulnerabilities",
+      "url": "http://arxiv.org/abs/2607.12723v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "a793443f469b24be",
+      "title": "How to Realize Recursively Self-Improving Agents and Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+      "url": "http://arxiv.org/abs/2607.12254v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "f9893ba6acc49731",
+      "title": "Unveiling Complex Collective Behaviors from Simple Rewards",
+      "url": "http://arxiv.org/abs/2607.12861v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "2c584a1756be75c4",
+      "title": "Gradient-free learning of a closed-loop wall controller for turbulent drag reduction",
+      "url": "http://arxiv.org/abs/2607.12626v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "7b0c85afdcb814b1",
+      "title": "Toward Trustworthy Autonomous Science: A Two-Year Community Roadmap",
+      "url": "http://arxiv.org/abs/2607.12113v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "4bf6d9766c16b8a4",
+      "title": "MAMMOTH: A Multi-Modal End-to-End Policy for Off-Road Mobility Robust to Missing Modality",
+      "url": "http://arxiv.org/abs/2607.12965v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "a3af36c9ea83d8f4",
+      "title": "Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence",
+      "url": "http://arxiv.org/abs/2607.12477v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "45480c9a450ff740",
+      "title": "UR-VC: Unsupervised Robotic Value Correction for Time-Derived Progress Proxies",
+      "url": "http://arxiv.org/abs/2607.12892v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "83936e2518d95e2b",
+      "title": "FlowWAM: Optical Flow as a Unified Action Representation for World Action Models",
+      "url": "http://arxiv.org/abs/2607.13017v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "2f4a6e03d8b67dc0",
+      "title": "More than a Manipulator: Planning Propellant-Free Attitude Maneuvers for Free-Floating Spacecraft",
+      "url": "http://arxiv.org/abs/2607.12130v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "43b69c21b8c8b121",
+      "title": "ABot-3DWorld 0: A Universal World Model to Explore Any 3D Space",
+      "url": "http://arxiv.org/abs/2607.11673v2",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "7dba270158a030d1",
+      "title": "A Multi-Agent System for Autonomous, Fine-Tuning-Free Clinical Symptom Detection: Development and Validation Study",
+      "url": "http://arxiv.org/abs/2607.12886v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "e03bbdc835dc81ee",
+      "title": "Stability Buys Time: A Re-Keying Game for Encrypted Multi-Agent Control",
+      "url": "http://arxiv.org/abs/2607.12742v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
+      "key": "e5dfaf9882352b8d",
+      "title": "RCWT: Measuring Task-Budget Displacement from Coordination Content in LLM Calls",
+      "url": "http://arxiv.org/abs/2607.12216v1",
+      "sent_at": "2026-07-15T22:01:15.419569+00:00"
+    },
+    {
       "key": "bd3ca6bc3e776ddc",
       "title": "Coordinated Incremental Trajectory Tracking of a Tailsitter Drone",
       "url": "http://arxiv.org/abs/2607.11651v1",
