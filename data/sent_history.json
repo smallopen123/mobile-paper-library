@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "df3e45ab0cf333ce",
+      "title": "Recursive ArUco Markers: A Scalable Fiducial Marker Design for Unmanned Aerial Vehicle Landing Pads",
+      "url": "http://arxiv.org/abs/2607.13830v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "6e0eafe37ae8d70c",
+      "title": "Dynamical Vehicle Orienteering Problem for Multi-Rotor Unmanned Aerial Vehicles",
+      "url": "http://arxiv.org/abs/2607.13789v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "064505a7d23bba06",
+      "title": "Machine Learning Challenges in Intelligent Unmanned Aerial Vehicle Operations in Developing Economie",
+      "url": "http://arxiv.org/abs/2607.13447v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "f45e554e84c01071",
+      "title": "Distributionally Robust and Safe Imitation Learning",
+      "url": "http://arxiv.org/abs/2607.13436v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "d5366ec3eb5c002d",
+      "title": "Learning Safe Agent Behaviour from Human Preferences and Justifications via World Models",
+      "url": "http://arxiv.org/abs/2607.13172v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "5479753ba814f20a",
+      "title": "Task-Oriented Sensing and Covert Transmissions for Collaborative Multi-AUV Systems",
+      "url": "http://arxiv.org/abs/2607.13880v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "a0cd166c4484ac85",
+      "title": "Explaining Reinforcement Learning Agents via Inductive Logic Programming",
+      "url": "http://arxiv.org/abs/2607.13655v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "c9ef2ac5ddf9ba14",
+      "title": "AeroMap3D: Anchoring Monocular UAV 6-DoF Localization to Visual-Geometric-Semantic Map Priors",
+      "url": "http://arxiv.org/abs/2607.14009v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "da774f54d6460cd3",
+      "title": "A Hybrid Sampling-Based Trajectory Planner with Game-Theoretic Guidance for Autonomous Racing",
+      "url": "http://arxiv.org/abs/2607.13354v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "9f687f7e28ee8eec",
+      "title": "Breaking Déjà Vu: Independent Auditing of Visual Place Recognition through Vision-Language Reasoning",
+      "url": "http://arxiv.org/abs/2607.12818v2",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "2c011a3f158295b8",
+      "title": "AI-accelerated End-to-End Framework for Rapid Professional Upskilling",
+      "url": "http://arxiv.org/abs/2607.14044v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "925114ca1f141d8f",
+      "title": "The Dynamic Verifiable Multi-Agent Human Agentic Loyalty Loop (DVM-HALL) Model and the Net Human-Agent Score (NHAS) in Autonomous Commerce",
+      "url": "http://arxiv.org/abs/2607.13998v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "ed91541695391d51",
+      "title": "Multi-Agent Collaborative Reasoning with Tool-Augmented Evidence for Urban Region Profiling",
+      "url": "http://arxiv.org/abs/2607.13558v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "26c9e3f9483be6ff",
+      "title": "Conditional Invertible Neural Networks for Data-Driven UAV Control: A 2-D Proof of Concept",
+      "url": "http://arxiv.org/abs/2607.13703v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "80d29acd36b026b6",
+      "title": "WNOJ-LIO: A White-Noise-on-Jerk Motion-Prior EKF for High-Dynamic LiDAR-IMU Fusion",
+      "url": "http://arxiv.org/abs/2607.13405v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "c681ee96fd0b53f7",
+      "title": "Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence",
+      "url": "http://arxiv.org/abs/2607.12477v2",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "3a19fabd15fc7449",
+      "title": "Grounded world models in biological organisms and future embodied AI",
+      "url": "http://arxiv.org/abs/2607.13560v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "618d1bdedc3a3898",
+      "title": "How Far Can Root Cause Analysis Go on Real-World Telemetry Data?",
+      "url": "http://arxiv.org/abs/2607.13548v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "3227b8a4a1715bf4",
+      "title": "COLMAR: Cooperative View Policy Learning for Multi-Agent Active 3D Reconstruction",
+      "url": "http://arxiv.org/abs/2607.13524v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
+      "key": "f39f5501c079454f",
+      "title": "Can We Steer the Black-Box? Towards Controllability-Centric Evaluation of Recommender Systems with Collaborative Agents",
+      "url": "http://arxiv.org/abs/2607.13418v1",
+      "sent_at": "2026-07-16T22:04:34.934235+00:00"
+    },
+    {
       "key": "11273ef73d6ed1a4",
       "title": "Improving Autonomous Nano-drones Performance via Automated End-to-End Optimization and Deployment of DNNs",
       "url": "http://arxiv.org/abs/2607.12593v1",
