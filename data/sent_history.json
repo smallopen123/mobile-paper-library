@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "1ae894296efa9019",
+      "title": "CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking",
+      "url": "http://arxiv.org/abs/2607.15004v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "7e4cf564ca5ff41d",
+      "title": "MIND-CAVs: Multi-Intelligence Negotiation and Decision System for CAVs based on Intent-Driven Autonomy",
+      "url": "http://arxiv.org/abs/2607.14688v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "19fb7081e37d98ff",
+      "title": "Curvature-Constrained and Constant-Speed Distributed Simultaneous Arrival Control for Multi-Robot Systems",
+      "url": "http://arxiv.org/abs/2607.14781v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "ff3e462e40f10ddc",
+      "title": "WorkDrive: Roadwork Chain of Causation for Autonomous Driving",
+      "url": "http://arxiv.org/abs/2607.14727v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "024643ccab54bae6",
+      "title": "LIVE-RIS: Real-Time In-Flight Actuation of UAV-Mounted RIS",
+      "url": "http://arxiv.org/abs/2607.14851v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "454e7f5cc6afeb74",
+      "title": "AE-UAV: An Air-to-Air Event-Based UAV Tracking Benchmark and a Real-Time Frequency-Domain Tracker",
+      "url": "http://arxiv.org/abs/2607.14726v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "3398327677e61058",
+      "title": "Finite-Sample Conformal Coverage Recovery via Fusion under Degraded Local Guarantees in Occupancy Map Estimation",
+      "url": "http://arxiv.org/abs/2607.14906v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "60339f2bb30a99e5",
+      "title": "An offline approach to fNIRS-guided reinforcement learning for robot behavior",
+      "url": "http://arxiv.org/abs/2607.14393v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "b90e5477a247e6ce",
+      "title": "AutoSynthesis: An agentic system for automated meta-analysis",
+      "url": "http://arxiv.org/abs/2607.15247v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "19efdee1d1406e99",
+      "title": "Open-AoE: An Open Egocentric Manipulation Dataset and Toolchain for Embodied Learning",
+      "url": "http://arxiv.org/abs/2607.14183v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "4c5354f8b95e951d",
+      "title": "3D Geometric Tooth Alignment Planning via Deep Reinforcement Learning",
+      "url": "http://arxiv.org/abs/2607.14544v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "07ad58e3a8621425",
+      "title": "RENEW: Towards Learning World Models and Repairing Model Exploitation from Preferences",
+      "url": "http://arxiv.org/abs/2607.14180v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "d01dd5d1b39ad2bb",
+      "title": "Digital Pantheon: Simulating and Auditing Coalition Formation with LLM Agents",
+      "url": "http://arxiv.org/abs/2607.15095v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "7afa568a7f46a82c",
+      "title": "Automatic Hard Example Synthesis with Multi-Level Agentic Data Curation",
+      "url": "http://arxiv.org/abs/2607.14256v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "7fac6b41d90e3723",
+      "title": "Learning Agile Navigation in Crowded Environments for Quadruped Robots",
+      "url": "http://arxiv.org/abs/2607.15036v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "3ff7feaa8f979d3e",
+      "title": "Assessing Risks of Hydro-Generator Shaft Fatigue from Data Center Load Oscillations",
+      "url": "http://arxiv.org/abs/2607.14412v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "d54d11272651a117",
+      "title": "SearchOS-V1: Towards Robust Open-Domain Information-Seeking Agent Collaboration",
+      "url": "http://arxiv.org/abs/2607.15257v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "5a64beb3eb695b5e",
+      "title": "ARMOR++: Agentic Orchestration of a Multi-Domain Primitive Set for Transferable Attacks on Deepfake Detectors",
+      "url": "http://arxiv.org/abs/2607.15246v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "7a8be01f30c9d3f2",
+      "title": "MAGiSt3R: Multi-Agent Feed-forward 3D Reconstruction from Monocular RGB Videos",
+      "url": "http://arxiv.org/abs/2607.15211v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
+      "key": "c4af89651cbb6a4e",
+      "title": "Stigmergic Graph Memory: An Environment-Aware Approach for Many-to-Many Multi-Agent Pickup and Delivery",
+      "url": "http://arxiv.org/abs/2607.15182v1",
+      "sent_at": "2026-07-17T21:55:03.469563+00:00"
+    },
+    {
       "key": "df3e45ab0cf333ce",
       "title": "Recursive ArUco Markers: A Scalable Fiducial Marker Design for Unmanned Aerial Vehicle Landing Pads",
       "url": "http://arxiv.org/abs/2607.13830v1",
