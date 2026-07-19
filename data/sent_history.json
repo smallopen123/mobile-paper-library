@@ -1,6 +1,126 @@
 {
   "sent": [
     {
+      "key": "e43e4cda9682dcab",
+      "title": "Self-Aware Recursively Self-Improving Agents for Personal Singularity: A Goal-, Scope-, Tool-, and Benchmark-Driven Multi-Agent Architecture",
+      "url": "http://arxiv.org/abs/2607.12254v2",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "5a5a401dca2320af",
+      "title": "BrainPilot: Automating Brain Discovery with Agentic Research",
+      "url": "http://arxiv.org/abs/2607.15079v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "374c49ef941c1032",
+      "title": "A Distributed PI+Reset Scheme for Discrete-Time Economic Dispatch of A Grid-connected BESS Network",
+      "url": "http://arxiv.org/abs/2607.14508v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "c2a2357ad855db78",
+      "title": "Concept-Guided Spatial Regularization for World Models in Atari Pong",
+      "url": "http://arxiv.org/abs/2607.15142v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "c2ebcd94e5ee8346",
+      "title": "ReasFlow: Assisting Reasoning-Centric Scientific Discovery in Applied Mathematics via a Knowledge-Based Multi-Agent System",
+      "url": "http://arxiv.org/abs/2607.14178v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "0593ea42903d11c5",
+      "title": "Can We Steer the Black-Box? Towards Controllability-Centric Evaluation of Recommender Systems with Collaborative Agents",
+      "url": "http://arxiv.org/abs/2607.13418v2",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "6cb274be8ff69333",
+      "title": "Ego-Dynamics-Augmented World Model for Autonomous Driving with Zero-Shot Cross-Chassis Adaptation",
+      "url": "http://arxiv.org/abs/2607.13410v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "4d9c5bd3866df8b3",
+      "title": "Orchestrating Power Grid Studies with Multi-Agent AI and MCP Servers",
+      "url": "http://arxiv.org/abs/2607.14158v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "4ac3c3222f8481fd",
+      "title": "Fine-Tuned Multi-Agent Framework for Detecting OCEAN in Life Narratives",
+      "url": "http://arxiv.org/abs/2607.12215v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "1230550334ba2265",
+      "title": "Comparison-Based Ordinal Learning for Proactive Driving Risk Assessment",
+      "url": "http://arxiv.org/abs/2607.11128v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "f804809741352f82",
+      "title": "TRACE: An Operational Reasoning Schema for Auditable Agentic Commitments",
+      "url": "http://arxiv.org/abs/2607.12480v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "6ea634d26f55c03a",
+      "title": "Graph Feedback Controls Consensus and Clique Formation in Open-Weight Language-Model Populations",
+      "url": "http://arxiv.org/abs/2607.12077v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "a30e1c29b4fbf2c8",
+      "title": "Paradoxes of Game Theoretic Equilibria and Price of Anarchy",
+      "url": "http://arxiv.org/abs/2607.11752v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "759284d81df1d648",
+      "title": "OpsMem: Dual-Memory Reasoning with Cross-Memory Resonance for Failure Diagnosis",
+      "url": "http://arxiv.org/abs/2607.11357v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "62e7767145471949",
+      "title": "Efficient Test-Time Optimization for Multi-Agent Proof Autoformalization",
+      "url": "http://arxiv.org/abs/2607.11307v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "6a146a89d7c9a886",
+      "title": "Automated Textbook Auditing with Multi-Agent LLM Systems",
+      "url": "http://arxiv.org/abs/2607.11276v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "2806cda545f1501c",
+      "title": "Towards Predictive, Aligned, and Scalable Robot Learning",
+      "url": "http://arxiv.org/abs/2607.11270v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "33ba615d0beb9771",
+      "title": "Modeling and Validation of Quality of Control for Edge-Offloaded Collaborative Navigation",
+      "url": "http://arxiv.org/abs/2607.14853v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "4f04f0571b495362",
+      "title": "Hierarchical Denoising For Multi-Step Visual Reasoning",
+      "url": "http://arxiv.org/abs/2607.15278v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
+      "key": "af8196e7b2b817a9",
+      "title": "DriftWorld: Fast World Modeling through Drifting",
+      "url": "http://arxiv.org/abs/2607.15065v1",
+      "sent_at": "2026-07-19T21:53:33.742476+00:00"
+    },
+    {
       "key": "1ae894296efa9019",
       "title": "CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking",
       "url": "http://arxiv.org/abs/2607.15004v1",
