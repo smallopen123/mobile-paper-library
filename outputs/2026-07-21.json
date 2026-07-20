@@ -1,0 +1,17 @@
+{
+  "schema_version": 2,
+  "stream": "low-altitude-paper-library",
+  "report_date": "2026-07-21",
+  "generated_at": "2026-07-21T05:59:10+08:00",
+  "generator_commit": "71813dc0c5fed5d134bf6dc9b81b7f8598a74ece",
+  "source_run_url": "https://github.com/smallopen123/mobile-paper-library/actions/runs/29782239961",
+  "generation_status": "failed",
+  "email_status": "sent",
+  "source_errors": [
+    "arXiv: no verified candidates"
+  ],
+  "item_count": 0,
+  "items": [],
+  "title": "低空经济通用大模型前沿论文库生成失败 - 2026-07-21",
+  "body": "今日未取得可验证的 arXiv 候选条目。已保存失败记录，请稍后重试。"
+}
