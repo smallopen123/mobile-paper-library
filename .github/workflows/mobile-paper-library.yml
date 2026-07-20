@@ -5,14 +5,23 @@ on:
     # 05:00 Asia/Shanghai = 21:00 UTC (previous day)
     - cron: "0 21 * * *"
   workflow_dispatch:
+    inputs:
+      backfill_dates:
+        description: "Optional comma-separated YYYY-MM-DD dates; rebuilds reports without email"
+        required: false
+        type: string
 
 permissions:
   contents: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
 jobs:
   build-library:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 90
 
     steps:
       - name: Checkout repository
@@ -28,6 +37,7 @@ jobs:
         run: pip install -r requirements.txt
 
       - name: Build mobile paper library and notify
+        if: ${{ github.event_name != 'workflow_dispatch' || inputs.backfill_dates == '' }}
         env:
           QQ_SMTP_HOST: ${{ secrets.QQ_SMTP_HOST }}
           QQ_SMTP_PORT: ${{ secrets.QQ_SMTP_PORT }}
@@ -39,14 +49,36 @@ jobs:
           DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
           DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
           DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
         run: python scripts/mobile_paper_library.py
 
+      - name: Rebuild historical reports without email
+        if: ${{ github.event_name == 'workflow_dispatch' && inputs.backfill_dates != '' }}
+        env:
+          DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+          DEEPSEEK_MODEL: ${{ vars.DEEPSEEK_MODEL }}
+          DEEPSEEK_BASE_URL: ${{ vars.DEEPSEEK_BASE_URL }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
+          GITHUB_REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          IFS=',' read -ra dates <<< "${{ inputs.backfill_dates }}"
+          for report_date in "${dates[@]}"; do
+            python scripts/backfill_recent.py --date "$report_date"
+          done
+
       - name: Commit generated library
+        if: always()
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs data/sent_history.json
+          if [ -d outputs ]; then git add outputs; fi
           git diff --cached --quiet || git commit -m "Update mobile paper library"
           git push
