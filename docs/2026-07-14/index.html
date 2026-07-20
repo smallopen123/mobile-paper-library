@@ -20,7 +20,16 @@ h1{margin:0}h2{line-height:1.35}h3{color:#115e59}.english,.meta,.muted{color:var
           <h3>中文摘要</h3><p>目标检测是众多无人机应用中的基础组件，但长期受到遮挡或目标像素稀缺等问题的困扰。主动目标检测通过主动视觉提供了一种应对这些挑战的新范式，然而由于缺乏用于算法开发和评估的高质量数据集和基准，基于无人机的主动目标检测研究仍然稀少。为填补这一空白，本文提出了ATRNet-LUDO，这是首个用于无人机-地面主动目标检测的大规模真实世界数据集。它包含121,000张多视角全景多目标航拍图像和121万张局部单目标切片，覆盖40个场景中的10种车辆目标。该数据集能够为无人机智能体交互和主动观测策略学习构建多样化的训练和测试环境。基于该数据集，我们建立了一个用于主动目标检测策略学习方法的综合评估基准。大多数现有的主动目标检测策略依赖深度强化学习，但泛化能力差。在我们的基准上的评估揭示了训练和测试性能之间存在显著的泛化差距，凸显了对解决方案的迫切需求。为此，我们利用联合嵌入预测架构构建了一个世界模型来增强状态表示学习，并通过融入主动目标检测特定的先验知识提出了AOD-JEPA。大量实验验证了其有效性和优越性。我们希望ATRNet-LUDO和该基准能够推动无人机-地面主动目标检测领域的研究。数据集和代码即将在https://github.com/Leo000ooo/LUDO_dataset上提供。</p>
           <details><summary>English Abstract</summary><p>Object detection is a fundamental component in numerous Unmanned Aerial Vehicle (UAV) applications, yet it has long been plagued by hindrances like occlusion or target pixel scarcity. Active Object Detection (AOD) provides a novel paradigm to address these challenges via active vision, while UAV-based AOD research remains scarce due to the lack of high-quality datasets and benchmarks for algorithm development and evaluation. To fill this gap, this paper presents ATRNet-LUDO, the first large-scale real-world dataset for UAV-Ground Active Object Detection (UGAOD). It contains 121,000 multi-view panoramic multi-target aerial images and 1.21 million local single-target slices, covering 10 vehicle targets across 40 scenarios. It enables the construction of diverse training and testing environments for UAV agent interaction and active observation policy learning. Based on this dataset, we establish a comprehensive evaluation benchmark for AOD policy learning methods. Most existing AOD policies rely on Deep Reinforcement Learning (DRL) but suffer from poor generalization. Evaluations on our benchmark reveal a significant generalization gap between training and testing performance, highlighting an urgent need for solutions. To this end, we leverage the Joint Embedding Predictive Architecture (JEPA) to construct a world model that enhances state representation learning, and propose AOD-JEPA by incorporating AOD-specific prior knowledge. Extensive experiments validate its effectiveness and superiority. We hope ATRNet-LUDO and the benchmark will advance research in the UGAOD field. The dataset and code are soon available at https://github.com/Leo000ooo/LUDO_dataset.</p></details>
           <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
-          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR N0[&quot;输入/场景：无人机在野外复杂遮挡环境中对地面车辆目标进行主动目标检测&quot;] N1[&quot;核心模块：基于POMDP的深度强化学习框架（Dueling DQN）与世界模型辅助策略学习（WMPL）&quot;] N2[&quot;机制：利用联合嵌入预测架构（AOD-JEPA）构建世界模型，通过场景净化（SAM3）融入先验知识，增强状态表示学习&quot;] N3[&quot;输出：主动观测策略（π*），指导无人机选择最优视角或终止&quot;] N4[&quot;指标：Return（主要）、Recognition rate、Movement distance&quot;] N0 --&gt; N1 N1 --&gt; N2 N2 --&gt; N3 N3 --&gt; N4</pre>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：无人机在野外复杂遮挡环境中对地面车辆目标进行主动目标检测&quot;]
+  N1[&quot;核心模块：基于POMDP的深度强化学习框架（Dueling DQN）与世界模型辅助策略学习（WMPL）&quot;]
+  N2[&quot;机制：利用联合嵌入预测架构（AOD-JEPA）构建世界模型，通过场景净化（SAM3）融入先验知识，增强状态表示学习&quot;]
+  N3[&quot;输出：主动观测策略（π*），指导无人机选择最优视角或终止&quot;]
+  N4[&quot;指标：Return（主要）、Recognition rate、Movement distance&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4</pre>
           <h3>方法与理论链路</h3><p>ATRNet-LUDO数据集构建（多视角密集采样、场景配置、标注）→ 基于POMDP的主动目标检测问题形式化 → 深度强化学习框架（Dueling DQN）→ 世界模型辅助策略学习（WMPL）：利用联合嵌入预测架构（JEPA）训练世界模型，并融入主动目标检测先验知识（通过SAM3进行场景净化）→ AOD-JEPA架构 → 在基准上评估与消融实验。</p>
           <h3>主要结果</h3><ul><li>主动观测策略 vs 传统被动感知（PDF p.1）</li><li>WMPL vs DRL基线（PDF p.1）</li><li>AOD-JEPA vs 其他SSL架构（PDF p.14）</li></ul>
           <h3>博士研究构想</h3><p>假设：在AOD-JEPA中，将场景净化模块替换为可学习的、任务驱动的注意力机制，而非依赖固定的SAM3分割，可以更灵活地提取任务相关特征，从而在保持或提升泛化性能的同时降低对大规模预训练分割模型的依赖。该假设可证伪：通过对比实验，若可学习注意力机制版本在测试环境中的return或recognition rate显著低于AOD-JEPA，则假设被证伪。</p>
@@ -35,7 +44,20 @@ h1{margin:0}h2{line-height:1.35}h3{color:#115e59}.english,.meta,.muted{color:var
           <h3>中文摘要</h3><p>在这项工作中，我们旨在通过利用全向表示中旋转等变的特性来解决全景世界模型中的长程记忆挑战，其中旋转可以被视为一种隐式几何变换。基于这一见解，我们提出了PanoWorld，它通过固定航向将相机轨迹简化为平移，并通过密集全景光线条件（DPRC）和几何感知记忆增强（GMA）进行当前动作建模和长程记忆。然后，引入了一个三阶段训练流程来逐步优化每个组件。为了更好地评估在大尺度空间变化和多样化光照条件下的物理一致性（现有数据集相对稳定），我们构建了World360，这是一个大规模数据集，包含通过全景无人机收集的真实世界视频片段和由AirSim360生成的高质量模拟片段。在World360上的大量实验证明了PanoWorld的有效性，其性能大幅优于替代方法。我们的模型、训练代码和数据集将公开提供。更多信息可在我们的项目页面找到：https://lihaoy-ux.github.io/panoworld-page/。</p>
           <details><summary>English Abstract</summary><p>In this work, we aim to address the challenge of long-range memory in panoramic world models by exploiting the rotation-equivariant property of omnidirectional representations, where rotation can be treated as an implicit geometric transformation.Building on this insight, we propose PanoWorld, which simplifies camera trajectories into translations via fixed headings for both current-action modeling and long-range memory through Dense Panoramic Ray-Conditioning (DPRC) and Geometry-aware Memory Augmentation (GMA).Then, a three-stage training pipeline is introduced to progressively optimize each component. To better evaluate physical consistency under large-scale spatial variations and diverse illumination conditions, where existing datasets are relatively stable, we construct World360, a large-scale dataset consisting of both real-world video clips collected via panoramic unmanned aerial vehicles and high-quality simulated clips generated by AirSim360.Extensive experiments on World360 demonstrate the effectiveness of PanoWorld, outperforming alternative methods by a large margin.Our models, training code, and dataset will be publicly available. More information can be found on our project page: https://lihaoy-ux.github.io/panoworld-page/.</p></details>
           <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
-          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR N0[&quot;输入/场景：初始全景图像 + 目标相机轨迹（固定航向）&quot;] N1[&quot;核心模块：运动解耦（旋转视为几何变换，仅建模平移）&quot;] N2[&quot;核心模块：DPRC（密集全景光线条件，通过PRoPE编码平移为视角相关表示）&quot;] N3[&quot;核心模块：GMA（几何感知记忆增强，通过3D光线对应检索历史特征并置信度门控融合）&quot;] N4[&quot;机制：三阶段训练（全景微调→运动学习→记忆锚定）&quot;] N5[&quot;输出：可控全景视频&quot;] N6[&quot;指标：FID, FAED, NIQE, Q-Align, PSNR&quot;] N0 --&gt; N1 N1 --&gt; N2 N2 --&gt; N3 N3 --&gt; N4 N4 --&gt; N5 N5 --&gt; N6</pre>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：初始全景图像 + 目标相机轨迹（固定航向）&quot;]
+  N1[&quot;核心模块：运动解耦（旋转视为几何变换，仅建模平移）&quot;]
+  N2[&quot;核心模块：DPRC（密集全景光线条件，通过PRoPE编码平移为视角相关表示）&quot;]
+  N3[&quot;核心模块：GMA（几何感知记忆增强，通过3D光线对应检索历史特征并置信度门控融合）&quot;]
+  N4[&quot;机制：三阶段训练（全景微调→运动学习→记忆锚定）&quot;]
+  N5[&quot;输出：可控全景视频&quot;]
+  N6[&quot;指标：FID, FAED, NIQE, Q-Align, PSNR&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
           <h3>方法与理论链路</h3><p>1. 运动解耦：利用全景表示的旋转等变性，将旋转视为几何变换，仅显式建模平移。2. 动作建模（DPRC）：通过局部正交基和局部变换矩阵构建运动流形，将相机平移编码为每条光线的视角相关表示，并通过PRoPE注入扩散Transformer。3. 记忆建模（GMA）：将历史特征映射到公共PRoPE空间，通过基于3D光线对应的注意力机制检索，并使用置信度引导门控融合记忆特征与基础扩散特征。4. 三阶段训练：阶段1：全景视频微调（LoRA适应全景几何）；阶段2：视角相关运动学习（DPRC模块）；阶段3：记忆锚定一致性（GMA模块）。</p>
           <h3>主要结果</h3><ul><li>未确认可引用结果。</li></ul>
           <h3>博士研究构想</h3><p>可证伪的博士研究构想：在低空无人机场景中，将PanoWorld的DPRC和GMA模块扩展到时空基础模型，用于预测和规划无人机在未知环境中的长期轨迹，并通过在World360数据集和真实无人机平台上的实验，验证其在轨迹预测准确性和生成场景物理一致性方面是否优于现有方法。</p>
