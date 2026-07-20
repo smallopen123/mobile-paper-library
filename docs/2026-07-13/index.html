@@ -20,7 +20,16 @@ h1{margin:0}h2{line-height:1.35}h3{color:#115e59}.english,.meta,.muted{color:var
           <h3>中文摘要</h3><p>视觉-语言-动作（VLA）模型将视觉感知、自然语言理解和动作生成统一在一个基础模型中，使机器人能够直接根据摄像头图像执行诸如“折叠毛巾”或“飞向红色建筑”等指令。由于VLA继承了互联网规模预训练的世界知识，它们已成为基于学习的操作的主导框架，而双臂协调则是最具挑战性的试验平台：两个各有7个自由度的机械臂必须协同运动以完成折叠、组装和重新定向物体等任务。无人机航空机器人面临结构上相似的挑战：无人机必须在严格的延迟和有效载荷约束下，根据视觉观测协调推力、姿态以及日益增加的夹爪指令。本综述涵盖了2017年至2026年间的183篇文献，并沿七个维度组织：VLA架构、训练方法、动作表示、双臂协调（2022-2026年）、无人机导航与控制（2017-2026年）、语言基础以及包括记忆和世界模型在内的交叉问题。我们展示了为双臂VLA开发的协调策略、训练方法和动作表示可迁移至无人机系统，并确定了两个领域的十四个研究方向。</p>
           <details><summary>English Abstract</summary><p>Vision Language Action (VLA) models unify visual perception, natural-language understanding, and action generation within a single foundation model, allowing a robot to follow instructions such as fold the towel or fly to the red building directly from camera images. Because VLAs inherit world knowledge from internet-scale pre-training, they have become the dominant framework for learning-based manipulation, with bimanual coordination serving as the most demanding testbed: two arms with 7 degrees of freedom each must move in concert to fold, assemble, and reorient objects. Unmanned aerial robotics faces a structurally similar challenge: a drone must coordinate thrust, attitude, and increasingly gripper commands from visual observations under strict latency and payload constraints. This review covers 183 contributions spanning 2017-2026 and organized along seven dimensions: VLA architectures, training recipes, action representations, bimanual coordination (2022-2026), unmanned aerial vehicle (UAV) navigation and control (2017-2026), language grounding, and cross-cutting concerns including memory and world models. We show that the coordination strategies, training recipes, and action representations developed for bimanual VLAs transfer to unmanned aerial systems and identify fourteen research directions across both domains.</p></details>
           <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
-          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR N0[&quot;输入/场景: 摄像头图像 + 语言指令 + 本体感知状态&quot;] N1[&quot;核心模块: VLA架构 (自回归/流匹配/扩散/混合) + 动作头&quot;] N2[&quot;机制: 动作分块 (Action Chunking) + 流匹配/扩散去噪&quot;] N3[&quot;输出: 连续动作块 (Action Chunk) 或离散动作令牌&quot;] N4[&quot;指标: Task success rate, Inference latency, Data efficiency, Generalization ratio&quot;] N0 --&gt; N1 N1 --&gt; N2 N2 --&gt; N3 N3 --&gt; N4</pre>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景: 摄像头图像 + 语言指令 + 本体感知状态&quot;]
+  N1[&quot;核心模块: VLA架构 (自回归/流匹配/扩散/混合) + 动作头&quot;]
+  N2[&quot;机制: 动作分块 (Action Chunking) + 流匹配/扩散去噪&quot;]
+  N3[&quot;输出: 连续动作块 (Action Chunk) 或离散动作令牌&quot;]
+  N4[&quot;指标: Task success rate, Inference latency, Data efficiency, Generalization ratio&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4</pre>
           <h3>方法与理论链路</h3><p>VLA框架（视觉编码器fvis → VLM骨干fVLM → 动作头fact）→ 动作分块（Action Chunking）→ 流匹配/扩散/自回归动作生成 → 三阶段训练（预训练、后训练、强化学习）→ 双臂协调策略（联合动作空间、层次化、主从）→ 无人机导航与控制（视觉语言导航、端到端飞行、空中操作）→ 跨领域迁移分析</p>
           <h3>主要结果</h3><ul><li>CognitiveDrone的VLM推理增益（PDF p.32）</li><li>UAV-VLA的规划速度（PDF p.31）</li><li>GigaBrain-0.5M的双臂任务改进（PDF p.40）</li></ul>
           <h3>博士研究构想</h3><p>假设：在无人机空中操作任务中，采用联合动作空间（Joint Action Space）的VLA策略（如π0）比采用独立动作空间（Independent）的策略在协调无人机本体与机械臂动作时具有更高的任务成功率和更低的碰撞率。实验：在Flying Hand平台上，分别训练使用联合动作空间和独立动作空间的VLA策略，执行空中抓取和放置任务，比较任务成功率和碰撞次数。</p>
@@ -35,7 +44,18 @@ h1{margin:0}h2{line-height:1.35}h3{color:#115e59}.english,.meta,.muted{color:var
           <h3>中文摘要</h3><p>无人机视频广泛应用于交通监控、城市管理和应急响应。然而，现有的无人机视频感知主要依赖于预定义类别下的框级定位和轨迹关联，难以在开放场景中同时支持灵活查询和细粒度实例级动态理解。为此，我们引入了一个新任务——无人机开放词汇视频实例分割（UAV-OVVIS），该任务根据开放词汇查询发现无人机视频中的目标，并输出具有全局一致身份的实例级分割轨迹。考虑到无人机场景中实例级标注的稀缺性，我们提出了AeroTrack，一个无需训练的统一框架。AeroTrack以周期性开放词汇检测、短片段掩码传播和跨片段身份统一为核心，重用现有的视觉基础模型以实现UAV-OVVIS。基于该框架，我们实例化了五种AeroTrack变体，并构建了AeroVIS，一个包含9个无人机目标类别和8,279条轨迹的UAV-OVVIS评估基准。实验表明，AeroTrack在无人机场景中显著优于现有的通用视频实例分割方法，并展现出强大的开放词汇鲁棒性和泛化能力。为支持未来研究，我们发布了AeroTrack和AeroVIS作为UAV-OVVIS的统一框架和基准。</p>
           <details><summary>English Abstract</summary><p>Unmanned Aerial Vehicle (UAV) videos are widely used in traffic monitoring, urban management, and emergency rescue. However, existing UAV video perception mainly relies on box-level localization and trajectory association under predefined categories, making it difficult to simultaneously support flexible queries and fine-grained instance-level dynamic understanding in open scenarios. To this end, we introduce a new task, UAV Open-Vocabulary Video Instance Segmentation (UAV-OVVIS), which discovers targets in UAV videos according to open-vocabulary queries and outputs instance-level segmentation trajectories with globally consistent identities. Considering the scarcity of instance-level annotations in UAV scenarios, we propose AeroTrack, a training-free unified framework. AeroTrack centers on periodic open-vocabulary detection, short-segment mask propagation, and cross-segment identity unification, reusing existing visual foundation models to enable UAV-OVVIS. Based on this framework, we instantiate five AeroTrack variants and construct AeroVIS, an evaluation benchmark for UAV-OVVIS containing 9 UAV object categories and 8,279 trajectories. Experiments show that AeroTrack substantially outperforms existing general video instance segmentation methods in UAV scenarios and demonstrates strong open-vocabulary robustness and generalization. To support future research, we release AeroTrack and AeroVIS as a unified framework and benchmark for UAV-OVVIS.</p></details>
           <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
-          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR N0[&quot;输入/场景：UAV视频 + 开放词汇文本查询&quot;] N1[&quot;核心模块：Recognizer（YOLO-World/Grounding DINO/SAM3）周期性开放词汇检测&quot;] N2[&quot;核心模块：Segmenter（SAM2/SAM3）短片段掩码生成与传播&quot;] N3[&quot;机制：LIA输出级跨片段ID关联，维护全局身份&quot;] N4[&quot;输出：实例级分割轨迹（全局一致ID）&quot;] N5[&quot;指标：HOTA, mAP, DetA, AssA, Mask J&quot;] N0 --&gt; N1 N1 --&gt; N2 N2 --&gt; N3 N3 --&gt; N4 N4 --&gt; N5</pre>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：UAV视频 + 开放词汇文本查询&quot;]
+  N1[&quot;核心模块：Recognizer（YOLO-World/Grounding DINO/SAM3）周期性开放词汇检测&quot;]
+  N2[&quot;核心模块：Segmenter（SAM2/SAM3）短片段掩码生成与传播&quot;]
+  N3[&quot;机制：LIA输出级跨片段ID关联，维护全局身份&quot;]
+  N4[&quot;输出：实例级分割轨迹（全局一致ID）&quot;]
+  N5[&quot;指标：HOTA, mAP, DetA, AssA, Mask J&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5</pre>
           <h3>方法与理论链路</h3><p>AeroTrack框架将UAV-OVVIS解耦为两个组件：开放词汇识别器（Recognizer）和视频实例分割器（Segmenter）。识别器在关键帧上周期性执行开放词汇检测，生成位置提示；分割器根据位置提示在短视频片段内生成和传播实例掩码，并在片段边界重置内部状态以约束内存和计算成本。进一步设计生命周期感知ID关联（LIA），在输出层关联跨片段局部轨迹，维护全局一致的视频身份。该框架支持识别器和分割器的模块化组合，本文使用YOLO-World、Grounding DINO和SAM3作为识别器，SAM2和SAM3作为分割器，实例化五种代表性组合。</p>
           <h3>主要结果</h3><ul><li>未确认可引用结果。</li></ul>
           <h3>博士研究构想</h3><p>假设AeroTrack的周期性检测和短片段传播策略在长视频密集目标场景中优于全视频传播，可通过设计对比实验验证：在固定视频长度和目标数量下，比较AeroTrack与Native SAM3的峰值内存和HOTA指标，预期AeroTrack在内存受限时保持更高HOTA。</p>
@@ -50,7 +70,20 @@ h1{margin:0}h2{line-height:1.35}h3{color:#115e59}.english,.meta,.muted{color:var
           <h3>中文摘要</h3><p>在这项工作中，我们研究了无人机的末米精度导航，例如使用单目视觉在最后10米内自主到达目标。由于尺度模糊、旋转不连续性以及细粒度空间推理的需求，这项任务具有挑战性。现有方法在大视角变化下常常失败，或缺乏对未见环境的泛化能力。为此，我们提出了DreamNav，一种从粗到细的扩散精化空中视觉伺服框架。在第一粗估计阶段，一个稳健的回归策略采用三角参数化，通过联合建模正弦和余弦分量来预测旋转，有效缓解了由角度周期性引起的优化不稳定性。基于这个粗估计，第二扩散精化阶段利用预训练的世界模型模拟候选动作的未来视觉观测，通过视觉想象过程选择与目标视觉差异最小的轨迹。为了支持严格的评估，我们贡献了PairUAV，一个大规模基准，包含来自University-1652数据集的72个场景中的480万图像对。大量实验表明，DreamNav在准确性和泛化能力上优于强视觉伺服和基础模型基线，并具有对未见场景的零样本迁移能力。</p>
           <details><summary>English Abstract</summary><p>In this work, we study the last-meter precision navigation for UAVs, e.g., autonomously reaching a target within the final 10 meters using monocular vision. This task is challenging due to scale ambiguity, rotation discontinuities, and the need for fine-grained spatial reasoning. Existing methods often fail under large viewpoint changes or lack generalization to unseen environments. To this end, we propose DreamNav, a coarse-to-fine diffusion-refined aerial visual servoing framework. In the first coarse-estimation stage, a robust regression policy employs a trigonometric parameterization to predict rotation by jointly modeling sine and cosine components, effectively mitigating optimization instabilities caused by angular periodicity. Given this coarse estimate, the second diffusion-refined stage utilizes a pre-trained world model to simulate future visual observations for candidate actions, selecting the trajectory that minimizes visual discrepancy with the target through a process of visual imagination. To support rigorous evaluation, we contribute PairUAV, a large-scale benchmark comprising 4.8 million image pairs across 72 scenes, curated from the University-1652 dataset. Extensive experiments show DreamNav outperforms strong visual servoing and foundation model baselines in accuracy and generalization, with zero-shot transfer to unseen scenes.</p></details>
           <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
-          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR N0[&quot;输入/场景：源图像和目标图像（512×512单目RGB）&quot;] N1[&quot;核心模块：粗估计阶段（三角参数化回归 + ViT骨干）&quot;] N2[&quot;机制：预测粗粒度航向角和距离&quot;] N3[&quot;核心模块：扩散精化阶段（ControlNet风格潜在扩散模型）&quot;] N4[&quot;机制：候选姿态生成（3×3网格）→ 合成未来观测 → 像素级MSE选择最佳匹配&quot;] N5[&quot;输出：精化后的航向角和距离&quot;] N6[&quot;指标：MAER, MAEH, AVG, SR&quot;] N0 --&gt; N1 N1 --&gt; N2 N2 --&gt; N3 N3 --&gt; N4 N4 --&gt; N5 N5 --&gt; N6</pre>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：源图像和目标图像（512&#215;512单目RGB）&quot;]
+  N1[&quot;核心模块：粗估计阶段（三角参数化回归 + ViT骨干）&quot;]
+  N2[&quot;机制：预测粗粒度航向角和距离&quot;]
+  N3[&quot;核心模块：扩散精化阶段（ControlNet风格潜在扩散模型）&quot;]
+  N4[&quot;机制：候选姿态生成（3&#215;3网格）→ 合成未来观测 → 像素级MSE选择最佳匹配&quot;]
+  N5[&quot;输出：精化后的航向角和距离&quot;]
+  N6[&quot;指标：MAER, MAEH, AVG, SR&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
           <h3>方法与理论链路</h3><p>DreamNav框架包含两个阶段：第一阶段（粗估计阶段）采用三角参数化（联合回归正弦和余弦分量）的稳健回归策略，基于ViT骨干网络预测粗粒度的航向角和距离；第二阶段（扩散精化阶段）利用ControlNet风格的潜在扩散模型（预训练世界模型）对候选动作进行视觉想象，通过合成未来观测并与目标图像比较，选择最优轨迹。</p>
           <h3>主要结果</h3><ul><li>未确认可引用结果。</li></ul>
           <h3>博士研究构想</h3><p>可证伪的博士研究构想：在低空无人机导航中，引入时空基础模型（如Video World Model）替代静态图像扩散模型，通过预测连续帧序列来增强对动态环境（如移动障碍物、光照变化）的鲁棒性，并验证其在PairUAV扩展数据集上的性能提升。</p>
