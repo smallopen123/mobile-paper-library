@@ -341,6 +341,17 @@ def build_mermaid(flow: Any) -> str:
     return "\n".join(lines)
 
 
+def _safe_mermaid(value: Any) -> str:
+    """Keep generated Mermaid line breaks while rejecting fenced or malformed content."""
+    text = str(value or "").replace("\r\n", "\n").replace("\r", "\n").strip()
+    lines = [line.rstrip() for line in text.split("\n") if line.strip()]
+    if len(lines) < 4 or lines[0].strip() not in {"flowchart LR", "flowchart TD"}:
+        return ""
+    if "```" in text:
+        return ""
+    return "\n".join(lines)
+
+
 def apply_fulltext_payload(item: Any, inspection: PdfInspection, payload: dict[str, Any]) -> None:
     string_fields = (
         "title_zh",
@@ -588,7 +599,7 @@ def build_daily_markdown(items: list[Any], title: str, report_date: str, web_url
             ])
         else:
             lines.append("未自动识别到论文核心框图；没有使用结果曲线或无关图片代替。")
-        diagram = _safe_text(getattr(item, "summary_diagram_mermaid", ""))
+        diagram = _safe_mermaid(getattr(item, "summary_diagram_mermaid", ""))
         diagram_pages = "、".join(str(page) for page in getattr(item, "diagram_source_pages", [])) or "未记录"
         lines.extend([
             "",
@@ -691,7 +702,7 @@ def render_html(items: list[Any], title: str, report_date: str, base_url: str) -
     for item in sorted(items, key=lambda value: getattr(value, "analysis_rank", None) or 999):
         rank = getattr(item, "analysis_rank", None)
         badge = f"Top {rank} · Full-text verified" if rank else "Abstract-level"
-        mermaid = _safe_text(getattr(item, "summary_diagram_mermaid", ""))
+        mermaid = _safe_mermaid(getattr(item, "summary_diagram_mermaid", ""))
         diagram = f'<pre class="mermaid">{html.escape(mermaid)}</pre>' if mermaid else '<p class="muted">未生成可验证总结框图。</p>'
         results = "".join(f"<li>{html.escape(e['name'])}（PDF p.{e['page']}）</li>" for e in getattr(item, "key_results_zh", [])) or "<li>未确认可引用结果。</li>"
         cards.append(f"""

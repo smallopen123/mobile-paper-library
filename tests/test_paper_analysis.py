@@ -118,6 +118,24 @@ class PaperAnalysisTests(unittest.TestCase):
         self.assertIn("flowchart LR", item.summary_diagram_mermaid)
         self.assertEqual(item.diagram_source_pages, [1])
 
+    def test_mermaid_line_breaks_survive_markdown_and_html_rendering(self) -> None:
+        item = FakeItem("Paper", "https://example.test", "https://example.test/p.pdf", "Abstract")
+        item.analysis_rank = 1
+        item.title_en = "Paper"
+        item.title_zh = "论文"
+        item.abstract_en = "English abstract"
+        item.abstract_zh = "中文摘要"
+        item.fulltext_status = "verified"
+        item.summary_diagram_mermaid = analysis.build_mermaid(
+            ["UAV observations", "World Model", "Safe trajectory", "ADE"]
+        )
+
+        markdown = analysis.build_daily_markdown([item], "日报", "2026-07-20")
+        html = analysis.render_html([item], "日报", "2026-07-20", "https://example.test")
+
+        self.assertIn("```mermaid\nflowchart LR\n  N0", markdown)
+        self.assertIn("flowchart LR\n  N0", html)
+
     def test_failed_pdf_is_replaced_by_next_candidate(self) -> None:
         items = [
             FakeItem("Broken", "https://example.test/1", "https://example.test/1.pdf", "Abstract"),
