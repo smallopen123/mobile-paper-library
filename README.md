@@ -30,6 +30,8 @@
 | `QQ_SMTP_FROM` | `1425709546@qq.com` |
 | `QQ_SMTP_TO` | `1425709546@qq.com` |
 | `QQ_SMTP_AUTH_CODE` | QQ 邮箱 SMTP 授权码 |
+| `DEEPSEEK_API_KEY` | 优先使用的 DeepSeek API Key |
+| `OPENAI_API_KEY` | DeepSeek 重试失败后的备用 OpenAI API Key |
 
 `DEEPSEEK_API_KEY` 已配置时优先启用双语与全文结构化分析；可同时配置 `OPENAI_API_KEY` 作为失败重试后的备用模型。程序会先重试整批，再逐篇重试，并校验中文字段；仍失败的条目会标记为 `partial`，不会再错误显示为“免费模式”。没有配置模型时仍执行 PDF/核心图元数据核验，但不会虚构中文分析或数值结论。
 
