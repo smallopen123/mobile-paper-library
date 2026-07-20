@@ -1,6 +1,12 @@
 {
   "sent": [
     {
+      "key": "5f38e6f469a5e885",
+      "title": "Knowing the Self, Understanding the World: A Dual-Cognition Benchmark for UAV Spatio-temporal Reasoning with MLLMs",
+      "url": "http://arxiv.org/abs/2607.16193v1",
+      "sent_at": "2026-07-20T10:11:34.657694+00:00"
+    },
+    {
       "key": "1ae894296efa9019",
       "title": "CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking",
       "url": "http://arxiv.org/abs/2607.15004v1",
