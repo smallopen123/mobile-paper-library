@@ -1,25 +1,36 @@
 from __future__ import annotations
 
+import argparse
 import datetime as dt
 import email.utils
 import hashlib
 import html
 import json
 import os
+import random
 import re
 import smtplib
 import ssl
+import sys
 import time
 import textwrap
 import urllib.parse
 import xml.etree.ElementTree as ET
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from email.message import EmailMessage
 from pathlib import Path
 from typing import Iterable
 
 import requests
 from openai import OpenAI
+
+from paper_analysis import (
+    build_daily_markdown,
+    build_email_summary,
+    process_top_papers,
+    render_html,
+)
+from report_contract import build_report, write_report
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -28,6 +39,26 @@ HISTORY_PATH = ROOT / "data" / "sent_history.json"
 MAX_ITEMS = 20
 RECENT_DAYS = 7
 PRIMARY_DAYS = 3
+STREAM = "low-altitude-paper-library"
+REPORT_TITLE = "低空经济通用大模型前沿论文库"
+USER_AGENT = "mobile-paper-library/2.0 (+https://github.com/smallopen123/mobile-paper-library)"
+RETRYABLE_HTTP_CODES = {429, 500, 502, 503, 504}
+
+RESEARCH_PROFILE = """
+博士研究重点：低空场景中的 LLM、VLM、VLA、World Model、时空基础模型、Agent、
+安全评估与边缘部署。论文必须同时具有低空/无人机/城市空中交通语境和通用大模型、
+基础模型或大规模预训练方法语境；机器人、临床、牙科和通用商业智能体不单独纳入。
+"""
+
+LOW_ALTITUDE_TERMS = (
+    "low altitude", "urban air mobility", "advanced air mobility", "uav", "drone",
+    "unmanned aerial", "air traffic", "aerial vehicle", "flight trajectory",
+)
+FOUNDATION_MODEL_TERMS = (
+    "foundation model", "large language model", "llm", "vision-language", "vlm",
+    "vision-language-action", "vla", "world model", "pretrained model", "pre-trained model",
+    "multimodal model", "spatiotemporal foundation", "spatio-temporal foundation", "agentic",
+)
 
 KEYWORDS = [
     "low altitude economy",
@@ -41,15 +72,15 @@ KEYWORDS = [
     "spatio-temporal",
     "risk assessment",
     "airspace safety",
-    "multi-agent",
-    "robot learning",
-    "embodied ai",
-    "autonomous navigation",
-    "collision avoidance",
-    "intent prediction",
+    "large language model",
+    "foundation model",
+    "vision-language model",
+    "vision-language-action",
+    "multimodal model",
+    "agentic",
     "world model",
-    "diffusion policy",
-    "reinforcement learning",
+    "pretrained model",
+    "edge deployment",
 ]
 
 
@@ -68,6 +99,30 @@ class Item:
     reading_hint_zh: str = ""
     relevance_zh: str = ""
     practice_zh: str = ""
+    title_en: str = ""
+    abstract_en: str = ""
+    abstract_zh: str = ""
+    analysis_rank: int | None = None
+    evidence_scope: str = "abstract"
+    source_pages: list[int] = field(default_factory=list)
+    datasets: list[dict] = field(default_factory=list)
+    baselines: list[dict] = field(default_factory=list)
+    metrics: list[dict] = field(default_factory=list)
+    key_results_zh: list[dict] = field(default_factory=list)
+    limitations_zh: list[dict] = field(default_factory=list)
+    research_question_zh: str = ""
+    hypothesis_zh: str = ""
+    method_chain_zh: str = ""
+    frontier_zh: str = ""
+    reproducibility_zh: str = ""
+    research_idea_zh: str = ""
+    core_figure: dict = field(default_factory=dict)
+    summary_diagram_mermaid: str = ""
+    diagram_source_pages: list[int] = field(default_factory=list)
+    fulltext_status: str = "not_attempted"
+    figure_status: str = "not_attempted"
+    pdf_page_count: int = 0
+    parsed_page_count: int = 0
 
     @property
     def key(self) -> str:
@@ -102,18 +157,35 @@ def require_env(name: str) -> str:
     return value
 
 
-def request_text(url: str) -> str:
-    last_error: Exception | None = None
-    for attempt in range(3):
+def _retry_delay(attempt: int, retry_after: str | None = None) -> float:
+    if retry_after:
         try:
-            response = requests.get(url, timeout=35)
+            return min(float(retry_after), 120.0)
+        except ValueError:
+            pass
+    return min(5.0 * (2**attempt) + random.uniform(0.0, 2.0), 60.0)
+
+
+def request_text(url: str, attempts: int = 4) -> str:
+    last_error: Exception | None = None
+    headers = {"User-Agent": USER_AGENT, "Accept": "application/atom+xml,text/xml,*/*"}
+    for attempt in range(attempts):
+        try:
+            response = requests.get(url, headers=headers, timeout=(15, 60))
             response.raise_for_status()
             return response.text
-        except Exception as exc:
+        except requests.HTTPError as exc:
             last_error = exc
-            if attempt == 2:
+            status = exc.response.status_code if exc.response is not None else 0
+            if status not in RETRYABLE_HTTP_CODES or attempt == attempts - 1:
                 raise
-            time.sleep(2 * (attempt + 1))
+            retry_after = exc.response.headers.get("Retry-After") if exc.response is not None else None
+            time.sleep(_retry_delay(attempt, retry_after))
+        except (requests.Timeout, requests.ConnectionError) as exc:
+            last_error = exc
+            if attempt == attempts - 1:
+                raise
+            time.sleep(_retry_delay(attempt))
     raise last_error if last_error else RuntimeError("request_text failed")
 
 
@@ -150,31 +222,32 @@ def matched_keywords(item: Item) -> list[str]:
 
 def relevance_score(item: Item) -> float:
     haystack = f"{item.title} {item.summary} {item.source}".lower()
+    low_altitude_hits = sum(term in haystack for term in LOW_ALTITUDE_TERMS)
+    foundation_hits = sum(term in haystack for term in FOUNDATION_MODEL_TERMS)
+    if not low_altitude_hits or not foundation_hits:
+        return -100.0
     score = len(matched_keywords(item)) * 2.0
-    if "uav" in haystack or "drone" in haystack:
-        score += 3.0
-    if "trajectory" in haystack or "motion forecasting" in haystack:
-        score += 3.0
-    if "risk" in haystack or "safety" in haystack:
-        score += 2.5
-    if "multi-agent" in haystack:
+    score += low_altitude_hits * 4.0 + foundation_hits * 5.0
+    if "safety" in haystack or "risk" in haystack:
+        score += 2.0
+    if "edge" in haystack or "deployment" in haystack:
         score += 2.0
     age_days = max((dt.datetime.now(dt.timezone.utc) - parse_date(item.published)).days, 0)
     score += max(0, 4 - age_days * 0.5)
     return score
 
 
-def fetch_arxiv() -> list[Item]:
+def fetch_arxiv(source_errors: list[str] | None = None) -> list[Item]:
     queries = [
-        '(ti:"trajectory prediction" OR abs:"trajectory prediction" OR ti:"motion forecasting" OR abs:"motion forecasting")',
-        '(ti:UAV OR abs:UAV OR ti:drone OR abs:drone OR abs:"urban air mobility" OR abs:"advanced air mobility")',
-        '(abs:"multi-agent" OR ti:"multi-agent" OR abs:"robot learning" OR abs:"embodied AI")',
-        '(abs:"risk assessment" OR abs:"airspace safety" OR abs:"collision avoidance")',
-        '(abs:"world model" OR abs:"diffusion policy" OR abs:"autonomous navigation")',
+        '((ti:UAV OR abs:UAV OR ti:drone OR abs:drone) AND (abs:"foundation model" OR abs:"large language model" OR abs:LLM))',
+        '((abs:"urban air mobility" OR abs:"advanced air mobility" OR abs:"air traffic") AND (abs:"foundation model" OR abs:"world model" OR abs:agentic))',
+        '((ti:UAV OR abs:UAV OR ti:drone OR abs:drone) AND (abs:"vision-language" OR abs:VLM OR abs:"vision-language-action" OR abs:VLA))',
+        '((ti:UAV OR abs:UAV OR ti:drone OR abs:drone) AND (abs:"multimodal model" OR abs:"pretrained model" OR abs:"pre-trained model"))',
+        '((abs:"flight trajectory" OR abs:"aerial vehicle") AND (abs:"spatiotemporal foundation" OR abs:"spatio-temporal foundation" OR abs:"world model"))',
     ]
     ns = {"atom": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
     items: list[Item] = []
-    for query in queries:
+    for query_index, query in enumerate(queries, 1):
         params = urllib.parse.urlencode(
             {
                 "search_query": f"({query}) AND (cat:cs.RO OR cat:cs.AI OR cat:cs.LG OR cat:cs.CV OR cat:eess.SY OR cat:stat.ML)",
@@ -184,7 +257,12 @@ def fetch_arxiv() -> list[Item]:
                 "sortOrder": "descending",
             }
         )
-        root = ET.fromstring(request_text(f"https://export.arxiv.org/api/query?{params}"))
+        try:
+            root = ET.fromstring(request_text(f"https://export.arxiv.org/api/query?{params}"))
+        except Exception as exc:
+            if source_errors is not None:
+                source_errors.append(f"arXiv query {query_index}: {type(exc).__name__}")
+            continue
         for entry in root.findall("atom:entry", ns):
             title = normalize(entry.findtext("atom:title", default="", namespaces=ns))
             url = entry.findtext("atom:id", default="", namespaces=ns)
@@ -208,6 +286,8 @@ def fetch_arxiv() -> list[Item]:
             )
             item.score = relevance_score(item)
             items.append(item)
+        if query_index < len(queries):
+            time.sleep(3.0)
     return items
 
 
@@ -251,11 +331,10 @@ def select_items(items: list[Item], history: set[str]) -> list[Item]:
     now = dt.datetime.now(dt.timezone.utc)
     recent_cutoff = now - dt.timedelta(days=RECENT_DAYS)
     primary_cutoff = now - dt.timedelta(days=PRIMARY_DAYS)
-    filtered = [item for item in items if item.key not in history and parse_date(item.published) >= recent_cutoff]
+    relevant = [item for item in items if item.score > 0]
+    filtered = [item for item in relevant if item.key not in history and parse_date(item.published) >= recent_cutoff]
     primary = [item for item in filtered if parse_date(item.published) >= primary_cutoff]
     candidates = primary if len(primary) >= MAX_ITEMS else filtered
-    if len(candidates) < MAX_ITEMS:
-        candidates = items
     return sorted(candidates, key=lambda item: item.score, reverse=True)[:MAX_ITEMS]
 
 
@@ -263,8 +342,8 @@ def rule_based_notes(item: Item) -> dict[str, str]:
     keywords = matched_keywords(item)
     keyword_text = ", ".join(keywords[:8]) if keywords else "未命中特定关键词，但因发布时间和类别被纳入候选。"
     reading_hint = (
-        "免费模式未调用大模型，因此不自动生成中文翻译。建议在安卓 Chrome/Edge 中打开本页后使用“翻译网页”，"
-        "或打开 PDF 后用浏览器/阅读器自带翻译功能阅读。"
+        "中文翻译在模型重试后仍未生成，本条已按 partial 状态保留英文原文，等待下一次自动补全；"
+        "这不是免费模式提示，也不代表英文摘要已经完成中文核验。"
     )
     relevance = (
         f"规则相关性：命中关键词 {keyword_text}。可优先检查论文的问题定义、数据来源、模型输入输出、"
@@ -281,93 +360,178 @@ def rule_based_notes(item: Item) -> dict[str, str]:
     }
 
 
-def resolve_llm_config() -> LLMConfig | None:
+def resolve_llm_configs() -> list[LLMConfig]:
+    configs: list[LLMConfig] = []
     deepseek_api_key = os.getenv("DEEPSEEK_API_KEY")
     if deepseek_api_key:
-        return LLMConfig(
-            provider="DeepSeek",
-            api_key=deepseek_api_key,
-            model=os.getenv("DEEPSEEK_MODEL") or "deepseek-chat",
-            base_url=os.getenv("DEEPSEEK_BASE_URL") or "https://api.deepseek.com",
+        configs.append(
+            LLMConfig(
+                provider="DeepSeek",
+                api_key=deepseek_api_key,
+                model=os.getenv("DEEPSEEK_MODEL") or "deepseek-chat",
+                base_url=os.getenv("DEEPSEEK_BASE_URL") or "https://api.deepseek.com",
+            )
         )
-    return None
+    openai_api_key = os.getenv("OPENAI_API_KEY")
+    if openai_api_key:
+        configs.append(
+            LLMConfig(
+                provider="OpenAI",
+                api_key=openai_api_key,
+                model=os.getenv("OPENAI_MODEL") or "gpt-4.1-mini",
+                base_url=os.getenv("OPENAI_BASE_URL"),
+            )
+        )
+    return configs
 
 
-def enrich_items_with_llm(items: list[Item]) -> list[Item]:
-    config = resolve_llm_config()
-    if not config:
-        return items
+def resolve_llm_config() -> LLMConfig | None:
+    """Backward-compatible primary-provider accessor."""
+    configs = resolve_llm_configs()
+    return configs[0] if configs else None
 
-    client_kwargs = {"api_key": config.api_key}
-    if config.base_url:
-        client_kwargs["base_url"] = config.base_url
-    client = OpenAI(**client_kwargs)
 
-    by_idx: dict[int, dict] = {}
+def _parse_json_object(content: str) -> dict:
+    cleaned = re.sub(r"^```(?:json)?\s*|\s*```$", "", content.strip(), flags=re.I | re.S)
+    try:
+        payload = json.loads(cleaned)
+        if isinstance(payload, dict):
+            return payload
+        if isinstance(payload, list):
+            return {"items": payload}
+    except json.JSONDecodeError:
+        pass
+    decoder = json.JSONDecoder()
+    for match in re.finditer(r"[\[{]", cleaned):
+        try:
+            payload, _ = decoder.raw_decode(cleaned[match.start() :])
+        except json.JSONDecodeError:
+            continue
+        if isinstance(payload, dict):
+            return payload
+        if isinstance(payload, list):
+            return {"items": payload}
+    raise ValueError("LLM response did not contain a valid JSON object")
+
+
+def make_json_invoker(config: LLMConfig | list[LLMConfig] | None):
+    configs = config if isinstance(config, list) else ([config] if config else [])
+    if not configs:
+        return None
+    clients: list[tuple[LLMConfig, OpenAI]] = []
+    for candidate in configs:
+        client_kwargs = {"api_key": candidate.api_key}
+        if candidate.base_url:
+            client_kwargs["base_url"] = candidate.base_url
+        clients.append((candidate, OpenAI(**client_kwargs)))
+
+    def invoke(prompt: str) -> dict:
+        failure_types: list[str] = []
+        for candidate, client in clients:
+            for attempt in range(2):
+                try:
+                    response = client.chat.completions.create(
+                        model=candidate.model,
+                        messages=[
+                            {"role": "system", "content": "你是严谨的科研全文分析与中英翻译助手，只输出 JSON。"},
+                            {"role": "user", "content": prompt},
+                        ],
+                        temperature=0.1,
+                    )
+                    content = (response.choices[0].message.content or "").strip()
+                    return _parse_json_object(content)
+                except Exception as exc:
+                    failure_types.append(f"{candidate.provider}:{type(exc).__name__}")
+                    if attempt == 0:
+                        time.sleep(1.0 + random.uniform(0.0, 0.5))
+        raise RuntimeError("All LLM providers failed: " + ", ".join(failure_types))
+
+    return invoke
+
+
+def _contains_chinese(value: str) -> bool:
+    return bool(re.search(r"[\u4e00-\u9fff]", value or ""))
+
+
+def _translation_prompt(payload: list[dict]) -> str:
+    return (
+        "你是科研论文中文整理助手。请基于给定论文列表返回严格 JSON 对象，顶层字段 items 为数组。"
+        "每项字段必须包括：idx, title_zh, abstract_zh, reading_hint_zh, relevance_zh, practice_zh。"
+        "abstract_zh 必须忠实翻译英文摘要；reading_hint_zh 用1到2句提示如何阅读；"
+        "relevance_zh 用2到3句说明与低空场景通用大模型、基础模型、安全评估或边缘部署的相关性；"
+        "practice_zh 用2到3句给出可落地实验或复现建议。不得添加原摘要中不存在的指标或结论。\n"
+        + json.dumps(payload, ensure_ascii=False)
+    )
+
+
+def _translation_payload(items: list[Item], start: int) -> list[dict]:
+    return [
+        {
+            "idx": start + offset,
+            "title": item.title,
+            "authors": item.authors,
+            "source": item.source,
+            "published": item.published,
+            "abstract": item.summary[:2200],
+        }
+        for offset, item in enumerate(items, 1)
+    ]
+
+
+def _apply_translation_entries(items: list[Item], result: dict) -> set[int]:
+    completed: set[int] = set()
+    entries = result.get("items", []) if isinstance(result, dict) else []
+    for entry in entries if isinstance(entries, list) else []:
+        if not isinstance(entry, dict):
+            continue
+        try:
+            idx = int(entry["idx"])
+            item = items[idx - 1]
+        except (KeyError, TypeError, ValueError, IndexError):
+            continue
+        title_zh = normalize(str(entry.get("title_zh") or ""))
+        abstract_zh = normalize(str(entry.get("abstract_zh") or entry.get("summary_zh") or ""))
+        if not (_contains_chinese(title_zh) and _contains_chinese(abstract_zh)):
+            continue
+        item.title_zh = title_zh
+        item.summary_zh = abstract_zh
+        item.abstract_zh = abstract_zh
+        item.reading_hint_zh = normalize(str(entry.get("reading_hint_zh") or ""))
+        item.relevance_zh = normalize(str(entry.get("relevance_zh") or ""))
+        item.practice_zh = normalize(str(entry.get("practice_zh") or ""))
+        completed.add(idx)
+    return completed
+
+
+def enrich_items_with_llm(items: list[Item], invoke_json=None) -> tuple[list[Item], list[str]]:
+    for item in items:
+        item.title_en = item.title_en or item.title
+        item.abstract_en = item.abstract_en or item.summary
+    if invoke_json is None:
+        invoke_json = make_json_invoker(resolve_llm_configs())
+    if not invoke_json:
+        return items, ["Chinese translation: no configured LLM provider"]
+
+    completed: set[int] = set()
     batch_size = 5
     for start in range(0, len(items), batch_size):
         batch = items[start : start + batch_size]
-        compact = []
-        for offset, item in enumerate(batch, 1):
-            compact.append(
-                {
-                    "idx": start + offset,
-                    "title": item.title,
-                    "authors": item.authors,
-                    "source": item.source,
-                    "published": item.published,
-                    "summary": item.summary[:1600],
-                }
-            )
-
-        prompt = (
-            "你是科研论文中文整理助手。请基于给定论文列表，返回严格 JSON 数组。"
-            "数组每项字段必须包括：idx, title_zh, summary_zh, reading_hint_zh, relevance_zh, practice_zh。"
-            "summary_zh 需要忠实翻译英文摘要；reading_hint_zh 用1到2句提示如何阅读；"
-            "relevance_zh 用2到3句说明与低空经济安全、航迹预测或智能体的相关性；"
-            "practice_zh 用2到3句给出可落地实验或复现建议。不要输出 JSON 之外的任何文字。\n\n"
-            f"{json.dumps(compact, ensure_ascii=False)}"
-        )
-
-        response = client.chat.completions.create(
-            model=config.model,
-            messages=[
-                {"role": "system", "content": "你是严谨的科研中文翻译与解读助手。"},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=0.2,
-        )
-        content = (response.choices[0].message.content or "").strip()
         try:
-            json_match = re.search(r"\[.*\]", content, re.S)
-            payload = json.loads(json_match.group(0) if json_match else content)
+            result = invoke_json(_translation_prompt(_translation_payload(batch, start)))
+            completed.update(_apply_translation_entries(items, result))
         except Exception:
-            payload = []
-        for entry in payload:
-            if "idx" in entry:
-                by_idx[int(entry["idx"])] = entry
+            pass
+        missing = [start + offset for offset in range(1, len(batch) + 1) if start + offset not in completed]
+        for idx in missing:
+            try:
+                result = invoke_json(_translation_prompt(_translation_payload([items[idx - 1]], idx - 1)))
+                completed.update(_apply_translation_entries(items, result))
+            except Exception:
+                continue
 
-    enriched: list[Item] = []
-    for idx, item in enumerate(items, 1):
-        extra = by_idx.get(idx, {})
-        enriched.append(
-            Item(
-                title=item.title,
-                url=item.url,
-                pdf_url=item.pdf_url,
-                source=item.source,
-                published=item.published,
-                authors=item.authors,
-                summary=item.summary,
-                score=item.score,
-                title_zh=str(extra.get("title_zh", "")),
-                summary_zh=str(extra.get("summary_zh", "")),
-                reading_hint_zh=str(extra.get("reading_hint_zh", "")),
-                relevance_zh=str(extra.get("relevance_zh", "")),
-                practice_zh=str(extra.get("practice_zh", "")),
-            )
-        )
-    return enriched
+    missing = [idx for idx in range(1, len(items) + 1) if idx not in completed]
+    errors = [f"Chinese translation unavailable after retry: item {idx} ({items[idx - 1].title})" for idx in missing]
+    return items, errors
 
 
 def page_base_url() -> str:
@@ -434,7 +598,7 @@ def render_daily_page(items: list[Item], today: str, base_url: str) -> str:
 <body>
   <header><div class="wrap">
     <h1>低空经济前沿论文库</h1>
-    <p class="sub">{today} · 20 篇论文 · 免费模式 · 手机阅读版</p>
+    <p class="sub">{today} · {len(items)} 篇论文 · 免费模式 · 手机阅读版</p>
     <a class="back" href="{base_url}/">查看历史归档</a>
   </div></header>
   <main>
@@ -452,14 +616,14 @@ def render_index(today: str, base_url: str) -> str:
     for path in sorted(DOCS_DIR.iterdir(), reverse=True):
         if path.is_dir() and re.fullmatch(r"\d{4}-\d{2}-\d{2}", path.name):
             label = path.name
-            entries.append(f'<li><a href="{base_url}/{label}/">{label} 前沿论文库</a></li>')
+            entries.append(f'<li><a href="{base_url}/{label}/">{label} 低空经济通用大模型前沿论文库</a></li>')
     items = "\n".join(entries) or "<li>暂无归档</li>"
     return f"""<!doctype html>
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>低空经济前沿论文库</title>
+  <title>低空经济通用大模型前沿论文库</title>
   <style>
     body{{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;background:#f4f6f8;color:#172033;line-height:1.7}}
     main{{max-width:860px;margin:0 auto;padding:30px 18px 64px}}
@@ -543,7 +707,7 @@ def render_daily_page_deepseek(items: list[Item], today: str, base_url: str) -> 
 <body>
   <header><div class="wrap">
     <h1>低空经济前沿论文库</h1>
-    <p class="sub">{today} | 20 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
+    <p class="sub">{today} | {len(items)} 篇论文 | DeepSeek 中文版 | 手机阅读友好</p>
     <a class="back" href="{base_url}/">查看历史归档</a>
   </div></header>
   <main>
@@ -581,13 +745,48 @@ def render_index_deepseek(today: str, base_url: str) -> str:
 </head>
 <body>
   <main>
-    <h1>低空经济前沿论文库</h1>
-    <p class="muted">最后更新：{today}。每天北京时间 05:00 自动生成，优先使用 DeepSeek 输出中文内容。</p>
+    <h1>低空经济通用大模型前沿论文库</h1>
+    <p class="muted">最后更新：{today}。每天北京时间 05:00 自动生成；Top 10 进行 PDF 全文与页码核验。</p>
     <ul>{items}</ul>
   </main>
 </body>
 </html>
 """
+
+
+def render_markdown_digest(items: list[Item], today: str, base_url: str) -> str:
+    lines = [
+        f"网页版本：{base_url}/{today}/",
+        "",
+        "以下内容来自 arXiv 元数据与摘要；未读取论文全文的条目不能视为精读结论。",
+        "",
+    ]
+    for idx, item in enumerate(items, 1):
+        notes = rule_based_notes(item)
+        lines.extend(
+            [
+                f"## {idx}. {item.title_zh or item.title}",
+                "",
+                f"- English title: {item.title}",
+                f"- Authors: {item.authors or 'Unknown'}",
+                f"- Source: {item.source}",
+                f"- Published: {item.published}",
+                f"- Original: {item.url}",
+                f"- PDF: {item.pdf_url}",
+                "",
+                "### 摘要级内容",
+                "",
+                item.summary_zh or item.summary,
+                "",
+                "### 相关性与阅读建议",
+                "",
+                item.relevance_zh or notes["relevance"],
+                "",
+                item.practice_zh or notes["practice"],
+                "",
+            ]
+        )
+    return "\n".join(lines).strip()
 
 
 def send_email(subject: str, body: str) -> None:
@@ -609,53 +808,103 @@ def send_email(subject: str, body: str) -> None:
 
 
 def main() -> None:
+    if hasattr(sys.stdout, "reconfigure"):
+        sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--dry-run", action="store_true", help="Generate files without sending email.")
+    parser.add_argument("--skip-llm", action="store_true", help="Skip optional DeepSeek enrichment.")
+    args = parser.parse_args()
     load_env_file()
     today = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).date().isoformat()
     base_url = page_base_url()
-    all_items = dedupe(fetch_arxiv())
+    source_errors: list[str] = []
+    all_items = dedupe(fetch_arxiv(source_errors))
     selected = select_items(all_items, load_history())
+
+    if not selected:
+        subject = f"{REPORT_TITLE}生成失败 - {today}"
+        body = "今日未取得可验证的 arXiv 候选条目。已保存失败记录，请稍后重试。"
+        report = build_report(
+            stream=STREAM,
+            title=subject,
+            body=body,
+            items=[],
+            generation_status="failed",
+            email_status="skipped" if args.dry_run else "pending",
+            source_errors=source_errors or ["arXiv: no verified candidates"],
+            report_date=today,
+            default_kind="paper",
+        )
+        write_report(report)
+        if args.dry_run:
+            print(body)
+            return
+        try:
+            send_email(subject, body)
+            report["email_status"] = "sent"
+            write_report(report)
+        except Exception:
+            report["email_status"] = "failed"
+            write_report(report)
+            raise
+        raise RuntimeError("No candidate papers were found; a failure notice was saved and emailed.")
+
     if len(selected) < MAX_ITEMS:
-        raise RuntimeError(f"Only found {len(selected)} candidate papers.")
-    selected = enrich_items_with_llm(selected)
+        source_errors.append(f"Only {len(selected)} of {MAX_ITEMS} requested papers were available")
+
+    llm_configs = resolve_llm_configs()
+    invoke_json = None if args.skip_llm else make_json_invoker(llm_configs)
+    if not args.skip_llm:
+        selected, translation_errors = enrich_items_with_llm(selected, invoke_json)
+        source_errors.extend(translation_errors)
+    for item in selected:
+        item.title_en = item.title_en or item.title
+        item.abstract_en = item.abstract_en or item.summary
+        item.abstract_zh = item.abstract_zh or item.summary_zh
+
+    selected, pdf_errors = process_top_papers(
+        selected,
+        RESEARCH_PROFILE,
+        invoke_json,
+    )
+    source_errors.extend(pdf_errors)
 
     daily_dir = DOCS_DIR / today
     daily_dir.mkdir(parents=True, exist_ok=True)
-    (daily_dir / "index.html").write_text(render_daily_page_deepseek(selected, today, base_url), encoding="utf-8")
+    web_url = f"{base_url}/{today}/"
+    (daily_dir / "index.html").write_text(
+        render_html(selected, REPORT_TITLE, today, base_url), encoding="utf-8"
+    )
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     (DOCS_DIR / "index.html").write_text(render_index_deepseek(today, base_url), encoding="utf-8")
-    save_history(selected)
-
-    top_titles = "\n".join(f"{idx}. {item.title_zh or item.title}" for idx, item in enumerate(selected[:8], 1))
-    body = textwrap.dedent(
-        f"""
-        今日低空经济前沿论文库已生成：
-        {base_url}/{today}/
-
-        当前为无 API 免费模式：网页包含 20 篇论文的英文摘要、原文页面、PDF 链接、规则相关性说明和实践阅读思路。
-        如需中文翻译，可在安卓 Chrome/Edge 中打开页面后使用“翻译网页”。
-
-        今日部分条目：
-        {top_titles}
-
-        历史归档：
-        {base_url}/
-        """
-    ).strip()
-    body = textwrap.dedent(
-        f"""
-        今日低空经济前沿论文库已生成：
-        {base_url}/{today}/
-
-        当前页面优先展示 DeepSeek 生成的中文标题、中文摘要翻译和中文阅读提示。
-        今日部分条目：
-        {top_titles}
-
-        历史归档：
-        {base_url}/
-        """
-    ).strip()
-    send_email(f"低空经济前沿论文库 - {today}", body)
-    print(f"Generated free mobile paper library for {today}: {base_url}/{today}/")
+    body = build_daily_markdown(selected, REPORT_TITLE, today, web_url)
+    email_body = build_email_summary(selected, REPORT_TITLE, today, web_url)
+    generation_status = "partial" if source_errors else "complete"
+    report = build_report(
+        stream=STREAM,
+        title=f"{REPORT_TITLE} - {today}",
+        body=body,
+        items=selected,
+        generation_status=generation_status,
+        email_status="skipped" if args.dry_run else "pending",
+        source_errors=source_errors,
+        report_date=today,
+        default_kind="paper",
+    )
+    write_report(report)
+    if args.dry_run:
+        print(f"Generated {len(selected)} papers without sending email: {web_url}")
+        return
+    try:
+        send_email(f"{REPORT_TITLE} - {today}", email_body)
+        report["email_status"] = "sent"
+        write_report(report)
+        save_history(selected)
+    except Exception:
+        report["email_status"] = "failed"
+        write_report(report)
+        raise
+    print(f"Generated and emailed {len(selected)} papers ({generation_status}): {web_url}")
 
 
 if __name__ == "__main__":
