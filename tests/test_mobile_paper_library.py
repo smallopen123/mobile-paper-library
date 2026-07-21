@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import re
+import smtplib
 import sys
 import tempfile
 import types
@@ -93,6 +94,41 @@ class MobilePaperLibraryTests(unittest.TestCase):
         ):
             self.assertEqual(library.request_text("https://example.test", attempts=2), "<feed />")
         sleep.assert_called_once_with(5.0)
+
+    def test_smtp_transient_failure_is_retried(self) -> None:
+        with mock.patch.object(
+            library,
+            "_send_email_once",
+            side_effect=[smtplib.SMTPServerDisconnected("temporary"), None],
+        ) as send, mock.patch.object(library.time, "sleep") as sleep:
+            library.send_email("subject", "body")
+        self.assertEqual(send.call_count, 2)
+        sleep.assert_called_once_with(5.0)
+
+    def test_successful_report_skips_scheduled_duplicate(self) -> None:
+        with tempfile.TemporaryDirectory() as temp_dir, mock.patch.object(
+            report_contract, "OUTPUTS_DIR", Path(temp_dir)
+        ), mock.patch.object(library, "fetch_arxiv") as fetch, mock.patch.object(
+            library, "send_email"
+        ) as send, mock.patch.object(sys, "argv", ["mobile_paper_library.py"]):
+            today = library.dt.datetime.now(
+                library.dt.timezone(library.dt.timedelta(hours=8))
+            ).date().isoformat()
+            (Path(temp_dir) / f"{today}.json").write_text(
+                json.dumps(
+                    {
+                        "stream": library.STREAM,
+                        "report_date": today,
+                        "generation_status": "partial",
+                        "email_status": "sent",
+                        "item_count": 1,
+                    }
+                ),
+                encoding="utf-8",
+            )
+            library.main()
+        fetch.assert_not_called()
+        send.assert_not_called()
 
     def test_dry_run_with_fewer_items_writes_partial_report(self) -> None:
         item = library.Item(
