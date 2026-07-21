@@ -2,14 +2,21 @@ name: Mobile Paper Library
 
 on:
   schedule:
-    # 05:00 Asia/Shanghai = 21:00 UTC (previous day)
+    # Staggered retries. A successful sent report makes later runs no-ops.
     - cron: "0 21 * * *"
+    - cron: "30 22 * * *"
+    - cron: "0 0 * * *"
   workflow_dispatch:
     inputs:
       backfill_dates:
         description: "Optional comma-separated YYYY-MM-DD dates; rebuilds reports without email"
         required: false
         type: string
+      force_send:
+        description: "Regenerate and resend today's report"
+        required: false
+        default: true
+        type: boolean
 
 permissions:
   contents: write
@@ -36,6 +43,9 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
 
+      - name: Run reliability tests
+        run: python -m unittest discover -s tests -v
+
       - name: Build mobile paper library and notify
         if: ${{ github.event_name != 'workflow_dispatch' || inputs.backfill_dates == '' }}
         env:
@@ -54,7 +64,7 @@ jobs:
           OPENAI_BASE_URL: ${{ vars.OPENAI_BASE_URL }}
           GITHUB_TOKEN: ${{ github.token }}
           GITHUB_REPOSITORY: ${{ github.repository }}
-        run: python scripts/mobile_paper_library.py
+        run: python scripts/mobile_paper_library.py ${{ (github.event_name == 'workflow_dispatch' && inputs.force_send) && '--force-send' || '' }}
 
       - name: Rebuild historical reports without email
         if: ${{ github.event_name == 'workflow_dispatch' && inputs.backfill_dates != '' }}
@@ -81,4 +91,10 @@ jobs:
           git add docs data/sent_history.json
           if [ -d outputs ]; then git add outputs; fi
           git diff --cached --quiet || git commit -m "Update mobile paper library"
-          git push
+          for attempt in 1 2 3; do
+            if git push; then
+              exit 0
+            fi
+            sleep $((attempt * 5))
+          done
+          exit 1

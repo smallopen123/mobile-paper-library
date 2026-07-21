@@ -31,6 +31,7 @@ from paper_analysis import (
     process_top_papers,
     render_html,
 )
+import report_contract
 from report_contract import build_report, write_report
 
 
@@ -818,7 +819,7 @@ def render_markdown_digest(items: list[Item], today: str, base_url: str) -> str:
     return "\n".join(lines).strip()
 
 
-def send_email(subject: str, body: str) -> None:
+def _send_email_once(subject: str, body: str) -> None:
     host = require_env("QQ_SMTP_HOST")
     port = int(require_env("QQ_SMTP_PORT"))
     user = require_env("QQ_SMTP_USER")
@@ -836,15 +837,47 @@ def send_email(subject: str, body: str) -> None:
         smtp.send_message(msg)
 
 
+def send_email(subject: str, body: str, attempts: int = 3) -> None:
+    for attempt in range(attempts):
+        try:
+            _send_email_once(subject, body)
+            return
+        except smtplib.SMTPAuthenticationError:
+            raise
+        except (smtplib.SMTPException, OSError, TimeoutError):
+            if attempt == attempts - 1:
+                raise
+            time.sleep(min(5.0 * (2**attempt), 30.0))
+
+
+def completed_report_already_sent(report_date: str) -> bool:
+    path = report_contract.OUTPUTS_DIR / f"{report_date}.json"
+    try:
+        report = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, ValueError, TypeError):
+        return False
+    return bool(
+        report.get("stream") == STREAM
+        and report.get("report_date") == report_date
+        and report.get("generation_status") in {"complete", "partial"}
+        and report.get("email_status") == "sent"
+        and int(report.get("item_count") or 0) > 0
+    )
+
+
 def main() -> None:
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8", errors="replace")
     parser = argparse.ArgumentParser()
     parser.add_argument("--dry-run", action="store_true", help="Generate files without sending email.")
     parser.add_argument("--skip-llm", action="store_true", help="Skip optional DeepSeek enrichment.")
+    parser.add_argument("--force-send", action="store_true", help="Regenerate and resend even if today succeeded.")
     args = parser.parse_args()
     load_env_file()
     today = dt.datetime.now(dt.timezone(dt.timedelta(hours=8))).date().isoformat()
+    if not args.dry_run and not args.force_send and completed_report_already_sent(today):
+        print(f"Today's paper-library report was already sent; backup run skipped ({today}).")
+        return
     base_url = page_base_url()
     source_errors: list[str] = []
     all_items = dedupe(fetch_arxiv(source_errors))
