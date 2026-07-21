@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>低空经济通用大模型前沿论文库（今日无新增·近30天回看） - 2026-07-22</title>
+<style>
+:root{--bg:#f1f5f9;--paper:#fff;--ink:#0f172a;--muted:#64748b;--brand:#0f766e}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.7}
+header{background:#083c3a;color:white;padding:28px 18px}header div,main{max-width:980px;margin:auto}main{padding:18px 14px 60px}
+.paper{background:var(--paper);border:1px solid #cbd5e1;border-radius:14px;padding:20px;margin:16px 0;box-shadow:0 8px 24px #0f172a12}
+.badge{display:inline-block;background:#ccfbf1;color:#115e59;border-radius:999px;padding:3px 10px;font-weight:700}
+h1{margin:0}h2{line-height:1.35}h3{color:#115e59}.english,.meta,.muted{color:var(--muted)}a{color:var(--brand)}
+.mermaid{background:#f8fafc;border:1px solid #cbd5e1;border-radius:10px;padding:12px;overflow:auto}
+</style></head><body><header><div><h1>低空经济通用大模型前沿论文库（今日无新增·近30天回看）</h1><p>2026-07-22 · Top 10 full-text · Bilingual</p><a style="color:#99f6e4" href="https://smallopen123.github.io/mobile-paper-library/">查看历史归档</a></div></header>
+<main>
+        <article class="paper">
+          <span class="badge">Top 1 · 近30天回看（首次收录 2026-07-13）</span>
+          <h2>无人机末米精度导航：一种扩散精化空中视觉伺服方法</h2>
+          <p class="english">Last-Meter Precision Navigation for UAVs: A Diffusion-Refined Aerial Visual Servoing Approach</p>
+          <p class="meta">Yaxuan Li, Jiarui Zeng, Shaofei Huang, Zhedong Zheng · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.04352v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.04352v1">PDF</a></p>
+          <h3>中文摘要</h3><p>在这项工作中，我们研究了无人机的末米精度导航，例如使用单目视觉在最后10米内自主到达目标。由于尺度模糊、旋转不连续性以及细粒度空间推理的需求，这项任务具有挑战性。现有方法在大视角变化下常常失败，或缺乏对未见环境的泛化能力。为此，我们提出了DreamNav，一种从粗到细的扩散精化空中视觉伺服框架。在第一粗估计阶段，一个稳健的回归策略采用三角参数化，通过联合建模正弦和余弦分量来预测旋转，有效缓解了由角度周期性引起的优化不稳定性。基于这个粗估计，第二扩散精化阶段利用预训练的世界模型模拟候选动作的未来视觉观测，通过视觉想象过程选择与目标视觉差异最小的轨迹。为了支持严格的评估，我们贡献了PairUAV，一个大规模基准，包含来自University-1652数据集的72个场景中的480万图像对。大量实验表明，DreamNav在准确性和泛化能力上优于强视觉伺服和基础模型基线，并具有对未见场景的零样本迁移能力。</p>
+          <details><summary>English Abstract</summary><p>In this work, we study the last-meter precision navigation for UAVs, e.g., autonomously reaching a target within the final 10 meters using monocular vision. This task is challenging due to scale ambiguity, rotation discontinuities, and the need for fine-grained spatial reasoning. Existing methods often fail under large viewpoint changes or lack generalization to unseen environments. To this end, we propose DreamNav, a coarse-to-fine diffusion-refined aerial visual servoing framework. In the first coarse-estimation stage, a robust regression policy employs a trigonometric parameterization to predict rotation by jointly modeling sine and cosine components, effectively mitigating optimization instabilities caused by angular periodicity. Given this coarse estimate, the second diffusion-refined stage utilizes a pre-trained world model to simulate future visual observations for candidate actions, selecting the trajectory that minimizes visual discrepancy with the target through a process of visual imagination. To support rigorous evaluation, we contribute PairUAV, a large-scale benchmark comprising 4.8 million image pairs across 72 scenes, curated from the University-1652 dataset. Extensive experiments show DreamNav outperforms strong visual servoing and foundation model baselines in accuracy and generalization, with zero-shot transfer to unseen scenes.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：源图像和目标图像（512×512单目RGB）&quot;]
+  N1[&quot;核心模块：粗估计阶段（三角参数化回归 + ViT骨干）&quot;]
+  N2[&quot;机制：预测粗粒度航向角和距离&quot;]
+  N3[&quot;核心模块：扩散精化阶段（ControlNet风格潜在扩散模型）&quot;]
+  N4[&quot;机制：候选姿态生成（3×3网格）→ 合成未来观测 → 像素级MSE选择最佳匹配&quot;]
+  N5[&quot;输出：精化后的航向角和距离&quot;]
+  N6[&quot;指标：MAER, MAEH, AVG, SR&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
+          <h3>方法与理论链路</h3><p>DreamNav框架包含两个阶段：第一阶段（粗估计阶段）采用三角参数化（联合回归正弦和余弦分量）的稳健回归策略，基于ViT骨干网络预测粗粒度的航向角和距离；第二阶段（扩散精化阶段）利用ControlNet风格的潜在扩散模型（预训练世界模型）对候选动作进行视觉想象，通过合成未来观测并与目标图像比较，选择最优轨迹。</p>
+          <h3>主要结果</h3><ul><li>未确认可引用结果。</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：在低空无人机导航中，引入时空基础模型（如Video World Model）替代静态图像扩散模型，通过预测连续帧序列来增强对动态环境（如移动障碍物、光照变化）的鲁棒性，并验证其在PairUAV扩展数据集上的性能提升。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 2 · 近30天回看（首次收录 2026-07-20）</span>
+          <h2>认识自我，理解世界：基于多模态大模型的无人机时空推理双认知基准</h2>
+          <p class="english">Knowing the Self, Understanding the World: A Dual-Cognition Benchmark for UAV Spatio-temporal Reasoning with MLLMs</p>
+          <p class="meta">Like Liu, Zhengzheng Xu, Haitao He, Hongzhe Li, Shuchang Zhang, Dian Shao · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.16193v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.16193v1">PDF</a></p>
+          <h3>中文摘要</h3><p>多模态大语言模型在多种视觉-语言任务中取得了强劲性能，但其在无人机场景中的能力仍未得到充分探索。近期面向无人机的基准开始评估MLLM在航空场景中的表现，但它们通常聚焦于场景理解、事件识别或导航完成，而非联合评估无人机智能体所需的双认知能力：在多视角时空背景下同时推理无人机自身状态和外部环境。为填补这一空白，我们提出了UAV-DualCog，一个基于双认知视角构建的航空多视角时空推理基准。UAV-DualCog包含图像和视频任务，以联合评估自状态和环境状态推理，同时要求超越离散答案预测的空间或时间证据。我们还开发了一个自动化流水线，从场景级语义点云构建数据，生成一个可扩展的基准，包含多样场景、数百个地标和数千个问答样本。广泛评估表明，当前MLLM在无人机双认知方面仍远不可靠。自状态推理、视角变换、精确空间定位和时间区间定位是持续的瓶颈，通过思维/前沿模型和人类基线的额外验证确认了该基准对人类可理解但对现有模型具有挑战性。我们进一步从不相交场景构建了UAV-DualCog-Train，并通过轻量级优化探针表明它提供了有用的结构化监督，表明其不仅作为评估基准，也作为推进基于MLLM的无人机智能体的数据资源的价值。</p>
+          <details><summary>English Abstract</summary><p>Multimodal large language models have achieved strong performance across diverse vision-language tasks, yet their capabilities in UAV scenarios remain insufficiently explored. Recent UAV-oriented benchmarks have begun to evaluate MLLMs in aerial scenarios, but they typically focus on scene understanding, event recognition, or navigation completion, rather than jointly assessing the dual-cognition capability required for UAV agents: reasoning about both the UAV&#x27;s own state and the external environment in multiview spatio-temporal contexts. To address this gap, we present UAV-DualCog, a benchmark for aerial multiview spatio-temporal reasoning built on this dual-cognition perspective. UAV-DualCog includes both image and video tasks to jointly evaluate self-state and environment-state reasoning, while requiring spatial or temporal grounding beyond discrete answer prediction. We also develop an automated pipeline that constructs data from scene-level semantic point clouds, yielding a scalable benchmark with diverse scenes, hundreds of landmarks, and thousands of QA samples. Extensive evaluations show that current MLLMs remain far from reliable in UAV dual cognition. Self-state reasoning, viewpoint transformation, precise spatial grounding, and temporal interval localization are persistent bottlenecks, and additional validation with thinking/frontier models and a human baseline confirms that the benchmark is understandable to humans but challenging for existing models. We further construct UAV-DualCog-Train from disjoint scenes and show through a lightweight optimization probe that it provides useful structured supervision, suggesting its value not only as an evaluation benchmark but also as a data resource for advancing MLLM-based UAV agents. Project website and supplementary materials: https://uav-dualcog.lozumi.com</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：AerialVLN模拟器中的18个无人机场景，包含746个地标&quot;]
+  N1[&quot;核心模块：双认知形式化（自状态认知 + 环境状态认知）&quot;]
+  N2[&quot;机制：自动化数据构建流水线（场景扫描→地标收集→图像/视频任务生成）&quot;]
+  N3[&quot;输出：图像任务（4种）和视频任务（2种），要求输出边界框和时间区间&quot;]
+  N4[&quot;指标：Acc, mIoU, BBox@0.5, tIoU@50, F1@0.5&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4</pre>
+          <h3>方法与理论链路</h3><p>1. 双认知形式化：将无人机认知分为自状态认知和环境状态认知两个维度。2. 自动化数据构建流水线：从场景级语义点云中扫描场景、收集地标，通过可控视角采样、可见性检查和结构化标注生成图像和视频任务。3. 任务设计：包括4种图像任务（自相对位置推理、未来观测预测、环境相对位置推理、地标驱动动作决策）和2种视频任务（飞行行为识别、地标可见性识别）。4. 评估协议：使用统一提示、JSON模式、解析规则和指标，要求输出边界框和时间区间作为证据。5. 轻量级优化探针：使用UAV-DualCog-Train对Qwen3.5-4B进行两阶段优化，评估结构化监督的效果。</p>
+          <h3>主要结果</h3><ul><li>未确认可引用结果。</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：在UAV-DualCog基准上，通过引入跨帧一致性目标或显式视频侧监督，能否显著提升MLLM在视频任务中的时间定位和可见性计数性能？具体可设计一个双流架构，分别处理自状态和环境状态，并加入时间注意力机制，验证其在UAV-DualCog视频任务上的提升。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 3 · 近30天回看（首次收录 2026-07-18）</span>
+          <h2>CosFly-VLA：一种用于无人机跟踪的空间感知视觉-语言-动作模型</h2>
+          <p class="english">CosFly-VLA: A Spatially Aware Vision-Language-Action Model for UAV Tracking</p>
+          <p class="meta">Ruilong Ren, Songsheng Cheng, Yunpeng Zhou, Hanxuan Chen, Xiangyue Wang, Tianle Zeng, Shuai Yuan, Binbo Li, Hanzhong Guo, Ji Pei, Da Zhang, Kangli Wang · arXiv cs.RO</p>
+          <p><a href="http://arxiv.org/abs/2607.15004v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.15004v1">PDF</a></p>
+          <h3>中文摘要</h3><p>动态目标跟踪对于在复杂城市环境中运行的无人机至关重要，其中目标和相机视角都在持续变化。现有的视觉-语言-动作策略可以有效跟踪可见目标，但当建筑物、植被或路边物体遮挡视线时，其性能通常会下降。在持续遮挡期间，策略可能会丢失目标状态，向错误区域执行动作，并通过后续观测放大此误差，直到无法重新捕获目标。为此，我们提出了CosFly-VLA，一种空间感知的VLA模型，它通过结构化预测接口联合定位目标、估计其可见性并生成连续飞行动作。为了训练此策略，我们使用了一个基于多样化数据源的大规模方案。在50万混合池上的空间基础持续预训练注入了无人机视角的深度、距离和3D空间推理。一个三阶段基于课程的监督微调过程通过多头预热，随后在自然和困难/长遮挡数据上进行两阶段课程学习，来专门化跟踪器。链式思维训练随后教授面向恢复的推理轨迹，然后输出结构化答案。最后，一个闭环强化学习阶段通过一个多组件奖励（涵盖对峙跟踪、定位质量、碰撞避免和任务成功）来优化跟踪行为。相对于OpenVLA，CosFly-VLA-0.8B在seen-test上将开环平均位移误差降低了34.1%，在unseen-test上降低了35.3%。闭环优化分别将成功率提高了29.8%和2.5%。这些结果展示了从可见帧模仿到空间基础动作闭环控制的进展，并在共享的oracle状态历史下进行评估。</p>
+          <details><summary>English Abstract</summary><p>Dynamic target tracking is essential for Unmanned Aerial Vehicles (UAVs) operating in complex urban environments, where both the target and the camera viewpoint change continuously. Existing Vision-Language-Action (VLA) policies can track visible targets effectively, but their performance often degrades when buildings, vegetation, or roadside objects block the line of sight. During sustained occlusion, a policy may lose the target state, execute actions toward an incorrect region, and amplify this error through subsequent observations until re-acquisition becomes impossible. To this end, we present CosFly-VLA, a spatially aware VLA model that jointly grounds the target, estimates its visibility, and generates continuous flight actions through a structured prediction interface. To train this policy, we use a large-scale recipe over diverse data sources. Spatially Grounded Continued Pretraining (CPT) on a 500k mixed pool injects UAV-view depth, distance, and 3-D spatial reasoning. A three-stage Curriculum-based Supervised Fine-Tuning (SFT) process then specializes the tracker through multi-head warm-up followed by two-stage curriculum learning over natural and hard / long-occlusion data. Chain-of-Thought (CoT) training subsequently teaches recovery-oriented reasoning traces before structured answers. Finally, a closed-loop Reinforcement Learning (RL) stage optimizes tracking behavior with a multi-component reward covering stand-off tracking, grounding quality, collision avoidance, and task success. Relative to OpenVLA, CosFly-VLA-0.8B reduces open-loop Average Displacement Error (ADE) by 34.1% on seen-test and 35.3% on unseen-test. Closed-loop optimization improves Success Rate (SR) by 29.8% and 2.5%, respectively. These results demonstrate progress from visible-frame imitation toward spatially grounded action-closed-loop control, evaluated under a shared oracle state history.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景: 5帧RGB图像 + 语言指令 + 无人机状态历史 + 先前目标框&quot;]
+  N1[&quot;核心模块: Qwen3.5 VLM骨干 (冻结, LoRA适配) + 元查询接口&quot;]
+  N2[&quot;机制: 空间基础CPT → 三阶段课程SFT → CoT训练 → 闭环RL (EG-FPO)&quot;]
+  N3[&quot;输出: 目标可见性 + 当前帧边界框 + 8步4-DoF航点增量动作块&quot;]
+  N4[&quot;指标: 开环: ADE, First DE, Final DE, IoU, Vis F1; 闭环: SR, TCR, ATF, ADE, dErr&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4</pre>
+          <h3>方法与理论链路</h3><p>任务形式化为闭环恢复问题；模型架构：Qwen3.5骨干+LoRA适配器+元查询接口+三个解耦头（流匹配DiT动作专家、MLP边界框头、MLP可见性头）；训练配方：空间基础持续预训练（CPT）→三阶段基于课程的监督微调（SFT）→链式思维（CoT）训练→闭环强化学习（RL，专家引导流策略优化EG-FPO）</p>
+          <h3>主要结果</h3><ul><li>开环ADE降低 (seen-test)（PDF p.1）</li><li>开环ADE降低 (unseen-test)（PDF p.1）</li><li>闭环SR提升 (seen-test)（PDF p.1）</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：在CosFly-VLA的基础上，引入一个显式的、可学习的“遮挡记忆”模块，该模块不仅维持目标的空间假设，还能编码遮挡物的几何和语义信息（例如，通过隐式神经表示）。假设是，与仅依赖历史轨迹和场景布局的隐式推理相比，显式建模遮挡物可以显著提高在复杂、非重复性遮挡场景（如目标穿过多个不同形状的建筑物或植被区域）下的重新捕获成功率。可以通过在CARLA中设计包含多样化遮挡物布局的测试场景，并比较CosFly-VLA与添加了遮挡记忆模块的变体在闭环成功率上的差异来证伪。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 4 · 近30天回看（首次收录 2026-07-17）</span>
+          <h2>空间中的自我：无人机具身智能中自我意识与空间认知的基准测试</h2>
+          <p class="english">Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence</p>
+          <p class="meta">Zhishan Zou, Guoyan Sun, Zhiwei Wei, Jiancheng Pan, Yujie Li, Mugen Peng, Wenjia Xu · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.12477v2">Original Page</a> · <a href="http://arxiv.org/pdf/2607.12477v2">PDF</a></p>
+          <h3>中文摘要</h3><p>自主无人机系统越来越依赖多模态大语言模型在复杂的真实环境中运行。这种具身场景不仅需要理解周围空间，还需要保持对智能体自身的一致表征。然而，现有的无人机导向方法和基准测试仍然以环境为中心，主要关注空间理解任务，而智能体的自我意识仍然是隐式的。为了解决这一差距，我们引入了SIS-Bench，这是一个在统一的“空间中的自我”框架下评估无人机场景中具身空间智能的基准测试。SIS-Bench沿着两个互补维度（空间和自我）以及感知、记忆和推理三个层级组织评估。它包含来自1,646个真实世界无人机视频的4,856个问答对，这些问答对通过任务条件构建流程和专家验证生成。广泛的评估揭示了当前多模态大语言模型在建模动态和以智能体为中心的过程方面存在根本性限制。特别是，我们观察到空间认知和自我意识之间存在明显的不平衡，以及跨认知层级的渐进性能下降。受这些发现的启发，我们进一步探索了一种运动感知表示，该表示通过光流和视觉特征融合来整合与自我相关的动态。实验结果表明，对智能体运动进行建模一致地提升了感知和记忆性能，不仅在空间认知方面，在自我意识方面也是如此，并且可以泛化到下游的无人机决策任务。我们的结果强调了自我意识对于推进具身空间智能的重要性，并为运动感知的“空间中的自我”建模提供了新的基准和实证证据。</p>
+          <details><summary>English Abstract</summary><p>Autonomous UAV systems increasingly rely on multimodal large language models (MLLMs) to operate in complex real-world environments. Such embodied scenarios require not only understanding the surrounding space but also maintaining a coherent representation of the agent itself. However, existing UAV-oriented approaches and benchmarks remain largely environment-centric, primarily focusing on spatial understanding tasks, with the agent&#x27;s self-awareness remaining implicit. To address this gap, we introduce SIS-Bench, a benchmark for evaluating embodied spatial intelligence in UAV scenarios under a unified self-in-space formulation. SIS-Bench organizes evaluation along two complementary dimensions, space and self, and a three-level hierarchy of perception, memory, and reasoning. It contains 4,856 question--answer pairs across 13 tasks derived from 1,646 real-world UAV videos through a task-conditioned construction pipeline with expert verification. Extensive evaluations reveal that current MLLMs exhibit fundamental limitations in modeling dynamic and agent-centered processes. In particular, we observe a clear imbalance between spatial cognition and self-awareness, as well as a progressive performance degradation across cognitive levels. Motivated by these findings, we further explore a motion-aware representation that incorporates self-related dynamics through optical flow and visual feature fusion. Experimental results show that modeling agent motion consistently improves perception and memory performance, not only in spatial cognition but also in self-awareness, and generalizes to downstream UAV decision-making tasks. Our results highlight the importance of self-awareness for advancing embodied spatial intelligence, and provide both a new benchmark and empirical evidence for motion-aware self-in-space modeling.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：真实世界无人机视频（AirScape, UrbanVideo-Bench, VisDrone）&quot;]
+  N1[&quot;核心模块：SIS-Bench基准（空间认知与自我意识两个维度，感知、记忆、推理三个层级）&quot;]
+  N2[&quot;机制：任务条件构建流程（数据处理→任务特定标注→QA构建→双专家验证）&quot;]
+  N3[&quot;评估：26个视频MLLM（6个专有模型，20个开源模型）在SIS-Bench上的Accuracy&quot;]
+  N4[&quot;发现：空间认知与自我意识不平衡，认知层级性能退化&quot;]
+  N5[&quot;改进：SIS-Motion框架（光流运动编码器 + 视觉特征融合）&quot;]
+  N6[&quot;输出：SIS-Motion在SIS-Bench上提升Spatial Avg和Self Avg，并迁移到下游OpenUAV导航任务&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
+          <h3>方法与理论链路</h3><p>1. 构建SIS-Bench基准：从AirScape、UrbanVideo-Bench和VisDrone三个真实世界无人机视频源，通过数据处理、任务特定标注、QA构建和双专家验证四阶段流程，生成包含4,856个问答对的基准，覆盖空间认知和自我意识两个维度，以及感知、记忆和推理三个认知层级。2. 评估26个视频多模态大语言模型（6个专有模型和20个开源模型）在SIS-Bench上的性能。3. 提出SIS-Motion框架：在标准视频多模态大语言模型基础上，增加基于光流的运动编码器和轻量级连接器，将运动特征与视觉特征融合。4. 构建SIS-Motion-54K训练数据集，进行受控实验，比较零样本基线、仅视觉微调基线和SIS-Motion的性能。5. 在OpenUAV下游无人机导航任务上评估SIS-Motion的迁移能力。</p>
+          <h3>主要结果</h3><ul><li>SIS-Motion改进效果（PDF p.11）</li><li>下游任务迁移（PDF p.12）</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：在SIS-Bench框架下，假设引入更精细的自我运动表征（如结合IMU数据或6-DoF姿态估计）能够进一步缩小空间认知与自我意识之间的性能差距，尤其是在推理层级。可以通过在SIS-Motion框架中替换或增强运动编码器（例如，使用基于IMU的轨迹编码器或基于视觉的6-DoF姿态估计器），并在SIS-Bench的推理任务（如Action Prediction和Path Planning）上评估性能来验证。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 5 · 近30天回看（首次收录 2026-07-16）</span>
+          <h2>空间中的自我：无人机具身智能中自我意识与空间认知的基准测试</h2>
+          <p class="english">Self in Space: Benchmarking Self-Awareness and Spatial Cognition in UAV Embodied Intelligence</p>
+          <p class="meta">Zhishan Zou, Guoyan Sun, Zhiwei Wei, Jiancheng Pan, Yujie Li, Mugen Peng, Wenjia Xu · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.12477v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.12477v1">PDF</a></p>
+          <h3>中文摘要</h3><p>自主无人机系统越来越依赖多模态大语言模型在复杂的真实环境中运行。这种具身场景不仅需要理解周围空间，还需要保持对智能体自身的一致表征。然而，现有的无人机导向方法和基准测试仍然以环境为中心，主要关注空间理解任务，而智能体的自我意识仍然是隐式的。为了解决这一差距，我们引入了SIS-Bench，这是一个在统一的“空间中的自我”框架下评估无人机场景中具身空间智能的基准测试。SIS-Bench沿着两个互补维度（空间和自我）以及感知、记忆和推理三个层级组织评估。它包含来自1,646个真实无人机视频的4,856个问答对，通过任务条件构建流程和专家验证生成。广泛的评估揭示了当前多模态大语言模型在建模动态和以智能体为中心的过程方面存在根本性限制。特别是，我们观察到空间认知和自我意识之间存在明显的不平衡，以及跨认知层级的渐进性能退化。受这些发现的启发，我们进一步探索了一种运动感知表示，通过光流和视觉特征融合来整合与自我相关的动态。实验结果表明，建模智能体运动一致地改善了感知和记忆性能，不仅在空间认知方面，而且在自我意识方面，并且可以泛化到下游无人机决策任务。我们的结果强调了自我意识对于推进具身空间智能的重要性，并为运动感知的“空间中的自我”建模提供了新的基准和实证证据。</p>
+          <details><summary>English Abstract</summary><p>Autonomous UAV systems increasingly rely on multimodal large language models (MLLMs) to operate in complex real-world environments. Such embodied scenarios require not only understanding the surrounding space but also maintaining a coherent representation of the agent itself. However, existing UAV-oriented approaches and benchmarks remain largely environment-centric, primarily focusing on spatial understanding tasks, with the agent&#x27;s self-awareness remaining implicit. To address this gap, we introduce SIS-Bench, a benchmark for evaluating embodied spatial intelligence in UAV scenarios under a unified self-in-space formulation. SIS-Bench organizes evaluation along two complementary dimensions, space and self, and a three-level hierarchy of perception, memory, and reasoning. It contains 4,856 question--answer pairs across 13 tasks derived from 1,646 real-world UAV videos through a task-conditioned construction pipeline with expert verification. Extensive evaluations reveal that current MLLMs exhibit fundamental limitations in modeling dynamic and agent-centered processes. In particular, we observe a clear imbalance between spatial cognition and self-awareness, as well as a progressive performance degradation across cognitive levels. Motivated by these findings, we further explore a motion-aware representation that incorporates self-related dynamics through optical flow and visual feature fusion. Experimental results show that modeling agent motion consistently improves perception and memory performance, not only in spatial cognition but also in self-awareness, and generalizes to downstream UAV decision-making tasks. Our results highlight the importance of self-awareness for advancing embodied spatial intelligence, and provide both a new benchmark and empirical evidence for motion-aware self-in-space modeling.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：真实无人机视频（AirScape, UrbanVideo-Bench, VisDrone）&quot;]
+  N1[&quot;核心模块：SIS-Bench基准（空间认知与自我意识，感知-记忆-推理层级）&quot;]
+  N2[&quot;机制：任务条件构建流程（数据处理→任务特定标注→QA构建→双专家验证）&quot;]
+  N3[&quot;评估：26个视频MLLM（6个专有模型+20个开源模型）在SIS-Bench上的Accuracy&quot;]
+  N4[&quot;发现：空间认知与自我意识不平衡，认知层级性能退化&quot;]
+  N5[&quot;改进：SIS-Motion框架（光流运动编码器+视觉特征融合）&quot;]
+  N6[&quot;输出：SIS-Motion提升感知和记忆性能，泛化到下游无人机导航任务&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
+          <h3>方法与理论链路</h3><p>1. 构建SIS-Bench基准：从AirScape、UrbanVideo-Bench和VisDrone三个真实无人机视频源，通过数据处理、任务特定标注、QA构建和双专家验证四阶段流程，生成4,856个问答对，覆盖空间认知和自我意识两个维度，以及感知、记忆和推理三个认知层级。2. 评估26个视频多模态大语言模型（6个专有模型和20个开源模型）在SIS-Bench上的性能。3. 提出SIS-Motion框架：在标准视频多模态大语言模型基础上，增加基于光流的运动编码器和轻量级连接器，将运动特征与视觉特征融合。4. 构建SIS-Motion-54K训练数据集，包含54k样本，涵盖多项选择问答、开放问答和描述三种格式。5. 在SIS-Bench上进行受控实验，比较零样本基线、仅视觉微调基线和SIS-Motion的性能。6. 在基于OpenUAV的下游无人机导航任务上评估迁移能力。</p>
+          <h3>主要结果</h3><ul><li>SIS-Motion提升性能（PDF p.11）</li><li>SIS-Motion泛化到下游任务（PDF p.12）</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：在SIS-Bench框架下，引入更复杂的自我状态表示（如IMU数据、GPS轨迹、动力学模型）而非仅依赖光流，是否能进一步改善多模态大语言模型在无人机场景中的空间认知和自我意识，特别是在推理层级？假设：融合多模态自我状态信息（视觉+IMU+GPS）的模型在SIS-Bench的推理任务（如动作预测、路径规划）上的性能显著优于仅使用视觉+光流的SIS-Motion模型。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 6 · 近30天回看（首次收录 2026-07-15）</span>
+          <h2>面向高分辨率近距多光谱遥感影像的自监督训练</h2>
+          <p class="english">Self-supervised training for high-resolution close-range multispectral remote sensing imagery</p>
+          <p class="meta">Leon-Friedrich Thomas, Mikael Änäkkälä, Antti Lajunen · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.11366v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.11366v1">PDF</a></p>
+          <h3>中文摘要</h3><p>尽管自监督学习为减少近距遥感中的标注工作量提供了一种有前景的方法，但由于数据有限，其在高分辨率多光谱无人机影像上的有效性仍未得到充分探索。本研究利用跨多个传感器、年份和区域采集的厘米级多光谱无人机影像，评估了用于精准农业的自监督预训练。基于Transformer的编码器使用动量对比v3和掩码自编码器，在结合msuav500K与新收集的芬兰农田多年无人机影像的协调数据集上进行预训练。预训练使用了四个光谱波段（绿、红、红边、近红外）以实现跨传感器兼容性。模型在WeedMap数据集上使用5%–100%的训练数据进行作物-杂草语义分割评估。以下两个子集作为下游任务：任务A（德国，RedEdge-M），在该任务中比较了所有预训练模型在部分和全微调下的表现；任务B（瑞士，Sequoia），在该任务中评估了任务A的最佳编码器。我们使用MoCo-v3预训练的Swin Transformer在两个任务上均取得了最强性能，超越了Doornbos等人基于msuav500K预发布版本预训练的Swin Transformer模型。我们的预训练Swin Transformer还展示了跨传感器和跨区域的泛化能力。此外，我们公开了一个来自芬兰的多年多光谱无人机数据集，以支持未来研究。</p>
+          <details><summary>English Abstract</summary><p>Although self-supervised learning (SSL) offers a promising way to reduce annotation effort in close-range remote sensing, its effectiveness for high-resolution multispectral unmanned aerial vehicle (UAV) imagery remains underexplored due to limited data. This study evaluated SSL pretraining for precision agriculture using cm-scale multispectral drone imagery collected across multiple sensors, years, and regions. Transformer-based encoders were pretrained with Momentum Contrast v3 (MoCo-v3) and Masked Autoencoders on a harmonized dataset combining msuav500K with newly collected multi-year UAV imagery from agricultural fields in Finland. Pretraining used four spectral bands (Green, Red, Red-Edge, Near-Infrared) for cross-sensor compatibility. The models were evaluated on crop-weed semantic segmentation using the WeedMap dataset with 5--100% training data. The following two subsets served as downstream tasks: Task A (Germany, RedEdge-M), where all pretrained models were compared under partial and full fine-tuning, and Task B (Switzerland, Sequoia), where the best encoder from Task A was assessed. Our Swin Transformer pretrained with MoCo-v3 achieved the strongest performance on both tasks, surpassing the Swin Transformer model of Doornbos et al. pretrained on a pre-release of msuav500K. Our pretrained Swin Transformer further demonstrated cross-sensor and cross-region generalization. We additionally provide a public multi-year multispectral UAV dataset from Finland to support future research.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景: 高分辨率多光谱无人机影像 (Green, Red, Red-Edge, NIR, 0.7-25 cm GSD)&quot;]
+  N1[&quot;核心模块: 自监督预训练 (MoCo-v3 用于 Swin Transformer; MAE 用于 ViT Small/Base)&quot;]
+  N2[&quot;机制: 动量对比学习 (MoCo-v3) 或 掩码重建 (MAE)&quot;]
+  N3[&quot;输出: 预训练编码器权重&quot;]
+  N4[&quot;下游任务: 作物-杂草语义分割 (WeedMap 数据集, 任务A: 德国 RedEdge-M, 任务B: 瑞士 Sequoia)&quot;]
+  N5[&quot;指标: mean IoU&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5</pre>
+          <h3>方法与理论链路</h3><p>数据收集与预处理（芬兰农田多年多光谱无人机影像，MicaSense RedEdge 3相机，50m和10m飞行高度）→ 数据协调与扩展（与msuav500K合并，保留绿、红、红边、近红外四个波段，8-bit缩放）→ 自监督预训练（MoCo-v3用于Swin Transformer；MAE用于ViT Small和ViT Base，400 epochs）→ 下游任务评估（WeedMap数据集，任务A德国RedEdge-M，任务B瑞士Sequoia；5%-100%训练数据；Wasserstein距离优化数据划分）→ 性能比较（与从头训练、ImageNet预训练、Doornbos等人预训练对比；冻结/解冻编码器；指标：mean IoU）</p>
+          <h3>主要结果</h3><ul><li>Swin Transformer (MoCo-v3, msuav500k+N) 在任务A上表现最佳（PDF p.9）</li></ul>
+          <h3>博士研究构想</h3><p>假设：在低空多光谱无人机影像上，使用尺度感知的掩码自编码器（Scale-MAE）进行自监督预训练，能比标准MAE和MoCo-v3更好地处理msuav500K中0.1-25cm的极端地面采样距离变化，从而提升下游语义分割性能。可证伪实验：在msuav500k+N上预训练Scale-MAE（需估计或获取每张影像的GSD），与本文MoCo-v3 Swin Transformer和MAE ViT在任务A和B上对比，使用5%-100%训练数据，评估mean IoU。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 7 · 近30天回看（首次收录 2026-07-15）</span>
+          <h2>解析、搜索与确认：基于思维链推理与结构化空间记忆的免训练空中视觉对话导航</h2>
+          <p class="english">Parse, Search, and Confirmation: Training-Free Aerial Vision-and-Dialog Navigation with Chain-of-Thought Reasoning and Structured Spatial Memory</p>
+          <p class="meta">Yu Qi, Hongyu Li, Shaofei Huang, Tianrui Hui, Yaxiong Wang, Lechao Cheng, Zhun Zhong, Si Liu, Meng Wang · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.11529v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.11529v1">PDF</a></p>
+          <h3>中文摘要</h3><p>本文针对资源高效的高空无人机导航任务，在免训练设置下解决空中视觉对话导航（AVDN）问题。直接应用多模态大语言模型（MLLM）会导致导航不可靠，原因在于方向定位能力弱且缺乏显式空间记忆。为解决这些问题，我们提出了PSC-AVDN，一个免训练框架，它将三阶段解析-搜索-确认推理流程与结构化空间记忆（SSM）紧密结合。解析阶段使用大语言模型（LLM）将模糊的对话指令转换为稳定的几何方向和目的地线索。搜索思维链（S-CoT）在高空观测下逐步进行目标探索，确认思维链（C-CoT）在候选区域周围进行细粒度验证以解决视觉歧义。同时，SSM集成了三种互补的空间线索来源，包括多尺度视觉观测、空间视觉记忆和结构化几何记忆，以提供全局空间上下文和长期一致性。在ANDH和ANDH-Full上的大量实验表明，PSC-AVDN在免训练设置下达到了新的最先进性能，匹配或超越了若干微调方法。代码将公开在：https://github.com/QY6616/PSC-AVDN</p>
+          <details><summary>English Abstract</summary><p>In this paper, we tackle the Aerial Vision-and-Dialog Navigation (AVDN) task in the training-free setting for resource-efficient high-altitude UAV navigation.Naively applying MLLMs leads to unreliable navigation due to weak directional grounding and the lack of explicit spatial memory.To address these issues, we propose PSC-AVDN, a training-free framework that tightly couples a three-stage Parsing-Search-Confirmation reasoning pipeline with a Structured Spatial Memory (SSM).The parsing stage uses an LLM to convert ambiguous dialogue instructions into stable geometric directional and destination cues.A Search Chain-of-Thought (S-CoT) then performs stepwise target exploration under high-altitude observations, and a Confirmation Chain-of-Thought (C-CoT) conducts fine-grained verification around candidate regions to resolve visual ambiguity.Meanwhile, SSM integrates three complementary sources of spatial cues, including multi-scale visual observation, spatial visual memory, and structured geometric memory to provide global spatial context and long-horizon consistency.Extensive experiments on ANDH and ANDH-Full show that PSC-AVDN establishes new state-of-the-art performance in the training-free setting, matching or surpassing several finetuned methods.Code will be publicly available at: https://github.com/QY6616/PSC-AVDN</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：高空无人机视角下的视觉对话导航任务，输入为对话指令和当前视觉观测&quot;]
+  N1[&quot;核心模块1：解析阶段（Parsing Stage）——使用LLM将模糊指令转换为几何方向和目的地线索，通过航向解析模块输出绝对角度&quot;]
+  N2[&quot;核心模块2：搜索阶段（Search Stage）——通过S-CoT进行逐步目标探索，包括目的地分析、场景理解、参考网格图生成和候选区域缩小&quot;]
+  N3[&quot;核心模块3：确认阶段（Confirmation Stage）——通过C-CoT在候选区域进行细粒度验证，输出边界框和置信度&quot;]
+  N4[&quot;辅助模块：结构化空间记忆（SSM）——集成MVO、SVM和SGM，提供全局空间上下文&quot;]
+  N5[&quot;输出：导航轨迹和最终目标位置&quot;]
+  N6[&quot;指标：SPL、SR、GP&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
+          <h3>方法与理论链路</h3><p>1. 解析阶段：使用通用LLM从对话指令中提取方向和目的地线索，并通过航向解析模块将多种方向格式转换为一致的角度表示。2. 搜索阶段：设计搜索思维链（S-CoT），将目标搜索分解为四个子推理步骤（目的地分析、场景理解、参考网格图生成、候选区域逐步缩小）。3. 确认阶段：引入确认思维链（C-CoT），在候选区域进行细粒度验证，通过可解释推理链排除错误候选并确认唯一目标。4. 结构化空间记忆（SSM）：集成多尺度视觉观测、空间视觉记忆和结构化几何记忆，提供全局空间上下文和长期一致性。</p>
+          <h3>主要结果</h3><ul><li>ANDH Unseen Val. SPL（PDF p.6）</li><li>ANDH Unseen Test SPL（PDF p.6）</li><li>ANDH-Full Unseen Val. SPL（PDF p.6）</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：假设在低空无人机导航中，引入动态更新的结构化空间记忆（如实时构建的语义地图）可以显著提升MLLM在长轨迹和多轮对话下的导航成功率。实验设计：在ANDH-Full数据集上，比较PSC-AVDN与移除SSM模块的变体，预期SSM模块的移除会导致SPL和SR下降超过10%。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 8 · 近30天回看（首次收录 2026-07-14）</span>
+          <h2>面向野外无人机的主动目标检测：大规模数据集、基准与方法</h2>
+          <p class="english">Toward Active Object Detection for UAVs in the Wild: A Large-Scale Dataset, Benchmark and Method</p>
+          <p class="meta">Tianpeng Liu, Xinhua Jiang, Li Liu, Qinmu Shen, Siwei Tang, Zhen Liu, Yongxiang Liu · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.09078v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.09078v1">PDF</a></p>
+          <h3>中文摘要</h3><p>目标检测是众多无人机应用中的基础组件，但长期受到遮挡或目标像素稀缺等问题的困扰。主动目标检测通过主动视觉提供了一种应对这些挑战的新范式，然而由于缺乏用于算法开发和评估的高质量数据集和基准，基于无人机的主动目标检测研究仍然稀少。为填补这一空白，本文提出了ATRNet-LUDO，这是首个用于无人机-地面主动目标检测的大规模真实世界数据集。它包含121,000张多视角全景多目标航拍图像和121万张局部单目标切片，覆盖40个场景中的10种车辆目标。该数据集能够为无人机智能体交互和主动观测策略学习构建多样化的训练和测试环境。基于该数据集，我们建立了一个用于主动目标检测策略学习方法的综合评估基准。大多数现有的主动目标检测策略依赖深度强化学习，但泛化能力差。在我们的基准上的评估揭示了训练和测试性能之间存在显著的泛化差距，凸显了对解决方案的迫切需求。为此，我们利用联合嵌入预测架构构建了一个世界模型来增强状态表示学习，并通过融入主动目标检测特定的先验知识提出了AOD-JEPA。大量实验验证了其有效性和优越性。我们希望ATRNet-LUDO和该基准能够推动无人机-地面主动目标检测领域的研究。数据集和代码即将在https://github.com/Leo000ooo/LUDO_dataset上提供。</p>
+          <details><summary>English Abstract</summary><p>Object detection is a fundamental component in numerous Unmanned Aerial Vehicle (UAV) applications, yet it has long been plagued by hindrances like occlusion or target pixel scarcity. Active Object Detection (AOD) provides a novel paradigm to address these challenges via active vision, while UAV-based AOD research remains scarce due to the lack of high-quality datasets and benchmarks for algorithm development and evaluation. To fill this gap, this paper presents ATRNet-LUDO, the first large-scale real-world dataset for UAV-Ground Active Object Detection (UGAOD). It contains 121,000 multi-view panoramic multi-target aerial images and 1.21 million local single-target slices, covering 10 vehicle targets across 40 scenarios. It enables the construction of diverse training and testing environments for UAV agent interaction and active observation policy learning. Based on this dataset, we establish a comprehensive evaluation benchmark for AOD policy learning methods. Most existing AOD policies rely on Deep Reinforcement Learning (DRL) but suffer from poor generalization. Evaluations on our benchmark reveal a significant generalization gap between training and testing performance, highlighting an urgent need for solutions. To this end, we leverage the Joint Embedding Predictive Architecture (JEPA) to construct a world model that enhances state representation learning, and propose AOD-JEPA by incorporating AOD-specific prior knowledge. Extensive experiments validate its effectiveness and superiority. We hope ATRNet-LUDO and the benchmark will advance research in the UGAOD field. The dataset and code are soon available at https://github.com/Leo000ooo/LUDO_dataset.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：无人机在野外复杂遮挡环境中对地面车辆目标进行主动目标检测&quot;]
+  N1[&quot;核心模块：基于POMDP的深度强化学习框架（Dueling DQN）与世界模型辅助策略学习（WMPL）&quot;]
+  N2[&quot;机制：利用联合嵌入预测架构（AOD-JEPA）构建世界模型，通过场景净化（SAM3）融入先验知识，增强状态表示学习&quot;]
+  N3[&quot;输出：主动观测策略（π*），指导无人机选择最优视角或终止&quot;]
+  N4[&quot;指标：Return（主要）、Recognition rate、Movement distance&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4</pre>
+          <h3>方法与理论链路</h3><p>ATRNet-LUDO数据集构建（多视角密集采样、场景配置、标注）→ 基于POMDP的主动目标检测问题形式化 → 深度强化学习框架（Dueling DQN）→ 世界模型辅助策略学习（WMPL）：利用联合嵌入预测架构（JEPA）训练世界模型，并融入主动目标检测先验知识（通过SAM3进行场景净化）→ AOD-JEPA架构 → 在基准上评估与消融实验。</p>
+          <h3>主要结果</h3><ul><li>主动观测策略 vs 传统被动感知（PDF p.1）</li><li>WMPL vs DRL基线（PDF p.1）</li><li>AOD-JEPA vs 其他SSL架构（PDF p.14）</li></ul>
+          <h3>博士研究构想</h3><p>假设：在AOD-JEPA中，将场景净化模块替换为可学习的、任务驱动的注意力机制，而非依赖固定的SAM3分割，可以更灵活地提取任务相关特征，从而在保持或提升泛化性能的同时降低对大规模预训练分割模型的依赖。该假设可证伪：通过对比实验，若可学习注意力机制版本在测试环境中的return或recognition rate显著低于AOD-JEPA，则假设被证伪。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 9 · 近30天回看（首次收录 2026-07-14）</span>
+          <h2>PanoWorld：真实世界全景视频生成</h2>
+          <p class="english">PanoWorld: Real-World Panoramic Generation</p>
+          <p class="meta">Haoyuan Li, Dizhe Zhang, Yuemei Zhou, Xiangkai Zhang, Haoran Feng, Xiaofan Lin, Wenjie Jiang, Bo Du, Ming-Hsuan Yang, Lu Qi · arXiv cs.CV</p>
+          <p><a href="http://arxiv.org/abs/2607.09661v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.09661v1">PDF</a></p>
+          <h3>中文摘要</h3><p>在这项工作中，我们旨在通过利用全向表示中旋转等变的特性来解决全景世界模型中的长程记忆挑战，其中旋转可以被视为一种隐式几何变换。基于这一见解，我们提出了PanoWorld，它通过固定航向将相机轨迹简化为平移，并通过密集全景光线条件（DPRC）和几何感知记忆增强（GMA）进行当前动作建模和长程记忆。然后，引入了一个三阶段训练流程来逐步优化每个组件。为了更好地评估在大尺度空间变化和多样化光照条件下的物理一致性（现有数据集相对稳定），我们构建了World360，这是一个大规模数据集，包含通过全景无人机收集的真实世界视频片段和由AirSim360生成的高质量模拟片段。在World360上的大量实验证明了PanoWorld的有效性，其性能大幅优于替代方法。我们的模型、训练代码和数据集将公开提供。更多信息可在我们的项目页面找到：https://lihaoy-ux.github.io/panoworld-page/。</p>
+          <details><summary>English Abstract</summary><p>In this work, we aim to address the challenge of long-range memory in panoramic world models by exploiting the rotation-equivariant property of omnidirectional representations, where rotation can be treated as an implicit geometric transformation.Building on this insight, we propose PanoWorld, which simplifies camera trajectories into translations via fixed headings for both current-action modeling and long-range memory through Dense Panoramic Ray-Conditioning (DPRC) and Geometry-aware Memory Augmentation (GMA).Then, a three-stage training pipeline is introduced to progressively optimize each component. To better evaluate physical consistency under large-scale spatial variations and diverse illumination conditions, where existing datasets are relatively stable, we construct World360, a large-scale dataset consisting of both real-world video clips collected via panoramic unmanned aerial vehicles and high-quality simulated clips generated by AirSim360.Extensive experiments on World360 demonstrate the effectiveness of PanoWorld, outperforming alternative methods by a large margin.Our models, training code, and dataset will be publicly available. More information can be found on our project page: https://lihaoy-ux.github.io/panoworld-page/.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景：初始全景图像 + 目标相机轨迹（固定航向）&quot;]
+  N1[&quot;核心模块：运动解耦（旋转视为几何变换，仅建模平移）&quot;]
+  N2[&quot;核心模块：DPRC（密集全景光线条件，通过PRoPE编码平移为视角相关表示）&quot;]
+  N3[&quot;核心模块：GMA（几何感知记忆增强，通过3D光线对应检索历史特征并置信度门控融合）&quot;]
+  N4[&quot;机制：三阶段训练（全景微调→运动学习→记忆锚定）&quot;]
+  N5[&quot;输出：可控全景视频&quot;]
+  N6[&quot;指标：FID, FAED, NIQE, Q-Align, PSNR&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4
+  N4 --&gt; N5
+  N5 --&gt; N6</pre>
+          <h3>方法与理论链路</h3><p>1. 运动解耦：利用全景表示的旋转等变性，将旋转视为几何变换，仅显式建模平移。2. 动作建模（DPRC）：通过局部正交基和局部变换矩阵构建运动流形，将相机平移编码为每条光线的视角相关表示，并通过PRoPE注入扩散Transformer。3. 记忆建模（GMA）：将历史特征映射到公共PRoPE空间，通过基于3D光线对应的注意力机制检索，并使用置信度引导门控融合记忆特征与基础扩散特征。4. 三阶段训练：阶段1：全景视频微调（LoRA适应全景几何）；阶段2：视角相关运动学习（DPRC模块）；阶段3：记忆锚定一致性（GMA模块）。</p>
+          <h3>主要结果</h3><ul><li>未确认可引用结果。</li></ul>
+          <h3>博士研究构想</h3><p>可证伪的博士研究构想：在低空无人机场景中，将PanoWorld的DPRC和GMA模块扩展到时空基础模型，用于预测和规划无人机在未知环境中的长期轨迹，并通过在World360数据集和真实无人机平台上的实验，验证其在轨迹预测准确性和生成场景物理一致性方面是否优于现有方法。</p>
+        </article>
+        
+        <article class="paper">
+          <span class="badge">Top 10 · 近30天回看（首次收录 2026-07-13）</span>
+          <h2>面向无人机航空机器人与双臂操作的视觉-语言-动作（VLA）模型综述</h2>
+          <p class="english">Vision Language Action (VLA) Models for Unmanned Aerial Robotics and Bimanual Manipulation: A Review</p>
+          <p class="meta">Inkyu Sa, Chanoh Park, Hea-Min Lee, Donghee Noh, Ho Seok Ahn · arXiv cs.RO</p>
+          <p><a href="http://arxiv.org/abs/2607.06706v1">Original Page</a> · <a href="http://arxiv.org/pdf/2607.06706v1">PDF</a></p>
+          <h3>中文摘要</h3><p>视觉-语言-动作（VLA）模型将视觉感知、自然语言理解和动作生成统一在一个基础模型中，使机器人能够直接根据摄像头图像执行诸如“折叠毛巾”或“飞向红色建筑”等指令。由于VLA继承了互联网规模预训练的世界知识，它们已成为基于学习的操作的主导框架，而双臂协调则是最具挑战性的试验平台：两个各有7个自由度的机械臂必须协同运动以完成折叠、组装和重新定向物体等任务。无人机航空机器人面临结构上相似的挑战：无人机必须在严格的延迟和有效载荷约束下，根据视觉观测协调推力、姿态以及日益增加的夹爪指令。本综述涵盖了2017年至2026年间的183篇文献，并沿七个维度组织：VLA架构、训练方法、动作表示、双臂协调（2022-2026年）、无人机导航与控制（2017-2026年）、语言基础以及包括记忆和世界模型在内的交叉问题。我们展示了为双臂VLA开发的协调策略、训练方法和动作表示可迁移至无人机系统，并确定了两个领域的十四个研究方向。</p>
+          <details><summary>English Abstract</summary><p>Vision Language Action (VLA) models unify visual perception, natural-language understanding, and action generation within a single foundation model, allowing a robot to follow instructions such as fold the towel or fly to the red building directly from camera images. Because VLAs inherit world knowledge from internet-scale pre-training, they have become the dominant framework for learning-based manipulation, with bimanual coordination serving as the most demanding testbed: two arms with 7 degrees of freedom each must move in concert to fold, assemble, and reorient objects. Unmanned aerial robotics faces a structurally similar challenge: a drone must coordinate thrust, attitude, and increasingly gripper commands from visual observations under strict latency and payload constraints. This review covers 183 contributions spanning 2017-2026 and organized along seven dimensions: VLA architectures, training recipes, action representations, bimanual coordination (2022-2026), unmanned aerial vehicle (UAV) navigation and control (2017-2026), language grounding, and cross-cutting concerns including memory and world models. We show that the coordination strategies, training recipes, and action representations developed for bimanual VLAs transfer to unmanned aerial systems and identify fourteen research directions across both domains.</p></details>
+          <h3>论文原始核心框图</h3><p class="muted">原始图不在公开网页再分发；Figure 元数据保留，并在个人 Obsidian 同步时本地裁剪。</p>
+          <h3>AI 中文总结框图</h3><pre class="mermaid">flowchart LR
+  N0[&quot;输入/场景: 摄像头图像 + 语言指令 + 本体感知状态&quot;]
+  N1[&quot;核心模块: VLA架构 (自回归/流匹配/扩散/混合) + 动作头&quot;]
+  N2[&quot;机制: 动作分块 (Action Chunking) + 流匹配/扩散去噪&quot;]
+  N3[&quot;输出: 连续动作块 (Action Chunk) 或离散动作令牌&quot;]
+  N4[&quot;指标: Task success rate, Inference latency, Data efficiency, Generalization ratio&quot;]
+  N0 --&gt; N1
+  N1 --&gt; N2
+  N2 --&gt; N3
+  N3 --&gt; N4</pre>
+          <h3>方法与理论链路</h3><p>VLA框架（视觉编码器fvis → VLM骨干fVLM → 动作头fact）→ 动作分块（Action Chunking）→ 流匹配/扩散/自回归动作生成 → 三阶段训练（预训练、后训练、强化学习）→ 双臂协调策略（联合动作空间、层次化、主从）→ 无人机导航与控制（视觉语言导航、端到端飞行、空中操作）→ 跨领域迁移分析</p>
+          <h3>主要结果</h3><ul><li>CognitiveDrone的VLM推理增益（PDF p.32）</li><li>UAV-VLA的规划速度（PDF p.31）</li><li>GigaBrain-0.5M的双臂任务改进（PDF p.40）</li></ul>
+          <h3>博士研究构想</h3><p>假设：在无人机空中操作任务中，采用联合动作空间（Joint Action Space）的VLA策略（如π0）比采用独立动作空间（Independent）的策略在协调无人机本体与机械臂动作时具有更高的任务成功率和更低的碰撞率。实验：在Flying Hand平台上，分别训练使用联合动作空间和独立动作空间的VLA策略，执行空中抓取和放置任务，比较任务成功率和碰撞次数。</p>
+        </article>
+        </main><script type="module">import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';mermaid.initialize({startOnLoad:true,theme:'neutral'});</script></body></html>
