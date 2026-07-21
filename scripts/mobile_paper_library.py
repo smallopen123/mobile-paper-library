@@ -27,6 +27,7 @@ from openai import OpenAI
 from paper_analysis import (
     build_daily_markdown,
     build_email_summary,
+    load_recent_review_records,
     process_top_papers,
     render_html,
 )
@@ -36,6 +37,7 @@ from report_contract import build_report, write_report
 ROOT = Path(__file__).resolve().parents[1]
 DOCS_DIR = ROOT / "docs"
 HISTORY_PATH = ROOT / "data" / "sent_history.json"
+REPORTS_DIR = ROOT / "outputs"
 MAX_ITEMS = 20
 RECENT_DAYS = 7
 PRIMARY_DAYS = 3
@@ -123,11 +125,38 @@ class Item:
     figure_status: str = "not_attempted"
     pdf_page_count: int = 0
     parsed_page_count: int = 0
+    selection_mode: str = "new"
+    source_report_date: str = ""
 
     @property
     def key(self) -> str:
         raw = f"{self.title}|{self.url}".lower()
         return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:16]
+
+
+def item_from_review_record(record: dict) -> Item:
+    item = Item(
+        title=str(record.get("title_en") or record.get("title") or ""),
+        url=str(record.get("url") or ""),
+        pdf_url=str(record.get("pdf_url") or ""),
+        source=str(record.get("source") or ""),
+        published=str(record.get("published_at") or ""),
+        authors=str(record.get("authors") or ""),
+        summary=str(record.get("abstract_en") or record.get("summary") or ""),
+        score=0.0,
+    )
+    for name in (
+        "title_zh", "title_en", "abstract_en", "abstract_zh", "analysis_rank", "evidence_scope",
+        "source_pages", "datasets", "baselines", "metrics", "key_results_zh", "limitations_zh",
+        "research_question_zh", "hypothesis_zh", "method_chain_zh", "frontier_zh", "relevance_zh",
+        "reproducibility_zh", "research_idea_zh", "core_figure", "summary_diagram_mermaid",
+        "diagram_source_pages", "fulltext_status", "figure_status", "pdf_page_count", "parsed_page_count",
+        "selection_mode", "source_report_date",
+    ):
+        if name in record:
+            setattr(item, name, record[name])
+    item.summary_zh = item.abstract_zh
+    return item
 
 
 @dataclass
@@ -819,9 +848,10 @@ def main() -> None:
     base_url = page_base_url()
     source_errors: list[str] = []
     all_items = dedupe(fetch_arxiv(source_errors))
-    selected = select_items(all_items, load_history())
+    new_items = select_items(all_items, load_history())
 
-    if not selected:
+    all_arxiv_queries_failed = sum(error.startswith("arXiv query ") for error in source_errors) >= 5
+    if not new_items and not all_items and all_arxiv_queries_failed:
         subject = f"{REPORT_TITLE}生成失败 - {today}"
         body = "今日未取得可验证的 arXiv 候选条目。已保存失败记录，请稍后重试。"
         report = build_report(
@@ -849,40 +879,53 @@ def main() -> None:
             raise
         raise RuntimeError("No candidate papers were found; a failure notice was saved and emailed.")
 
-    if len(selected) < MAX_ITEMS:
-        source_errors.append(f"Only {len(selected)} of {MAX_ITEMS} requested papers were available")
+    if new_items and len(new_items) < MAX_ITEMS:
+        source_errors.append(f"Only {len(new_items)} of {MAX_ITEMS} requested new papers were available")
 
-    llm_configs = resolve_llm_configs()
-    invoke_json = None if args.skip_llm else make_json_invoker(llm_configs)
-    if not args.skip_llm:
-        selected, translation_errors = enrich_items_with_llm(selected, invoke_json)
-        source_errors.extend(translation_errors)
-    for item in selected:
-        item.title_en = item.title_en or item.title
-        item.abstract_en = item.abstract_en or item.summary
-        item.abstract_zh = item.abstract_zh or item.summary_zh
+    processed_new: list[Item] = []
+    if new_items:
+        llm_configs = resolve_llm_configs()
+        invoke_json = None if args.skip_llm else make_json_invoker(llm_configs)
+        if not args.skip_llm:
+            new_items, translation_errors = enrich_items_with_llm(new_items, invoke_json)
+            source_errors.extend(translation_errors)
+        for item in new_items:
+            item.title_en = item.title_en or item.title
+            item.abstract_en = item.abstract_en or item.summary
+            item.abstract_zh = item.abstract_zh or item.summary_zh
+        processed_new, pdf_errors = process_top_papers(new_items, RESEARCH_PROFILE, invoke_json)
+        source_errors.extend(pdf_errors)
 
-    selected, pdf_errors = process_top_papers(
-        selected,
-        RESEARCH_PROFILE,
-        invoke_json,
+    verified_new = [item for item in processed_new if item.analysis_rank]
+    needed_reviews = max(0, 10 - len(verified_new))
+    review_records = load_recent_review_records(
+        REPORTS_DIR,
+        STREAM,
+        today,
+        limit=needed_reviews,
+        exclude_keys=(item.key for item in processed_new),
     )
-    source_errors.extend(pdf_errors)
+    review_items = [item_from_review_record(record) for record in review_records]
+    next_rank = max((item.analysis_rank or 0 for item in processed_new), default=0)
+    for offset, item in enumerate(review_items, 1):
+        item.analysis_rank = next_rank + offset
+    selected = processed_new + review_items
+    title_suffix = "（今日无新增·近30天回看）" if not processed_new else ""
 
     daily_dir = DOCS_DIR / today
     daily_dir.mkdir(parents=True, exist_ok=True)
     web_url = f"{base_url}/{today}/"
     (daily_dir / "index.html").write_text(
-        render_html(selected, REPORT_TITLE, today, base_url), encoding="utf-8"
+        render_html(selected, REPORT_TITLE + title_suffix, today, base_url), encoding="utf-8"
     )
     DOCS_DIR.mkdir(parents=True, exist_ok=True)
     (DOCS_DIR / "index.html").write_text(render_index_deepseek(today, base_url), encoding="utf-8")
-    body = build_daily_markdown(selected, REPORT_TITLE, today, web_url)
-    email_body = build_email_summary(selected, REPORT_TITLE, today, web_url)
+    body = build_daily_markdown(selected, REPORT_TITLE + title_suffix, today, web_url)
+    email_body = build_email_summary(selected, REPORT_TITLE + title_suffix, today, web_url)
     generation_status = "partial" if source_errors else "complete"
     report = build_report(
         stream=STREAM,
-        title=f"{REPORT_TITLE} - {today}",
+        title=f"{REPORT_TITLE}{title_suffix} - {today}",
         body=body,
         items=selected,
         generation_status=generation_status,
@@ -896,10 +939,10 @@ def main() -> None:
         print(f"Generated {len(selected)} papers without sending email: {web_url}")
         return
     try:
-        send_email(f"{REPORT_TITLE} - {today}", email_body)
+        send_email(f"{REPORT_TITLE}{title_suffix} - {today}", email_body)
         report["email_status"] = "sent"
         write_report(report)
-        save_history(selected)
+        save_history(processed_new)
     except Exception:
         report["email_status"] = "failed"
         write_report(report)

@@ -110,6 +110,8 @@ class MobilePaperLibraryTests(unittest.TestCase):
             with mock.patch.object(report_contract, "OUTPUTS_DIR", temp / "outputs"), mock.patch.object(
                 library, "DOCS_DIR", temp / "docs"
             ), mock.patch.object(library, "HISTORY_PATH", temp / "history.json"), mock.patch.object(
+                library, "REPORTS_DIR", temp / "reports"
+            ), mock.patch.object(
                 library, "fetch_arxiv", return_value=[item]
             ), mock.patch.object(
                 library, "process_top_papers", return_value=([item], ["Only 0 of 10 papers had a downloadable, extractable PDF"])
@@ -122,6 +124,88 @@ class MobilePaperLibraryTests(unittest.TestCase):
         self.assertEqual(report["item_count"], 1)
         self.assertEqual(report["schema_version"], 2)
         self.assertIn("title_en", report["items"][0])
+
+    def test_zero_new_candidates_uses_verified_review_and_is_not_failed(self) -> None:
+        previous = library.Item(
+            title="Verified UAV foundation model",
+            url="https://arxiv.org/abs/2607.00009",
+            pdf_url="https://arxiv.org/pdf/2607.00009",
+            source="arXiv cs.RO",
+            published="2026-07-20T00:00:00Z",
+            authors="Researcher",
+            summary="A verified English abstract.",
+            score=10,
+            title_en="Verified UAV foundation model",
+            title_zh="已核验的无人机基础模型",
+            abstract_en="A verified English abstract.",
+            abstract_zh="这是一段已核验的中文摘要。",
+            analysis_rank=1,
+            fulltext_status="verified",
+            figure_status="not_found",
+            core_figure={"status": "not_found"},
+        )
+        current_date = library.dt.datetime.now(library.dt.timezone(library.dt.timedelta(hours=8))).date()
+        previous_date = (current_date - library.dt.timedelta(days=1)).isoformat()
+        dynamic = library.Item(
+            title="Already sent paper",
+            url="https://arxiv.org/abs/2607.00010",
+            pdf_url="https://arxiv.org/pdf/2607.00010",
+            source="arXiv cs.RO",
+            published=current_date.isoformat(),
+            authors="Researcher",
+            summary="Already handled.",
+            score=10,
+        )
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            reports = temp / "reports"
+            reports.mkdir()
+            (reports / f"{previous_date}.json").write_text(
+                json.dumps(
+                    {
+                        "stream": library.STREAM,
+                        "report_date": previous_date,
+                        "items": [report_contract.serialize_item(previous)],
+                    },
+                    ensure_ascii=False,
+                ),
+                encoding="utf-8",
+            )
+            with mock.patch.object(report_contract, "OUTPUTS_DIR", temp / "outputs"), mock.patch.object(
+                library, "REPORTS_DIR", reports
+            ), mock.patch.object(library, "DOCS_DIR", temp / "docs"), mock.patch.object(
+                library, "HISTORY_PATH", temp / "history.json"
+            ), mock.patch.object(library, "fetch_arxiv", return_value=[dynamic]), mock.patch.object(
+                library, "select_items", return_value=[]
+            ), mock.patch.object(sys, "argv", ["mobile_paper_library.py", "--dry-run", "--skip-llm"]):
+                library.main()
+            report = json.loads(next((temp / "outputs").glob("*.json")).read_text(encoding="utf-8"))
+        self.assertEqual(report["generation_status"], "complete")
+        self.assertEqual(report["email_status"], "skipped")
+        self.assertEqual(report["item_count"], 1)
+        self.assertEqual(report["items"][0]["selection_mode"], "review")
+        self.assertEqual(report["items"][0]["source_report_date"], previous_date)
+        self.assertIn("今日新增 0 篇", report["body"])
+        self.assertIn("回看条目不是今日新增", report["body"])
+
+    def test_all_arxiv_queries_failed_still_creates_failure_report(self) -> None:
+        def failed_source(errors: list[str]) -> list[library.Item]:
+            errors.extend(f"arXiv query {index}: ReadTimeout" for index in range(1, 6))
+            return []
+
+        with tempfile.TemporaryDirectory() as temp_dir:
+            temp = Path(temp_dir)
+            with mock.patch.object(report_contract, "OUTPUTS_DIR", temp / "outputs"), mock.patch.object(
+                library, "REPORTS_DIR", temp / "reports"
+            ), mock.patch.object(library, "DOCS_DIR", temp / "docs"), mock.patch.object(
+                library, "HISTORY_PATH", temp / "history.json"
+            ), mock.patch.object(library, "fetch_arxiv", side_effect=failed_source), mock.patch.object(
+                sys, "argv", ["mobile_paper_library.py", "--dry-run", "--skip-llm"]
+            ):
+                library.main()
+            report = json.loads(next((temp / "outputs").glob("*.json")).read_text(encoding="utf-8"))
+        self.assertEqual(report["generation_status"], "failed")
+        self.assertEqual(report["item_count"], 0)
 
 
 if __name__ == "__main__":

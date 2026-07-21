@@ -58,7 +58,7 @@ def serialize_item(item: Any, default_kind: str = "other") -> dict[str, Any]:
         "title_zh": str(_item_value(item, "title_zh", "")),
         "url": str(_item_value(item, "url", "")),
         "pdf_url": str(_item_value(item, "pdf_url", "")),
-        "published_at": str(_item_value(item, "published", _item_value(item, "date", ""))),
+        "published_at": str(_item_value(item, "published", _item_value(item, "published_at", _item_value(item, "date", "")))),
         "source": str(_item_value(item, "source", "")),
         "authors": str(_item_value(item, "authors", "")),
         "summary": abstract_en,
@@ -87,6 +87,8 @@ def serialize_item(item: Any, default_kind: str = "other") -> dict[str, Any]:
         "figure_status": str(_item_value(item, "figure_status", "not_attempted")),
         "pdf_page_count": int(_item_value(item, "pdf_page_count", 0) or 0),
         "parsed_page_count": int(_item_value(item, "parsed_page_count", 0) or 0),
+        "selection_mode": str(_item_value(item, "selection_mode", "new")),
+        "source_report_date": str(_item_value(item, "source_report_date", "")),
     }
     errors = validate_schema_v2_item(serialized)
     if errors:

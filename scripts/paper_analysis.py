@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import datetime as dt
 import html
 import json
 import math
@@ -56,6 +57,65 @@ class PdfOcrRequired(RuntimeError):
 
 def _safe_text(value: Any) -> str:
     return re.sub(r"\s+", " ", str(value or "")).strip()
+
+
+def load_recent_review_records(
+    outputs_dir: Path,
+    stream: str,
+    report_date: str,
+    *,
+    limit: int = TOP_FULLTEXT,
+    days: int = 30,
+    exclude_keys: Iterable[str] = (),
+) -> list[dict[str, Any]]:
+    """Return verified prior cards for a clearly labelled, rotating review fallback."""
+    target_date = dt.date.fromisoformat(report_date)
+    cutoff = target_date - dt.timedelta(days=days)
+    excluded = {str(value) for value in exclude_keys if value}
+    reviewed: set[str] = set()
+    candidates: dict[str, tuple[dt.date, int, dict[str, Any]]] = {}
+    if not outputs_dir.exists():
+        return []
+    for path in sorted(outputs_dir.glob("????-??-??.json"), reverse=True):
+        try:
+            report = json.loads(path.read_text(encoding="utf-8-sig"))
+            source_date = dt.date.fromisoformat(str(report.get("report_date") or path.stem))
+        except (OSError, ValueError, json.JSONDecodeError):
+            continue
+        if report.get("stream") != stream or source_date >= target_date or source_date < cutoff:
+            continue
+        for record in report.get("items") or []:
+            key = str(record.get("id") or record.get("url") or record.get("title_en") or "")
+            if not key or key in excluded:
+                continue
+            if record.get("selection_mode") == "review":
+                reviewed.add(key)
+                continue
+            status = str(record.get("fulltext_status") or "")
+            if not record.get("analysis_rank") or not status.startswith("verified"):
+                continue
+            rank = int(record.get("analysis_rank") or 999)
+            previous = candidates.get(key)
+            if previous is None or source_date > previous[0]:
+                candidates[key] = (source_date, rank, dict(record))
+    ordered = sorted(
+        candidates.items(),
+        key=lambda pair: (pair[0] in reviewed, -pair[1][0].toordinal(), pair[1][1]),
+    )
+    result: list[dict[str, Any]] = []
+    for key, (source_date, _rank, record) in ordered[:limit]:
+        record["selection_mode"] = "review"
+        record["source_report_date"] = str(record.get("source_report_date") or source_date.isoformat())
+        record["analysis_rank"] = len(result) + 1
+        result.append(record)
+    return result
+
+
+def _selection_label(item: Any) -> str:
+    if getattr(item, "selection_mode", "new") == "review":
+        source_date = _safe_text(getattr(item, "source_report_date", "")) or "日期未知"
+        return f"近30天回看（首次收录 {source_date}）"
+    return "今日新增"
 
 
 def _slug(value: str) -> str:
@@ -516,23 +576,26 @@ def _callout(title: str, content: str, folded: bool = True) -> str:
 def build_daily_markdown(items: list[Any], title: str, report_date: str, web_url: str = "") -> str:
     top = sorted((item for item in items if getattr(item, "analysis_rank", None)), key=lambda item: item.analysis_rank)
     other = [item for item in items if not getattr(item, "analysis_rank", None)]
+    review_count = sum(1 for item in items if getattr(item, "selection_mode", "new") == "review")
+    new_count = len(items) - review_count
     topic_counts = Counter(_topic(item) for item in items)
     evidence_counts = Counter("全文核验" if item in top else "摘要级" for item in items)
     lines = [
         "## 今日核心发现",
         "",
-        f"- 候选论文 {len(items)} 篇；成功完成 PDF 全文提取与页码校验 {len(top)} 篇。",
+        f"- 今日新增 {new_count} 篇；近 30 天回看 {review_count} 篇；当前展示全文核验卡 {len(top)} 篇。",
+        "- 回看条目不是今日新增，仅用于在严格去重后仍提供可读、可复用的研究内容。",
         f"- 主题分布以 {', '.join(label for label, _ in topic_counts.most_common(3)) or '暂无'} 为主。",
         "- 所有数值、数据集、Baseline 与局限仅在存在可回查英文证据片段时展示。",
         "",
         "## Top 10 阅读优先级",
         "",
-        "| 排名 | 中文标题 | English Title | 全文状态 | 核心图 |",
-        "| ---: | --- | --- | --- | --- |",
+        "| 排名 | 类型 | 中文标题 | English Title | 全文状态 | 核心图 |",
+        "| ---: | --- | --- | --- | --- | --- |",
     ]
     for item in top:
         lines.append(
-            f"| {item.analysis_rank} | {_safe_text(getattr(item, 'title_zh', '')) or '待翻译'} | "
+            f"| {item.analysis_rank} | {_selection_label(item)} | {_safe_text(getattr(item, 'title_zh', '')) or '待翻译'} | "
             f"{_safe_text(getattr(item, 'title_en', ''))} | {item.fulltext_status} | {item.figure_status} |"
         )
     lines.extend([
@@ -577,6 +640,7 @@ def build_daily_markdown(items: list[Any], title: str, report_date: str, web_url
             f"- Authors: {_safe_text(getattr(item, 'authors', '')) or 'Unknown'}",
             f"- Source: {_safe_text(getattr(item, 'source', ''))}",
             f"- Published: {_safe_text(getattr(item, 'published', ''))}",
+            f"- Entry type: {_selection_label(item)}",
             f"- [Original Page]({_safe_text(getattr(item, 'url', ''))}) | [Available PDF]({_safe_text(getattr(item, 'pdf_url', ''))})",
             f"- Evidence scope: `{getattr(item, 'evidence_scope', 'abstract')}`；分析引用页：{pages}",
             "",
@@ -670,9 +734,11 @@ def build_daily_markdown(items: list[Any], title: str, report_date: str, web_url
 def build_email_summary(items: list[Any], title: str, report_date: str, web_url: str = "") -> str:
     top = sorted((item for item in items if getattr(item, "analysis_rank", None)), key=lambda item: item.analysis_rank)
     other = [item for item in items if not getattr(item, "analysis_rank", None)]
+    review_count = sum(1 for item in items if getattr(item, "selection_mode", "new") == "review")
+    new_count = len(items) - review_count
     lines = [
         f"{title} - {report_date}",
-        f"今日候选 {len(items)} 篇，PDF 全文核验 {len(top)} 篇。完整双语报告与双框图请在 Obsidian 查看。",
+        f"今日新增 {new_count} 篇，近30天回看 {review_count} 篇，全文核验卡 {len(top)} 篇。回看条目不作为今日新增。",
         "",
         "Top 10 核心内容",
     ]
@@ -682,6 +748,7 @@ def build_email_summary(items: list[Any], title: str, report_date: str, web_url:
         lines.extend([
             "",
             f"{item.analysis_rank}. {_safe_text(getattr(item, 'title_zh', '')) or _safe_text(getattr(item, 'title', ''))}",
+            f"   类型：{_selection_label(item)}",
             f"   English: {_safe_text(getattr(item, 'title_en', ''))}",
             f"   问题：{_safe_text(getattr(item, 'research_question_zh', '')) or '待复核'}",
             f"   方法：{_safe_text(getattr(item, 'method_chain_zh', '')) or '待复核'}",
@@ -701,7 +768,7 @@ def render_html(items: list[Any], title: str, report_date: str, base_url: str) -
     cards: list[str] = []
     for item in sorted(items, key=lambda value: getattr(value, "analysis_rank", None) or 999):
         rank = getattr(item, "analysis_rank", None)
-        badge = f"Top {rank} · Full-text verified" if rank else "Abstract-level"
+        badge = f"Top {rank} · {_selection_label(item)}" if rank else "Abstract-level"
         mermaid = _safe_mermaid(getattr(item, "summary_diagram_mermaid", ""))
         diagram = f'<pre class="mermaid">{html.escape(mermaid)}</pre>' if mermaid else '<p class="muted">未生成可验证总结框图。</p>'
         results = "".join(f"<li>{html.escape(e['name'])}（PDF p.{e['page']}）</li>" for e in getattr(item, "key_results_zh", [])) or "<li>未确认可引用结果。</li>"
