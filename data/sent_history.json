@@ -1,6 +1,18 @@
 {
   "sent": [
     {
+      "key": "e7ca9d910034d1f1",
+      "title": "Intelligent Multi-UAV Navigation in ITNTNs: A Hierarchical LLM Approach",
+      "url": "http://arxiv.org/abs/2607.18604v1",
+      "sent_at": "2026-07-22T22:04:01.716263+00:00"
+    },
+    {
+      "key": "d023d969ef94720a",
+      "title": "No Training, Better Flights: Test-Time Scaled VLMs for UAV Navigation",
+      "url": "http://arxiv.org/abs/2607.19288v1",
+      "sent_at": "2026-07-22T22:04:01.716263+00:00"
+    },
+    {
       "key": "c462df356afae365",
       "title": "SkyVLaM: Multimodal Large Language Model for UAV Video Understanding in Remote Sensing",
       "url": "http://arxiv.org/abs/2607.17386v1",
