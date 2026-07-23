@@ -1,6 +1,12 @@
 {
   "sent": [
     {
+      "key": "02f0dd40f81e81ca",
+      "title": "Memory-Augmented Multimodal Large Language Models for Small Object Understanding in Streaming Aerial Videos",
+      "url": "http://arxiv.org/abs/2607.19857v1",
+      "sent_at": "2026-07-23T22:03:58.154754+00:00"
+    },
+    {
       "key": "e7ca9d910034d1f1",
       "title": "Intelligent Multi-UAV Navigation in ITNTNs: A Hierarchical LLM Approach",
       "url": "http://arxiv.org/abs/2607.18604v1",
